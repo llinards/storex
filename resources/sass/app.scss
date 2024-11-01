@@ -1,5 +1,17 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('/public/fonts/myriadpro-regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('/public/fonts/myriadpro-bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 500;
+}
 
 // Variables
 @import 'variables';

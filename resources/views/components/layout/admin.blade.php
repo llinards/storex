@@ -8,13 +8,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
 <main class="py-4">
-    @yield('content')
+    {{$slot}}
 </main>
 </body>
 </html>
