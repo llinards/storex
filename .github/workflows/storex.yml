@@ -1,4 +1,4 @@
-name: Stores Tests
+name: Storex Tests
 
 on:
   push:
