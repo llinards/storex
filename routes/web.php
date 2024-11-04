@@ -24,3 +24,19 @@ Route::middleware(['auth'])->prefix('home')->group(function () {
         return view('admin.index');
     })->name('admin.index');
 });
+
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contacts', function () {
+    return view('contacts');
+});
+Route::get('/faq', function () {
+    return view('faq');
+});
+Route::get('/article', function () {
+    return view('article');
+});
