@@ -19,6 +19,60 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+// Bootstrap Icons
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+.active {
+    color: $storex-red !important;
+    font-weight: 500;
+}
+
 .btn-primary {
-    background-color: #EE3439;
+    background-color: $storex-red;
+    border-style: none;
+    font-weight: 500;
+    padding: 10px 45px;
+}
+
+.btn-primary:hover {
+    background-color: $storex-red;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown .dropdown-menu {
+    border-radius: 0%;
+    border-color: #EFF0EE;
+}
+
+// .dropdown:hover .dropdown-menu {
+//     display: block;
+// }
+
+.nav-link {
+    max-width: 120px;
+    border-bottom: solid 1px transparent;
+    padding: 0px 8px;
+}
+
+.dropdown-item:hover,
+.nav-link:hover {
+    font-weight: 500;
+    color: $storex-red;
+    border-bottom: solid 1px $storex-red;
+}
+
+hr {
+    color: #EFF0EE;
+}
+
+nav img {
+    max-width: 25%;
+    min-width: 25%;
+}
+
+// Overwriting the default selected dropdown item color (blue).
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #F7F7F7;
 }
