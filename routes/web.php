@@ -18,3 +18,9 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
 Route::get('/', function () {
     return redirect(app()->getLocale());
 });
+
+Route::middleware(['auth'])->prefix('home')->group(function () {
+    Route::get('/', static function () {
+        return view('admin.index');
+    })->name('admin.index');
+});
