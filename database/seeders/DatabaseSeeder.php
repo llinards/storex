@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\CategoryTranslation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,14 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@test.com',
         ]);
 
-        Category::factory()->count(4)->create();
+        $categories = Category::factory()->count(4)->create();
+        foreach ($categories as $category) {
+            foreach (config('app.available_locales') as $locale) {
+                CategoryTranslation::factory()->create([
+                    'category_id' => $category->id,
+                    'locale'      => $locale,
+                ]);
+            }
+        }
     }
 }
