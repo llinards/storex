@@ -49,17 +49,15 @@
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-#first-section {
-    background: rgb(228, 228, 228);
-    background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
-}
-
 .carousel-item {
     height: 400px;
     position: relative;
     background-position: center;
     background-size: cover;
+}
 
+#mobile-carousel .carousel-item {
+    height: auto;
 }
 
 .dropdown .dropdown-menu {
@@ -82,6 +80,12 @@
     font-weight: 500;
     color: $storex-red;
     border-bottom: solid 1px $storex-red;
+}
+
+
+#first-section {
+    background: rgb(228, 228, 228);
+    background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 hr {
@@ -135,6 +139,16 @@ nav img {
 
     p {
         font-size: 12px;
+    }
+
+    .icon-xl {
+        font-size: 48px;
+        color: $storex-red;
+    }
+
+    .icon {
+        font-size: 32px;
+        color: $storex-red;
     }
 
 }

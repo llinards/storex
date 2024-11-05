@@ -1,4 +1,4 @@
-<div class="container" id="carousel">
+<div class="container" id="header-carousel">
     <div class="row">
         <div class="col-md-12 p-0">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
