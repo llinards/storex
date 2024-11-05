@@ -22,7 +22,6 @@
 // Bootstrap Icons
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-
 .active li {
     color: $storex-red !important;
     font-weight: 500;
@@ -40,11 +39,17 @@
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+#first-section {
+    background: rgb(228, 228, 228);
+    background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
 .carousel-item {
     height: 400px;
     position: relative;
     background-position: center;
     background-size: cover;
+
 }
 
 .dropdown .dropdown-menu {
