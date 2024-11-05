@@ -54,7 +54,7 @@
 
 .dropdown .dropdown-menu {
     border-radius: 0%;
-    border-color: #EFF0EE;
+    border-color: $storex-light-grey;
 }
 
 // .dropdown:hover .dropdown-menu {
@@ -75,7 +75,7 @@
 }
 
 hr {
-    color: #EFF0EE;
+    color: $storex-light-grey;
 }
 
 h1,
@@ -104,7 +104,7 @@ nav img {
 // Overwriting the default selected dropdown item color (blue).
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: #F7F7F7;
+    background-color: $body-bg;
 }
 
 
