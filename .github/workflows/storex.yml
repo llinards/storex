@@ -30,6 +30,11 @@ jobs:
         run: |
           mkdir -p database
           touch database/database.sqlite
+      - name: Migrate Database
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: php artisan migrate --force
       - name: Execute tests (Unit and Feature tests) via Pest
         env:
           DB_CONNECTION: sqlite
