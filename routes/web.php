@@ -11,7 +11,22 @@ Auth::routes([
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
-    Route::get('/', [CategoriesController::class, 'index']);
+    Route::get('/', [CategoriesController::class, 'index'])->name('index');
+    Route::get('/galerija', function () {
+        return view('gallery');
+    })->name('gallery');
+    Route::get('/par-mums', function () {
+        return view('about');
+    })->name('about');
+    Route::get('/kontakti', function () {
+        return view('contacts');
+    })->name('contacts');
+    Route::get('/buj', function () {
+        return view('faq');
+    })->name('faq');
+    Route::get('/aktualitates', function () {
+        return view('article');
+    })->name('article');
 });
 
 Route::get('/', function () {
@@ -24,18 +39,4 @@ Route::middleware(['auth'])->prefix('home')->group(function () {
     })->name('admin.index');
 });
 
-Route::get('/gallery', function () {
-    return view('gallery');
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contacts', function () {
-    return view('contacts');
-});
-Route::get('/faq', function () {
-    return view('faq');
-});
-Route::get('/article', function () {
-    return view('article');
-});
+
