@@ -27,6 +27,16 @@
     font-weight: 500;
 }
 
+.icon-xl {
+    font-size: 64px;
+    color: $storex-red;
+}
+
+.icon {
+    font-size: 48px;
+    color: $storex-red;
+}
+
 .btn-primary {
     background-color: $storex-red;
     border-style: none;
@@ -88,7 +98,8 @@ h1 {
     font-size: 48px;
 }
 
-h2 {
+h2,
+h3 {
     font-size: 28px;
 }
 

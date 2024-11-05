@@ -6,7 +6,7 @@
                     <div class="carousel-item active d-flex align-items-center"
                         style="background-image:url({{ asset('images/placeholder-tent-1.jpg') }})">
                         <div class="container col-9">
-                            <div class="col-sm-7 text-center text-sm-start">
+                            <div class="col-sm-12 text-center text-sm-start">
                                 <h1>Tenta angāri Jūsu saimniecībai vai uzņēmumam!</h1>
                                 <p>Uzticamība un augsta kvalitāte</p>
                                 <button class="btn btn-primary">Uz produkciju</button>
