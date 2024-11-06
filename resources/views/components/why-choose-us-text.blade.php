@@ -1,4 +1,4 @@
-<div class="container  border-bottom p-5 bg-grey">
+<div class="container border-bottom p-5 bg-grey">
     <div class="row d-flex align-items-center">
         <div class="col-6 px-5">
             <img class="img-fluid" src="{{ asset('images/storex-owners.jpg') }}" alt="Storex Owners">

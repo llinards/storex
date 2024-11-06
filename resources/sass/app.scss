@@ -22,6 +22,17 @@
 // Bootstrap Icons
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+.accordion-item {
+    border: 0;
+    border-radius: 0;
+    border-bottom: solid 2px $storex-grey;
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 .active li {
     color: $storex-red !important;
     font-weight: 500;
@@ -60,11 +71,11 @@
     background-size: cover;
 }
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon,
-.carousel-indicators {
-    filter: invert(1);
-}
+// .carousel-control-next-icon,
+// .carousel-control-prev-icon,
+// .carousel-indicators {
+//     filter: invert(1);
+// }
 
 #mobile-carousel .carousel-item {
     height: auto;
@@ -123,6 +134,11 @@ h3 {
     color: $storex-grey;
 }
 
+h4 {
+    font-size: 20px;
+    color: $storex-grey;
+}
+
 p {
     font-size: 18px;
     color: $storex-grey;
@@ -150,6 +166,10 @@ nav img {
 
     h3 {
         font-size: 16px
+    }
+
+    h4 {
+        font-size: 14px;
     }
 
     p {
