@@ -22,10 +22,19 @@
 // Bootstrap Icons
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-
 .active li {
     color: $storex-red !important;
     font-weight: 500;
+}
+
+.icon-xl {
+    font-size: 64px;
+    color: $storex-red;
+}
+
+.icon {
+    font-size: 48px;
+    color: $storex-red;
 }
 
 .btn-primary {
@@ -47,9 +56,13 @@
     background-size: cover;
 }
 
+#mobile-carousel .carousel-item {
+    height: auto;
+}
+
 .dropdown .dropdown-menu {
     border-radius: 0%;
-    border-color: #EFF0EE;
+    border-color: $storex-light-grey;
 }
 
 // .dropdown:hover .dropdown-menu {
@@ -69,14 +82,33 @@
     border-bottom: solid 1px $storex-red;
 }
 
+
+#first-section {
+    background: rgb(228, 228, 228);
+    background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
 hr {
-    color: #EFF0EE;
+    color: $storex-light-grey;
 }
 
 h1,
 h1+p {
     color: #fff;
     text-shadow: 0px 5px 20px #000000;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2,
+h3 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
 }
 
 nav img {
@@ -87,5 +119,36 @@ nav img {
 // Overwriting the default selected dropdown item color (blue).
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: #F7F7F7;
+    background-color: $body-bg;
+}
+
+
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .icon-xl {
+        font-size: 48px;
+        color: $storex-red;
+    }
+
+    .icon {
+        font-size: 32px;
+        color: $storex-red;
+    }
+
 }
