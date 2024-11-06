@@ -56,6 +56,12 @@
     background-size: cover;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators {
+    filter: invert(1);
+}
+
 #mobile-carousel .carousel-item {
     height: auto;
 }
@@ -82,6 +88,11 @@
     border-bottom: solid 1px $storex-red;
 }
 
+// Overwriting the default selected dropdown item color (blue).
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: $body-bg;
+}
 
 #first-section {
     background: rgb(228, 228, 228);
@@ -105,10 +116,12 @@ h1 {
 h2,
 h3 {
     font-size: 28px;
+    color: $storex-grey;
 }
 
 p {
     font-size: 18px;
+    color: $storex-grey;
 }
 
 nav img {
@@ -116,10 +129,8 @@ nav img {
     min-width: 25%;
 }
 
-// Overwriting the default selected dropdown item color (blue).
-.dropdown-item.active,
-.dropdown-item:active {
-    background-color: $body-bg;
+.storex-red {
+    color: $storex-red;
 }
 
 
