@@ -5,22 +5,22 @@
         </div>
         <div class="col-6 px-md-5">
             <h2 class="storex-red mt-2 mt-md-0 mb-md-4">
-                Kāpēc izvēlēties STOREX angāra iegādei?
+                @lang('Kāpēc izvēlēties STOREX angāra iegādei?')
             </h2>
             <p>
-                Mums ir vairāk nekā 10 gadu pieredze darbā ar tenta angāriem. Vairāk nekā 1000 uzņēmumu un
+                @lang('Mums ir vairāk nekā 10 gadu pieredze darbā ar tenta angāriem. Vairāk nekā 1000 uzņēmumu un
                 privātpersonu ir kļuvuši par mūsu klientiem ne tikai Latvijā, bet arī Eiropas valstīs. Mēs
                 piedāvājam kvalitatīvus tenta angārus, kas tiek ražoti pēc augstākajiem kvalitātes standartiem
                 EN 1090-1:2009+A1:2011 un atbilst visām ES prasībām. Angāriem ir CE sertifikāti, kas ir
-                piemēroti ES atbalsta saņemšanai.
+                piemēroti ES atbalsta saņemšanai.')
             </p>
-            <p>Mēs piedāvājam ne tikai augstākās kvalitātes angārus, bet arī izcilu klientu apkalpošanu. Jūs
+            <p>@lang('Mēs piedāvājam ne tikai augstākās kvalitātes angārus, bet arī izcilu klientu apkalpošanu. Jūs
                 būsiet pilnībā apmierināti ar savu pirkumu, un ja Jums radīsies kādi jautājumi vai būs
                 nepieciešama palīdzība, mūsu pieredzējušie speciālisti vienmēr būs pieejami bezmaksas
-                konsultācijām.
+                konsultācijām.')
             </p>
-            <p>Mūsu prioritāte ir apmierināts klients, kurš saņem tieši to, kas viņam nepieciešams –
-                kvalitatīvu risinājumu, kas pilnībā atbilst viņa vajadzībām.</p>
+            <p>@lang('Mūsu prioritāte ir apmierināts klients, kurš saņem tieši to, kas viņam nepieciešams –
+                kvalitatīvu risinājumu, kas pilnībā atbilst viņa vajadzībām.')</p>
         </div>
     </div>
 </div>
