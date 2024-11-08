@@ -17,13 +17,12 @@
     </head>
 
     <body>
-        <div class="border-bottom">
-            <div class="container pb-3">
-                @include('includes.navbar')
-            </div>
+        <div class="container mx-auto">
+            @include('includes.navbar')
         </div>
-        <main class="py-4">
+        <main class="container mx-auto">
             {{ $slot }}
         </main>
+        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
     </body>
 </html>

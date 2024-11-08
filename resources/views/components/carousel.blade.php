@@ -10,7 +10,10 @@
                         <div class="h-100 text-break container">
                             <div class="row mx-sm-5 h-100 align-items-center">
                                 <div class="col mx-sm-5 text-sm-start text-center">
-                                    <h1>@lang('Tenta angāri Jūsu saimniecībai vai uzņēmumam!')</h1>
+                                    <h1 class="font-storex font-medium">
+                                        @lang('Tenta angāri Jūsu saimniecībai vai
+                                        uzņēmumam!')
+                                    </h1>
                                     <p>@lang('Uzticamība un augsta kvalitāte')</p>
                                     <button class="btn btn-primary">@lang('Uz produkciju')</button>
                                 </div>

@@ -1,7 +1,8 @@
 <li>
     @props(['active' => false, 'type' => 'a'])
     <a
-        class="{{ $active ? 'active' : '' }} dropdown-item text-nowrap"
+        href="#"
+        class="{{ $active ? 'text-storex-red' : '' }} font-storex"
         aria-current="{{ $active ? 'page' : 'false' }}"
         {{ $attributes }}
     >

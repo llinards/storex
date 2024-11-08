@@ -1,7 +1,7 @@
-<li class="nav-item">
+<li>
     @props(['active' => false, 'type' => 'a'])
     <a
-        class="{{ $active ? 'active' : '' }} nav-link text-nowrap"
+        class="{{ $active ? 'font-bold text-storex-red' : '' }}"
         aria-current="{{ $active ? 'page' : 'false' }}"
         {{ $attributes }}
     >

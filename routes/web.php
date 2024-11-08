@@ -38,5 +38,3 @@ Route::middleware(['auth'])->prefix('home')->group(function () {
         return view('admin.index');
     })->name('admin.index');
 });
-
-

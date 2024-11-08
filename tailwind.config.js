@@ -4,9 +4,22 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./node_modules/flowbite/**/*.js"
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'storex-red': '#ee3439',
+                'storex-grey': '#353535',
+                'storex-light-grey': '#eff0ee',
+                'storex-light-grey-bg': 'eff0eecc',
+            },
+            fontFamily: {
+                'storex': ['MyriadPro', 'sans-serif']
+            }
+        },
     },
-    plugins: [],
+    plugins: [
+        require('flowbite/plugin')
+    ]
 }
