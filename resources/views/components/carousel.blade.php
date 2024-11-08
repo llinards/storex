@@ -10,36 +10,9 @@
                         <div class="container h-100 text-break">
                             <div class="row mx-sm-5 h-100 align-items-center">
                                 <div class="col mx-sm-5 text-sm-start text-center">
-                                    <h1>Tenta angāri Jūsu saimniecībai vai uzņēmumam!</h1>
-                                    <p>Uzticamība un augsta kvalitāte</p>
-                                    <button class="btn btn-primary">Uz produkciju</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item"
-                        style="background-image:url({{ asset('images/placeholder-tent-1.jpg') }})">
-                        <div class="container h-100 text-break">
-                            <div class="row mx-sm-5 h-100 align-items-center">
-                                <div class="col mx-sm-5 text-sm-start text-center">
-                                    <h1>Test 2!</h1>
-                                    <p>Uzticamība un augsta kvalitāte</p>
-                                    <button class="btn btn-primary">Uz produkciju</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item"
-                        style="background-image:url({{ asset('images/placeholder-tent-1.jpg') }})">
-                        <div class="container h-100 text-break">
-                            <div class="row mx-sm-5 h-100 align-items-center">
-                                <div class="col mx-sm-5 text-sm-start text-center">
-                                    <h1>Test 3 super long text that it shoudl technically break the layout, but
-                                        hopefully not!</h1>
-                                    <p>Uzticamība un augsta kvalitāte</p>
-                                    <button class="btn btn-primary">Uz produkciju</button>
+                                    <h1>@lang('Tenta angāri Jūsu saimniecībai vai uzņēmumam!')</h1>
+                                    <p>@lang('Uzticamība un augsta kvalitāte')</p>
+                                    <button class="btn btn-primary">@lang('Uz produkciju')</button>
                                 </div>
                             </div>
                         </div>
