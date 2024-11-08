@@ -1,5 +1,4 @@
 <x-nav.nav>
-
     <x-nav.dropdown>
         <x-slot name="toggle">@lang('Produkcija')</x-slot>
         <x-slot name="links">
@@ -14,8 +13,7 @@
     <x-nav.dropdown>
         <x-slot name="toggle">@lang('Raksti')</x-slot>
         <x-slot name="links">
-            <x-nav.dropdown-link href="#" :active="request()->is('article')">Raksts 1
-            </x-nav.dropdown-link>
+            <x-nav.dropdown-link href="#" :active="request()->is('article')">Raksts 1</x-nav.dropdown-link>
             <x-nav.dropdown-link href="#">Raksts 2</x-nav.dropdown-link>
         </x-slot>
     </x-nav.dropdown>
@@ -26,11 +24,13 @@
     <x-nav.link href="{{ route('faq') }}" :active="request()->is('faq')">@lang('BUJ')</x-nav.link>
 
     <x-nav.lang>
-        @foreach(config('app.available_locales') as $locale)
-        <x-nav.dropdown-link
-            href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => $locale])}}"
-            :active="app()->getLocale() === $locale">{{ strtoupper($locale) }}</x-nav.dropdown-link>
+        @foreach (config('app.available_locales') as $locale)
+            <x-nav.dropdown-link
+                href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => $locale])}}"
+                :active="app()->getLocale() === $locale"
+            >
+                {{ strtoupper($locale) }}
+            </x-nav.dropdown-link>
         @endforeach
     </x-nav.lang>
-
 </x-nav.nav>
