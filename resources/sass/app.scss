@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // Fonts
 @font-face {
     font-family: 'MyriadPro';
@@ -16,174 +20,174 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
-
-// Bootstrap Icons
-@import 'bootstrap-icons/font/bootstrap-icons.css';
-
-.accordion-item {
-    border: 0;
-    border-radius: 0;
-    border-bottom: solid 2px $storex-grey;
+body {
+    font-family: 'MyriadPro';
 }
 
-.accordion-item:last-of-type {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+.globe-toggled {
+    fill: $storex-red;
+    /* Change to the color you want */
 }
 
-.active li {
-    color: $storex-red !important;
-    font-weight: 500;
-}
-
-.icon-xl {
-    font-size: 64px;
-    color: $storex-red;
-}
-
-.icon {
-    font-size: 48px;
-    color: $storex-red;
-}
-
-.bg-grey {
-    background-color: $storex-light-grey-bg;
-}
-
-.btn-primary {
-    background-color: $storex-red;
-    border-style: none;
-    font-weight: 500;
-    padding: 10px 45px;
-}
-
-.btn-primary:hover {
-    background-color: $storex-red;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-item {
-    height: 400px;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-}
-
-// .carousel-control-next-icon,
-// .carousel-control-prev-icon,
-// .carousel-indicators {
-//     filter: invert(1);
+// .accordion-item {
+//     border: 0;
+//     border-radius: 0;
+//     border-bottom: solid 2px $storex-grey;
 // }
 
-#mobile-carousel .carousel-item {
-    height: auto;
-}
-
-.dropdown .dropdown-menu {
-    border-radius: 0%;
-    border-color: $storex-light-grey;
-}
-
-// .dropdown:hover .dropdown-menu {
-//     display: block;
+// .accordion-item:last-of-type {
+//     border-bottom-right-radius: 0;
+//     border-bottom-left-radius: 0;
 // }
 
-.nav-link {
-    max-width: 120px;
-    border-bottom: solid 1px transparent;
-    padding: 0px 8px;
-}
+// .active li {
+//     color: $storex-red !important;
+//     font-weight: 500;
+// }
 
-.dropdown-item:hover,
-.nav-link:hover {
-    font-weight: 500;
-    color: $storex-red;
-    border-bottom: solid 1px $storex-red;
-}
+// .icon-xl {
+//     font-size: 64px;
+//     color: $storex-red;
+// }
 
-// Overwriting the default selected dropdown item color (blue).
-.dropdown-item.active,
-.dropdown-item:active {
-    background-color: $body-bg;
-}
+// .icon {
+//     font-size: 48px;
+//     color: $storex-red;
+// }
 
-#first-section {
-    background: rgb(228, 228, 228);
-    background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
-}
+// .bg-grey {
+//     background-color: $storex-light-grey-bg;
+// }
 
-hr {
-    color: $storex-light-grey;
-}
+// .btn-primary {
+//     background-color: $storex-red;
+//     border-style: none;
+//     font-weight: 500;
+//     padding: 10px 45px;
+// }
 
-h1,
-h1+p {
-    color: #fff;
-    text-shadow: 0px 5px 20px #000000;
-}
+// .btn-primary:hover {
+//     background-color: $storex-red;
+//     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+// }
 
-h1 {
-    font-size: 48px;
-}
+// .carousel-item {
+//     height: 400px;
+//     position: relative;
+//     background-position: center;
+//     background-size: cover;
+// }
 
-h2,
-h3 {
-    font-size: 28px;
-    color: $storex-grey;
-}
+// // .carousel-control-next-icon,
+// // .carousel-control-prev-icon,
+// // .carousel-indicators {
+// //     filter: invert(1);
+// // }
 
-h4 {
-    font-size: 20px;
-    color: $storex-grey;
-}
+// #mobile-carousel .carousel-item {
+//     height: auto;
+// }
 
-p {
-    font-size: 18px;
-    color: $storex-grey;
-}
+// .dropdown .dropdown-menu {
+//     border-radius: 0%;
+//     border-color: $storex-light-grey;
+// }
 
-nav img {
-    max-width: 25%;
-    min-width: 25%;
-}
+// // .dropdown:hover .dropdown-menu {
+// //     display: block;
+// // }
 
-.storex-red {
-    color: $storex-red;
-}
+// .nav-link {
+//     max-width: 120px;
+//     border-bottom: solid 1px transparent;
+//     padding: 0px 8px;
+// }
 
+// .dropdown-item:hover,
+// .nav-link:hover {
+//     font-weight: 500;
+//     color: $storex-red;
+//     border-bottom: solid 1px $storex-red;
+// }
 
+// // Overwriting the default selected dropdown item color (blue).
+// .dropdown-item.active,
+// .dropdown-item:active {
+//     background-color: $body-bg;
+// }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: 28px;
-    }
+// #first-section {
+//     background: rgb(228, 228, 228);
+//     background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
+// }
 
-    h2 {
-        font-size: 20px;
-    }
+// hr {
+//     color: $storex-light-grey;
+// }
 
-    h3 {
-        font-size: 16px
-    }
+// h1,
+// h1+p {
+//     color: #fff;
+//     text-shadow: 0px 5px 20px #000000;
+// }
 
-    h4 {
-        font-size: 14px;
-    }
+// h1 {
+//     font-size: 48px;
+// }
 
-    p {
-        font-size: 12px;
-    }
+// h2,
+// h3 {
+//     font-size: 28px;
+//     color: $storex-grey;
+// }
 
-    .icon-xl {
-        font-size: 48px;
-        color: $storex-red;
-    }
+// h4 {
+//     font-size: 20px;
+//     color: $storex-grey;
+// }
 
-    .icon {
-        font-size: 32px;
-        color: $storex-red;
-    }
+// p {
+//     font-size: 18px;
+//     color: $storex-grey;
+// }
 
-}
+// nav img {
+//     max-width: 25%;
+//     min-width: 25%;
+// }
+
+// .storex-red {
+//     color: $storex-red;
+// }
+
+// @media (max-width: 767px) {
+//     h1 {
+//         font-size: 28px;
+//     }
+
+//     h2 {
+//         font-size: 20px;
+//     }
+
+//     h3 {
+//         font-size: 16px;
+//     }
+
+//     h4 {
+//         font-size: 14px;
+//     }
+
+//     p {
+//         font-size: 12px;
+//     }
+
+//     .icon-xl {
+//         font-size: 48px;
+//         color: $storex-red;
+//     }
+
+//     .icon {
+//         font-size: 32px;
+//         color: $storex-red;
+//     }
+// }
