@@ -23,7 +23,7 @@
             </div>
         </div>
         <main>
-            <div class="container sm:m-12 sm:mx-auto">
+            <div class="">
                 {{ $slot }}
             </div>
         </main>

@@ -1,10 +1,12 @@
 <div
     id="header"
-    class="flex h-screen items-center sm:h-96"
     style="background-image: url({{ asset('images/placeholder-tent-1.jpg') }})"
+    {{
+        $attributes->merge(['class' => 'flex h-screen items-center sm:h-96'])
+    }}
 >
     <div class="text-center sm:px-32 sm:text-left">
-        <h1 class="font-storex font-medium leading-tight sm:w-3/4">
+        <h1 class="leading-tight sm:w-3/4">
             @lang('Tenta angāri Jūsu saimniecībai vai
             uzņēmumam!')
         </h1>

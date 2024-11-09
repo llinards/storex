@@ -1,15 +1,22 @@
 <x-layout.app>
-    <x-header class="py-4"></x-header>
-    {{-- <div class="d-none d-sm-block container mt-5 px-0"> --}}
-    {{--
-        <x-why-choose-us></x-why-choose-us>
+    <div class="bg-storex-light-grey">
+        <div class="container sm:m-12 sm:mx-auto">
+            <x-header class="py-4"></x-header>
+            <x-why-choose-us class="pb-8 pt-4"></x-why-choose-us>
         </div>
+    </div>
+    <div class="container sm:m-12 sm:mx-auto">
+        <x-products></x-products>
+    </div>
+    {{--
         <div class="d-block d-sm-none container mt-5 px-0">
         <x-why-choose-us-mob></x-why-choose-us-mob>
         </div>
     --}}
-    {{-- </div> --}}
+
     {{--
+        </div>
+        {{--
         <div class="d-none d-sm-block container p-4" id="third-section">
         <x-why-choose-us-text></x-why-choose-us-text>
         </div>
