@@ -22,11 +22,19 @@
 
 body {
     font-family: 'MyriadPro';
+    color: $storex-grey;
 }
 
-.globe-toggled {
+.icon-toggled {
     fill: $storex-red;
-    /* Change to the color you want */
+}
+
+.transform-svg {
+    transform: scaleY(-1);
+}
+
+li {
+    font-weight: 400;
 }
 
 // .accordion-item {

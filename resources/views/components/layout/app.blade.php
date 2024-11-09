@@ -17,8 +17,10 @@
     </head>
 
     <body>
-        <div class="container mx-auto">
-            @include('includes.navbar')
+        <div class="sticky border-b-2">
+            <div class="container mx-auto px-4 sm:px-0">
+                @include('includes.navbar')
+            </div>
         </div>
         <main class="container mx-auto">
             {{ $slot }}

@@ -1,7 +1,9 @@
 <button
     id="lang-dropdown-link"
-    data-dropdown-toggle="lang-dropdown"
-    class="flex w-full items-center justify-between px-3 py-2"
+    data-dropdown-toggle="lang-hover"
+    data-dropdown-trigger="hover"
+    class="inline-flex items-center font-bold"
+    type="button"
 >
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
         <path
@@ -9,12 +11,10 @@
         ></path>
     </svg>
 </button>
+
 <!-- Dropdown menu -->
-<div
-    id="lang-dropdown"
-    class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-storex shadow dark:divide-gray-600 dark:bg-gray-700"
->
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="language-dropdown">
+<div id="lang-hover" class="z-10 hidden w-44 divide-y divide-gray-100 bg-white px-3 py-2 shadow dark:bg-gray-700">
+    <ul class="py-2 text-sm" aria-labelledby="lang-dropdown-link">
         {{ $slot }}
     </ul>
 </div>
