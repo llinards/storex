@@ -1,14 +1,15 @@
 <x-layout.app>
+    <x-header class="py-4"></x-header>
+    {{-- <div class="d-none d-sm-block container mt-5 px-0"> --}}
     {{--
-        <div id="first-section p-4">
-        <x-carousel></x-carousel>
-        <div class="d-none d-sm-block container mt-5 px-0">
         <x-why-choose-us></x-why-choose-us>
         </div>
         <div class="d-block d-sm-none container mt-5 px-0">
         <x-why-choose-us-mob></x-why-choose-us-mob>
         </div>
-        </div>
+    --}}
+    {{-- </div> --}}
+    {{--
         <div class="d-none d-sm-block container p-4" id="third-section">
         <x-why-choose-us-text></x-why-choose-us-text>
         </div>

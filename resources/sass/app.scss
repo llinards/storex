@@ -25,16 +25,46 @@ body {
     color: $storex-grey;
 }
 
-.icon-toggled {
-    fill: $storex-red;
+h1,
+h1 + p {
+    color: #fff;
+    text-shadow: 0px 5px 20px #000000;
 }
 
-.transform-svg {
-    transform: scaleY(-1);
+h1 {
+    font-size: 48px;
+}
+
+h2,
+h3 {
+    font-size: 28px;
+    color: $storex-grey;
+}
+
+h4 {
+    font-size: 20px;
+    color: $storex-grey;
+}
+
+.icon-hover:hover {
+    fill: $storex-red;
 }
 
 li {
     font-weight: 400;
+}
+
+main {
+    background-color: $storex-light-grey;
+}
+
+p {
+    font-size: 18px;
+    color: $storex-grey;
+}
+
+.transform-svg {
+    transform: scaleY(-1);
 }
 
 // .accordion-item {
@@ -79,12 +109,10 @@ li {
 //     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 // }
 
-// .carousel-item {
-//     height: 400px;
-//     position: relative;
-//     background-position: center;
-//     background-size: cover;
-// }
+#header {
+    background-position: center;
+    background-size: cover;
+}
 
 // // .carousel-control-next-icon,
 // // .carousel-control-prev-icon,
@@ -129,36 +157,6 @@ li {
 //     background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
 // }
 
-// hr {
-//     color: $storex-light-grey;
-// }
-
-// h1,
-// h1+p {
-//     color: #fff;
-//     text-shadow: 0px 5px 20px #000000;
-// }
-
-// h1 {
-//     font-size: 48px;
-// }
-
-// h2,
-// h3 {
-//     font-size: 28px;
-//     color: $storex-grey;
-// }
-
-// h4 {
-//     font-size: 20px;
-//     color: $storex-grey;
-// }
-
-// p {
-//     font-size: 18px;
-//     color: $storex-grey;
-// }
-
 // nav img {
 //     max-width: 25%;
 //     min-width: 25%;
@@ -168,26 +166,27 @@ li {
 //     color: $storex-red;
 // }
 
-// @media (max-width: 767px) {
-//     h1 {
-//         font-size: 28px;
-//     }
+@media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
 
-//     h2 {
-//         font-size: 20px;
-//     }
+    h2 {
+        font-size: 20px;
+    }
 
-//     h3 {
-//         font-size: 16px;
-//     }
+    h3 {
+        font-size: 16px;
+    }
 
-//     h4 {
-//         font-size: 14px;
-//     }
+    h4 {
+        font-size: 14px;
+    }
 
-//     p {
-//         font-size: 12px;
-//     }
+    p {
+        font-size: 12px;
+    }
+}
 
 //     .icon-xl {
 //         font-size: 48px;
@@ -198,4 +197,3 @@ li {
 //         font-size: 32px;
 //         color: $storex-red;
 //     }
-// }
