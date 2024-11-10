@@ -17,11 +17,15 @@
     </head>
 
     <body>
-        <div class="container mx-auto">
-            @include('includes.navbar')
+        <div class="fixed w-full border-b-2 bg-white sm:relative">
+            <div class="container mx-auto px-4 sm:px-0">
+                @include('includes.navbar')
+            </div>
         </div>
-        <main class="container mx-auto">
-            {{ $slot }}
+        <main>
+            <div class="">
+                {{ $slot }}
+            </div>
         </main>
         <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
     </body>
