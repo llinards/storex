@@ -1,4 +1,4 @@
-<div class="bg-white p-4 sm:p-0">
+<div class="bg-white px-4 sm:p-0">
     <div class="flex items-center justify-between border-b-2 border-storex-light-grey">
         <h3>@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a href="#" class="border-b-2 border-transparent font-bold text-storex-red hover:border-storex-red sm:text-xl">
