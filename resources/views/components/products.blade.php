@@ -1,13 +1,16 @@
-<div class="bg-white p-4 sm:p-0">
+<div class="bg-white px-4 sm:p-0">
     <div class="flex items-center justify-between border-b-2 border-storex-light-grey">
         <h3>@lang('Tenta angāru veidi un aksesuāri')</h3>
-        <a href="#" class="border-b-2 border-transparent font-bold text-storex-red hover:border-storex-red sm:text-xl">
+        <a
+            href="/products"
+            class="border-b-2 border-transparent font-bold text-storex-red hover:border-storex-red sm:text-xl"
+        >
             @lang('Skatīt
             visus')
         </a>
     </div>
-    <div class="gap-10 py-4 sm:grid sm:grid-cols-4 sm:p-0 sm:py-4">
-        <x-product-card>
+    <div class="gap-10 py-4 sm:p-0 sm:py-4 md:grid md:grid-cols-2 lg:grid-cols-4">
+        <x-product-card href="/tenta-angari">
             <x-slot name="productImage">
                 {{ asset('images/placeholder-tent-1.jpg') }}
             </x-slot>
@@ -17,7 +20,7 @@
             </x-slot>
             <x-slot name="productLink">Uzzināt vairāk</x-slot>
         </x-product-card>
-        <x-product-card>
+        <x-product-card href="/konteineru-tenta-angari">
             <x-slot name="productImage">
                 {{ asset('images/placeholder-tent-1.jpg') }}
             </x-slot>
@@ -27,7 +30,7 @@
             </x-slot>
             <x-slot name="productLink">Uzzināt vairāk</x-slot>
         </x-product-card>
-        <x-product-card>
+        <x-product-card href="/industrialas-siltumnicas">
             <x-slot name="productImage">
                 {{ asset('images/placeholder-tent-1.jpg') }}
             </x-slot>
@@ -37,7 +40,7 @@
             </x-slot>
             <x-slot name="productLink">Uzzināt vairāk</x-slot>
         </x-product-card>
-        <x-product-card>
+        <x-product-card href="/aksesuari-tenta-angariem">
             <x-slot name="productImage">
                 {{ asset('images/placeholder-tent-1.jpg') }}
             </x-slot>
