@@ -1,8 +1,6 @@
 <div
     style="background-image: url({{ $backgroundImage ?? '' }})"
-    {{
-        $attributes->merge(['class' => 'flex h-screen items-center sm:h-96 header'])
-    }}
+    {{ $attributes->merge(['class' => 'flex h-screen items-center sm:h-96 header']) }}
 >
     <div class="text-center sm:px-32 sm:text-left">
         <h1 class="leading-tight sm:w-3/4">
