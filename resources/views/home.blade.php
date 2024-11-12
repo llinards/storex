@@ -18,4 +18,9 @@
             <x-faq></x-faq>
         </div>
     </div>
+    <div class="py-4">
+        <div class="my-8 sm:m-12 sm:mx-auto">
+            @include('includes.reviews-desktop')
+        </div>
+    </div>
 </x-layout.app>
