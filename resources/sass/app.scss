@@ -47,6 +47,11 @@ h4 {
     font-size: 20px;
 }
 
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .icon,
 .icon-hover:hover {
     fill: $storex-red;
@@ -63,6 +68,13 @@ li {
 p {
     font-size: 18px;
     color: $storex-grey;
+}
+
+footer,
+footer p,
+footer a {
+    color: white;
+    font-size: 18px;
 }
 
 .transform-svg {
