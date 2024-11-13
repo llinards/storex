@@ -180,28 +180,6 @@ footer a {
 //     color: $storex-red;
 // }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    h4 {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-}
-
 //     .icon-xl {
 //         font-size: 48px;
 //         color: $storex-red;
@@ -211,3 +189,6 @@ footer a {
 //         font-size: 32px;
 //         color: $storex-red;
 //     }
+
+// Media Queries
+@import 'media-queries';
