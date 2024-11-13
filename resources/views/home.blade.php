@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="container sm:m-12 sm:mx-auto">
-        <x-products></x-products>
+        <x-products.wrapper></x-products.wrapper>
     </div>
     <div class="bg-storex-light-grey md:py-4">
         <div class="container mb-8 sm:mx-auto md:my-8">
