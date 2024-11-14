@@ -47,6 +47,11 @@ h4 {
     font-size: 20px;
 }
 
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .icon,
 .icon-hover:hover {
     fill: $storex-red;
@@ -63,6 +68,13 @@ li {
 p {
     font-size: 18px;
     color: $storex-grey;
+}
+
+footer,
+footer p,
+footer a {
+    color: white;
+    font-size: 18px;
 }
 
 .transform-svg {
@@ -168,28 +180,6 @@ p {
 //     color: $storex-red;
 // }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    h4 {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-}
-
 //     .icon-xl {
 //         font-size: 48px;
 //         color: $storex-red;
@@ -199,3 +189,6 @@ p {
 //         font-size: 32px;
 //         color: $storex-red;
 //     }
+
+// Media Queries
+@import 'media-queries';

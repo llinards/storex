@@ -1,4 +1,4 @@
-<li class="py-1">
+<li class="px-4 py-1 md:px-0">
     @props(['active' => false, 'type' => 'a'])
     <a
         href="#"

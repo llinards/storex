@@ -1,0 +1,37 @@
+@media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4,
+    h5 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    footer,
+    footer p,
+    footer a {
+        color: white;
+        font-size: 14px;
+    }
+
+    .x-footer-links {
+        order: 2;
+    }
+
+    #all-rights {
+        order: 1;
+    }
+}

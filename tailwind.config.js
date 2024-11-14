@@ -17,7 +17,7 @@ export default {
             },
             fontFamily: {
                 'storex': ['MyriadPro', 'sans-serif']
-            }
+            },
         },
     },
     plugins: [
