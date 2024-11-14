@@ -26,7 +26,7 @@ body {
 }
 
 h1,
-h1 + p {
+h1+p {
     color: #fff;
     text-shadow: 0px 5px 20px #000000;
 }
@@ -50,6 +50,10 @@ h4 {
 h5 {
     font-size: 18px;
     font-weight: 500;
+}
+
+.h-104 {
+    height: 28rem;
 }
 
 .icon,
