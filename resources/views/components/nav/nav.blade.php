@@ -4,14 +4,16 @@
             <img src="{{ asset('images/storex-logo.png') }}" class="w-32 sm:w-48" alt="Storex Logo" />
         </a>
         <button
+            id="hamburger-menu"
             data-collapse-toggle="navbar-multi-level"
             type="button"
-            class="inline-flex h-10 w-10 items-center justify-center text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+            class="inline-flex h-10 w-10 items-center justify-center text-sm md:hidden"
             aria-controls="navbar-multi-level"
             aria-expanded="false"
         >
             <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path
+                    id="hamburger-path"
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
