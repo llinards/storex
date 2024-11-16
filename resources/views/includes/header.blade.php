@@ -1,16 +1,16 @@
-<x-banner href="/test">
+<x-banner>
     <x-slot name="backgroundImage">{{ asset('images/placeholder-tent-1.jpg') }}</x-slot>
     <x-slot name="heading">@lang('Tenta angāri Jūsu saimniecībai vai uzņēmumam!')</x-slot>
     <x-slot name="subText">@lang('Uzticamība un augsta kvalitāte')</x-slot>
     <x-slot name="btnOne">
         <x-btn href="#">@lang('Uz produkciju')</x-btn>
     </x-slot>
-    <x-slot name="btnTwo">
+    <x-slot name="btnTwo" class="hidden">
         <x-btn href="tel:+37122338346" class="flex items-center">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="24"
+                height="24"
                 fill="#ffffff"
                 viewBox="0 0 256 256"
                 class="pr-1"
