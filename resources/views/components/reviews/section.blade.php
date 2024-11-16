@@ -1,58 +1,44 @@
-<h2 class="mb-8 text-center">@lang('STOREX klientu atsauksmes')</h2>
+{{-- DESKTOP VIEW --}}
 
-<div class="relative flex h-48 w-full items-center justify-center" data-carousel="static">
-    {{ $slot }}
+<h2 class="mb-4 text-center lg:mb-12">@lang('STOREX klientu atsauksmes')</h2>
+
+<div id="controls-carousel" class="hidden grid-cols-12 pb-4 lg:grid" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative order-2 col-span-10 h-32 overflow-hidden rounded-lg">
+        {{-- 3 REVIEWS PER ITEM --}}
+
+        <!-- Item 1 -->
+        <div class="grid grid-cols-3 items-center duration-300 ease-in-out" data-carousel-item="active">
+            <x-reviews.content.review-1></x-reviews.content.review-1>
+            <x-reviews.content.review-2></x-reviews.content.review-2>
+            <x-reviews.content.review-3></x-reviews.content.review-3>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="grid grid-cols-3 items-center duration-300 ease-in-out" data-carousel-item></div>
+    </div>
+    <x-reviews.controls></x-reviews.controls>
+</div>
+
+{{-- MOBILE VIEW --}}
+
+<div id="controls-carousel" class="grid grid-cols-12 pb-4 lg:hidden" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative order-2 col-span-10 h-32 overflow-hidden rounded-lg">
+        {{-- 1 REVIEW PER ITEM --}}
+        <!-- Item 1 -->
+        <div class="flex items-center duration-300 ease-in-out" data-carousel-item="active">
+            <x-reviews.content.review-1></x-reviews.content.review-1>
+        </div>
+        <!-- Item 2 -->
+        <div class="flex items-center duration-300 ease-in-out" data-carousel-item>
+            <x-reviews.content.review-2></x-reviews.content.review-2>
+        </div>
+        <!-- Item 3 -->
+        <div class="flex items-center duration-300 ease-in-out" data-carousel-item>
+            <x-reviews.content.review-3></x-reviews.content.review-3>
+        </div>
+    </div>
     <!-- Slider controls -->
-    <button
-        type="button"
-        class="group absolute left-0 top-1/2 z-30 flex h-full -translate-y-1/2 transform cursor-pointer items-center justify-center px-4 focus:outline-none"
-        data-carousel-prev
-    >
-        <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 shadow-lg group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
-        >
-            <svg
-                class="h-4 w-4 text-storex-red dark:text-gray-800 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-            >
-                <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 1 1 5l4 4"
-                />
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button
-        type="button"
-        class="group absolute right-0 top-1/2 z-30 flex h-full -translate-y-1/2 transform cursor-pointer items-center justify-center px-4 focus:outline-none"
-        data-carousel-next
-    >
-        <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 shadow-lg group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
-        >
-            <svg
-                class="h-4 w-4 text-storex-red dark:text-gray-800 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-            >
-                <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 9 4-4-4-4"
-                />
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
+    <x-reviews.controls></x-reviews.controls>
 </div>
