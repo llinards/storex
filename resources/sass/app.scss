@@ -5,14 +5,14 @@
 // Fonts
 @font-face {
     font-family: 'MyriadPro';
-    src: url('/public/fonts/myriadpro-regular.otf') format('opentype');
+    src: url(/public/fonts/myriadpro-regular.otf) format('opentype');
     font-style: normal;
-    font-weight: 400;
+    font-weight: 00;
 }
 
 @font-face {
     font-family: 'MyriadPro';
-    src: url('/public/fonts/myriadpro-bold.otf') format('opentype');
+    src: url(/public/fonts/myriadpro-bold.otf) format('opentype');
     font-style: normal;
     font-weight: 500;
 }
@@ -20,7 +20,7 @@
 // Variables
 @import 'variables';
 
-body {
+html {
     font-family: 'MyriadPro';
     color: $storex-grey;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 h1,
-h1+p {
+h1 + p {
     color: #fff;
     text-shadow: 0px 5px 20px #000000;
 }

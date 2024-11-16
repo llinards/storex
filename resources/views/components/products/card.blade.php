@@ -4,9 +4,9 @@
     </a>
     <div class="flex flex-grow flex-col p-5">
         <div class="flex-grow">
-            <h3 class="font-bold tracking-tight">
+            <h4 class="font-bold tracking-tight">
                 {{ $productHeading }}
-            </h3>
+            </h4>
             <p>
                 {{ $productDescription }}
             </p>
