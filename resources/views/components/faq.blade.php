@@ -6,7 +6,7 @@
     <div
         id="accordion-flush"
         data-accordion="collapse"
-        class="px-4 sm:w-3/4"
+        class="w-full px-4 md:w-3/4"
         data-active-classes="text-storex-red"
         data-inactive-classes="text-storex-grey border-b-2 border-storex-grey"
     >
