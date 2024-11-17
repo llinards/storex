@@ -1,12 +1,12 @@
 <div class="px-4 md:px-0">
-    <h2 id="faq" class="border-b-2 py-4 text-center md:border-b-0 md:pt-16">@lang('Biežāk uzdotie jautājumi')</h2>
+    <h2 id="faq" class="mb-4 border-b-2 text-center md:border-b-0">@lang('Biežāk uzdotie jautājumi')</h2>
 </div>
 
 <div class="flex justify-center">
     <div
         id="accordion-flush"
         data-accordion="collapse"
-        class="px-4 sm:w-3/4"
+        class="w-full px-4 md:w-3/4"
         data-active-classes="text-storex-red"
         data-inactive-classes="text-storex-grey border-b-2 border-storex-grey"
     >

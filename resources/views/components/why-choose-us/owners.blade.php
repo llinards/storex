@@ -2,7 +2,7 @@
     <div class="items-center gap-24 xl:grid xl:grid-cols-2">
         <img src="{{ asset('images/storex-owners.jpg') }}" alt="Storex Owners" class="max-h-full" />
         <div class="p-4">
-            <h2 class="text-center text-storex-red sm:mb-4 md:text-left">
+            <h2 class="text-center text-storex-red sm:my-4 md:text-left">
                 @lang('Kāpēc izvēlēties STOREX angāra iegādei?')
             </h2>
             <p class="py-2 md:text-xl">
