@@ -58,4 +58,4 @@
     </x-reviews.section>
 --}}
 
-<x-reviews.content.wrapper-2></x-reviews.content.wrapper-2>
+{{--<x-reviews.content.wrapper-2></x-reviews.content.wrapper-2>--}}
