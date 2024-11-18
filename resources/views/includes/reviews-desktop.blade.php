@@ -28,7 +28,7 @@
     </x-slot>
     </x-reviews.content>
     </x-reviews.wrapper>
-    
+
     <x-reviews.wrapper>
     <x-reviews.content>
     <x-slot name="heading">John Doe</x-slot>
@@ -58,4 +58,4 @@
     </x-reviews.section>
 --}}
 
-<x-reviews.wrapper-2></x-reviews.wrapper-2>
+<x-reviews.content.wrapper-2></x-reviews.content.wrapper-2>
