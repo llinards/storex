@@ -1,5 +1,5 @@
 <footer class="bg-storex-grey">
-    <div class="container mx-auto px-4 sm:px-0">
+    <div class="container mx-auto px-4 lg:px-6 xl:px-8">
         <div class="border-b-2 border-white">
             <a href="/" class="flex items-center">
                 <img

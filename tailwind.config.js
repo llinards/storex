@@ -11,6 +11,7 @@ export default {
             colors: {
                 'storex-red': '#ee3439',
                 'storex-grey': '#353535',
+                'storex-inactive-grey': '#7E898C',
                 'storex-light-grey': '#F7F7F7',
                 'storex-medium-grey': '#eff0ee',
                 'storex-medium-grey-bg': '#eff0eecc',
@@ -18,6 +19,9 @@ export default {
             fontFamily: {
                 'storex': ['MyriadPro', 'sans-serif']
             },
+            borderWidth: {
+                '1': '1px',
+            }
         },
     },
     plugins: [

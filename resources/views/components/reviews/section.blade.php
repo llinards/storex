@@ -1,6 +1,6 @@
 {{-- DESKTOP VIEW --}}
 
-<h2 class="mb-4 text-center lg:mb-12">@lang('STOREX klientu atsauksmes')</h2>
+<h2 class="mb-4 border-b-1 text-center sm:border-none lg:mb-12">@lang('STOREX klientu atsauksmes')</h2>
 
 <div id="controls-carousel" class="hidden grid-cols-12 pb-4 lg:grid" data-carousel="static">
     <!-- Carousel wrapper -->

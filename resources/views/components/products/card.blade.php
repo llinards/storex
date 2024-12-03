@@ -1,4 +1,4 @@
-<div class="border-1 max-w my-8 flex flex-col rounded-lg border-storex-light-grey bg-white shadow sm:my-0">
+<div class="max-w my-8 flex flex-col rounded-lg border-1 border-storex-light-grey bg-white shadow sm:my-0">
     <a {{ $attributes }}>
         <img class="rounded-t-lg" src="{{ $productImage ?? '' }}" alt="" />
     </a>
@@ -12,7 +12,7 @@
             </p>
         </div>
     </div>
-    <a class="mt-auto block px-5 pb-5 font-bold text-storex-red sm:text-xl" {{ $attributes }}>
+    <a class="mt-auto block px-5 pb-5 font-bold text-storex-red" {{ $attributes }}>
         <span class="flex items-center justify-end space-x-2">
             <span>{{ $productLink }}</span>
             <svg

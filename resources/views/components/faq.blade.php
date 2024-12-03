@@ -1,14 +1,14 @@
-<div class="px-4 md:px-0">
-    <h2 id="faq" class="mb-4 border-b-2 text-center md:border-b-0">@lang('Biežāk uzdotie jautājumi')</h2>
+<div>
+    <h2 id="faq" class="mb-4 border-b-1 text-center sm:border-none">@lang('Biežāk uzdotie jautājumi')</h2>
 </div>
 
 <div class="flex justify-center">
     <div
         id="accordion-flush"
         data-accordion="collapse"
-        class="w-full px-4 md:w-3/4"
+        class="w-full md:w-3/4"
         data-active-classes="text-storex-red"
-        data-inactive-classes="text-storex-grey border-b-2 border-storex-grey"
+        data-inactive-classes="text-storex-grey border-b-1 border-storex-grey"
     >
         <h3 id="accordion-flush-heading-1">
             <button
@@ -40,7 +40,7 @@
 
         <div
             id="accordion-flush-body-1"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-1"
         >
             <div class="py-3">
@@ -82,7 +82,7 @@
 
         <div
             id="accordion-flush-body-2"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-2"
         >
             <div class="py-3">
@@ -123,7 +123,7 @@
 
         <div
             id="accordion-flush-body-3"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-3"
         >
             <div class="py-3">
@@ -164,7 +164,7 @@
 
         <div
             id="accordion-flush-body-4"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-4"
         >
             <div class="py-3">
@@ -204,7 +204,7 @@
 
         <div
             id="accordion-flush-body-5"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-5"
         >
             <div class="py-3">
@@ -245,7 +245,7 @@
 
         <div
             id="accordion-flush-body-6"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-6"
         >
             <div class="py-3">
@@ -286,7 +286,7 @@
 
         <div
             id="accordion-flush-body-7"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-7"
         >
             <div class="py-3">
@@ -327,7 +327,7 @@
 
         <div
             id="accordion-flush-body-8"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-8"
         >
             <div class="py-3">
@@ -368,7 +368,7 @@
 
         <div
             id="accordion-flush-body-9"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-9"
         >
             <div class="py-3">
@@ -409,7 +409,7 @@
 
         <div
             id="accordion-flush-body-10"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-10"
         >
             <div class="py-3">
@@ -450,7 +450,7 @@
 
         <div
             id="accordion-flush-body-11"
-            class="hidden border-b-2 border-storex-red"
+            class="hidden border-b-1 border-storex-red"
             aria-labelledby="accordion-flush-heading-11"
         >
             <div class="py-3">
