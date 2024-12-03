@@ -1,10 +1,7 @@
 <div class="hidden bg-white px-4 sm:block sm:p-0">
     <div class="flex items-center justify-between border-b-2 border-storex-light-grey">
         <h3>@lang('Tenta angāru veidi un aksesuāri')</h3>
-        <a
-            href="/products"
-            class="border-b-2 border-transparent font-bold text-storex-red hover:border-storex-red sm:text-lg md:text-xl"
-        >
+        <a href="/products" class="border-b-2 border-transparent font-bold text-storex-red hover:border-storex-red">
             @lang('Skatīt
             visus')
         </a>
@@ -55,7 +52,7 @@
     <!-- Carousel wrapper -->
     <div class="h-104 relative order-2 col-span-10 overflow-hidden rounded-lg">
         <!-- Item 1 -->
-        <div class="flex hidden items-center p-4 duration-300 ease-in-out" data-carousel-item="active">
+        <div class="flex hidden items-center duration-300 ease-in-out" data-carousel-item="active">
             <div>
                 <x-products.card href="/tenta-angari">
                     <x-slot name="productImage">
@@ -70,7 +67,7 @@
             </div>
         </div>
         <!-- Item 2 -->
-        <div class="flex hidden items-center p-4 duration-300 ease-in-out">
+        <div class="flex hidden items-center duration-300 ease-in-out">
             <x-products.card href="/konteineru-tenta-angari">
                 <x-slot name="productImage">
                     {{ asset('images/placeholder-tent-1.jpg') }}
@@ -84,7 +81,7 @@
             </x-products.card>
         </div>
         <!-- Item 3 -->
-        <div class="flex hidden items-center p-4 duration-300 ease-in-out" data-carousel-item>
+        <div class="flex hidden items-center duration-300 ease-in-out" data-carousel-item>
             <x-products.card href="/industrialas-siltumnicas">
                 <x-slot name="productImage">
                     {{ asset('images/placeholder-tent-1.jpg') }}
@@ -97,7 +94,7 @@
             </x-products.card>
         </div>
         <!-- Item 4 -->
-        <div class="flex hidden items-center p-4 duration-300 ease-in-out" data-carousel-item>
+        <div class="flex hidden items-center duration-300 ease-in-out" data-carousel-item>
             <x-products.card href="/aksesuari-tenta-angariem">
                 <x-slot name="productImage">
                     {{ asset('images/placeholder-tent-1.jpg') }}

@@ -1,12 +1,12 @@
-<div class="bg-storex-medium-grey-bg py-8 sm:p-20">
+<div class="bg-storex-medium-grey-bg py-8 sm:px-12 md:px-20 lg:py-12">
     <ul
-        class="flex justify-center text-center"
+        class="flex justify-center border-t-1 border-storex-grey pb-4 text-center sm:border-none"
         data-tabs-toggle="#default-tab"
         role="tablist"
-        data-tabs-active-classes="text-storex-red border-b-2 border-storex-red font-bold"
-        data-tabs-inactive-classes="text-storex-grey"
+        data-tabs-active-classes="text-storex-red border-b-1 border-storex-red"
+        data-tabs-inactive-classes="text-storex-inactive-grey"
     >
-        <li class="mx-4">
+        <li class="mx-4 pt-2">
             <button
                 id="agriculture-tab"
                 data-tabs-target="#agriculture"
@@ -14,12 +14,12 @@
                 role="tab"
                 aria-controls="agriculture"
                 aria-selected="true"
-                class="text-wrap py-1 hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap py-1 font-bold hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri lauksaimniekiem
             </button>
         </li>
-        <li class="mx-4">
+        <li class="mx-4 pt-2">
             <button
                 id="business-tab"
                 data-tabs-target="#business"
@@ -27,15 +27,15 @@
                 role="tab"
                 aria-controls="business"
                 aria-selected="false"
-                class="text-wrap py-1 hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap py-1 font-bold hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri biznesam
             </button>
         </li>
     </ul>
     <div id="default-tab">
-        <div class="hidden p-4" id="agriculture" role="tabpanel" aria-labelledby="agriculture-tab">
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+        <div class="hidden px-4 lg:px-6 xl:px-8" id="agriculture" role="tabpanel" aria-labelledby="agriculture-tab">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@
                     </p>
                 </div>
             </div>
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
                     </p>
                 </div>
             </div>
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -103,8 +103,8 @@
                 </div>
             </div>
         </div>
-        <div class="hidden text-wrap p-4" id="business" role="tabpanel" aria-labelledby="business-tab">
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+        <div class="hidden text-wrap px-4 lg:px-6 xl:px-8" id="business" role="tabpanel" aria-labelledby="business-tab">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@
                     </p>
                 </div>
             </div>
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@
                     </p>
                 </div>
             </div>
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 md:flex md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-<nav class="bg-white py-4">
+<nav class="bg-white py-4 sm:px-4 lg:px-6 xl:px-8">
     <div class="mx-auto flex flex-wrap items-center justify-between">
         <a href="/" class="flex items-center">
             <img src="{{ asset('images/storex-logo.png') }}" class="w-32 sm:w-48" alt="Storex Logo" />

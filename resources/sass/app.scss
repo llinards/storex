@@ -30,7 +30,7 @@ html {
 }
 
 h1,
-h1+p {
+h1 + p {
     color: #fff;
     text-shadow: 0px 5px 20px #000000;
 }
@@ -44,17 +44,17 @@ h2,
 h3 {
     font-size: 28px;
     color: $storex-grey;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h4 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h5 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .h-104 {

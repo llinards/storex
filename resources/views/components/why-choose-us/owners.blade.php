@@ -1,8 +1,8 @@
-<div class="bg-storex-medium-grey-bg sm:p-20">
+<div class="bg-storex-medium-grey-bg p-4 sm:p-20">
     <div class="items-center gap-24 lg:grid lg:grid-cols-2">
         <img src="{{ asset('images/storex-owners.jpg') }}" alt="Storex Owners" class="max-h-full" />
-        <div class="p-4">
-            <h2 class="text-center text-storex-red sm:my-4 md:text-left">
+        <div class="mt-4">
+            <h2 class="text-center text-storex-red md:text-left">
                 @lang('Kāpēc izvēlēties STOREX angāra iegādei?')
             </h2>
             <p class="py-2 md:text-xl">
@@ -18,7 +18,7 @@
                 nepieciešama palīdzība, mūsu pieredzējušie speciālisti vienmēr būs pieejami bezmaksas
                 konsultācijām.')
             </p>
-            <p class="py-2 md:text-xl">
+            <p class="pt-2 md:text-xl">
                 @lang('Mūsu prioritāte ir apmierināts klients, kurš saņem tieši to, kas viņam nepieciešams –
                 kvalitatīvu risinājumu, kas pilnībā atbilst viņa vajadzībām.')
             </p>
