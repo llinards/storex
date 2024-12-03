@@ -9,19 +9,18 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CategoryTranslationFactory extends Factory
 {
-  /**
-   * Define the model's default state.
-   *
-   * @return array<string, mixed>
-   */
-  public function definition(): array
-  {
-    $locales = config('app.available_locales');
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        $locales = config('app.available_locales');
 
-    return [
-        'title'       => $this->faker->sentence(3),
-        'description' => $this->faker->paragraph,
-
-    ];
-  }
+        return [
+            'title'       => $this->faker->sentence(3),
+            'description' => $this->faker->paragraph,
+        ];
+    }
 }
