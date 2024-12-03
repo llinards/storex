@@ -12,7 +12,25 @@
             </p>
         </div>
     </div>
-    <a class="mt-auto block px-5 pb-5 text-right font-bold text-storex-red sm:text-xl" {{ $attributes }}>
-        {{ $productLink }}
+    <a class="mt-auto block px-5 pb-5 font-bold text-storex-red sm:text-xl" {{ $attributes }}>
+        <span class="flex items-center justify-end space-x-2">
+            <span>{{ $productLink }}</span>
+            <svg
+                class="h-3 w-3 text-storex-red"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="m1 9 4-4-4-4"
+                />
+            </svg>
+        </span>
     </a>
 </div>

@@ -9,7 +9,7 @@
             visus')
         </a>
     </div>
-    <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:py-4 xl:grid-cols-4">
+    <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:py-4 md:grid-cols-3 xl:grid-cols-4">
         <x-products.card href="/tenta-angari">
             <x-slot name="productImage">
                 {{ asset('images/placeholder-tent-1.jpg') }}

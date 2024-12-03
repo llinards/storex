@@ -1,6 +1,6 @@
 <x-layout.app>
     <div class="bg-storex-light-grey">
-        <div class="container sm:m-12 sm:mx-auto">
+        <div class="container pb-8 pt-4 sm:m-12 sm:mx-auto">
             @include('includes.header')
             <x-why-choose-us.wrapper class="mb-8 mt-4"></x-why-choose-us.wrapper>
         </div>

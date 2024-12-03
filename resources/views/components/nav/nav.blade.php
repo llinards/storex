@@ -7,7 +7,7 @@
             id="hamburger-menu"
             data-collapse-toggle="navbar-multi-level"
             type="button"
-            class="inline-flex h-10 w-10 items-center justify-center text-sm md:hidden"
+            class="inline-flex h-10 w-10 items-center justify-center text-sm lg:hidden"
             aria-controls="navbar-multi-level"
             aria-expanded="false"
         >
@@ -22,7 +22,7 @@
                 />
             </svg>
         </button>
-        <div class="mt-4 hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <div class="mt-4 hidden w-full md:w-auto lg:block" id="navbar-multi-level">
             <ul
                 class="mx-auto flex flex-col items-center bg-storex-light-grey p-4 sm:bg-inherit md:flex-row md:space-x-8"
             >
