@@ -1,4 +1,4 @@
-<div class="bg-storex-medium-grey-bg p-4 sm:p-20">
+<div class="bg-storex-medium-grey-bg px-4 py-8 sm:p-20">
     <div class="items-center gap-24 lg:grid lg:grid-cols-2">
         <img src="{{ asset('images/storex-owners.jpg') }}" alt="Storex Owners" class="max-h-full" />
         <div class="mt-4">
