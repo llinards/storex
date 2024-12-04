@@ -27,6 +27,11 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/aktualitates', function () {
         return view('article');
     })->name('article');
+
+
+    Route::get('/element-test', function () {
+        return view('element-test');
+    })->name('element-test');
 });
 
 Route::get('/', function () {

@@ -204,5 +204,115 @@ footer a {
 //         color: $storex-red;
 //     }
 
+
+// CAROUSEL
+
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+// .gallery {
+//     background: #EEE;
+// }
+
+// .gallery-cell {
+//     width: 66%;
+//     height: 200px;
+//     margin-right: 10px;
+//     background: #8C8;
+//     counter-increment: gallery-cell;
+// }
+
+// /* cell number */
+// .gallery-cell:before {
+//     display: block;
+//     text-align: center;
+
+//     line-height: 200px;
+//     font-size: 80px;
+//     color: white;
+// }
+
+// Custom styles
+.carousel-cell {
+    width: 80%;
+    border-radius: 8px; // Optional: make the cells round
+    padding: 15px; // Add padding to the cells
+    counter-increment: gallery-cell;
+    counter-increment: carousel-cell;
+
+}
+
+.carousel {
+    margin-top: 20px; // Add some spacing above the carousel
+
+}
+
+.flickity-button-icon {
+    color: $storex-red
+}
+
+.arrow {
+    size: 2px;
+}
+
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    /* Adjust width for the gradient */
+    z-index: 10;
+    pointer-events: none;
+    /* Prevent interaction with the fade overlay */
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.carousel::before {
+    left: 0;
+    /* Left side gradient */
+}
+
+.carousel::after {
+    right: 0;
+    /* Right side gradient */
+    transform: rotate(180deg);
+    /* Flip the gradient direction */
+}
+
+.carousel {
+    position: relative;
+    /* Needed for positioning pseudo-elements */
+}
+
+.squeezed-text {
+    display: -webkit-box;
+    /* Required for multi-line clamping */
+    -webkit-box-orient: vertical;
+    /* Make the box vertical */
+    -webkit-line-clamp: 2;
+    /* Display 2 lines of text */
+    overflow: hidden;
+    /* Hide anything after the 2 lines */
+    text-overflow: ellipsis;
+    /* Add ellipsis if needed */
+    line-height: 1.5;
+    /* Adjust line height for readability */
+    height: auto;
+    /* Let the container adjust based on content */
+}
+
+.dot.is-selected {
+    background-color: $storex-red;
+}
+
 // Media Queries
 @import 'media-queries';
