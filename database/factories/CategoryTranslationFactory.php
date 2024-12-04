@@ -19,7 +19,7 @@ class CategoryTranslationFactory extends Factory
         $locales = config('app.available_locales');
 
         return [
-            'title'       => $this->faker->sentence(3),
+            'title' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph,
         ];
     }

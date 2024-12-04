@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            'name'  => 'Test User',
+            'name' => 'Test User',
             'email' => 'test@test.com',
         ]);
 
@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             foreach (config('app.available_locales') as $locale) {
                 CategoryTranslation::factory()->create([
                     'category_id' => $category->id,
-                    'locale'      => $locale,
+                    'locale' => $locale,
                 ]);
             }
         }
