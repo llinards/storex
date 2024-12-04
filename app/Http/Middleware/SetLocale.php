@@ -11,11 +11,11 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $locale        = $request->segment(1);
-        $validLocales  = config('app.available_locales');
+        $locale = $request->segment(1);
+        $validLocales = config('app.available_locales');
         $defaultLocale = env('APP_LOCALE');
 
-        if ( ! in_array($locale, $validLocales, true)) {
+        if (! in_array($locale, $validLocales, true)) {
             return redirect($defaultLocale);
         }
 

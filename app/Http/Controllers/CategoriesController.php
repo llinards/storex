@@ -13,4 +13,3 @@ class CategoriesController extends Controller
         return view('home', compact('categories'));
     }
 }
-
