@@ -1,7 +1,5 @@
 <x-layout.app>
-
     <div class="py-8"></div>
-
 
     <!-- Flickity HTML init -->
     <div class="gallery js-flickity carousel">
@@ -44,7 +42,4 @@
             <x-slot name="productLink">Uzzināt vairāk</x-slot>
         </x-products.card>
     </div>
-
-
-
 </x-layout.app>
