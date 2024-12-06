@@ -27,3 +27,36 @@ hamburgerMenu.addEventListener('click', () => {
     hamburgerMenuPath.setAttribute('d', iconLink);
     console.log(iconLink);
 });
+
+let flkty = new Flickity('.carousel', {
+    cellAlign: 'left',
+    contain: true,
+});
+
+// Function to update the next or previous item as inactive
+function updateInactiveItem() {
+    let currentIndex = flkty.selectedIndex;
+    let cells = flkty.cells;
+
+    // Remove 'inactive' class from all cells
+    cells.forEach((cell) => {
+        cell.element.classList.remove('inactive');
+    });
+
+    // Get the next item (if any) and add the 'inactive' class
+    let nextIndex = currentIndex + 1;
+    let prevIndex = currentIndex - 1;
+
+    if (nextIndex < cells.length) {
+        cells[nextIndex].element.classList.add('inactive');
+    }
+
+    // If it's the last item, mark the previous item as inactive
+    if (currentIndex === cells.length - 1 && prevIndex >= 0) {
+        cells[prevIndex].element.classList.add('inactive');
+    }
+}
+
+// Update the inactive item on initialization and on selection change
+updateInactiveItem();
+flkty.on('select', updateInactiveItem);

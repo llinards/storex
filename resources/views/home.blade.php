@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="bg-white py-2">
+    <div class="bg-white py-4 sm:pb-0">
         <div class="container px-4 sm:m-8 sm:mx-auto lg:px-6 xl:px-8">
             <x-products.wrapper></x-products.wrapper>
         </div>
