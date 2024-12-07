@@ -4,5 +4,5 @@
         @lang('An unknown error occurred, try again later')
         !
     </h2>
-    <button class="btn btn-primary d-block mx-auto mt-4" onclick="window.history.back()">@lang('Back')</button>
+    <x-btn type="button" onclick="window.history.back()">@lang('Back')</x-btn>
 </x-layout.error>
