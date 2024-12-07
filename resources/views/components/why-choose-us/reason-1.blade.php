@@ -1,4 +1,4 @@
-<div class="py-2 sm:py-0 lg:flex lg:items-center">
+<div class="hidden py-2 sm:block sm:py-0 lg:flex lg:items-center">
     <div class="lg:pr-4">
         <svg
             xmlns="http://www.w3.org/2000/svg"
