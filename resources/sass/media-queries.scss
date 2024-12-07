@@ -31,22 +31,20 @@
 }
 
 @media (max-width: 640px) {
-    .x-footer-links {
-        order: 2;
-    }
-
-    #all-rights {
-        order: 1;
-    }
-
     /* Carousel cell styles */
     .carousel-cell {
         width: 60%;
-        min-height: 300px;
-        max-height: 640px;
+        margin: 15px;
+    }
+
+    /* Positioning pseudo-elements */
+}
+
+@media (max-width: 1024px) {
+    /* Carousel cell styles */
+    .carousel-cell {
         counter-increment: gallery-cell;
         counter-increment: carousel-cell;
-        margin: 15px;
     }
 
     .carousel-cell.inactive {
@@ -62,83 +60,18 @@
             transform 0.3s ease;
     }
 
-    /* Custom Flickity button styles */
-    .flickity-prev-next-button .flickity-button-icon {
-        color: $storex-red;
-    }
-
-    .flickity-prev-next-button:disabled {
-        display: none;
-    }
-
-    .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .flickity-button {
-        transition: background 0.2s ease-in-out;
-    }
-
     /* Positioning pseudo-elements */
     .carousel {
         position: relative;
         /* Needed for positioning pseudo-elements */
-        padding: 20px 0;
     }
 
-    /* Dot style for the selected cell */
-    .dot.is-selected {
-        background-color: $storex-red;
+    .review-cell {
+        width: 60%;
     }
 
     // Placement of the dots.
     .flickity-page-dots {
-        bottom: -10px;
-    }
-
-    .why-choose-us-cell {
-        background-color: white;
-        text-align: center;
-        padding: 20px;
+        bottom: -20px;
     }
 }
-
-// /* Carousel gradient styles */
-// .carousel::before,
-// .carousel::after {
-//     content: '';
-//     /* Required for pseudo-elements */
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     width: 100px;
-//     /* Adjust width for the gradient */
-//     z-index: 10;
-//     pointer-events: none;
-//     /* Prevent interaction with the fade overlay */
-// }
-
-// /* Left side gradient */
-// .carousel::before {
-//     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-//     left: 0;
-// }
-
-// /* Right side gradient */
-// .carousel::after {
-//     background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-//     right: 0;
-// }
-
-// /* Hide left gradient on the first cell */
-// .carousel.no-left-gradient::before {
-//     display: none;
-// }
-
-// /* Hide right gradient on the last cell */
-// .carousel.no-right-gradient::after {
-//     display: none;
-// }

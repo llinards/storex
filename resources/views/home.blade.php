@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="bg-white py-4 sm:pb-0">
+    <div class="bg-white py-4">
         <div class="container px-4 sm:m-8 sm:mx-auto lg:px-6 xl:px-8">
             <x-products.wrapper></x-products.wrapper>
         </div>
@@ -37,9 +37,9 @@
         </div>
     </div>
 
-    <div class="bg-white py-4">
-        <div class="container my-8 px-4 sm:mx-auto lg:px-6 xl:px-8">
-            <x-reviews.section></x-reviews.section>
+    <div class="bg-white py-8">
+        <div class="container mb-4 px-4 sm:mx-auto lg:px-6 xl:px-8">
+            <x-reviews.wrapper></x-reviews.wrapper>
         </div>
     </div>
 </x-layout.app>

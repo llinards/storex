@@ -75,13 +75,13 @@ li {
     font-weight: 400;
 }
 
-// main {
-//     background-color: $storex-light-grey;
-// }
-
 p {
     font-size: 18px;
     color: $storex-grey;
+}
+
+.small-paragraph {
+    font-size: 13px;
 }
 
 .squeezed-text {
@@ -116,144 +116,68 @@ footer a {
     transform: scaleY(-1);
 }
 
-// .accordion-item {
-//     border: 0;
-//     border-radius: 0;
-//     border-bottom: solid 2px $storex-grey;
-// }
-
-// .accordion-item:last-of-type {
-//     border-bottom-right-radius: 0;
-//     border-bottom-left-radius: 0;
-// }
-
-// .active li {
-//     color: $storex-red !important;
-//     font-weight: 500;
-// }
-
-// .icon-xl {
-//     font-size: 64px;
-//     color: $storex-red;
-// }
-
-// .icon {
-//     font-size: 48px;
-//     color: $storex-red;
-// }
-
-// .bg-grey {
-//     background-color: $storex-light-grey-bg;
-// }
-
-// .btn-primary {
-//     background-color: $storex-red;
-//     border-style: none;
-//     font-weight: 500;
-//     padding: 10px 45px;
-// }
-
-// .btn-primary:hover {
-//     background-color: $storex-red;
-//     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-// }
-
 .header {
     background-position: center;
     background-size: cover;
 }
-
-// // .carousel-control-next-icon,
-// // .carousel-control-prev-icon,
-// // .carousel-indicators {
-// //     filter: invert(1);
-// // }
-
-// #mobile-carousel .carousel-item {
-//     height: auto;
-// }
-
-// .dropdown .dropdown-menu {
-//     border-radius: 0%;
-//     border-color: $storex-light-grey;
-// }
-
-// // .dropdown:hover .dropdown-menu {
-// //     display: block;
-// // }
-
-// .nav-link {
-//     max-width: 120px;
-//     border-bottom: solid 1px transparent;
-//     padding: 0px 8px;
-// }
-
-// .dropdown-item:hover,
-// .nav-link:hover {
-//     font-weight: 500;
-//     color: $storex-red;
-//     border-bottom: solid 1px $storex-red;
-// }
-
-// // Overwriting the default selected dropdown item color (blue).
-// .dropdown-item.active,
-// .dropdown-item:active {
-//     background-color: $body-bg;
-// }
-
-// #first-section {
-//     background: rgb(228, 228, 228);
-//     background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
-// }
-
-// nav img {
-//     max-width: 25%;
-//     min-width: 25%;
-// }
-
-// .storex-red {
-//     color: $storex-red;
-// }
-
-//     .icon-xl {
-//         font-size: 48px;
-//         color: $storex-red;
-//     }
-
-//     .icon {
-//         font-size: 32px;
-//         color: $storex-red;
-//     }
-
-// CAROUSEL
-
-/* external css: flickity.css */
 
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-// .gallery {
-//     background: #EEE;
-// }
+.x-footer-links {
+    order: 2;
+}
 
-// .gallery-cell {
-//     width: 66%;
-//     height: 200px;
-//     margin-right: 10px;
-//     background: #8C8;
-//     counter-increment: gallery-cell;
-// }
+#all-rights {
+    order: 1;
+}
 
-// /* cell number */
-// .gallery-cell:before {
-//     display: block;
-//     text-align: center;
+/* Custom Flickity button styles */
+.flickity-prev-next-button .flickity-button-icon {
+    color: $storex-red;
+}
 
-//     line-height: 200px;
-//     font-size: 80px;
-//     color: white;
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+.flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flickity-button {
+    transition: background 0.2s ease-in-out;
+}
+
+/* Dot style for the selected cell */
+.dot.is-selected {
+    background-color: $storex-red;
+}
+
+// Placement of the dots.
+.flickity-page-dots {
+    bottom: 0px;
+}
+
+.review-cell {
+    width: 30%;
+    /* Slightly less than 33% to account for margins */
+    margin: 0px 15px;
+}
+
+.review-carousel {
+    position: relative;
+    padding: 20px 0;
+}
+
+// .review-carousel .review-cell:nth-child(3n) {
+//     border: none;
+//     /* or border: 0; */
 // }
 
 // Media Queries
