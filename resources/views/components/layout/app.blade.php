@@ -16,7 +16,12 @@
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
 
         <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        @vite([
+            'resources/sass/flickity.css',
+            'resources/sass/app.scss',
+            'resources/js/app.js',
+            'resources/js/flickity.pkgd.min.js',
+        ])
     </head>
 
     <body>
@@ -26,6 +31,5 @@
         </main>
         @include('includes.footer')
         <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     </body>
 </html>

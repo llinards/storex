@@ -1,13 +1,5 @@
 import { initFlowbite } from 'flowbite';
-
 initFlowbite;
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     const button = document.getElementById('lang-dropdown-link');
-//     button.addEventListener('click', () => {
-//         svg.classList.toggle('icon-toggled');
-//     });
-// });
 
 const menuOpenIcon = 'M1 1h15M1 7h15M1 13h15';
 const menuCloseIcon =
@@ -34,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carousels.forEach((carousel) => {
         let flkty = new Flickity(carousel, {
-            cellAlign: 'left',
             contain: true,
         });
 

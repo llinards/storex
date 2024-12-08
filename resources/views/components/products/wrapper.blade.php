@@ -15,7 +15,7 @@
 {{-- MOBILE LAYOUT --}}
 <div class="mb-4 block sm:hidden">
     <h2 class="border-b-1 text-center">@lang('Tenta angāru veidi un aksesuāri')</h2>
-    <div class="gallery js-flickity carousel" data-flickity='{ "contain": true }'>
+    <div class="carousel" data-flickity='{ "contain": true }'>
         <x-products.content></x-products.content>
     </div>
 </div>
