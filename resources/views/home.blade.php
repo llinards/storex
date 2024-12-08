@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="bg-white py-8">
+    <div class="bg-white pb-4 pt-8">
         <div class="container mb-4 px-4 sm:mx-auto lg:px-6 xl:px-8">
             <x-reviews.wrapper></x-reviews.wrapper>
         </div>
