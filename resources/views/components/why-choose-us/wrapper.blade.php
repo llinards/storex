@@ -14,7 +14,7 @@
 {{-- MOBILE LAYOUT --}}
 <div class="block py-4 sm:hidden">
     <h2 class="border-b-1 text-center">@lang('Kāpēc STOREX?')</h2>
-    <div class="gallery js-flickity carousel" data-flickity='{ "contain": true }'>
+    <div class="carousel" data-flickity='{ "contain": true }'>
         <x-why-choose-us.content></x-why-choose-us.content>
     </div>
 </div>
