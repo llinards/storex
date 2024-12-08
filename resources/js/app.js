@@ -1,4 +1,6 @@
-import { initFlowbite } from 'flowbite';
+import {initFlowbite} from 'flowbite';
+import Flickity from 'flickity';
+
 initFlowbite;
 
 const menuOpenIcon = 'M1 1h15M1 7h15M1 13h15';
