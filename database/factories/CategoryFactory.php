@@ -23,10 +23,10 @@ class CategoryFactory extends Factory
         $sourceImagePath = resource_path('images/category-cover-image-sample.jpg'); // Path to the source image
         $destinationPath = storage_path('app/public/categories');
 
-        $imageName            = basename($sourceImagePath);
+        $imageName = basename($sourceImagePath);
         $destinationImagePath = $destinationPath.'/'.$imageName;
 
-        if ( ! file_exists($destinationImagePath)) {
+        if (! file_exists($destinationImagePath)) {
             copy($sourceImagePath, $destinationImagePath);
         }
 
