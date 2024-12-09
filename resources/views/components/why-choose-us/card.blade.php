@@ -1,4 +1,4 @@
-<div class="carousel-cell rounded-lg border-1 bg-white py-4 shadow-md">
+<div class="carousel-cell rounded-lg border-1 bg-white py-8 shadow-md">
     <div class="flex justify-center py-4">
         {{ $icon }}
     </div>

@@ -1,22 +1,24 @@
 <div class="carousel-cell rounded-lg border-1 shadow-md">
-    <a {{ $attributes }}>
-        <img class="rounded-t-lg" src="{{ $productImage ?? '' }}" alt="" />
+    <a {{ $attributes }} class="block h-48 overflow-hidden">
+        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>
 
-    <div class="grid grid-flow-row auto-rows-max">
+    <div class="grid h-48 content-between">
         <div class="bg-white p-5">
             <div class="flex-grow">
-                <h4 class="font-bold tracking-tight">
+                <h3 class="pb-4 font-bold tracking-tight">
                     {{ $productHeading }}
-                </h4>
+                </h3>
                 <p class="squeezed-text text-small">
                     {{ $productDescription }}
                 </p>
             </div>
         </div>
-        <a class="mt-auto block rounded-b-lg bg-white px-5 pb-5 font-bold text-storex-red" {{ $attributes }}>
+        <a class="mt-auto block rounded-b-lg bg-white px-5 pb-4 font-bold text-storex-red" {{ $attributes }}>
             <span class="flex items-center justify-end space-x-2">
-                <span>{{ $productLink }}</span>
+                <span class="border-b-2 border-transparent transition duration-200 hover:border-storex-red">
+                    {{ $productLink }}
+                </span>
                 <svg
                     class="h-3 w-3 text-storex-red"
                     aria-hidden="true"

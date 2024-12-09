@@ -1,5 +1,5 @@
 <div class="hidden py-2 sm:block sm:py-0 lg:flex lg:items-center">
-    <div class="lg:pr-4">
+    <div class="lg:mr-6">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -13,7 +13,7 @@
         </svg>
     </div>
     <div>
-        <h2>@lang('10 gadu pieredze')</h2>
+        <h2 class="mt-4 lg:mt-0">@lang('10 gadu pieredze')</h2>
         <p class="p-0">
             @lang('Ar desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes
             risinājumus,
