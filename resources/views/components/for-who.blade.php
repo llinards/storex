@@ -6,7 +6,7 @@
         data-tabs-active-classes="text-storex-red border-b-1 border-storex-red"
         data-tabs-inactive-classes="text-storex-inactive-grey"
     >
-        <li class="mx-4 pt-2">
+        <li class="mx-4">
             <button
                 id="agriculture-tab"
                 data-tabs-target="#agriculture"
@@ -14,12 +14,12 @@
                 role="tab"
                 aria-controls="agriculture"
                 aria-selected="true"
-                class="text-wrap py-1 font-bold hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap py-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri lauksaimniekiem
             </button>
         </li>
-        <li class="mx-4 pt-2">
+        <li class="mx-4">
             <button
                 id="business-tab"
                 data-tabs-target="#business"
@@ -27,7 +27,7 @@
                 role="tab"
                 aria-controls="business"
                 aria-selected="false"
-                class="text-wrap py-1 font-bold hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap py-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri biznesam
             </button>
