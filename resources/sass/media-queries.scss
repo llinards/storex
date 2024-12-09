@@ -8,7 +8,7 @@
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     h4,
@@ -33,8 +33,8 @@
 @media (max-width: 640px) {
     /* Carousel cell styles */
     .carousel-cell {
-        width: 60%;
-        margin: 15px;
+        width: 66%;
+        margin: 64px 15px;
     }
 
     /* Positioning pseudo-elements */
@@ -67,12 +67,11 @@
     }
 
     .review-cell {
-        width: 60%;
-        margin-bottom: 32px;
+        width: 66%;
     }
 
     // Placement of the dots.
     .flickity-page-dots {
-        bottom: -20px;
+        bottom: 11px;
     }
 }

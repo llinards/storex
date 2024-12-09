@@ -29,7 +29,7 @@ html {
 
 main {
     background-color: $body-bg;
-    background: linear-gradient(180deg, $storex-light-grey 0%, $body-bg 100%);
+    // background: linear-gradient(180deg, $storex-light-grey 0%, $body-bg 100%);
 }
 
 .btn {
@@ -66,6 +66,11 @@ h5 {
 
 .h-104 {
     height: 28rem;
+}
+
+h2,
+h3 {
+    line-height: 1;
 }
 
 .icon,
@@ -163,7 +168,7 @@ footer a {
 
 // Placement of the dots.
 .flickity-page-dots {
-    bottom: -10px;
+    bottom: -5px;
 }
 
 .review-cell {
@@ -174,7 +179,7 @@ footer a {
 
 .review-carousel {
     position: relative;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 // .review-carousel .review-cell:nth-child(3n) {
@@ -183,4 +188,11 @@ footer a {
 // }
 
 // Media Queries
+
+.faq-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 @import 'media-queries';

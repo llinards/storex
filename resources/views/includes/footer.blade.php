@@ -9,7 +9,7 @@
                 />
             </a>
             <div
-                class="flex flex-col py-4 md:grid md:grid-cols-2 md:gap-12 md:pb-8 md:pt-4 lg:flex-none lg:grid-cols-4 lg:gap-20"
+                class="flex flex-col py-4 md:grid md:grid-cols-2 md:gap-12 md:pb-8 md:pt-4 lg:flex-none lg:grid-cols-3 lg:gap-20"
             >
                 <div class="order-1 md:order-none">
                     <h5 class="md:pb-3">@lang('Mūsu prioritāre ir apmierināts klients!')</h5>
@@ -37,7 +37,8 @@
                     <x-footer-link href="#">@lang('Cenrādis')</x-footer-link>
                     <x-footer-link href="#">@lang('Dokumentācija')</x-footer-link>
                 </div>
-                <div class="order-5 md:order-none">
+                {{--
+                    <div class="order-5 md:order-none">
                     <h5 class="ml-4 py-3 uppercase">Raksti</h5>
                     <x-footer-link href="#">@lang('Par tenta angāriem')</x-footer-link>
                     <x-footer-link href="#">@lang('Tenta angāri - noliktavas')</x-footer-link>
@@ -46,15 +47,18 @@
                     <x-footer-link href="#">@lang('Tenta angāri sporta pasākumiem')</x-footer-link>
                     <x-footer-link href="#">@lang('Tenta paviljoni')</x-footer-link>
                     <x-footer-link href="#">@lang('Tenta vārti')</x-footer-link>
-                </div>
+                    </div>
+                --}}
                 <div class="order-6 md:order-none">
                     <h5 class="ml-4 py-3 uppercase">Sadaļas</h5>
                     <x-footer-link href="#">@lang('Par mums')</x-footer-link>
                     <x-footer-link href="#">@lang('Kontakti')</x-footer-link>
-                    <x-footer-link href="#">@lang('Galerija')</x-footer-link>
+                    {{-- <x-footer-link href="#">@lang('Galerija')</x-footer-link> --}}
                     <x-footer-link href="#">@lang('BUJ')</x-footer-link>
+                    <x-footer-link href="#">@lang('Privātuma politika')</x-footer-link>
+                    <x-footer-link href="#">@lang('Noteikumi un nosacījumi')</x-footer-link>
                 </div>
-                <div class="order-2 col-span-2 grid content-between md:order-none">
+                <div class="order-2 grid content-between md:order-none">
                     <ul class="py-2 md:py-0">
                         <li>
                             <a href="https://maps.app.goo.gl/E9EtPST5AXgxRduN8" class="flex items-center text-sm">
@@ -132,26 +136,18 @@
                         </svg>
                     </div>
                 </div>
-                <div class="order-3 col-span-2 flex justify-end md:order-none">
+                {{--
+                    <div class="order-3 col-span-2 flex justify-end md:order-none">
                     <div class="w-full border-y-2 py-4 md:border-y-0 md:py-0 lg:w-2/3">
-                        <x-forms.newsletter></x-forms.newsletter>
+                    <x-forms.newsletter></x-forms.newsletter>
                     </div>
-                </div>
+                    </div>
+                --}}
             </div>
         </div>
 
-        <div class="flex flex-col py-4 md:py-8 lg:grid lg:flex-none lg:grid-cols-3">
-            <div class="order-1 md:order-none lg:py-0">
-                <a href="/ru">@lang('По-русски')</a>
-                <a class="pl-2 lg:pr-8" href="/en">@lang('In english')</a>
-            </div>
-            <div class="order-3 md:order-none lg:py-0 lg:text-center">
-                <p>All rights reserved © {{ now()->year }} Storex Structures.</p>
-            </div>
-            <div class="order-2 md:order-none lg:py-0 lg:text-right">
-                <a class="block lg:inline lg:pr-8" href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
+        <div class="order-3 py-4 text-center md:order-none md:py-8">
+            <p>All rights reserved © {{ now()->year }} Storex Structures.</p>
         </div>
     </div>
 </footer>

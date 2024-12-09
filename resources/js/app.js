@@ -3,6 +3,7 @@ import Flickity from 'flickity';
 
 initFlowbite;
 
+// Hamburger for Nav
 const menuOpenIcon = 'M1 1h15M1 7h15M1 13h15';
 const menuCloseIcon =
     'M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z';
@@ -22,6 +23,7 @@ hamburgerMenu.addEventListener('click', () => {
     console.log(iconLink);
 });
 
+// Carousel Opacity Effect
 document.addEventListener('DOMContentLoaded', function () {
     // Find all carousel elements
     let carousels = document.querySelectorAll('.carousel');
@@ -60,3 +62,36 @@ document.addEventListener('DOMContentLoaded', function () {
         flkty.on('select', updateInactiveItem);
     });
 });
+
+// Accordion Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    let firstSvg = document.querySelector('.faq-accordion svg');
+    if (firstSvg) {
+        firstSvg.classList.remove('rotate-180');
+        firstSvg.classList.add('rotate-0');
+    }
+});
+
+let acc = document.getElementsByClassName('faq-accordion');
+let i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function () {
+        let panel = this.nextElementSibling;
+        let svg = this.querySelector('svg');
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+
+        if (svg.classList.contains('rotate-180')) {
+            svg.classList.remove('rotate-180');
+            svg.classList.add('rotate-0');
+        } else {
+            svg.classList.remove('rotate-0');
+            svg.classList.add('rotate-180');
+        }
+    });
+}

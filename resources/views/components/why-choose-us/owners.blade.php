@@ -1,8 +1,8 @@
-<div class="bg-storex-medium-grey-bg px-4 py-8 sm:p-20">
-    <div class="items-center gap-24 lg:grid lg:grid-cols-2">
+<div class="bg-storex-medium-grey-bg px-4 py-8 sm:px-20 sm:py-12">
+    <div class="items-center gap-20 lg:grid lg:grid-cols-2">
         <img src="{{ asset('images/storex-owners.jpg') }}" alt="Storex Owners" class="max-h-full" />
-        <div class="mt-4">
-            <h2 class="text-center text-storex-red md:text-left">
+        <div class="mt-4 sm:mt-0">
+            <h2 class="text-center text-storex-red md:pb-2 md:pt-4 md:text-left">
                 @lang('Kāpēc izvēlēties STOREX angāra iegādei?')
             </h2>
             <p class="py-2 md:text-xl">
