@@ -22,6 +22,11 @@ class Category extends Model
         return $this->translation->first()->title ?? null;
     }
 
+    public function getSlugAttribute()
+    {
+        return $this->translation->first()->slug ?? null;
+    }
+
     public function getDescriptionAttribute()
     {
         return $this->translation->first()->description ?? null;

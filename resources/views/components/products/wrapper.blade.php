@@ -3,22 +3,62 @@
     <div class="flex items-center justify-between border-b-1 border-storex-light-grey">
         <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a
-            href="/products"
+            href="#"
             class="border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
         >
             @lang('Skatīt
             visus')
         </a>
     </div>
-    <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 md:grid-cols-3 xl:grid-cols-4">
-        <x-products.content></x-products.content>
-    </div>
+    @if ($categories->isEmpty())
+        <div class="mt-3 flex items-center justify-center">
+            <p>
+                @lang('Kategorijas nav atrastas')
+                .
+            </p>
+        </div>
+    @else
+        <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 md:grid-cols-3 xl:grid-cols-4">
+            @foreach ($categories as $category)
+                <x-products.card
+                    href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                >
+                    <x-slot name="productImage">
+                        {{ Storage::url('categories/' . $category->image) }}
+                    </x-slot>
+                    <x-slot name="productHeading">{{ $category->title }}</x-slot>
+                    <x-slot name="productDescription">{{ $category->description }}</x-slot>
+                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
+                </x-products.card>
+            @endforeach
+        </div>
+    @endif
 </div>
 
 {{-- MOBILE LAYOUT --}}
 <div class="block sm:hidden">
     <h2 class="border-b-1 pb-2 text-center">@lang('Tenta angāru veidi un aksesuāri')</h2>
-    <div class="carousel" data-flickity='{ "contain": true }'>
-        <x-products.content></x-products.content>
-    </div>
+    @if ($categories->isEmpty())
+        <div class="mt-3 flex items-center justify-center">
+            <p>
+                @lang('Kategorijas nav atrastas')
+                .
+            </p>
+        </div>
+    @else
+        <div class="carousel" data-flickity='{ "contain": true }'>
+            @foreach ($categories as $category)
+                <x-products.card
+                    href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                >
+                    <x-slot name="productImage">
+                        {{ Storage::url('categories/' . $category->image) }}
+                    </x-slot>
+                    <x-slot name="productHeading">{{ $category->title }}</x-slot>
+                    <x-slot name="productDescription">{{ $category->description }}</x-slot>
+                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
+                </x-products.card>
+            @endforeach
+        </div>
+    @endif
 </div>

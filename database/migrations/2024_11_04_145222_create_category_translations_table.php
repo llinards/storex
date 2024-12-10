@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('locale')->index();
 
             $table->string('title');
+            $table->string('slug')->unique();
             $table->text('description');
 
             $table->unique(['category_id', 'locale']);
