@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\CategoryTranslation;
 
 class CategoriesController extends Controller
 {
-    public function index()
+    public function show(string $locale, CategoryTranslation $category): CategoryTranslation
     {
-        $categories = Category::all();
-
-        return view('home', compact('categories'));
+        return $category;
     }
 }

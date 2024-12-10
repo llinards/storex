@@ -11,7 +11,6 @@ const hamburgerMenu = document.getElementById('hamburger-menu');
 const hamburgerMenuPath = document.getElementById('hamburger-path');
 
 let iconLink = hamburgerMenuPath.getAttribute('d');
-console.log(iconLink);
 
 hamburgerMenu.addEventListener('click', () => {
     if (iconLink == menuOpenIcon) {
@@ -20,7 +19,6 @@ hamburgerMenu.addEventListener('click', () => {
         iconLink = menuOpenIcon;
     }
     hamburgerMenuPath.setAttribute('d', iconLink);
-    console.log(iconLink);
 });
 
 // Carousel Opacity Effect

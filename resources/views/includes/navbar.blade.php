@@ -2,11 +2,13 @@
     <div class="container mx-auto px-4 sm:px-0">
         <x-nav.nav>
             <x-nav.production>
-                <x-nav.dropdown-link href="#">Tenta angāri - nojumes</x-nav.dropdown-link>
-                <x-nav.dropdown-link href="#">Konteineru tenta angāri</x-nav.dropdown-link>
-                <x-nav.dropdown-link href="#">Industriālās siltumnīcas</x-nav.dropdown-link>
-                <x-nav.dropdown-link href="#">Aksesuāri tenta angāriem</x-nav.dropdown-link>
-                <x-nav.dropdown-link href="#">Cenrādis</x-nav.dropdown-link>
+                @foreach ($categories as $category)
+                    <x-nav.dropdown-link
+                        href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                    >
+                        {{ $category->title }}
+                    </x-nav.dropdown-link>
+                @endforeach
             </x-nav.production>
 
             {{-- <x-nav.blog> --}}
@@ -17,6 +19,9 @@
             {{-- <x-nav.link href="{{ route('gallery') }}" :active="request()->is('gallery')"> --}}
             {{-- @lang('Galerija') --}}
             {{-- </x-nav.link> --}}
+            <x-nav.link href="{{ route('pricelist') }}" :active="request()->is('pricelist')">
+                @lang('Cenrādis')
+            </x-nav.link>
             <x-nav.link href="{{ route('about') }}" :active="request()->is('about')">
                 @lang('Par mums')
             </x-nav.link>

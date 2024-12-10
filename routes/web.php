@@ -11,7 +11,9 @@ Auth::routes([
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
-    Route::get('/', [CategoriesController::class, 'index'])->name('index');
+    Route::get('/', function () {
+        return view('home');
+    })->name('home');
     Route::get('/galerija', function () {
         return view('gallery');
     })->name('gallery');
@@ -27,7 +29,13 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/aktualitates', function () {
         return view('article');
     })->name('article');
+    Route::get('/cenradis', function () {
+        return view('pricelist');
+    })->name('pricelist');
 
+    Route::get('/{category}', [CategoriesController::class, 'show'])->name('category.show');
+
+    //    TODO: Remove this route
     Route::get('/element-test', function () {
         return view('element-test');
     })->name('element-test');
