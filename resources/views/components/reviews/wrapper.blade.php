@@ -1,4 +1,4 @@
-<h2 class="border-b-1 pb-2 text-center lg:border-none">@lang('STOREX klientu atsauksmes')</h2>
+<h2 class="border-b-1 pb-2 sm:pb-0 text-center lg:border-none">@lang('STOREX klientu atsauksmes')</h2>
 
 {{-- DESKTOP VIEW --}}
 <div class="hidden lg:block">
