@@ -35,8 +35,8 @@
     </ul>
     <div id="default-tab">
         <div class="hidden px-4 lg:px-6 xl:px-8" id="agriculture" role="tabpanel" aria-labelledby="agriculture-tab">
-            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
-                <div>
+            <div class="items-center gap-2 text-center sm:gap-6 sm:py-4 md:flex md:py-2 md:text-left">
+                <div class="pb-4 md:pb-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="36"
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
-                <div>
+                <div class="pb-4 md:pb-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="36"
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
-                <div>
+                <div class="pb-4 md:pb-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="36"
