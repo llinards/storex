@@ -1,4 +1,4 @@
-<x-faq.question style="max-height: 100%">
+<x-faq.question>
     <x-slot name="question">@lang('Kāda garantija ir Jūsu produkcijai?')</x-slot>
     <x-slot name="answer">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dicta quisquam velit eligendi nihil,

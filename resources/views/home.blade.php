@@ -34,11 +34,11 @@
                 <div class="px-4 lg:px-6 xl:px-8 pb-12">
                 <x-faq></x-faq>
                 </div>
-                
-                <div class="my-4 px-4 lg:px-6 xl:px-8 py-12">
-                <x-faq.wrapper></x-faq.wrapper>
-                </div>
             --}}
+
+            <div class="px-4 pb-12 lg:px-6 xl:px-8">
+                <x-faq.wrapper></x-faq.wrapper>
+            </div>
         </div>
     </div>
 

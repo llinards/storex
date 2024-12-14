@@ -82,15 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Accordion Functionality
-document.addEventListener('DOMContentLoaded', function () {
-    let firstSvg = document.querySelector('.faq-accordion svg');
-    if (firstSvg) {
-        firstSvg.classList.remove('rotate-180');
-        firstSvg.classList.add('rotate-0');
-    }
-});
-
+// Accordion Functionality and Styling
 let acc = document.getElementsByClassName('faq-accordion');
 let i;
 
@@ -98,19 +90,26 @@ for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function () {
         let panel = this.nextElementSibling;
         let svg = this.querySelector('svg');
+        let h4 = this.querySelector('h4');
 
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
+            panel.classList.toggle('border-storex-red');
+            h4.classList.toggle('text-storex-red');
         } else {
             panel.style.maxHeight = panel.scrollHeight + 'px';
+            panel.classList.toggle('border-storex-red');
+            h4.classList.toggle('text-storex-red');
         }
 
         if (svg.classList.contains('rotate-180')) {
             svg.classList.remove('rotate-180');
             svg.classList.add('rotate-0');
+            svg.classList.toggle('text-storex-red');
         } else {
             svg.classList.remove('rotate-0');
             svg.classList.add('rotate-180');
+            svg.classList.toggle('text-storex-red');
         }
     });
 }

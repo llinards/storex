@@ -15,7 +15,7 @@
         <div id="burger-icon" class="cursor-pointer sm:hidden">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-storex-grey"
+                class="h-8 w-8 text-storex-grey transition-all duration-200"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -26,7 +26,7 @@
         <div id="close-icon" class="hidden cursor-pointer">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-storex-grey"
+                class="h-8 w-8 text-storex-grey transition-all duration-200"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
