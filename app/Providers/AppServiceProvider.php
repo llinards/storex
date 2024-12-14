@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer(['home', 'includes.navbar'], function ($view) {
+        view()->composer(['home', 'components.nav.links'], function ($view) {
             $categories = Category::with([
                 'translation' => function ($query) {
                     $query->select('category_id', 'title', 'slug', 'description', 'locale')

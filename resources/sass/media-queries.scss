@@ -17,11 +17,6 @@
         font-weight: 500;
     }
 
-    p,
-    a {
-        font-size: 14px;
-    }
-
     footer,
     footer p,
     footer a {
@@ -30,14 +25,24 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
     /* Carousel cell styles */
     .carousel-cell {
         width: 66%;
         margin: 64px 15px;
     }
 
-    /* Positioning pseudo-elements */
+    // li button,
+    p,
+    a {
+        font-size: 14px;
+    }
+
+    li,
+    li a,
+    li button {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1024px) {
