@@ -1,15 +1,13 @@
-<li class="py-1 sm:py-0">
+<li class="group py-1 sm:relative sm:py-0">
     <button
         id="production-btn"
-        data-dropdown-toggle="production-hover"
-        data-dropdown-delay="200"
-        data-dropdown-trigger="hover"
-        class="inline-flex items-center border-b-2 border-transparent hover:border-storex-red hover:text-storex-red"
+        class="inline-flex items-center border-b-2 border-transparent transition duration-200 group-hover:border-storex-red group-hover:text-storex-red"
         type="button"
     >
         @lang('Produkcija')
         <svg
-            class="ms-3 h-2.5 w-2.5"
+            id="arrow-svg"
+            class="ms-3 h-2.5 w-2.5 transition duration-200 group-hover:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,8 +24,11 @@
     </button>
 
     <!-- Dropdown menu -->
-    <div id="production-hover" class="hidden w-44 bg-white px-3 py-2 shadow dark:bg-storex-grey">
-        <ul class="py-2 text-sm" aria-labelledby="production-btn">
+    <div
+        id="production-content"
+        class="flex max-h-0 justify-center overflow-hidden opacity-0 transition-all duration-200 ease-in-out group-hover:max-h-screen group-hover:opacity-100 sm:absolute sm:w-44 sm:shadow"
+    >
+        <ul class="my-2 w-60 bg-white px-3 py-2 text-left text-sm shadow sm:mt-0" aria-labelledby="production-btn">
             {{ $slot }}
         </ul>
     </div>

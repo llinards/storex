@@ -1,6 +1,6 @@
-<div class="hidden md:block">
+<div class="group relative hidden sm:block">
     <button
-        id=" lang-dropdown-link"
+        id="lang-dropdown-link"
         data-dropdown-toggle="lang-hover"
         data-dropdown-trigger="hover"
         class="inline-flex items-center font-bold"
@@ -21,15 +21,18 @@
     </button>
 
     <!-- Dropdown menu -->
-    <div id="lang-hover" class="z-10 hidden w-44 divide-y divide-gray-100 bg-white px-3 py-2 shadow">
+    <div
+        id="lang-hover"
+        class="absolute z-10 max-h-0 w-12 divide-y divide-gray-100 overflow-hidden bg-white px-3 py-2 opacity-0 shadow transition-all duration-300 ease-in-out group-hover:max-h-screen group-hover:opacity-100"
+    >
         <ul aria-labelledby="lang-dropdown-link">
             {{ $slot }}
         </ul>
     </div>
 </div>
 
-<div class="md:hidden">
-    <ul class="flex" aria-labelledby="lang-dropdown-link">
+<div class="sm:hidden">
+    <ul class="flex justify-evenly" aria-labelledby="lang-dropdown-link">
         {{ $slot }}
     </ul>
 </div>

@@ -1,11 +1,11 @@
 <div class="py-2">
-    <button class="faq-accordion flex w-full items-center justify-between">
-        <h4 class="m-0 text-left">
+    <button class="faq-accordion flex w-full items-center justify-between transition-all duration-200">
+        <h4 class="m-0 text-left transition-all duration-200">
             {{ $question }}
         </h4>
         <svg
             data-accordion-icon
-            class="h-3 w-3 shrink-0 rotate-180"
+            class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -20,7 +20,7 @@
             />
         </svg>
     </button>
-    <div class="faq-panel mt-4 border-b-1 border-storex-grey" {{ $attributes }}>
-        <p>{{ $answer }}</p>
+    <div class="faq-panel mt-4 border-b-1 border-storex-grey transition-all duration-200" {{ $attributes }}>
+        <p class="mb-4">{{ $answer }}</p>
     </div>
 </div>
