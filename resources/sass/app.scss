@@ -5,16 +5,23 @@
 @import 'flickity/dist/flickity.min.css';
 
 // Fonts
+
 @font-face {
-    font-family: 'MyriadPro';
-    src: url(/public/fonts/myriadpro-regular.otf) format('opentype');
+    font-family: 'Lato';
+    src: url(/public/fonts/Lato-Regular.eot) format('embedded-opentype');
+    src: url(/public/fonts/Lato-Regular.woff2) format('woff2');
+    src: url(/public/fonts/Lato-Regular.woff) format('woff');
+    src: url(/public/fonts/Lato-Regular.ttf) format('truetype');
     font-style: normal;
-    font-weight: 00;
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'MyriadPro';
-    src: url(/public/fonts/myriadpro-bold.otf) format('opentype');
+    font-family: 'Lato';
+    src: url(/public/fonts/Lato-Bold.eot) format('embedded-opentype');
+    src: url(/public/fonts/Lato-Bold.woff2) format('woff2');
+    src: url(/public/fonts/Lato-Bold.woff) format('woff');
+    src: url(/public/fonts/Lato-Bold.ttf) format('truetype');
     font-style: normal;
     font-weight: 500;
 }
@@ -23,7 +30,7 @@
 @import 'variables';
 
 html {
-    font-family: 'MyriadPro', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: $storex-grey;
 }
 
