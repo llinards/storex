@@ -1,13 +1,14 @@
 <x-layout.app>
-    <div>
+    <div style="background-image: url('{{ asset('images/placeholder-tent-1.jpg') }}')" class="bg-cover bg-center">
         <div class="container sm:mx-auto sm:pb-12">
-            <div class="sm:px-4 lg:px-6 xl:px-8">
+            <div>
                 @include('includes.header')
             </div>
-
-            <div class="px-4 py-8 sm:py-0 lg:px-6 xl:px-8">
-                <x-why-choose-us.wrapper></x-why-choose-us.wrapper>
-            </div>
+        </div>
+    </div>
+    <div class="container sm:mx-auto sm:pb-12">
+        <div class="px-4 py-8 sm:py-0 lg:px-6 xl:px-8">
+            <x-why-choose-us.wrapper></x-why-choose-us.wrapper>
         </div>
     </div>
 
@@ -47,4 +48,6 @@
             <x-reviews.wrapper></x-reviews.wrapper>
         </div>
     </div>
+
+    <x-call-btn></x-call-btn>
 </x-layout.app>

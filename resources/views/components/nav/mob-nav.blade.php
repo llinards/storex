@@ -4,7 +4,7 @@
         {{
             $attributes->merge([
                 'class' => 'fixed top-0 left-0 right-0 flex justify-between items-center p-4 bg-white
-                                shadow-md z-50',
+                                            shadow-md z-50',
             ])
         }}
     >
