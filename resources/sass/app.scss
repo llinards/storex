@@ -179,6 +179,11 @@ footer a {
     bottom: -5px;
 }
 
+.flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $storex-red;
+}
+
 .review-cell {
     width: 30%;
     /* Slightly less than 33% to account for margins */
