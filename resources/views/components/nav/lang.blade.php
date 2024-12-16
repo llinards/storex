@@ -32,7 +32,7 @@
 </div>
 
 <div class="sm:hidden">
-    <ul class="flex justify-evenly" aria-labelledby="lang-dropdown-link">
+    <ul class="flex justify-center" aria-labelledby="lang-dropdown-link">
         {{ $slot }}
     </ul>
 </div>
