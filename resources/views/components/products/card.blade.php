@@ -1,10 +1,10 @@
-<div class="carousel-cell rounded-lg border-1 shadow-md">
+<div class="carousel-cell rounded-lg border-1 shadow-md sm:relative">
     <a {{ $attributes }} class="block h-48 overflow-hidden md:h-56 lg:h-48">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>
 
-    <div class="grid h-48 content-between md:h-56 lg:h-48">
-        <div class="bg-white p-5">
+    <div class="grid h-48 content-between p-5 md:h-56 lg:h-48">
+        <div class="bg-white">
             <div class="flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
                     {{ $productHeading }}
@@ -14,28 +14,32 @@
                 </p>
             </div>
         </div>
-        <a class="mt-auto block rounded-b-lg bg-white px-5 pb-4 font-bold text-storex-red" {{ $attributes }}>
-            <span class="flex items-center justify-end space-x-2">
-                <span class="border-b-2 border-transparent transition duration-200 hover:border-storex-red">
+
+        <div class="bottom-0 right-0 mb-4 mr-4 flex justify-end sm:absolute">
+            <a
+                class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
+                {{ $attributes }}
+            >
+                <span>
                     {{ $productLink }}
                 </span>
                 <svg
-                    class="h-3 w-3 text-storex-red"
+                    id="arrow-svg"
+                    class="ms-2 h-2.5 w-2.5 -rotate-90 transition duration-200"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
-                    viewBox="0 0 6 10"
+                    viewBox="0 0 10 6"
                 >
                     <path
                         stroke="currentColor"
                         stroke-linecap="round"
-                        stroke-width="2"
                         stroke-linejoin="round"
-                        stroke-width="1"
-                        d="m1 9 4-4-4-4"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
                     />
                 </svg>
-            </span>
-        </a>
+            </a>
+        </div>
     </div>
 </div>
