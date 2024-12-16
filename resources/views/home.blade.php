@@ -1,6 +1,9 @@
 <x-layout.app>
-    <div style="background-image: url('{{ asset('images/placeholder-tent-1.jpg') }}')" class="bg-cover bg-center">
-        <div class="container sm:mx-auto sm:pb-12">
+    <div
+        style="background-image: url('{{ asset('images/placeholder-tent-1.jpg') }}')"
+        class="bg-cover bg-center 2xl:container 2xl:mx-auto 2xl:max-w-[1472px]"
+    >
+        <div class="container sm:mx-auto">
             <div>
                 @include('includes.header')
             </div>
