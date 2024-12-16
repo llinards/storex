@@ -4,10 +4,26 @@
         <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a
             href="#"
-            class="border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
+            class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
         >
             @lang('Skatīt
             visus')
+            <svg
+                id="arrow-svg"
+                class="ms-2 h-2.5 w-2.5 -rotate-90 transition duration-200"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                />
+            </svg>
         </a>
     </div>
     @if ($categories->isEmpty())
