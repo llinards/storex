@@ -3,15 +3,15 @@
     {{
         $attributes->merge([
             'class' => 'flex items-center sm:flex-none sm:items-start px-4 sm:px-0 sm:grid sm:grid-cols-12 h-screen
-                                                                    sm:h-96 header grid-rows-12 ',
+            sm:h-96 header grid-rows-12 ',
         ])
     }}
 >
     <div class="col-span-8 col-start-2 row-start-2 text-center sm:text-left lg:row-start-3">
-        <h1 class="leading-tight">
+        <h2 class="text-shadow text-5xl leading-tight text-white">
             {{ $heading }}
-        </h1>
-        <p class="py-2">
+        </h2>
+        <p class="text-shadow py-2 text-white">
             {{ $subText }}
         </p>
         <div class="mt-2">
