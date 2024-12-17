@@ -3,7 +3,7 @@
         id="lang-dropdown-link"
         data-dropdown-toggle="lang-hover"
         data-dropdown-trigger="hover"
-        class="inline-flex items-center font-bold"
+        class="inline-flex items-center border-b-2 border-transparent py-1 font-bold"
         type="button"
     >
         <svg
@@ -32,7 +32,7 @@
 </div>
 
 <div class="sm:hidden">
-    <ul class="flex justify-evenly" aria-labelledby="lang-dropdown-link">
+    <ul class="flex justify-center" aria-labelledby="lang-dropdown-link">
         {{ $slot }}
     </ul>
 </div>

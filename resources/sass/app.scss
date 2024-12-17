@@ -42,10 +42,8 @@ main {
     background-color: $storex-red;
 }
 
-h1,
-h1 + p {
-    color: #fff;
-    text-shadow: 0px 5px 20px #000000;
+.text-shadow {
+    text-shadow: 0px 0px 35px #000000;
 }
 
 h1 {
@@ -55,7 +53,7 @@ h1 {
 
 h2,
 h3 {
-    font-size: 28px;
+    font-size: 20px;
     color: $storex-grey;
     font-weight: 500;
 }
@@ -72,6 +70,10 @@ h5 {
 
 .h-104 {
     height: 28rem;
+}
+
+.h-110 {
+    height: 30rem;
 }
 
 h2,
@@ -177,6 +179,11 @@ footer a {
     bottom: -5px;
 }
 
+.flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $storex-red;
+}
+
 .review-cell {
     width: 30%;
     /* Slightly less than 33% to account for margins */
@@ -186,6 +193,23 @@ footer a {
 .review-carousel {
     position: relative;
     padding: 30px 0;
+}
+
+/* Custom class for the h3 element */
+.truncated-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.25rem;
+    /* Default font size (adjust as needed) */
+}
+
+.truncated-text.squeezed {
+    font-size: 1rem;
+    /* Smaller font size when content exceeds 2 lines */
 }
 
 // .review-carousel .review-cell:nth-child(3n) {
