@@ -1,9 +1,12 @@
-<x-layout.admin>
+<x-layout.guest>
+    <x-slot name="title">{{ __('Login') }}</x-slot>
     <div class="container mx-auto">
         <div class="flex justify-center">
             <div class="w-full max-w-md">
                 <div class="rounded-lg bg-white shadow-md">
-                    <div class="bg-gray-200 px-6 py-4 text-lg font-semibold">{{ __('Register') }}</div>
+                    <div class="bg-gray-200 px-6 py-4 text-lg font-semibold flex justify-center">
+                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
+                    </div>
 
                     <div class="px-6 py-4">
                         <form method="POST" action="{{ route('register') }}">
@@ -18,7 +21,7 @@
                                     <input
                                         id="name"
                                         type="text"
-                                        class="focus:shadow-outline @error('name') @enderror w-full appearance-none rounded border border-red-500 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+                                        class="focus:shadow-outline @error('name') @enderror w-full appearance-none rounded border border-gray-200 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                                         name="name"
                                         value="{{ old('name') }}"
                                         required
@@ -27,7 +30,7 @@
                                     />
 
                                     @error('name')
-                                        <span class="mt-2 text-xs italic text-red-500">
+                                    <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -43,7 +46,7 @@
                                     <input
                                         id="email"
                                         type="email"
-                                        class="focus:shadow-outline @error('email') @enderror w-full appearance-none rounded border border-red-500 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+                                        class="focus:shadow-outline @error('email') @enderror w-full appearance-none rounded border border-gray-200 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                                         name="email"
                                         value="{{ old('email') }}"
                                         required
@@ -51,7 +54,7 @@
                                     />
 
                                     @error('email')
-                                        <span class="mt-2 text-xs italic text-red-500">
+                                    <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -67,14 +70,14 @@
                                     <input
                                         id="password"
                                         type="password"
-                                        class="focus:shadow-outline @error('password') @enderror w-full appearance-none rounded border border-red-500 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+                                        class="focus:shadow-outline @error('password') @enderror w-full appearance-none rounded border border-gray-200 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                                         name="password"
                                         required
                                         autocomplete="new-password"
                                     />
 
                                     @error('password')
-                                        <span class="mt-2 text-xs italic text-red-500">
+                                    <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -100,12 +103,9 @@
 
                             <div class="mb-4">
                                 <div class="flex items-center justify-between">
-                                    <button
-                                        type="submit"
-                                        class="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-                                    >
+                                    <x-btn>
                                         {{ __('Register') }}
-                                    </button>
+                                    </x-btn>
                                 </div>
                             </div>
                         </form>
@@ -114,4 +114,4 @@
             </div>
         </div>
     </div>
-</x-layout.admin>
+</x-layout.guest>

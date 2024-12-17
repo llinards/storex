@@ -1,9 +1,7 @@
 <x-layout.admin>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Admin Dashboard</h1>
-            </div>
-        </div>
-    </div>
+    <x-slot name="title">Sākums</x-slot>
+    <x-slot name="content">
+        <h1>Admin</h1>
+        <p>Welcome to the admin panel.</p>
+    </x-slot>
 </x-layout.admin>

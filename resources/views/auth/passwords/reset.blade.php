@@ -1,15 +1,18 @@
 <x-layout.admin>
+    <x-slot name="title">{{ __('Reset Password') }}</x-slot>
     <div class="container mx-auto">
         <div class="flex justify-center">
             <div class="w-full max-w-md">
                 <div class="rounded-lg bg-white shadow-md">
-                    <div class="bg-gray-200 px-6 py-4 text-lg font-semibold">{{ __('Reset Password') }}</div>
+                    <div class="bg-gray-200 px-6 py-4 text-lg font-semibold flex justify-center">
+                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
+                    </div>
 
                     <div class="px-6 py-4">
                         <form method="POST" action="{{ route('password.update') }}">
                             @csrf
 
-                            <input type="hidden" name="token" value="{{ $token }}" />
+                            <input type="hidden" name="token" value="{{ $token }}"/>
 
                             <div class="mb-4">
                                 <label for="email" class="mb-2 block text-sm font-bold text-gray-700">
@@ -29,7 +32,7 @@
                                     />
 
                                     @error('email')
-                                        <span class="mt-2 text-xs italic text-red-500">
+                                    <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -52,7 +55,7 @@
                                     />
 
                                     @error('password')
-                                        <span class="mt-2 text-xs italic text-red-500">
+                                    <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -78,12 +81,9 @@
 
                             <div class="mb-4">
                                 <div class="flex items-center justify-between">
-                                    <button
-                                        type="submit"
-                                        class="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-                                    >
+                                    <x-btn>
                                         {{ __('Reset Password') }}
-                                    </button>
+                                    </x-btn>
                                 </div>
                             </div>
                         </form>

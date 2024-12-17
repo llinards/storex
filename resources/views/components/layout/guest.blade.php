@@ -12,8 +12,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-<main class="py-4 admin-dashboard">
+<body class="h-screen">
+<main class="h-screen flex flex-col justify-center">
     {{ $slot }}
 </main>
 </body>

@@ -1,4 +1,4 @@
-<x-layout.admin>
+<x-layout.guest>
     <div class="container mx-auto">
         <div class="flex justify-center">
             <div class="w-full max-w-md">
@@ -23,14 +23,13 @@
                         <p class="text-gray-700">{{ __('If you did not receive the email') }},</p>
                         <form class="inline" method="POST" action="{{ route('verification.resend') }}">
                             @csrf
-                            <button type="submit" class="text-blue-500 hover:text-blue-800">
+                            <x-btn>
                                 {{ __('click here to request another') }}
-                            </button>
-                            .
+                            </x-btn>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</x-layout.admin>
+</x-layout.guest>
