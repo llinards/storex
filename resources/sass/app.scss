@@ -33,7 +33,7 @@ html {
     color: $storex-grey;
 }
 
-main {
+main:not(.admin-dashboard) {
     background-color: $body-bg;
     // background: linear-gradient(180deg, $storex-light-grey 0%, $body-bg 100%);
 }

@@ -1,9 +1,6 @@
 <?php
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-
-uses(RefreshDatabase::class);
 
 it('returns a successful response for login page', function () {
     $response = $this->get('/login');
@@ -19,7 +16,7 @@ it('returns to login page when trying to access dashboard', function () {
 
 it('returns a validation message if email and/or password is incorrect', function () {
     $response = $this->post('/login', [
-        'email' => 'wrong@example.com',
+        'email'    => 'wrong@example.com',
         'password' => 'wrongpassword',
     ]);
 

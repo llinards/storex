@@ -17,17 +17,17 @@ class Category extends Model
         return $this->hasMany(CategoryTranslation::class);
     }
 
-    public function getTitleAttribute()
+    public function getTitleAttribute(): string|null
     {
         return $this->translation->first()->title ?? null;
     }
 
-    public function getSlugAttribute()
+    public function getSlugAttribute(): string|null
     {
         return $this->translation->first()->slug ?? null;
     }
 
-    public function getDescriptionAttribute()
+    public function getDescriptionAttribute(): string|null
     {
         return $this->translation->first()->description ?? null;
     }

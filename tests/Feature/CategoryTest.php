@@ -2,9 +2,6 @@
 
 use App\Models\Category;
 use App\Models\CategoryTranslation;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-
-uses(RefreshDatabase::class);
 
 it('shows the category page for a valid locale and matching category locale', function () {
     $category    = Category::factory()->create();
