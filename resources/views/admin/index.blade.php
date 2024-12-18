@@ -1,9 +1,4 @@
 <x-layout.admin>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Admin Dashboard</h1>
-            </div>
-        </div>
-    </div>
+    <x-slot name="title">Sākums</x-slot>
+    <h1 class="text-2xl font-bold text-center">Sveicināti, {{ auth()->user()->name }}!</h1>
 </x-layout.admin>

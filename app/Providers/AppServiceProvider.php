@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Category;
+use App\Services\CategoryServices;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,20 +22,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot(CategoryServices $categoryServices): void
     {
-        view()->composer(['home', 'components.nav.links', 'production'], function ($view) {
-            $categories = Category::with([
-                'translation' => function ($query) {
-                    $query->select('category_id', 'title', 'slug', 'description', 'locale')
-                        ->where('locale', app()->getLocale());
-                },
-            ])
-                ->select('id', 'image')
-                ->whereHas('translation', function ($query) {
-                    $query->where('locale', app()->getLocale());
-                })
-                ->get();
+        View::composer(['home', 'components.nav.links'], function ($view) use ($categoryServices) {
+            $categories = $categoryServices->getCategories();
             $view->with('categories', $categories);
         });
     }
