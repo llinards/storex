@@ -51,6 +51,4 @@
             <x-reviews.wrapper></x-reviews.wrapper>
         </div>
     </div>
-
-    <x-call-btn></x-call-btn>
 </x-layout.app>

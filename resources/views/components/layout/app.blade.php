@@ -17,6 +17,7 @@
         @include('includes.navbar')
         <main>
             {{ $slot }}
+            <x-call-btn></x-call-btn>
         </main>
         @include('includes.footer')
     </body>

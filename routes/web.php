@@ -14,6 +14,9 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/', function () {
         return view('home');
     })->name('home');
+    Route::get('/produkcija', function () {
+        return view('production');
+    })->name('home');
     Route::get('/galerija', function () {
         return view('gallery');
     })->name('gallery');
