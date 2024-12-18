@@ -1,9 +1,9 @@
-<div class="carousel-cell rounded-lg border-1 shadow-md sm:relative">
+<div class="carousel-cell sm:relative">
     <a {{ $attributes }} class="block h-48 overflow-hidden md:h-56 lg:h-48">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>
 
-    <div class="grid h-48 content-between p-5 md:h-56 lg:h-48">
+    <div class="grid h-48 content-between rounded-b-lg border-1 p-5 shadow-md md:h-56 lg:h-48">
         <div class="bg-white">
             <div class="flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
