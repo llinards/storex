@@ -12,23 +12,23 @@ class Category extends Model
 
     protected $fillable = ['image'];
 
-    public function translation(): HasMany
+    public function translations(): HasMany
     {
         return $this->hasMany(CategoryTranslation::class);
     }
 
-    public function getTitleAttribute(): string|null
+    public function getTitleAttribute(): ?string
     {
-        return $this->translation->first()->title ?? null;
+        return $this->translations->first()->title ?? null;
     }
 
-    public function getSlugAttribute(): string|null
+    public function getSlugAttribute(): ?string
     {
-        return $this->translation->first()->slug ?? null;
+        return $this->translations->first()->slug ?? null;
     }
 
-    public function getDescriptionAttribute(): string|null
+    public function getDescriptionAttribute(): ?string
     {
-        return $this->translation->first()->description ?? null;
+        return $this->translations->first()->description ?? null;
     }
 }
