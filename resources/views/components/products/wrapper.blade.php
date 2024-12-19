@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between border-b-1 border-storex-light-grey">
         <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a
-            href="#"
+            href="{{ route('products.index') }}"
             class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
         >
             @lang('Skatīt
@@ -37,7 +37,7 @@
         <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 md:grid-cols-3 xl:grid-cols-4">
             @foreach ($categories as $category)
                 <x-products.card
-                    href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                    href="{{ route('category.show', ['category' => $category->slug]) }}"
                 >
                     <x-slot name="productImage">
                         {{ Storage::url('categories/' . $category->image) }}
@@ -65,7 +65,7 @@
         <div class="carousel" data-flickity='{ "contain": true }'>
             @foreach ($categories as $category)
                 <x-products.card
-                    href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                    href="{{ route('category.show', ['category' => $category->slug]) }}"
                 >
                     <x-slot name="productImage">
                         {{ Storage::url('categories/' . $category->image) }}

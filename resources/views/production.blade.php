@@ -1,8 +1,7 @@
 <x-layout.app>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pb-12 sm:pt-0">
-            <p class="text-storex-inactive-grey">@lang('Produkcija')</p>
-            <h1 class="pt-2 leading-none">@lang('Tenta angāri - nojumes')</h1>
+            <h1 class="pt-2 leading-none">@lang('Produkcija')</h1>
         </div>
 
         {{-- DESKTOP LAYOUT --}}
@@ -18,7 +17,7 @@
                 <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
                         <x-production.card
-                            href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                            href="#"
                         >
                             <x-slot name="productImage">
                                 {{ Storage::url('categories/' . $category->image) }}
@@ -52,7 +51,7 @@
                 <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
                     @foreach ($categories as $category)
                         <x-production.card
-                            href="{{ route('category.show', ['locale' => app()->getLocale(), 'category' => $category->slug]) }}"
+                            href="#"
                         >
                             <x-slot name="productImage">
                                 {{ Storage::url('categories/' . $category->image) }}

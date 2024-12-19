@@ -11,12 +11,17 @@ Auth::routes([
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
+//    Home
     Route::get('/', function () {
         return view('home');
     })->name('home');
+
+//    Products routes
     Route::get('/produkcija', function () {
         return view('production');
-    })->name('home');
+    })->name('products.index');
+
+
     Route::get('/galerija', function () {
         return view('gallery');
     })->name('gallery');
