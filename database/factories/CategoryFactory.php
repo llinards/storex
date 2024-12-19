@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Storage;
 use Smknstd\FakerPicsumImages\FakerPicsumImagesProvider;
 
 /**
@@ -20,18 +21,12 @@ class CategoryFactory extends Factory
         $faker = \Faker\Factory::create();
         $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
-        $sourceImagePath = resource_path('images/category-cover-image-sample.jpg'); // Path to the source image
-        $destinationPath = storage_path('app/public/categories');
-
-        $imageName = basename($sourceImagePath);
-        $destinationImagePath = $destinationPath.'/'.$imageName;
-
-        if (! file_exists($destinationImagePath)) {
-            copy($sourceImagePath, $destinationImagePath);
+        if (! Storage::disk('public')->exists('categories')) {
+            Storage::disk('public')->makeDirectory('categories');
         }
 
         return [
-            'image' => $imageName,
+            'image' => basename($faker->image(dir: storage_path('app/public/categories'), width: 800, height: 600)),
         ];
     }
 }
