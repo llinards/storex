@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between border-b-1 border-storex-light-grey">
         <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a
-            href="{{ route('products.index') }}"
+            href="{{ route('categories.index') }}"
             class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
         >
             @lang('Skatīt
@@ -36,16 +36,14 @@
     @else
         <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 md:grid-cols-3 xl:grid-cols-4">
             @foreach ($categories as $category)
-                <x-products.card
-                    href="{{ route('category.show', ['category' => $category->slug]) }}"
-                >
+                <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
                     <x-slot name="productImage">
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="productHeading">{{ $category->title }}</x-slot>
                     <x-slot name="productDescription">{{ $category->description }}</x-slot>
                     <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-products.card>
+                </x-categories.card>
             @endforeach
         </div>
     @endif
@@ -64,16 +62,14 @@
     @else
         <div class="carousel" data-flickity='{ "contain": true }'>
             @foreach ($categories as $category)
-                <x-products.card
-                    href="{{ route('category.show', ['category' => $category->slug]) }}"
-                >
+                <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
                     <x-slot name="productImage">
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="productHeading">{{ $category->title }}</x-slot>
                     <x-slot name="productDescription">{{ $category->description }}</x-slot>
                     <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-products.card>
+                </x-categories.card>
             @endforeach
         </div>
     @endif
