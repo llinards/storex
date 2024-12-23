@@ -88,9 +88,11 @@ h3 {
 
 li {
     font-weight: 400;
+    line-height: normal;
 }
 
-p {
+p,
+label {
     font-size: 18px;
     color: $storex-grey;
 }
@@ -118,6 +120,10 @@ p {
 
 .text-small {
     font-size: 13px;
+}
+
+.text-extra-small {
+    font-size: 8px;
 }
 
 footer,
@@ -223,6 +229,77 @@ footer a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.product-cell {
+    width: 100%;
+}
+
+/* cell number */
+
+.product-nav {
+    width: 100%;
+}
+
+.product-nav .product-cell {
+    height: 100px;
+    width: 20%;
+    margin-right: 0.5rem;
+}
+
+/* Hide the default radio button */
+.input-radio {
+    display: none;
+    /* Hide the radio button */
+}
+
+/* Style for the custom radio button */
+.input-radio-label {
+    position: relative;
+    padding-left: 30px;
+    /* Space for the custom circle */
+    cursor: pointer;
+    line-height: 20px;
+    user-select: none;
+}
+
+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 0px 1px $storex-inactive-grey;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+/* When the radio button is checked */
+.input-radio:checked + .input-radio-label::before {
+    background-color: $storex-red;
+    border-color: $storex-red;
+    border: solid white 3px;
+}
+
+.add-subtract-btn {
+    color: $storex-red;
+    padding: 0px 8px;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 100;
+    background-color: $storex-add-subtract-bg;
+    border-radius: 20%;
+}
+
+.add-subtract-btn:hover {
+    color: $storex-red;
+    padding: 0px 8px;
+    font-family: sans-serif;
+    font-weight: 100;
+    background-color: $storex-add-subtract-bg;
+    border-radius: 20%;
 }
 
 @keyframes slideIn {

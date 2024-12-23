@@ -1,8 +1,6 @@
 <x-nav.production>
     @foreach ($categories as $category)
-        <x-nav.dropdown-link
-            href="{{ route('category.show', ['category' => $category->slug]) }}"
-        >
+        <x-nav.dropdown-link href="{{ route('category.show', ['category' => $category->slug]) }}">
             {{ $category->title }}
         </x-nav.dropdown-link>
     @endforeach

@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "flickity": "^3.0.0",
+        "flickity-as-nav-for": "^3.0.0",
         "flowbite": "^2.5.2"
     }
 }

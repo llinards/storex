@@ -1,4 +1,4 @@
-<div class="carousel-cell production-cell rounded-lg border-1 shadow-md sm:relative">
+<div class="carousel-cell category-cell rounded-lg border-1 shadow-md sm:relative">
     <a {{ $attributes }} class="block overflow-hidden">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>

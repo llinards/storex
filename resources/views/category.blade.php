@@ -16,9 +16,7 @@
             @else
                 <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
-                        <x-production.card
-                            href="#"
-                        >
+                        <x-category.card href="#">
                             <x-slot name="productImage">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
@@ -32,7 +30,7 @@
                                 Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m
                             </x-slot>
                             <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                        </x-production.card>
+                        </x-category.card>
                     @endforeach
                 </div>
             @endif
@@ -50,9 +48,7 @@
             @else
                 <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
                     @foreach ($categories as $category)
-                        <x-production.card
-                            href="#"
-                        >
+                        <x-category.card href="#">
                             <x-slot name="productImage">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
@@ -66,7 +62,7 @@
                                 Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m
                             </x-slot>
                             <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                        </x-production.card>
+                        </x-category.card>
                     @endforeach
                 </div>
             @endif

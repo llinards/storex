@@ -18,7 +18,8 @@
     }
 
     p,
-    a {
+    a,
+    label {
         font-size: 14px;
     }
 
@@ -44,17 +45,18 @@
 
     // li button,
     p,
-    a {
+    a,
+    label {
         font-size: 14px;
     }
 
-    li,
+    // li,
     li a,
     li button {
         font-size: 20px;
     }
 
-    .production-cell {
+    .category-cell {
         margin: 32px 15px 32px 0px;
     }
 }

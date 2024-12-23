@@ -28,6 +28,9 @@ export default {
                 '104': '28rem',
                 '110': '30rem',
             },
+            fontSize: {
+                'xs': '8px'
+            }
 
         },
     },

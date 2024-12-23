@@ -17,7 +17,7 @@
 
     <div class="bg-white">
         <div class="container px-4 py-8 sm:mx-auto sm:py-12 lg:px-6 xl:px-8">
-            <x-products.wrapper :categories="$categories"></x-products.wrapper>
+            <x-categories.wrapper :categories="$categories"></x-categories.wrapper>
         </div>
     </div>
 

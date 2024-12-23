@@ -11,16 +11,21 @@ Auth::routes([
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
-//    Home
+    //    Home
     Route::get('/', function () {
         return view('home');
     })->name('home');
 
-//    Products routes
-    Route::get('/produkcija', function () {
-        return view('production');
-    })->name('products.index');
+    //   Category route
+    Route::get('/kategorija', function () {
+        return view('category');
+    })->name('categories.index');
 
+
+    //   Category route
+    Route::get('/produkts', function () {
+        return view('product');
+    })->name('categories.index');;
 
     Route::get('/galerija', function () {
         return view('gallery');
