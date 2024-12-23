@@ -88,6 +88,7 @@ h3 {
 
 li {
     font-weight: 400;
+    line-height: normal;
 }
 
 p,
@@ -119,6 +120,10 @@ label {
 
 .text-small {
     font-size: 13px;
+}
+
+.text-extra-small {
+    font-size: 8px;
 }
 
 footer,

@@ -113,26 +113,3 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
-
-// Product Counter
-const productAmount = document.getElementById('product-amount');
-const btnAdd = document.getElementById('btn-add');
-const btnSubtract = document.getElementById('btn-subtract');
-let amount = 0;
-
-btnAdd.addEventListener('click', function () {
-    amount++;
-    productAmount.innerText = amount;
-    productAmount.value = parseInt(amount);
-});
-btnSubtract.addEventListener('click', function () {
-    if (amount != 0) {
-        amount--;
-        productAmount.innerText = amount;
-        productAmount.value = parseInt(amount);
-    }
-});
-
-window.onload = function () {
-    document.getElementById('product-amount').value = '0';
-};
