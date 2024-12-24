@@ -24,8 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(CategoryServices $categoryServices): void
     {
-        View::composer(['home', 'components.nav.links', 'category', 'components.product'], function ($view) use ($categoryServices) {
-            $categories = $categoryServices->getCategories();
+        $locale = app()->getLocale();
+        View::composer(['home', 'components.nav.links'], function ($view) use ($locale, $categoryServices) {
+            $categories = $categoryServices->getCategories($locale);
             $view->with('categories', $categories);
         });
     }

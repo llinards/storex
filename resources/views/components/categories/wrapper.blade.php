@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between border-b-1 border-storex-light-grey">
         <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
         <a
-            href="{{ route('categories.index') }}"
+            href="{{ route('category.index') }}"
             class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
         >
             @lang('Skatīt

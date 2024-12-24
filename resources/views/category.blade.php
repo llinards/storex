@@ -16,7 +16,7 @@
             @else
                 <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
-                        <x-category.card href="#">
+                        <x-category.card href="{{ route('category.show', ['category' => $category->slug]) }}">
                             <x-slot name="productImage">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>

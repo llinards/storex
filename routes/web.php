@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -11,22 +12,9 @@ Auth::routes([
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
-    //    Home
     Route::get('/', function () {
         return view('home');
     })->name('home');
-
-    //   Category route
-    Route::get('/kategorija', function () {
-        return view('category');
-    })->name('categories.index');
-
-
-    //   Category route
-    Route::get('/produkts', function () {
-        return view('product');
-    })->name('categories.index');;
-
     Route::get('/galerija', function () {
         return view('gallery');
     })->name('gallery');
@@ -46,7 +34,14 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
         return view('pricelist');
     })->name('pricelist');
 
-    Route::get('/{category}', [CategoriesController::class, 'show'])->name('category.show');
+//    Temporary route
+    Route::get('/produkcija/kategorija-demo/produkts-demo',
+        [ProductsController::class, 'show'])->name('product.show');
+
+    Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
+    Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
+
+//    Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
 
     //    TODO: Remove this route
     Route::get('/element-test', function () {
