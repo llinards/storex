@@ -40,13 +40,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
 
     Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
     Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
-
 //    Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
-
-    //    TODO: Remove this route
-    Route::get('/element-test', function () {
-        return view('element-test');
-    })->name('element-test');
 });
 
 Route::get('/', function () {
