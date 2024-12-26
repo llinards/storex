@@ -1,7 +1,7 @@
 {{-- DESKTOP LAYOUT --}}
 <div class="hidden bg-white sm:block">
     <div class="flex items-center justify-between border-b-1 border-storex-light-grey">
-        <h3 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h3>
+        <h2 class="pb-2">@lang('Tenta angāru veidi un aksesuāri')</h2>
         <a
             href="{{ route('category.index') }}"
             class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"

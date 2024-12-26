@@ -24,4 +24,8 @@
     <div class="container mx-auto pb-8 pt-3 sm:pb-12 sm:pt-8 lg:px-6 xl:px-8">
         <x-product.card></x-product.card>
     </div>
+
+    <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
+        <x-product.specifications></x-product.specifications>
+    </div>
 </x-layout.app>

@@ -42,8 +42,11 @@ main:not(.admin-dashboard) {
     background-color: $storex-red;
 }
 
-.text-shadow {
-    text-shadow: 0px 0px 35px #000000;
+footer,
+footer p,
+footer a {
+    color: white;
+    font-size: 18px;
 }
 
 h1 {
@@ -51,7 +54,12 @@ h1 {
     font-weight: 700;
 }
 
-h2,
+h2 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+}
+
 h3 {
     font-size: 20px;
     color: $storex-grey;
@@ -76,9 +84,9 @@ h5 {
     height: 30rem;
 }
 
-h2,
-h3 {
-    line-height: 1;
+.header {
+    background-position: center;
+    background-size: cover;
 }
 
 .icon,
@@ -118,28 +126,20 @@ label {
     /* Let the container adjust based on content */
 }
 
-.text-small {
-    font-size: 13px;
+.text-shadow {
+    text-shadow: 0px 0px 35px #000000;
 }
 
 .text-extra-small {
     font-size: 8px;
 }
 
-footer,
-footer p,
-footer a {
-    color: white;
-    font-size: 18px;
+.text-small {
+    font-size: 13px;
 }
 
 .transform-svg {
     transform: scaleY(-1);
-}
-
-.header {
-    background-position: center;
-    background-size: cover;
 }
 
 * {
@@ -328,6 +328,11 @@ label::before {
 
 .slide-out {
     animation: slideOut 0.3s forwards;
+}
+
+th,
+td {
+    padding: 16px 8px;
 }
 
 @import 'media-queries';
