@@ -9,7 +9,7 @@
 
 {{-- MOBILE VIEW --}}
 <div class="lg:hidden">
-    <div class="carousel sm:pt-8" data-flickity='{ "contain": true }'>
+    <div class="carousel my-8 sm:pt-8" data-flickity='{ "contain": true }'>
         <x-reviews.mob-content></x-reviews.mob-content>
     </div>
 </div>

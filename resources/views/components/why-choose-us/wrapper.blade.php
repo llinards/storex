@@ -14,7 +14,7 @@
 {{-- MOBILE LAYOUT --}}
 <div class="block sm:hidden">
     <h2 class="border-b-1 pb-2 text-center">@lang('Kāpēc STOREX?')</h2>
-    <div class="carousel" data-flickity='{ "contain": true }'>
+    <div class="carousel my-8" data-flickity='{ "contain": true }'>
         <x-why-choose-us.content></x-why-choose-us.content>
     </div>
 </div>

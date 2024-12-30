@@ -11,13 +11,13 @@ class CategoriesController extends Controller
     {
         $categories = $categoryServices->getCategories($locale);
 
-        return view('category', compact('categories'));
+        return view('categories', compact('categories'));
     }
 
 
     public function show()
     {
-        return 'Šeit būt visi produkti kategorijā!';
-//       tad te liec return view('faila nosaukums');
+        // return 'Šeit būt visi produkti kategorijā!';
+        return view('category');
     }
 }

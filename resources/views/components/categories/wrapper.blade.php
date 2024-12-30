@@ -60,7 +60,7 @@
             </p>
         </div>
     @else
-        <div class="carousel" data-flickity='{ "contain": true }'>
+        <div class="carousel my-8" data-flickity='{ "contain": true }'>
             @foreach ($categories as $category)
                 <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
                     <x-slot name="productImage">
