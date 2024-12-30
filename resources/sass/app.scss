@@ -31,6 +31,7 @@
 html {
     font-family: 'Lato', sans-serif;
     color: $storex-grey;
+    scroll-behavior: smooth;
 }
 
 main:not(.admin-dashboard) {
@@ -176,13 +177,26 @@ label {
 }
 
 /* Dot style for the selected cell */
-.flickity-page-dot.is-selected {
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.dot.is-selected {
     background-color: $storex-red;
+    opacity: 1;
 }
 
 // Placement of the dots.
 .flickity-page-dots {
-    bottom: -5px;
+    bottom: -15px;
 }
 
 .flickity-button:focus {
@@ -218,13 +232,6 @@ label {
     /* Smaller font size when content exceeds 2 lines */
 }
 
-// .review-carousel .review-cell:nth-child(3n) {
-//     border: none;
-//     /* or border: 0; */
-// }
-
-// Media Queries
-
 .faq-panel {
     max-height: 0;
     overflow: hidden;
@@ -234,8 +241,6 @@ label {
 .product-cell {
     width: 100%;
 }
-
-/* cell number */
 
 .product-nav {
     width: 100%;
@@ -260,14 +265,22 @@ label {
     /* Space for the custom circle */
     cursor: pointer;
     line-height: 20px;
+    /* Ensure line height is the same as the radio button size */
     user-select: none;
+    display: inline-block;
+    /* Makes sure the label's height is based on the content */
+    vertical-align: middle;
+    /* Aligns the label vertically with the content */
 }
 
-label::before {
+/* Style for the custom circle before element */
+.input-radio-label::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Centers the circle vertically */
     width: 20px;
     height: 20px;
     box-shadow: 0px 0px 0px 1px $storex-inactive-grey;
@@ -281,25 +294,6 @@ label::before {
     background-color: $storex-red;
     border-color: $storex-red;
     border: solid white 3px;
-}
-
-.add-subtract-btn {
-    color: $storex-red;
-    padding: 0px 8px;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: 100;
-    background-color: $storex-add-subtract-bg;
-    border-radius: 20%;
-}
-
-.add-subtract-btn:hover {
-    color: $storex-red;
-    padding: 0px 8px;
-    font-family: sans-serif;
-    font-weight: 100;
-    background-color: $storex-add-subtract-bg;
-    border-radius: 20%;
 }
 
 @keyframes slideIn {
@@ -328,6 +322,34 @@ label::before {
 
 .slide-out {
     animation: slideOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.2s ease-out forwards;
 }
 
 th,

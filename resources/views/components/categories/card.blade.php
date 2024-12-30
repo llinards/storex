@@ -1,10 +1,10 @@
-<div class="carousel-cell sm:relative">
+<div class="carousel-cell relative">
     <a {{ $attributes }} class="block h-48 overflow-hidden md:h-56 lg:h-48">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>
 
-    <div class="grid h-48 content-between rounded-b-lg border-1 p-5 shadow-md md:h-56 lg:h-48">
-        <div class="bg-white">
+    <div class="grid h-48 content-between rounded-b-lg border-1 bg-white p-5 shadow-md md:h-56 lg:h-48">
+        <div>
             <div class="flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
                     {{ $productHeading }}
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="bottom-0 right-0 mb-4 mr-4 flex justify-end sm:absolute">
+        <div class="absolute bottom-0 right-0 mb-4 mr-4 flex justify-end">
             <a
                 class="inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red"
                 {{ $attributes }}

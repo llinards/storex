@@ -34,11 +34,6 @@
             <div class="sm:px-4 sm:pb-12 lg:px-6 xl:px-8">
                 <x-for-who></x-for-who>
             </div>
-            {{--
-                <div class="px-4 lg:px-6 xl:px-8 pb-12">
-                <x-faq></x-faq>
-                </div>
-            --}}
 
             <div class="px-4 py-8 sm:py-0 sm:pb-12 lg:px-6 xl:px-8">
                 <x-faq.wrapper></x-faq.wrapper>
