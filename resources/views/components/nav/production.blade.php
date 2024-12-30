@@ -28,10 +28,7 @@
         id="production-content"
         class="flex max-h-0 justify-center overflow-hidden opacity-0 transition-all duration-200 ease-in-out group-hover:max-h-screen group-hover:opacity-100 sm:absolute sm:w-44 sm:shadow"
     >
-        <ul
-            class="my-2 w-60 px-3 py-2 text-left text-sm sm:mt-0 sm:bg-white sm:shadow"
-            aria-labelledby="production-btn"
-        >
+        <ul class="w-60 px-3 py-2 text-left text-sm sm:mt-0 sm:bg-white sm:shadow" aria-labelledby="production-btn">
             {{ $slot }}
         </ul>
     </div>

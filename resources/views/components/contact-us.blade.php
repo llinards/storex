@@ -1,4 +1,4 @@
-<div class="gap-10 lg:grid lg:grid-cols-2">
+<div id="contact-us" class="gap-10 lg:grid lg:grid-cols-2">
     <div class="grid grid-cols-1 content-center lg:px-16">
         <div class="pb-4">
             <p class="text-storex-inactive-grey">@lang('Nepieciešama papildus informācija?')</p>
