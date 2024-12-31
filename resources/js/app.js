@@ -113,3 +113,23 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// Function to check if the device width is <= 639px
+
+// Since nav is fixed, offset the scrolling.
+document.querySelectorAll('.scroll-btn').forEach(function (button) {
+    button.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = 100; // Adjust this value based on your fixed navigation height
+
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth', // Add smooth scroll
+        });
+    });
+});
