@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Smknstd\FakerPicsumImages\FakerPicsumImagesProvider;
 
 /**
@@ -21,12 +22,28 @@ class CategoryFactory extends Factory
         $faker = \Faker\Factory::create();
         $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
-        if (! Storage::disk('public')->exists('categories')) {
+        $title = $this->faker->sentence(2);
+        $slug  = Str::slug($title);
+
+        if ( ! Storage::disk('public')->exists('categories')) {
             Storage::disk('public')->makeDirectory('categories');
         }
 
         return [
-            'image' => basename($faker->image(dir: storage_path('app/public/categories'), width: 800, height: 600)),
+            'image'       => basename($faker->image(dir: storage_path('app/public/categories'), width: 800,
+                height: 600)),
+            'title'       => [
+                'en' => '(EN) '.$title,
+                'lv' => '(LV) '.$title,
+            ],
+            'slug'        => [
+                'en' => 'en-'.$slug,
+                'lv' => 'lv-'.$slug,
+            ],
+            'description' => [
+                'en' => $this->faker->paragraph,
+                'lv' => $this->faker->paragraph,
+            ],
         ];
     }
 }

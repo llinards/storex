@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoryTranslation;
+use App\Models\Category;
 use App\Services\CategoryServices;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class CategoriesController extends Controller
@@ -16,13 +18,25 @@ class CategoriesController extends Controller
     }
 
 
-    public function show(string $locale, CategoryTranslation $category): CategoryTranslation|string
+    public function show(string $locale, Request $data)
     {
-        if ($category->locale !== $locale) {
-            abort(404);
-        }
-
-//        return $category;
         return 'Šeit būt visi produkti kategorijā!';
+    }
+
+    public function store(Request $data)
+    {
+        Category::create([
+            'title'       => [
+                app()->getLocale() => $data['title'],
+            ],
+            'slug'        => [
+                app()->getLocale() => Str::slug($data['title'], '-'),
+            ],
+            'description' => [
+                app()->getLocale() => $data['description'],
+            ],
+        ]);
+
+        return $data;
     }
 }

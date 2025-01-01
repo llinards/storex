@@ -4,31 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
 {
     use HasFactory;
+    use HasTranslations;
 
-    protected $fillable = ['image'];
+    public array $translatable = ['title', 'slug', 'description'];
 
-    public function translations(): HasMany
+    public function getFallbackLocale(): string
     {
-        return $this->hasMany(CategoryTranslation::class);
-    }
-
-    public function getTitleAttribute(): ?string
-    {
-        return $this->translations->first()->title ?? null;
-    }
-
-    public function getSlugAttribute(): ?string
-    {
-        return $this->translations->first()->slug ?? null;
-    }
-
-    public function getDescriptionAttribute(): ?string
-    {
-        return $this->translations->first()->description ?? null;
+        return env('APP_LOCALE');
     }
 }
