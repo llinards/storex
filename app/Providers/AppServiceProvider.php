@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\CategoryServices;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,9 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(CategoryServices $categoryServices): void
     {
-        $locale = app()->getLocale();
-        View::composer(['home', 'components.nav.links'], function ($view) use ($locale, $categoryServices) {
-            $categories = $categoryServices->getCategories($locale);
+        Model::unguard();
+
+        View::composer(['home', 'components.nav.links'], static function ($view) use ($categoryServices) {
+            $categories = $categoryServices->getCategories();
             $view->with('categories', $categories);
         });
     }

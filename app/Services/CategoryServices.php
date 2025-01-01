@@ -7,18 +7,8 @@ use Illuminate\Database\Eloquent\Collection;
 
 class CategoryServices
 {
-    public function getCategories(string $locale): Collection
+    public function getCategories(): Collection
     {
-        return Category::with([
-            'translations' => function ($query) use ($locale) {
-                $query->select('category_id', 'title', 'slug', 'description', 'locale')
-                      ->where('locale', $locale);
-            },
-        ])
-                       ->select('id', 'image')
-                       ->whereHas('translations', function ($query) use ($locale) {
-                           $query->where('locale', $locale);
-                       })
-                       ->get();
+        return Category::all();
     }
 }
