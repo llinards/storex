@@ -7,7 +7,7 @@
             class="max-h-full"
         />
         <div class="order-1 lg:order-2">
-            <h2 class="pb-2 text-left text-storex-red">
+            <h2 class="pb-2 text-center text-storex-red sm:text-left">
                 @lang('Kāpēc izvēlēties STOREX angāra iegādei?')
             </h2>
             <p class="py-2">
