@@ -12,11 +12,14 @@
     </div>
 
     <div class="container mx-auto px-4 lg:px-6 xl:px-8">
-
         <div class="py-8 sm:py-12">
-            <div class="items-center lg:gap-20 grid lg:grid-cols-2">
-                <img class="order-2 pt-4 lg:pt-0 lg:order-1" src="{{ asset('images/storex-facilities.jpg') }}"
-                    alt="Storex Owners" class="max-h-full" />
+            <div class="grid items-center lg:grid-cols-2 lg:gap-20">
+                <img
+                    class="order-2 pt-4 lg:order-1 lg:pt-0"
+                    src="{{ asset('images/storex-facilities.jpg') }}"
+                    alt="Storex Owners"
+                    class="max-h-full"
+                />
                 <div class="order-1 lg:order-2">
                     <h2 class="pb-2 text-center sm:text-left">
                         @lang('Gandrīz 10 gadi tirgū!')
@@ -35,7 +38,7 @@
                         vislabāko cenas un kvalitātes attiecību. Mūsu produkti ir sertificēti
                         un atbilst ES prasībām.')
                     </p>
-                    <p class="pt-2 pb-4">
+                    <p class="pb-4 pt-2">
                         @lang('Angāri ir aprīkoti ar augstas kvalitātes tentu,
                         kas ir lieliski piemērots dažādiem laikapstākļiem. Tos ir ļoti viegli
                         uzstādīt un pēc tam izjaukt, kā arī nomaksas iespējas ir ļoti plašas.
@@ -47,15 +50,19 @@
             </div>
         </div>
         <div class="pb-8 sm:pb-12">
-            <div class="items-center lg:gap-20 grid lg:grid-cols-2">
-                <img class="order-2 pt-4 lg:pt-0" src="{{ asset('images/storex-facilities.jpg') }}" alt="Storex Owners"
-                    class="max-h-full" />
+            <div class="grid items-center lg:grid-cols-2 lg:gap-20">
+                <img
+                    class="order-2 pt-4 lg:pt-0"
+                    src="{{ asset('images/storex-facilities.jpg') }}"
+                    alt="Storex Owners"
+                    class="max-h-full"
+                />
                 <div class="order-1">
                     <h2 class="pb-2 text-center sm:text-left">
                         @lang('Kādiem nolūkiem tiek izmantoti tenta
                         angāri?')
                     </h2>
-                    <p class="pt-2 pb-4">
+                    <p class="pb-4 pt-2">
                         @lang('Vairāk nekā 700 uzņēmumi un privātpersonas izmanto mūsu tenta
                         angārus visdažādākajiem pielietojumiemm: uzglabāšanai, dzīvnieku
                         un putnu turēšanai, dārzeņu audzēšanai. Tiem ir vienkārša
@@ -67,12 +74,10 @@
             </div>
         </div>
     </div>
-    </div>
+
     <div class="bg-white py-8 sm:py-12">
         <div class="container px-4 sm:mx-auto lg:px-6 xl:px-8">
             <x-reviews.wrapper></x-reviews.wrapper>
         </div>
     </div>
-
-
 </x-layout.app>
