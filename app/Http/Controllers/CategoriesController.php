@@ -10,9 +10,9 @@ use Illuminate\View\View;
 
 class CategoriesController extends Controller
 {
-    public function index(string $locale, CategoryServices $categoryServices): View
+    public function index(CategoryServices $categoryServices): View
     {
-        $categories = $categoryServices->getCategories($locale);
+        $categories = $categoryServices->getCategories();
 
         return view('categories', compact('categories'));
     }
