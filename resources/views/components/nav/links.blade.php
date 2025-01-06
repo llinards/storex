@@ -23,9 +23,9 @@
 <x-nav.link href="{{ route('contacts') }}" :active="request()->is('contacts')">
     @lang('Kontakti')
 </x-nav.link>
-{{-- <x-nav.link href="{{ route('faq') }}" :active="request()->is('faq')"> --}}
-{{-- @lang('BUJ') --}}
-{{-- </x-nav.link> --}}
+<x-nav.link href="{{ route('faq') }}" :active="request()->is('faq')">
+    @lang('BUJ')
+</x-nav.link>
 <x-nav.lang>
     @foreach (config('app.available_locales') as $locale)
         <x-nav.dropdown-link
