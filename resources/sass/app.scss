@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import 'flickity/dist/flickity.min.css';
+@import 'filepond/dist/filepond.min.css';
 
 // Fonts
 @font-face {
@@ -360,5 +361,4 @@ td {
 // .--tw-ring-color {
 //     color: $storex-red
 // }
-
 @import 'media-queries';

@@ -17,4 +17,11 @@ class Category extends Model
     {
         return env('APP_LOCALE');
     }
+
+    public function resolveRouteBinding($value, $field = null)
+    {
+        $locale = request()->route('locale');
+
+        return $this->where("slug->{$locale}", $value)->firstOrFail();
+    }
 }

@@ -1,10 +1,12 @@
-<x-nav.production>
-    @foreach ($categories as $category)
-        <x-nav.dropdown-link href="{{ route('category.show', ['category' => $category->slug]) }}">
-            {{ $category->title }}
-        </x-nav.dropdown-link>
-    @endforeach
-</x-nav.production>
+@if(!$categories->isEmpty())
+    <x-nav.production>
+        @foreach ($categories as $category)
+            <x-nav.dropdown-link href="{{ route('category.show', ['category' => $category->slug]) }}">
+                {{ $category->title }}
+            </x-nav.dropdown-link>
+        @endforeach
+    </x-nav.production>
+@endif
 
 {{-- <x-nav.blog> --}}
 {{-- <x-nav.dropdown-link href="#">Raksts 1</x-nav.dropdown-link> --}}
@@ -29,7 +31,7 @@
 <x-nav.lang>
     @foreach (config('app.available_locales') as $locale)
         <x-nav.dropdown-link
-            href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => $locale])}}"
+            href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => $locale, 'category' => request()->route('category')])}}"
             :active="app()->getLocale() === $locale"
         >
             {{ strtoupper($locale) }}

@@ -4,40 +4,50 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Services\CategoryServices;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
 class CategoriesController extends Controller
 {
-    public function index(string $locale, CategoryServices $categoryServices): View
+    protected CategoryServices $categoryServices;
+
+    public function __construct(CategoryServices $categoryServices)
     {
-        $categories = $categoryServices->getCategories($locale);
+        $this->categoryServices = $categoryServices;
+    }
+
+    public function index(): View
+    {
+        $categories = $this->categoryServices->getCategories();
 
         return view('categories', compact('categories'));
     }
 
-
-    public function show()
+    public function create(): View
     {
-        // return 'Šeit būt visi produkti kategorijā!';
-        return view('category');
+        return view('admin.categories.create');
     }
 
-    public function store(Request $data)
+    public function store(Request $data): RedirectResponse
     {
-        Category::create([
-            'title'       => [
-                app()->getLocale() => $data['title'],
-            ],
-            'slug'        => [
-                app()->getLocale() => Str::slug($data['title'], '-'),
-            ],
-            'description' => [
-                app()->getLocale() => $data['description'],
-            ],
-        ]);
+        try {
+            $this->categoryServices->storeCategory($data);
+            $this->categoryServices->storeMedia($data['category_image']);
+            Log::info('Category created');
 
-        return $data;
+            return redirect()->route('admin.index')->with('success', 'Kategorija izveidota!');
+        } catch (\Exception $e) {
+            Log::error('Category not created: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Kategorija netika izveidota!');
+        }
     }
+
+    public function show(string $locale, Category $category)
+    {
+        return view('category', compact('category'));
+    }
+
 }
