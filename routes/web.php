@@ -34,16 +34,10 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/cenradis', function () {
         return view('pricelist');
     })->name('pricelist');
-
-//    Temporary route
-    Route::get('/produkcija/kategorija-demo/produkts-demo',
-        [ProductsController::class, 'show'])->name('product.show');
-    Route::get('/produkcija/kategorija-demo',
-        [CategoriesController::class, 'show'])->name('category.show');
-
+    
     Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
-//    Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
-//    Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
+    Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
+    Route::get('/produkcija/{category}/produkts-demo', [ProductsController::class, 'show'])->name('product.show');
 });
 
 Route::get('/', function () {

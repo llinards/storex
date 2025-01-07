@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Services\CategoryServices;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -44,10 +45,9 @@ class CategoriesController extends Controller
         }
     }
 
-    public function show()
+    public function show(string $locale, Category $category)
     {
-        // return 'Šeit būt visi produkti kategorijā!';
-        return view('category');
+        return view('category', compact('category'));
     }
 
 }

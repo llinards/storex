@@ -9,8 +9,7 @@
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
                     <p>
-                        @lang('Kategorijas nav atrastas')
-                        .
+                        @lang('Kategorijas nav atrastas').
                     </p>
                 </div>
             @else
@@ -34,8 +33,7 @@
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
                     <p>
-                        @lang('Kategorijas nav atrastas')
-                        .
+                        @lang('Kategorijas nav atrastas').
                     </p>
                 </div>
             @else
