@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -53,4 +54,10 @@ Route::prefix('home')->middleware(['auth'])->group(function () {
     Route::get('/', static function () {
         return view('admin.index');
     })->name('admin.index');
+
+    Route::post('/upload', [FileUploadController::class, 'store']);
+    Route::delete('/upload', [FileUploadController::class, 'destroy']);
+
+    Route::get('/produkcija/izveidot', [CategoriesController::class, 'create'])->name('category.create');
+    Route::post('/produkcija/izveidot', [CategoriesController::class, 'store'])->name('category.store');
 });
