@@ -82,6 +82,7 @@ main:not(.admin-dashboard) {
 
 .btn {
     background-color: $storex-red;
+    max-width: fit-content;
 }
 
 footer,

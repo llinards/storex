@@ -1,6 +1,6 @@
 <div class="bg-white p-4 pb-8 sm:grid sm:grid-cols-2 sm:gap-10 sm:rounded-md sm:border-1 sm:pb-0 md:p-6 lg:p-8">
     <div>
-        <div class="product product-main" data-flickity='{"pageDots": false}'>
+        <div id="product-card" class="product product-main" data-flickity='{"pageDots": false}'>
             <div class="product-cell h-72 sm:h-96">
                 <a data-fslightbox="gallery" href="{{ asset('images/storex-alaska-s-front-page.jpg') }}">
                     <img
@@ -149,21 +149,23 @@
                     </label>
                 </li>
             </ul>
-            <x-btn href="#contact-us" class="scroll-btn my-2 flex items-center justify-center sm:justify-start">
-                @lang('Pasūtīt')
-                <svg
-                    class="ml-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="36"
-                    height="28"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                >
-                    <path
-                        d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"
-                    ></path>
-                </svg>
-            </x-btn>
+            <div class="flex justify-center sm:justify-start">
+                <x-btn href="#contact-us" class="scroll-btn my-2 flex items-center">
+                    @lang('Pasūtīt')
+                    <svg
+                        class="ml-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="36"
+                        height="28"
+                        fill="#ffffff"
+                        viewBox="0 0 256 256"
+                    >
+                        <path
+                            d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"
+                        ></path>
+                    </svg>
+                </x-btn>
+            </div>
         </div>
         <div class="pt-2">
             <ul class="gap-2 sm:flex md:gap-6 lg:gap-8">
