@@ -16,7 +16,7 @@
         <p class="text-shadow py-2 text-white">
             {{ $subText }}
         </p>
-        <div class="mt-2">
+        <div class="pt-4">
             {{ $btnOne ?? '' }}
         </div>
     </div>
