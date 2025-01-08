@@ -2,7 +2,6 @@
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0 md:grid md:grid-cols-2 md:gap-10">
             <div>
-                <p class="pt-2 text-storex-inactive-grey">@lang('Kontakti')</p>
                 <h1 class="leading-none">@lang('Kontakti')</h1>
                 <div>
                     <div class="py-4">
