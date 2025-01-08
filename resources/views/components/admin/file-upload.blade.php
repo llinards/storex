@@ -1,7 +1,13 @@
-<input class="form-control file-upload" type="file" id="{{ $name }}" name="{{ $name }}[]" required="{{ $required }}">
+<input
+    class="form-control file-upload"
+    type="file"
+    id="{{ $name }}"
+    name="{{ $name }}[]"
+    required="{{ $required }}"
+/>
 
 <script type="module">
-    const fileUpload = document.getElementById('{{$name}}');
+    const fileUpload = document.getElementById('{{ $name }}');
     const fileId = fileUpload.getAttribute('id');
     FilePond.registerPlugin(FilePondPluginFileValidateType);
     FilePond.registerPlugin(FilePondPluginImagePreview);
@@ -10,15 +16,15 @@
         server: {
             url: '/home/upload',
             headers: {
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            }
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            },
         },
         allowFileSizeValidation: true,
         allowReorder: true,
         allowImagePreview: true,
     };
     const optionsConfig = {
-        "category_image": {
+        category_image: {
             labelIdle: 'Pievienot bildi',
             maxFileSize: '500KB',
             acceptedFileTypes: ['image/*'],

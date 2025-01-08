@@ -1,4 +1,4 @@
-@if(!$categories->isEmpty())
+@if (! $categories->isEmpty())
     <x-nav.production>
         @foreach ($categories as $category)
             <x-nav.dropdown-link href="{{ route('category.show', ['category' => $category->slug]) }}">

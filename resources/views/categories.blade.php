@@ -1,7 +1,7 @@
 <x-layout.app>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0">
-            <h1 class="pt-2 leading-none">@lang('Tenta angāru veidi un aksesuāri')</h1>
+            <h1 class="leading-none">@lang('Tenta angāru veidi un aksesuāri')</h1>
         </div>
 
         {{-- DESKTOP LAYOUT --}}
@@ -9,7 +9,8 @@
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
                     <p>
-                        @lang('Kategorijas nav atrastas').
+                        @lang('Kategorijas nav atrastas')
+                        .
                     </p>
                 </div>
             @else
@@ -33,7 +34,8 @@
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
                     <p>
-                        @lang('Kategorijas nav atrastas').
+                        @lang('Kategorijas nav atrastas')
+                        .
                     </p>
                 </div>
             @else

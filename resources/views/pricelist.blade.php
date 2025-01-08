@@ -1,29 +1,6 @@
 <x-layout.app>
-    <div class="container flex items-center px-4 pt-24 text-storex-inactive-grey sm:mx-auto sm:pt-8 lg:px-6 xl:px-8">
-        <span>@lang('Produkcija')</span>
-        <span class="px-2">
-            <svg
-                id="arrow-svg"
-                class="h-1.5 w-1.5 -rotate-90"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-            >
-                <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 4 4 4-4"
-                />
-            </svg>
-        </span>
-        <span>@lang('Cenrādis')</span>
-    </div>
-
-    <div class="container mx-auto px-4 lg:px-6 xl:px-8">
-        <h1 class="pt-4 leading-none">@lang('Tenta angāra modeļi')</h1>
+    <div class="container mx-auto px-4 pt-24 sm:pt-12 lg:px-6 xl:px-8">
+        <h1 class="leading-none">@lang('Tenta angāra modeļi')</h1>
         {{-- <x-footer-link>@lang('Nospiest uz augšējās rindkopas priekš salīdzināšanas')</x-footer-link> --}}
     </div>
 
