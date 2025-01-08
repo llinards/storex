@@ -1,6 +1,6 @@
 <div class="bg-white p-4 pb-8 sm:grid sm:grid-cols-2 sm:gap-10 sm:rounded-md sm:border-1 sm:pb-0 md:p-6 lg:p-8">
     <div>
-        <div id="product-card" class="product product-main" data-flickity='{"pageDots": false}'>
+        <div id="product-card" class="product product-main" data-flickity='{"pageDots": false, "draggable" : false}'>
             <div class="product-cell h-72 sm:h-96">
                 <a data-fslightbox="gallery" href="{{ asset('images/storex-alaska-s-front-page.jpg') }}">
                     <img

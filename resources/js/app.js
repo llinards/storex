@@ -115,8 +115,6 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-// Function to check if the device width is <= 639px
-
 // Since nav is fixed, offset the scrolling.
 document.querySelectorAll('.scroll-btn').forEach(function (button) {
     button.addEventListener('click', function (event) {
