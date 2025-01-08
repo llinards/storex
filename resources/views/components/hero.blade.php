@@ -3,7 +3,7 @@
     {{
         $attributes->merge([
             'class' => 'flex items-center sm:flex-none sm:items-start sm:px-4 lg:px-6 xl:px-8 sm:grid sm:grid-cols-12 h-screen
-                                                                                                                            sm:h-110 header grid-rows-12 ',
+                                                                                                                                            sm:h-110 header grid-rows-12 ',
         ])
     }}
 >
