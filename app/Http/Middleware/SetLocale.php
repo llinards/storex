@@ -11,15 +11,22 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->segment(1);
-        $validLocales = config('app.available_locales');
+        $validLocales  = config('app.available_locales');
         $defaultLocale = env('APP_LOCALE');
+        $queryLocale   = strtolower($request->query('changeLanguage'));
 
-        if (! in_array($locale, $validLocales, true)) {
-            return redirect($defaultLocale);
+        if ($queryLocale && in_array($queryLocale, $validLocales, true)) {
+            $locale = $queryLocale;
+        } else {
+            $locale = $request->segment(1);
+
+            if ( ! in_array($locale, $validLocales, true)) {
+                return redirect($defaultLocale);
+            }
         }
 
         app()->setLocale($locale);
+
         URL::defaults(['locale' => $locale]);
 
         return $next($request);

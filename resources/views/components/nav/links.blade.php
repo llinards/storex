@@ -31,7 +31,7 @@
 <x-nav.lang>
     @foreach (config('app.available_locales') as $locale)
         <x-nav.dropdown-link
-            href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => $locale, 'category' => request()->route('category')])}}"
+            href="{{ url()->current() }}?changeLanguage={{ $locale }}"
             :active="app()->getLocale() === $locale"
         >
             {{ strtoupper($locale) }}
