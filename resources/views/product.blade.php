@@ -26,6 +26,7 @@
     </div>
 
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
+        <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
         <x-product.specifications></x-product.specifications>
     </div>
 
