@@ -1,5 +1,6 @@
 import { initFlowbite } from 'flowbite';
 import Flickity from 'flickity';
+import 'fslightbox';
 
 initFlowbite;
 

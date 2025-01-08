@@ -20,6 +20,7 @@
             <x-call-btn></x-call-btn>
         </main>
         @include('includes.footer')
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
 </html>
