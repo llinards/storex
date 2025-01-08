@@ -18,6 +18,11 @@ class Category extends Model
         return env('APP_LOCALE');
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function resolveRouteBinding($value, $field = null)
     {
         $locale = request()->route('locale');
