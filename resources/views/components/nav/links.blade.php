@@ -8,6 +8,16 @@
     </x-nav.production>
 @endif
 
+@if (! $categories->isEmpty())
+    <x-nav.production-mob>
+        @foreach ($categories as $category)
+            <x-nav.dropdown-link href="{{ route('category.show', ['category' => $category->slug]) }}">
+                {{ $category->title }}
+            </x-nav.dropdown-link>
+        @endforeach
+    </x-nav.production-mob>
+@endif
+
 {{-- <x-nav.blog> --}}
 {{-- <x-nav.dropdown-link href="#">Raksts 1</x-nav.dropdown-link> --}}
 {{-- <x-nav.dropdown-link href="#">Raksts 2</x-nav.dropdown-link> --}}

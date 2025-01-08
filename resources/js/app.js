@@ -25,9 +25,9 @@ closeIcon.addEventListener('click', () => {
 });
 
 // Production Dropdown Menu Functionality
-const productionBtn = document.getElementById('production-btn');
-const dropdown = document.getElementById('production-content');
-const arrowSvg = document.getElementById('arrow-svg');
+const productionBtn = document.getElementById('production-mob-btn');
+const dropdown = document.getElementById('production-mob-content');
+const arrowSvg = document.getElementById('arrow-mob-svg');
 
 productionBtn.addEventListener('click', function () {
     dropdown.classList.toggle('max-h-0');
