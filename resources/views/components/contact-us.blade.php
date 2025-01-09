@@ -57,7 +57,7 @@
             ></textarea>
 
             <div class="mt-8 border-t-2 border-storex-grey pt-8">
-                <x-btn type="submit" class="w-full">@lang('Nosūtīt')</x-btn>
+                <x-btn :type="'button'" class="w-full">@lang('Nosūtīt')</x-btn>
             </div>
         </form>
     </div>

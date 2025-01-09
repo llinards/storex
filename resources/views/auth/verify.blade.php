@@ -23,7 +23,7 @@
                         <p class="text-gray-700">{{ __('If you did not receive the email') }},</p>
                         <form class="inline" method="POST" action="{{ route('verification.resend') }}">
                             @csrf
-                            <x-btn>
+                            <x-btn :type="'button'">
                                 {{ __('click here to request another') }}
                             </x-btn>
                         </form>

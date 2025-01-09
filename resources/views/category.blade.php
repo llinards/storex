@@ -1,7 +1,7 @@
 <x-layout.app>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pb-12 sm:pt-0">
-            <h1 class="leading-none">@lang('Produkcija')</h1>
+            <h2>{{ $category->title }}</h2>
         </div>
 
         {{-- DESKTOP LAYOUT --}}
