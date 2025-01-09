@@ -4,7 +4,7 @@
         <div class="flex items-center">
             <div class="text-lg font-bold">
                 <a href="{{ route('admin.index') }}">
-                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8" />
+                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
                 </a>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <a href="{{ route('admin.index') }}" class="text-black">@lang('Sākums')</a>
             @if (Route::currentRouteName() !== 'category.create')
                 <span class="text-black">|</span>
-                <a href="{{ route('category.create') }}" class="text-black">@lang('Jauna kategorija')</a>
+                <a href="{{ route('admin.category.create') }}" class="text-black">@lang('Jauna kategorija')</a>
             @endif
         </div>
 

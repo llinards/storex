@@ -56,4 +56,16 @@ class CategoriesController extends Controller
     {
         return view('category', compact('category'));
     }
+
+    public function showAdmin(Request $data)
+    {
+        return $data;
+
+        return view('admin.categories.show');
+    }
+
+    public function update()
+    {
+        return redirect()->route('admin.index')->with('success', 'Kategorija atjaunota!');
+    }
 }

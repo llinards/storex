@@ -50,6 +50,10 @@ Route::prefix('home')->middleware(['auth'])->group(function () {
     Route::post('/upload', [FileUploadController::class, 'store']);
     Route::delete('/upload', [FileUploadController::class, 'destroy']);
 
-    Route::get('/produkcija/izveidot', [CategoriesController::class, 'create'])->name('category.create');
-    Route::post('/produkcija/izveidot', [CategoriesController::class, 'store'])->name('category.store');
+    Route::get('/produkcija/izveidot', [CategoriesController::class, 'create'])->name('admin.category.create');
+    Route::post('/produkcija/izveidot', [CategoriesController::class, 'store'])->name('admin.category.store');
+    Route::get('/produkcija/rediget/{category:id}',
+        [CategoriesController::class, 'showAdmin'])->name('admin.category.show');
+    Route::put('/produkcija/rediget/{category}',
+        [CategoriesController::class, 'update'])->name('admin.category.update');
 });
