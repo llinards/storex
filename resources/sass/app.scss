@@ -92,6 +92,10 @@ footer a {
     font-size: 18px;
 }
 
+.flickity-fullscreen-button {
+    display: block;
+}
+
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -402,4 +406,5 @@ td {
 // .--tw-ring-color {
 //     color: $storex-red
 // }
+
 @import 'media-queries';

@@ -1,50 +1,40 @@
 <div class="bg-white p-4 pb-8 sm:grid sm:grid-cols-2 sm:gap-10 sm:rounded-md sm:border-1 sm:pb-0 md:p-6 lg:p-8">
     <div>
-        <div id="product-card" class="product product-main" data-flickity='{"pageDots": false, "draggable" : false}'>
+        <div id="product-card" class="product product-main" data-flickity='{"pageDots": false, "fullscreen": true }'>
             <div class="product-cell h-72 sm:h-96">
-                <a data-fslightbox="gallery" href="{{ asset('images/storex-alaska-s-front-page.jpg') }}">
-                    <img
-                        class="h-full w-full object-cover"
-                        src=" {{ asset('images/storex-alaska-s-front-page.jpg') }}"
-                        alt=""
-                    />
-                </a>
+                <img
+                    class="h-full w-full object-cover"
+                    src=" {{ asset('images/storex-alaska-s-front-page.jpg') }}"
+                    alt=""
+                />
             </div>
             <div class="product-cell h-72 sm:h-96">
-                <a data-fslightbox="gallery" href="{{ asset('images/storex-container-front-page.jpg') }}">
-                    <img
-                        class="h-full w-full object-cover"
-                        src=" {{ asset('images/storex-container-front-page.jpg') }}"
-                        alt=""
-                    />
-                </a>
+                <img
+                    class="h-full w-full object-cover"
+                    src=" {{ asset('images/storex-container-front-page.jpg') }}"
+                    alt=""
+                />
             </div>
             <div class="product-cell h-72 sm:h-96">
-                <a data-fslightbox="gallery" href="{{ asset('images/storex-siltnamis-front-page.jpg') }}">
-                    <img
-                        class="h-full w-full object-cover"
-                        src=" {{ asset('images/storex-siltnamis-front-page.jpg') }}"
-                        alt=""
-                    />
-                </a>
+                <img
+                    class="h-full w-full object-cover"
+                    src=" {{ asset('images/storex-siltnamis-front-page.jpg') }}"
+                    alt=""
+                />
             </div>
             <div class="product-cell h-72 sm:h-96">
-                <a data-fslightbox="gallery" href="{{ asset('images/storex-gyvuliams-front-page.jpg') }}">
-                    <img
-                        class="h-full w-full object-cover"
-                        src=" {{ asset('images/storex-gyvuliams-front-page.jpg') }}"
-                        alt=""
-                    />
-                </a>
+                <img
+                    class="h-full w-full object-cover"
+                    src=" {{ asset('images/storex-gyvuliams-front-page.jpg') }}"
+                    alt=""
+                />
             </div>
             <div class="product-cell h-72 sm:h-96">
-                <a data-fslightbox="gallery" href="{{ asset('images/category-cover-image-sample.jpg') }}">
-                    <img
-                        class="h-full w-full object-cover"
-                        src=" {{ asset('images/category-cover-image-sample.jpg') }}"
-                        alt=""
-                    />
-                </a>
+                <img
+                    class="h-full w-full object-cover"
+                    src=" {{ asset('images/category-cover-image-sample.jpg') }}"
+                    alt=""
+                />
             </div>
         </div>
 
