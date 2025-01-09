@@ -27,9 +27,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
 
-        View::composer(['home', 'components.nav.links'], static function ($view) use ($categoryServices) {
-            $categories = $categoryServices->getCategories();
-            $view->with('categories', $categories);
-        });
+        View::composer(['home', 'components.nav.links', 'includes.footer'],
+            static function ($view) use ($categoryServices) {
+                $categories = $categoryServices->getCategories();
+                $view->with('categories', $categories);
+            });
     }
 }

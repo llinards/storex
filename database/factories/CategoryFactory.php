@@ -41,8 +41,8 @@ class CategoryFactory extends Factory
                 'lv' => 'lv-'.$slug,
             ],
             'description' => [
-                'en' => $this->faker->paragraph,
-                'lv' => $this->faker->paragraph,
+                'en' => '<p>'.$this->faker->paragraph.'</p>',
+                'lv' => '<p>'.$this->faker->paragraph.'</p>',
             ],
         ];
     }

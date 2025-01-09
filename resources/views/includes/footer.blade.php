@@ -30,10 +30,14 @@
                 </div>
                 <div class="order-4 md:order-none">
                     <h5 class="ml-4 py-3 uppercase">Produkcija</h5>
-                    <x-footer-link href="#">@lang('Tenta angāri - nojumes')</x-footer-link>
-                    <x-footer-link href="#">@lang('Konteineru tenta angāri')</x-footer-link>
-                    <x-footer-link href="#">@lang('Industriālās siltumnīcas')</x-footer-link>
-                    <x-footer-link href="#">@lang('Aksesuāri tenta angāriem')</x-footer-link>
+                    @if (! $categories->isEmpty())
+                        @foreach ($categories as $category)
+                            <x-footer-link
+                                href="{{ route('category.show', ['category' => $category->slug]) }}">
+                                {{ $category->title }}
+                            </x-footer-link>
+                        @endforeach
+                    @endif
                     <x-footer-link href="#">@lang('Cenrādis')</x-footer-link>
                     <x-footer-link href="#">@lang('Dokumentācija')</x-footer-link>
                 </div>
@@ -74,7 +78,7 @@
                                     ></path>
                                 </svg>
                                 "Rožulejas", Plācis, Straupes pag.,
-                                <br class="md:hidden" />
+                                <br class="md:hidden"/>
                                 Pārgaujas nov., LV-4152
                             </a>
                         </li>

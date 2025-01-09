@@ -21,7 +21,7 @@
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
                             <x-slot name="productHeading">{{ $category->title }}</x-slot>
-                            <x-slot name="productDescription">{{ $category->description }}</x-slot>
+                            <x-slot name="productDescription">{!! $category->description !!}</x-slot>
                             <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
                         </x-categories.card>
                     @endforeach
@@ -46,7 +46,7 @@
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
                             <x-slot name="productHeading">{{ $category->title }}</x-slot>
-                            <x-slot name="productDescription">{{ $category->description }}</x-slot>
+                            <x-slot name="productDescription">{!! $category->description !!}</x-slot>
                             <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
                         </x-categories.card>
                     @endforeach

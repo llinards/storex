@@ -34,10 +34,10 @@ class CategoryServices
     {
         $locale = $this->getLocale();
         Category::create([
-            'title'       => [$locale => $data->category_title],
-            'slug'        => [$locale => $this->setSlug($data->category_title)],
+            'title' => [$locale => $data->category_title],
+            'slug' => [$locale => $this->setSlug($data->category_title)],
             'description' => [$locale => $data->category_description],
-            'image'       => basename($data['category_image'][0]),
+            'image' => basename($data['category_image'][0]),
         ]);
     }
 
@@ -49,5 +49,4 @@ class CategoryServices
             }
         }
     }
-
 }

@@ -1,5 +1,6 @@
-import { initFlowbite } from 'flowbite';
+import {initFlowbite} from 'flowbite';
 import Flickity from 'flickity';
+import 'flickity/dist/flickity.min.css';
 import 'fslightbox';
 
 initFlowbite;

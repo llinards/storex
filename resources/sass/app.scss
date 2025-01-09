@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'flickity/dist/flickity.min.css';
-@import 'filepond/dist/filepond.min.css';
 
 // Fonts
 @font-face {
@@ -156,6 +154,7 @@ label {
     font-size: 13px;
 }
 
+.category-details > p,
 .squeezed-text {
     display: -webkit-box;
     /* Required for multi-line clamping */
@@ -181,6 +180,7 @@ label {
     font-size: 8px;
 }
 
+.category-details > p,
 .text-small {
     font-size: 13px;
 }

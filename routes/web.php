@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes([
     'register' => true,
-    'reset'    => true,
-    'verify'   => true,
+    'reset' => true,
+    'verify' => true,
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
