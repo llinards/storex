@@ -82,6 +82,7 @@ main:not(.admin-dashboard) {
 
 .btn {
     background-color: $storex-red;
+    max-width: fit-content;
 }
 
 footer,
@@ -89,6 +90,10 @@ footer p,
 footer a {
     color: white;
     font-size: 18px;
+}
+
+.flickity-fullscreen-button {
+    display: block;
 }
 
 h1 {
@@ -401,4 +406,5 @@ td {
 // .--tw-ring-color {
 //     color: $storex-red
 // }
+
 @import 'media-queries';
