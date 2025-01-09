@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes([
     'register' => true,
-    'reset' => true,
-    'verify' => true,
+    'reset'    => true,
+    'verify'   => true,
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
@@ -45,9 +45,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('home')->middleware(['auth'])->group(function () {
-    Route::get('/', static function () {
-        return view('admin.index');
-    })->name('admin.index');
+    Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
     Route::post('/upload', [FileUploadController::class, 'store']);
     Route::delete('/upload', [FileUploadController::class, 'destroy']);

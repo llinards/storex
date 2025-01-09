@@ -25,6 +25,13 @@ class CategoriesController extends Controller
         return view('categories', compact('categories'));
     }
 
+    public function adminIndex(): View
+    {
+        $categories = $this->categoryServices->getCategories();
+
+        return view('admin.index', compact('categories'));
+    }
+
     public function create(): View
     {
         return view('admin.categories.create');
