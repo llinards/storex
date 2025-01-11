@@ -77,4 +77,18 @@ class CategoriesController extends Controller
             return redirect()->back()->with('error', 'Kategorija netika atjaunota!');
         }
     }
+
+    public function destroy(int $id): RedirectResponse
+    {
+        try {
+            $this->categoryServices->destroyCategory($id);
+            Log::info('Category deleted');
+
+            return redirect()->back()->with('success', 'Kategorija dzēsta!');
+        } catch (\Exception $e) {
+            Log::error('Category not updated: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Kategorija netika dzēsta!');
+        }
+    }
 }

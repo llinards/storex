@@ -33,14 +33,21 @@
                             </a>
                         </td>
                         <td class="px-6 py-4 text-center">
-                            <a href="#" class="text-red-600 hover:text-red-800">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none"
-                                     viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22"/>
-                                </svg>
-                            </a>
+                            <form action="{{route('admin.category.destroy', ['category' => $category->id])}}"
+                                  method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" title="Dzēst"
+                                        onclick="return confirm('Vai tiešām vēlies dzēst kategoriju?')"
+                                        class="text-red-600 hover:text-red-800">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22"/>
+                                    </svg>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

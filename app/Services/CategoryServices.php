@@ -25,6 +25,11 @@ class CategoryServices
         return app()->getLocale();
     }
 
+    protected function getCategory(int $id): Category
+    {
+        return Category::findOrFail($id);
+    }
+
     public function getCategories(): Collection
     {
         return Category::all();
@@ -53,8 +58,8 @@ class CategoryServices
     public function updateCategory(object $data, int $id): void
     {
         $locale   = $this->getLocale();
-        $category = Category::findOrFail($id);
-        
+        $category = $this->getCategory($id);
+
         if ($data['category_image'] !== $category->image) {
             $this->storeMedia($data['category_image']);
         }
@@ -64,5 +69,12 @@ class CategoryServices
             'description' => [$locale => $data->category_description],
             'image'       => basename($data['category_image'][0]),
         ]);
+    }
+
+    public function destroyCategory(int $id): void
+    {
+        $category = $this->getCategory($id);
+        $this->fileServices->destroyFile('categories/'.$category->image);
+        $category->delete();
     }
 }

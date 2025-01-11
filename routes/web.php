@@ -57,4 +57,6 @@ Route::prefix('home')->middleware(['auth'])->group(function () {
         [CategoriesController::class, 'showAdmin'])->name('admin.category.show');
     Route::put('/produkcija/rediget/{category}',
         [CategoriesController::class, 'update'])->name('admin.category.update');
+    Route::delete('/produkcija/rediget/{category}',
+        [CategoriesController::class, 'destroy'])->name('admin.category.destroy');
 });
