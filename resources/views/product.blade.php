@@ -1,4 +1,7 @@
 <x-layout.app>
+    <x-slot name="title">NORDA</x-slot>
+    <x-slot name="description">TBD</x-slot>
+    <x-slot name="image">{{ asset('images/storex-alaska-s-front-page.jpg') }}</x-slot>
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
         <x-product.card></x-product.card>
     </div>

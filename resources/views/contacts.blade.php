@@ -1,4 +1,5 @@
 <x-layout.app>
+    <x-slot name="title">@lang('Kontakti')</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0 md:grid md:grid-cols-2 md:gap-10">
             <div>
@@ -29,7 +30,7 @@
                                     </svg>
                                     <span class="text-base transition-all duration-200 hover:text-storex-red">
                                         "Rožulejas", Plācis, Straupes pag.,
-                                        <br class="md:hidden" />
+                                        <br class="md:hidden"/>
                                         Pārgaujas nov., LV-4152
                                     </span>
                                 </a>

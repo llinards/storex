@@ -1,4 +1,5 @@
 <x-layout.app>
+    <x-slot name="title">@lang('Biežāk uzdotie jautājumi')</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         {{-- pb-10 instead of pb-12 since Qs have py-2 --}}
         <div class="pt-28 sm:pb-10 sm:pt-0">
