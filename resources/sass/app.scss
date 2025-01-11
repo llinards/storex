@@ -200,6 +200,13 @@ label {
     order: 1;
 }
 
+.flickity-prev-next-button {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 /* Custom Flickity button styles */
 .flickity-prev-next-button .flickity-button-icon {
     color: $storex-red;
@@ -207,13 +214,6 @@ label {
 
 .flickity-prev-next-button:disabled {
     display: none;
-}
-
-.flickity-prev-next-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .flickity-button {
