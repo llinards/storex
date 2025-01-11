@@ -25,24 +25,27 @@ class CategoryFactory extends Factory
         $title = $this->faker->sentence(2);
         $slug  = Str::slug($title);
 
-        if ( ! Storage::disk('public')->exists('categories')) {
+        if (! Storage::disk('public')->exists('categories')) {
             Storage::disk('public')->makeDirectory('categories');
         }
 
         return [
-            'image'       => basename($faker->image(dir: storage_path('app/public/categories'), width: 800,
-                height: 600)),
+            'image'       => basename($faker->image(
+                dir: storage_path('app/public/categories'),
+                width: 800,
+                height: 600
+            )),
             'title'       => [
-                'en' => '(EN) '.$title,
-                'lv' => '(LV) '.$title,
+                'en' => '(EN) ' . $title,
+                'lv' => '(LV) ' . $title,
             ],
             'slug'        => [
-                'en' => 'en-'.$slug,
-                'lv' => 'lv-'.$slug,
+                'en' => 'en-' . $slug,
+                'lv' => 'lv-' . $slug,
             ],
             'description' => [
-                'en' => '<p>'.$this->faker->paragraph.'</p>',
-                'lv' => '<p>'.$this->faker->paragraph.'</p>',
+                'en' => '<p>' . $this->faker->sentence(13) . '</p>',
+                'lv' => '<p>' . $this->faker->sentence(13) . '</p>',
             ],
         ];
     }
