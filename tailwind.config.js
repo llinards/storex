@@ -22,9 +22,6 @@ export default {
             fontFamily: {
                 'storex': ['MyriadPro', 'sans-serif']
             },
-            fontSize: {
-                '5xl': ['3rem', { lineHeight: '1.25' }],
-            },
             borderWidth: {
                 '1': '1px',
             },
