@@ -2,7 +2,9 @@
     id="description-text-area"
     name="{{ $name }}"
     class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-></textarea>
+>
+    {{$slot}}
+</textarea>
 
 <script type="module">
     const LICENSE_KEY = 'GPL';
@@ -12,8 +14,6 @@
             shouldNotGroupWhenFull: false
         },
         plugins: [AutoLink, Autosave, BlockQuote, Bold, Essentials, Italic, Link, Paragraph, Superscript, Underline],
-        initialData:
-            '<h2>Congratulations on setting up CKEditor 5! 🎉</h2>',
         licenseKey: LICENSE_KEY,
         link: {
             addTargetToExternalLinks: true,
@@ -28,7 +28,6 @@
                 }
             }
         },
-        placeholder: 'Type or paste your content here!'
     };
 
     ClassicEditor.create(document.querySelector('#description-text-area'), editorConfig);

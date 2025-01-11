@@ -34,10 +34,10 @@ class CategoryServices
     {
         $locale = $this->getLocale();
         Category::create([
-            'title' => [$locale => $data->category_title],
-            'slug' => [$locale => $this->setSlug($data->category_title)],
+            'title'       => [$locale => $data->category_title],
+            'slug'        => [$locale => $this->setSlug($data->category_title)],
             'description' => [$locale => $data->category_description],
-            'image' => basename($data['category_image'][0]),
+            'image'       => basename($data['category_image'][0]),
         ]);
     }
 
@@ -48,5 +48,21 @@ class CategoryServices
                 $this->fileServices->moveFile($item, basename($item), 'categories');
             }
         }
+    }
+
+    public function updateCategory(object $data, int $id): void
+    {
+        $locale   = $this->getLocale();
+        $category = Category::findOrFail($id);
+        
+        if ($data['category_image'] !== $category->image) {
+            $this->storeMedia($data['category_image']);
+        }
+        $category->update([
+            'title'       => [$locale => $data->category_title],
+            'slug'        => [$locale => $this->setSlug($data->category_title)],
+            'description' => [$locale => $data->category_description],
+            'image'       => basename($data['category_image'][0]),
+        ]);
     }
 }

@@ -9,6 +9,11 @@ class FileServices
 {
     protected string $disk = 'public';
 
+    public function getFile($location): string
+    {
+        return Storage::disk($this->disk)->get($location);
+    }
+
     public function storeFile($location, $file, $fileName = ''): string
     {
         return $fileName === ''

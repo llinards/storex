@@ -57,15 +57,24 @@ class CategoriesController extends Controller
         return view('category', compact('category'));
     }
 
-    public function showAdmin(Request $data)
+    public function showAdmin(int $category)
     {
-        return $data;
+        $category = Category::findOrFail($category);
 
-        return view('admin.categories.show');
+        return view('admin.categories.show', compact('category'));
     }
 
-    public function update()
+    public function update(Request $data, int $id): RedirectResponse
     {
-        return redirect()->route('admin.index')->with('success', 'Kategorija atjaunota!');
+        try {
+            $this->categoryServices->updateCategory($data, $id);
+            Log::info('Category updated');
+
+            return redirect()->route('admin.index')->with('success', 'Kategorija atjaunota!');
+        } catch (\Exception $e) {
+            Log::error('Category not updated: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Kategorija netika atjaunota!');
+        }
     }
 }
