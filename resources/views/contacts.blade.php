@@ -30,7 +30,7 @@
                                     </svg>
                                     <span class="text-base transition-all duration-200 hover:text-storex-red">
                                         "Rožulejas", Plācis, Straupes pag.,
-                                        <br class="md:hidden"/>
+                                        <br class="md:hidden" />
                                         Pārgaujas nov., LV-4152
                                     </span>
                                 </a>

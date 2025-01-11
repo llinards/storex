@@ -3,7 +3,7 @@
     name="{{ $name }}"
     class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 >
-    {{$slot}}
+    {{ $slot }}
 </textarea>
 
 <script type="module">
@@ -11,7 +11,7 @@
     const editorConfig = {
         toolbar: {
             items: ['bold', 'italic', 'underline', 'superscript', '|', 'link', 'blockQuote'],
-            shouldNotGroupWhenFull: false
+            shouldNotGroupWhenFull: false,
         },
         plugins: [AutoLink, Autosave, BlockQuote, Bold, Essentials, Italic, Link, Paragraph, Superscript, Underline],
         licenseKey: LICENSE_KEY,
@@ -23,10 +23,10 @@
                     mode: 'manual',
                     label: 'Downloadable',
                     attributes: {
-                        download: 'file'
-                    }
-                }
-            }
+                        download: 'file',
+                    },
+                },
+            },
         },
     };
 

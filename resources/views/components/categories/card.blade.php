@@ -14,7 +14,7 @@
         </div>
     </div>
     <a
-        class="flex justify-center rounded-b-lg border-1 bg-storex-red py-2 font-bold text-white transition-all duration-200 hover:shadow-md"
+        class="flex justify-center rounded-b-lg bg-storex-red py-2 font-bold text-white shadow-md transition-all duration-200 sm:shadow-none sm:hover:shadow-md"
         {{ $attributes }}
     >
         {{ $productLink }}

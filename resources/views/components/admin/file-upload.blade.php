@@ -26,7 +26,7 @@
     }
 
     // Build the FilePond files array from the existingImages array
-    const preloadedFiles = existingImages.map(imageUrl => ({
+    const preloadedFiles = existingImages.map((imageUrl) => ({
         source: imageUrl,
         options: {
             type: 'local', // Mark as preloaded

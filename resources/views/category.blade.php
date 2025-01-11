@@ -1,8 +1,8 @@
 <x-layout.app>
     <x-slot name="title">{{ $category->title }}</x-slot>
-    {{--    TODO: Sanitze description--}}
+    {{-- TODO: Sanitze description --}}
     <x-slot name="description">{{ $category->description }}</x-slot>
-    <x-slot name="image">{{ asset('storage/categories/'.$category->image) }}</x-slot>
+    <x-slot name="image">{{ asset('storage/categories/' . $category->image) }}</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pb-12 sm:pt-0">
             <h2>{{ $category->title }}</h2>
