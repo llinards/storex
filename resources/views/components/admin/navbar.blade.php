@@ -4,7 +4,7 @@
         <div class="flex items-center">
             <div class="text-lg font-bold">
                 <a href="{{ route('admin.index') }}">
-                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
+                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8" />
                 </a>
             </div>
         </div>

@@ -32,12 +32,12 @@
                     <h5 class="ml-4 py-3 uppercase">Produkcija</h5>
                     @if (! $categories->isEmpty())
                         @foreach ($categories as $category)
-                            <x-footer-link
-                                href="{{ route('category.show', ['category' => $category->slug]) }}">
+                            <x-footer-link href="{{ route('category.show', ['category' => $category->slug]) }}">
                                 {{ $category->title }}
                             </x-footer-link>
                         @endforeach
                     @endif
+
                     <x-footer-link href="#">@lang('Cenrādis')</x-footer-link>
                     <x-footer-link href="#">@lang('Dokumentācija')</x-footer-link>
                 </div>
@@ -78,7 +78,7 @@
                                     ></path>
                                 </svg>
                                 "Rožulejas", Plācis, Straupes pag.,
-                                <br class="md:hidden"/>
+                                <br class="md:hidden" />
                                 Pārgaujas nov., LV-4152
                             </a>
                         </li>

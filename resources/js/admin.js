@@ -14,16 +14,14 @@ import {
     Link,
     Paragraph,
     Superscript,
-    Underline
+    Underline,
 } from 'ckeditor5';
 import 'ckeditor5/ckeditor5.css';
-
 
 window.FilePond = FilePond;
 window.FilePondPluginFileValidateType = FilePondPluginFileValidateType;
 window.FilePondPluginImagePreview = FilePondPluginImagePreview;
 window.FilePondPluginFileValidateSize = FilePondPluginFileValidateSize;
-
 
 window.ClassicEditor = ClassicEditor;
 window.AutoLink = AutoLink;
@@ -36,4 +34,3 @@ window.Link = Link;
 window.Paragraph = Paragraph;
 window.Superscript = Superscript;
 window.Underline = Underline;
-

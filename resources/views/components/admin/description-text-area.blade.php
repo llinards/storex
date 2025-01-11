@@ -9,11 +9,10 @@
     const editorConfig = {
         toolbar: {
             items: ['bold', 'italic', 'underline', 'superscript', '|', 'link', 'blockQuote'],
-            shouldNotGroupWhenFull: false
+            shouldNotGroupWhenFull: false,
         },
         plugins: [AutoLink, Autosave, BlockQuote, Bold, Essentials, Italic, Link, Paragraph, Superscript, Underline],
-        initialData:
-            '<h2>Congratulations on setting up CKEditor 5! 🎉</h2>',
+        initialData: '<h2>Congratulations on setting up CKEditor 5! 🎉</h2>',
         licenseKey: LICENSE_KEY,
         link: {
             addTargetToExternalLinks: true,
@@ -23,12 +22,12 @@
                     mode: 'manual',
                     label: 'Downloadable',
                     attributes: {
-                        download: 'file'
-                    }
-                }
-            }
+                        download: 'file',
+                    },
+                },
+            },
         },
-        placeholder: 'Type or paste your content here!'
+        placeholder: 'Type or paste your content here!',
     };
 
     ClassicEditor.create(document.querySelector('#description-text-area'), editorConfig);

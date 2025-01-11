@@ -1,11 +1,11 @@
 <div class="carousel-cell relative">
     <a {{ $attributes }} class="block h-56 overflow-hidden">
-        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt=""/>
+        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
     </a>
 
     <div class="grid h-56 content-between rounded-b-lg border-1 bg-white p-5 shadow-md">
         <div>
-            <div class="flex-grow category-details">
+            <div class="category-details flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
                     {{ $productHeading }}
                 </h3>
