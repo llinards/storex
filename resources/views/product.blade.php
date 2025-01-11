@@ -10,7 +10,7 @@
         <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
         <x-product.pricelist-wrapper>
             <x-product.entry>
-                <x-slot name="tentName">NORDA 55</x-slot>
+                <x-slot name="name">NORDA 55</x-slot>
                 <x-slot name="length">10</x-slot>
                 <x-slot name="width">5,5</x-slot>
                 <x-slot name="height">5,3</x-slot>
@@ -23,7 +23,7 @@
             </x-product.entry>
 
             <x-product.entry>
-                <x-slot name="tentName">NORDA 110</x-slot>
+                <x-slot name="name">NORDA 110</x-slot>
                 <x-slot name="length">20</x-slot>
                 <x-slot name="width">5,5</x-slot>
                 <x-slot name="height">5,3</x-slot>

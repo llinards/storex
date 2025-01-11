@@ -1,6 +1,6 @@
 <x-layout.app>
     <x-slot name="title">@lang('Cenrādis')</x-slot>
-    <div class="container mx-auto px-4 pt-24 sm:pt-12 lg:px-6 xl:px-8">
+    <div class="container mx-auto px-4 pt-28 sm:pt-12 lg:px-6 xl:px-8">
         <h1 class="leading-none">@lang('Tenta angāra modeļi')</h1>
         {{-- <x-footer-link>@lang('Nospiest uz augšējās rindkopas priekš salīdzināšanas')</x-footer-link> --}}
     </div>

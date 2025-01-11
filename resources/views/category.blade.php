@@ -5,7 +5,7 @@
     <x-slot name="image">{{ asset('storage/categories/' . $category->image) }}</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pb-12 sm:pt-0">
-            <h2>{{ $category->title }}</h2>
+            <h1>{{ $category->title }}</h1>
         </div>
 
         {{-- DESKTOP LAYOUT --}}
