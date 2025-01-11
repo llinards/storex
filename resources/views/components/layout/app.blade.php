@@ -37,7 +37,6 @@
         <title>
             {{ isset($title) ? $title . ' | ' . config('app.name') : 'Sākums' . ' | ' . config('app.name') }}
         </title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
 
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -50,5 +49,7 @@
             <x-call-btn></x-call-btn>
         </main>
         @include('includes.footer')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+        
     </body>
 </html>
