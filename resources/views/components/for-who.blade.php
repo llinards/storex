@@ -1,6 +1,6 @@
 <div class="bg-storex-medium-grey-bg py-8 sm:px-12 md:px-20 lg:py-12">
     <ul
-        class="flex justify-center border-t-1 border-storex-grey pb-4 text-center sm:border-none"
+        class="flex justify-center border-t-1 border-storex-grey pb-4 pt-8 text-center sm:border-none sm:pt-0"
         data-tabs-toggle="#default-tab"
         role="tablist"
         data-tabs-active-classes="text-storex-red border-b-1 border-storex-red"
@@ -14,7 +14,7 @@
                 role="tab"
                 aria-controls="agriculture"
                 aria-selected="true"
-                class="text-wrap py-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri lauksaimniekiem
             </button>
@@ -27,7 +27,7 @@
                 role="tab"
                 aria-controls="business"
                 aria-selected="false"
-                class="text-wrap py-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
+                class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg"
             >
                 Tenta angāri biznesam
             </button>
@@ -35,7 +35,7 @@
     </ul>
     <div id="default-tab">
         <div class="hidden px-4 lg:px-6 xl:px-8" id="agriculture" role="tabpanel" aria-labelledby="agriculture-tab">
-            <div class="items-center gap-2 text-center sm:gap-6 sm:py-4 md:flex md:py-2 md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="hidden text-wrap px-4 lg:px-6 xl:px-8" id="business" role="tabpanel" aria-labelledby="business-tab">
-            <div class="items-center gap-2 text-center sm:gap-6 sm:py-4 md:flex md:py-2 md:text-left">
+            <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

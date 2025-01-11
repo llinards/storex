@@ -53,11 +53,10 @@
                 --}}
                 <div class="order-6 md:order-none">
                     <h5 class="ml-4 py-3 uppercase">Sadaļas</h5>
-                    <x-footer-link href="{{route('pricelist')}}">@lang('Cenrādis')</x-footer-link>
-                    <x-footer-link href="{{route('about')}}">@lang('Par mums')</x-footer-link>
-                    <x-footer-link href="{{route('contacts')}}">@lang('Kontakti')</x-footer-link>
+                    <x-footer-link href="#">@lang('Par mums')</x-footer-link>
+                    <x-footer-link href="#">@lang('Kontakti')</x-footer-link>
                     {{-- <x-footer-link href="#">@lang('Galerija')</x-footer-link> --}}
-                    <x-footer-link href="{{route('faq')}}">@lang('BUJ')</x-footer-link>
+                    <x-footer-link href="#">@lang('BUJ')</x-footer-link>
                     <x-footer-link href="#">@lang('Privātuma politika')</x-footer-link>
                     <x-footer-link href="#">@lang('Noteikumi un nosacījumi')</x-footer-link>
                 </div>
@@ -150,7 +149,7 @@
         </div>
 
         <div class="order-3 py-4 text-center md:order-none md:py-8">
-            <p>© SIA "AE Constructions" {{ now()->year }} | @lang('Visas tiesības aizsargātas')</p>
+            <p>All rights reserved © {{ now()->year }} Storex Structures.</p>
         </div>
     </div>
 </footer>

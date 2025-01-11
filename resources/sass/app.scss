@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 // Fonts
 @font-face {
     font-family: 'Lato';
@@ -95,7 +94,7 @@ footer a {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -154,7 +153,6 @@ label {
     font-size: 13px;
 }
 
-.category-details > p,
 .squeezed-text {
     display: -webkit-box;
     /* Required for multi-line clamping */

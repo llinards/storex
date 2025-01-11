@@ -9,10 +9,10 @@
         <div class="hidden sm:block">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message/>
+                    <x-info-status-message />
                 </div>
             @else
-                <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-12 md:grid-cols-3 xl:grid-cols-4">
+                <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-12 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
                         <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
                             <x-slot name="productImage">
@@ -31,7 +31,7 @@
         <div class="block pb-16 sm:hidden">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message/>
+                    <x-info-status-message />
                 </div>
             @else
                 <div class="carousel" data-flickity='{ "contain": true }'>

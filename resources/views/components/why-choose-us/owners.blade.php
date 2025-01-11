@@ -1,10 +1,12 @@
-<div class="bg-storex-medium-grey-bg px-4 py-8 sm:px-20 sm:py-12">
+<div
+    class="bg-cover bg-center px-4 py-8 sm:px-20 sm:py-12"
+    style="background-image: url('{{ asset('images/storex-background.png') }}')"
+>
     <div class="grid items-center lg:grid-cols-2 lg:gap-20">
         <img
-            class="order-2 pt-4 lg:order-1 lg:pt-0"
+            class="order-2 max-h-full pt-4 lg:order-1 lg:pt-0"
             src="{{ asset('images/storex-owners.jpg') }}"
             alt="Storex Owners"
-            class="max-h-full"
         />
         <div class="order-1 lg:order-2">
             <h2 class="pb-2 text-center text-storex-red sm:text-left">

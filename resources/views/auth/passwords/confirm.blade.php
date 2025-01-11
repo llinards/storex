@@ -5,7 +5,7 @@
             <div class="w-full max-w-md">
                 <div class="rounded-lg bg-white shadow-md">
                     <div class="flex justify-center bg-gray-200 px-6 py-4 text-lg font-semibold">
-                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
+                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8" />
                     </div>
 
                     <div class="px-6 py-4">
@@ -30,7 +30,7 @@
                                     />
 
                                     @error('password')
-                                    <span class="mt-2 text-xs italic text-red-500">
+                                        <span class="mt-2 text-xs italic text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
