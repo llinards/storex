@@ -208,7 +208,11 @@ label {
 }
 
 /* Custom Flickity button styles */
-.flickity-prev-next-button .flickity-button-icon {
+.flickity-prev-next-button {
+    background: $storex-red;
+}
+
+.flickity-button-icon {
     color: $storex-red;
 }
 
@@ -233,8 +237,8 @@ label {
     cursor: pointer;
 }
 
-.dot.is-selected {
-    background-color: $storex-red;
+.flickity-page-dot.is-selected {
+    background-color: $storex-red !important;
     opacity: 1;
 }
 
@@ -243,9 +247,10 @@ label {
     bottom: -15px;
 }
 
-.flickity-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px $storex-red;
+.flickity-button:focus,
+.flickity-page-dot:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0px $storex-red !important;
 }
 
 .review-cell {

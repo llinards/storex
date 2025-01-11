@@ -2,7 +2,7 @@ import { initFlowbite } from 'flowbite';
 import Flickity from 'flickity';
 import 'flickity/dist/flickity.min.css';
 import 'fslightbox';
-
+import 'flickity-fullscreen';
 initFlowbite;
 
 // Hamburger For Nav
@@ -59,22 +59,27 @@ document.addEventListener('DOMContentLoaded', function () {
             let currentIndex = flkty.selectedIndex;
             let cells = flkty.cells;
 
-            // Remove 'inactive' class from all cells
-            cells.forEach((cell) => {
-                cell.element.classList.remove('inactive');
-            });
+            // Check if cells are available before attempting to access them
+            if (cells && cells.length > 0) {
+                // Remove 'inactive' class from all cells
+                cells.forEach((cell) => {
+                    cell.element.classList.remove('inactive');
+                });
 
-            // Get the next item (if any) and add the 'inactive' class
-            let nextIndex = currentIndex + 1;
-            let prevIndex = currentIndex - 1;
+                // Get the next item (if any) and add the 'inactive' class
+                let nextIndex = currentIndex + 1;
+                let prevIndex = currentIndex - 1;
 
-            if (nextIndex < cells.length) {
-                cells[nextIndex].element.classList.add('inactive');
-            }
+                if (nextIndex < cells.length) {
+                    cells[nextIndex].element.classList.add('inactive');
+                }
 
-            // If it's the last item, mark the previous item as inactive
-            if (currentIndex === cells.length - 1 && prevIndex >= 0) {
-                cells[prevIndex].element.classList.add('inactive');
+                // If it's the last item, mark the previous item as inactive
+                if (currentIndex === cells.length - 1 && prevIndex >= 0) {
+                    cells[prevIndex].element.classList.add('inactive');
+                }
+            } else {
+                console.warn('No cells available in the carousel');
             }
         }
 
