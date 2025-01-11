@@ -3,7 +3,7 @@
     {{
         $attributes->merge([
             'class' => 'flex items-center sm:flex-none sm:items-start px-4 sm:px-0 sm:grid sm:grid-cols-12 h-screen
-                                                            sm:h-96 header grid-rows-12 ',
+                                                                    sm:h-96 header grid-rows-12 ',
         ])
     }}
 >
@@ -11,10 +11,10 @@
         <h2 class="text-shadow leading-tight text-white sm:text-[28px] md:text-5xl md:leading-tight">
             {{ $heading }}
         </h2>
-        <p class="text-shadow py-2 text-white">
+        <p class="text-shadow pt-2 text-white">
             {{ $subText }}
         </p>
-        <div class="pt-4">
+        <div>
             {{ $btnOne ?? '' }}
         </div>
     </div>
