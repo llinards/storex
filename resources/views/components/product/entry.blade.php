@@ -1,14 +1,14 @@
 <tr class="border-b-1 border-storex-grey text-center">
-    <td class="text-left text-storex-red">{{ $productName }}</td>
-    <td>{{ $productLength }}</td>
-    <td>{{ $productWidth }}</td>
-    <td>{{ $productHeight }}</td>
-    <td>{{ $productArchDistance }}</td>
-    <td>{{ $productGateDimension }}</td>
-    <td>{{ $productArea }}</td>
-    <td>{{ $productPvc }}</td>
+    <td class="text-left text-storex-red">{{ $name }}</td>
+    <td>{{ $length }}</td>
+    <td>{{ $width }}</td>
+    <td>{{ $height }}</td>
+    <td>{{ $archDistance }}</td>
+    <td>{{ $gateDimension }}</td>
+    <td>{{ $area }}</td>
+    <td>{{ $pvc }}</td>
     <td>
-        <a class="flex font-bold transition duration-200 hover:text-storex-red" href="{{ $productBlueprint }}">
+        <a class="flex font-bold transition duration-200 hover:text-storex-red" href="{{ $blueprint }}">
             <svg
                 class="text-grey mr-2 h-6 w-6"
                 aria-hidden="true"
@@ -29,5 +29,5 @@
             @lang('Lejupielādēt')
         </a>
     </td>
-    <td>{{ $productPrice }}</td>
+    <td>{{ $price }}</td>
 </tr>
