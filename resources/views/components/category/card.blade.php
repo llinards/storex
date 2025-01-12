@@ -1,13 +1,13 @@
 <div class="carousel-cell category-cell rounded-lg bg-white shadow-md sm:relative">
     <a {{ $attributes }} class="block overflow-hidden">
-        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $productImage ?? '' }}" alt="" />
+        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt="" />
     </a>
 
     <div class="rounded-lg bg-white p-5">
         <div>
             <div class="flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
-                    {{ $productHeading }}
+                    {{ $heading }}
                 </h3>
                 <div class="flex flex-col justify-between pb-6">
                     <div class="flex items-center py-2">
@@ -93,6 +93,6 @@
         class="flex justify-center rounded-b-lg bg-storex-red py-2 font-bold text-white transition-all duration-200 hover:shadow-md"
         {{ $attributes }}
     >
-        {{ $productLink }}
+        {{ $link }}
     </a>
 </div>

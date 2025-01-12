@@ -633,10 +633,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Igaunija')
+            <h4>@lang('Igaunija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -739,10 +739,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Lietuva')
+            <h4>@lang('Lietuva')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -852,10 +852,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Polija')
+            <h4>@lang('Polija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -974,10 +974,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Rumānija')
+            <h4>@lang('Rumānija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -1087,10 +1087,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Somija')
+            <h4>@lang('Somija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -1209,10 +1209,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Vācija')
+            <h4>@lang('Vācija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -1343,10 +1343,10 @@
                     </g>
                 </g>
             </svg>
-            @lang('Spānija')
+            <h4>@lang('Spānija')</h4>
             <svg
                 data-accordion-icon
-                class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+                class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

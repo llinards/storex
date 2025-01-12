@@ -1,8 +1,5 @@
 import { initFlowbite } from 'flowbite';
-import Flickity from 'flickity';
-import 'flickity/dist/flickity.min.css';
-import 'fslightbox';
-
+// import 'fslightbox';
 initFlowbite;
 
 // Hamburger For Nav
@@ -59,22 +56,27 @@ document.addEventListener('DOMContentLoaded', function () {
             let currentIndex = flkty.selectedIndex;
             let cells = flkty.cells;
 
-            // Remove 'inactive' class from all cells
-            cells.forEach((cell) => {
-                cell.element.classList.remove('inactive');
-            });
+            // Check if cells are available before attempting to access them
+            if (cells && cells.length > 0) {
+                // Remove 'inactive' class from all cells
+                cells.forEach((cell) => {
+                    cell.element.classList.remove('inactive');
+                });
 
-            // Get the next item (if any) and add the 'inactive' class
-            let nextIndex = currentIndex + 1;
-            let prevIndex = currentIndex - 1;
+                // Get the next item (if any) and add the 'inactive' class
+                let nextIndex = currentIndex + 1;
+                let prevIndex = currentIndex - 1;
 
-            if (nextIndex < cells.length) {
-                cells[nextIndex].element.classList.add('inactive');
-            }
+                if (nextIndex < cells.length) {
+                    cells[nextIndex].element.classList.add('inactive');
+                }
 
-            // If it's the last item, mark the previous item as inactive
-            if (currentIndex === cells.length - 1 && prevIndex >= 0) {
-                cells[prevIndex].element.classList.add('inactive');
+                // If it's the last item, mark the previous item as inactive
+                if (currentIndex === cells.length - 1 && prevIndex >= 0) {
+                    cells[prevIndex].element.classList.add('inactive');
+                }
+            } else {
+                console.warn('No cells available in the carousel');
             }
         }
 
@@ -91,7 +93,7 @@ let i;
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function () {
         let panel = this.nextElementSibling;
-        let svg = this.querySelector('svg');
+        let svg = this.querySelector('.acc-svg');
         let h4 = this.querySelector('h4');
 
         if (panel.style.maxHeight) {
@@ -132,4 +134,31 @@ document.querySelectorAll('.scroll-btn').forEach(function (button) {
             behavior: 'smooth', // Add smooth scroll
         });
     });
+});
+
+const radioBtn = document.querySelectorAll('input[name="tent-type"]');
+const productPrice = document.getElementById('product-price');
+
+// Function to update the price using a switch statement
+function updatePrice() {
+    const selectedRadio = document.querySelector('input[name="tent-type"]:checked');
+    let price;
+    switch (selectedRadio.value) {
+        case 'norda55':
+            price = '31 000€';
+            break;
+        case 'norda110':
+            price = '50 000€'; // Example price for the second model
+            break;
+        default:
+            price = 'N/A'; // Fallback price if no match is found
+    }
+
+    // Update the price element with the chosen price
+    productPrice.textContent = price;
+}
+
+// Add event listeners to all radio buttons
+radioBtn.forEach((radio) => {
+    radio.addEventListener('change', updatePrice);
 });

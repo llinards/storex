@@ -2,7 +2,7 @@
 
 {{-- DESKTOP VIEW --}}
 <div class="hidden lg:block">
-    <div class="review-carousel" data-flickity='{ "groupCells": true }'>
+    <div class="review-carousel" data-flickity='{ "groupCells": true, "draggable": true}'>
         <x-reviews.content></x-reviews.content>
     </div>
 </div>
