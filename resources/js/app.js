@@ -162,6 +162,3 @@ function updatePrice() {
 radioBtn.forEach((radio) => {
     radio.addEventListener('change', updatePrice);
 });
-
-// Set the initial price based on the default checked radio button
-updatePrice();
