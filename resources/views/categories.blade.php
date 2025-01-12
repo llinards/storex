@@ -2,7 +2,7 @@
     <x-slot name="title">@lang('Tenta angāru veidi un aksesuāri')</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0">
-            <h2>@lang('Tenta angāru veidi un aksesuāri')</h2>
+            <h1>@lang('Tenta angāru veidi un aksesuāri')</h1>
         </div>
 
         {{-- DESKTOP LAYOUT --}}

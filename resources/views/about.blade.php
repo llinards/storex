@@ -2,7 +2,7 @@
     <x-slot name="title">@lang('Par mums')</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pb-8 pt-28 sm:pb-0 sm:pt-0">
-            <h1 class="leading-none">@lang('Par mums')</h1>
+            <h1>@lang('Par mums')</h1>
         </div>
     </div>
     <div class="container sm:mx-auto">

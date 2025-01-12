@@ -96,6 +96,7 @@ footer a {
 h1 {
     font-size: 28px;
     font-weight: 700;
+    line-height: 1;
 }
 
 h2 {
@@ -245,8 +246,8 @@ label {
 
 .flickity-button:focus,
 .flickity-page-dot:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 0px $storex-red !important;
+    outline: none;
+    box-shadow: 0 0 0 0px $storex-red;
 }
 
 .review-cell {

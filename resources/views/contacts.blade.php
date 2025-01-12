@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0 md:grid md:grid-cols-2 md:gap-10">
             <div>
-                <h1 class="leading-none">@lang('Kontakti')</h1>
+                <h1>@lang('Kontakti')</h1>
                 <div>
                     <div class="py-4">
                         <p class="text-base text-storex-red">@lang('SIA "AE Constructions"')</p>
