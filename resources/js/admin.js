@@ -18,6 +18,8 @@ import {
 } from 'ckeditor5';
 import 'ckeditor5/ckeditor5.css';
 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 window.FilePond = FilePond;
 window.FilePondPluginFileValidateType = FilePondPluginFileValidateType;
 window.FilePondPluginImagePreview = FilePondPluginImagePreview;

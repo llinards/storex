@@ -75,7 +75,7 @@
                                     ></path>
                                 </svg>
                                 "Rožulejas", Plācis, Straupes pag.,
-                                <br class="md:hidden" />
+                                <br class="md:hidden"/>
                                 Pārgaujas nov., LV-4152
                             </a>
                         </li>
@@ -148,7 +148,8 @@
         </div>
 
         <div class="order-3 py-4 text-center md:order-none md:py-8">
-            <p>All rights reserved © {{ now()->year }} Storex Structures.</p>
+            <p>© SIA "AE Constructions" {{ now()->year }}</p>
+            <p>@lang('Visas tiesības aizsargātas').</p>
         </div>
     </div>
 </footer>
