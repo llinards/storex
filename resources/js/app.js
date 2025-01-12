@@ -1,8 +1,5 @@
 import { initFlowbite } from 'flowbite';
-import Flickity from 'flickity';
-import 'flickity/dist/flickity.min.css';
-import 'fslightbox';
-import 'flickity-fullscreen';
+// import 'fslightbox';
 initFlowbite;
 
 // Hamburger For Nav

@@ -25,9 +25,6 @@
         "filepond-plugin-file-validate-size": "^2.2.8",
         "filepond-plugin-file-validate-type": "^1.2.9",
         "filepond-plugin-image-preview": "^4.6.12",
-        "flickity": "^3.0.0",
-        "flickity-as-nav-for": "^3.0.0",
-        "flickity-fullscreen": "^2.0.0",
         "flowbite": "^2.5.2",
         "fslightbox": "^3.4.2"
     }

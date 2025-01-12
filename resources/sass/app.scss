@@ -201,17 +201,13 @@ label {
 }
 
 .flickity-prev-next-button {
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px;
+    height: 32px;
     border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Custom Flickity button styles */
-.flickity-prev-next-button {
-    background: $storex-red;
-}
-
+.flickity-prev-next-button,
 .flickity-button-icon {
     color: $storex-red;
 }
@@ -237,8 +233,8 @@ label {
     cursor: pointer;
 }
 
-.flickity-page-dot.is-selected {
-    background-color: $storex-red !important;
+.dot.is-selected {
+    background-color: $storex-red;
     opacity: 1;
 }
 
