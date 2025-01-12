@@ -93,7 +93,7 @@ let i;
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function () {
         let panel = this.nextElementSibling;
-        let svg = this.querySelector('svg');
+        let svg = this.querySelector('.acc-svg');
         let h4 = this.querySelector('h4');
 
         if (panel.style.maxHeight) {
