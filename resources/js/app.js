@@ -136,6 +136,32 @@ document.querySelectorAll('.scroll-btn').forEach(function (button) {
     });
 });
 
-// var flkty = $('.product').flickity({
-//     fullscreen: true,
-// });
+const radioBtn = document.querySelectorAll('input[name="tent-type"]');
+const productPrice = document.getElementById('product-price');
+
+// Function to update the price using a switch statement
+function updatePrice() {
+    const selectedRadio = document.querySelector('input[name="tent-type"]:checked');
+    let price;
+    switch (selectedRadio.value) {
+        case 'norda55':
+            price = '31 000€';
+            break;
+        case 'norda110':
+            price = '50 000€'; // Example price for the second model
+            break;
+        default:
+            price = 'N/A'; // Fallback price if no match is found
+    }
+
+    // Update the price element with the chosen price
+    productPrice.textContent = price;
+}
+
+// Add event listeners to all radio buttons
+radioBtn.forEach((radio) => {
+    radio.addEventListener('change', updatePrice);
+});
+
+// Set the initial price based on the default checked radio button
+updatePrice();

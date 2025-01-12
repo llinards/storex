@@ -33,12 +33,18 @@
     @else
         <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 lg:grid-cols-3 xl:grid-cols-4">
             @foreach ($categories as $category)
-                <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
+                <x-categories.card
+                    href="{{ route('category.show', ['category' => $category->slug]) }}"
+                    :featured="$category->is_featured"
+                >
                     <x-slot name="image">
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="heading">{{ $category->title }}</x-slot>
-                    {{-- <x-slot name="area">123</x-slot> --}}
+                    <x-slot name="area">
+                        @lang('Platība')
+                        56 - 84 m2
+                    </x-slot>
                     <x-slot name="description">{!! $category->description !!}</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-categories.card>
@@ -57,11 +63,18 @@
     @else
         <div class="carousel my-8" data-flickity='{ "contain": true }'>
             @foreach ($categories as $category)
-                <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
+                <x-categories.card
+                    href="{{ route('category.show', ['category' => $category->slug]) }}"
+                    :featured="$category->is_featured"
+                >
                     <x-slot name="image">
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="heading">{{ $category->title }}</x-slot>
+                    <x-slot name="area">
+                        @lang('Platība')
+                        56 - 84 m2
+                    </x-slot>
                     <x-slot name="description">{!! $category->description !!}</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-categories.card>

@@ -118,7 +118,7 @@
         </div>
         <div>
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
-                <span class="font-bold">31 000€</span>
+                <span id="product-price" class="font-bold">31 000€</span>
                 +
                 @lang('PVN')
             </p>
