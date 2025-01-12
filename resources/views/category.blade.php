@@ -5,7 +5,7 @@
     <x-slot name="image">{{ asset('storage/categories/' . $category->image) }}</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pb-12 sm:pt-0">
-            <h2>{{ $category->title }}</h2>
+            <h1>{{ $category->title }}</h1>
         </div>
 
         {{-- DESKTOP LAYOUT --}}
@@ -24,58 +24,16 @@
                 <x-category.card
                     href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
-                    <x-slot name="productImage">
+                    <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
                     </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
+                    <x-slot name="heading">NORDA</x-slot>
                     <x-slot name="area">Platība 56 - 84 m2</x-slot>
                     <x-slot name="width">Platums 7 m</x-slot>
                     <x-slot name="height">Augstums 4,8 m</x-slot>
                     <x-slot name="length">Garums ?</x-slot>
                     <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-container-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-siltnamis-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-gyvuliams-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
+                    <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-category.card>
             </div>
         </div>
@@ -96,58 +54,16 @@
                 <x-category.card
                     href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
-                    <x-slot name="productImage">
+                    <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
                     </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
+                    <x-slot name="heading">NORDA</x-slot>
                     <x-slot name="area">Platība 56 - 84 m2</x-slot>
                     <x-slot name="width">Platums 7 m</x-slot>
                     <x-slot name="height">Augstums 4,8 m</x-slot>
                     <x-slot name="length">Garums ?</x-slot>
                     <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-container-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-siltnamis-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
-                </x-category.card>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
-                >
-                    <x-slot name="productImage">
-                        {{ asset('images/storex-gyvuliams-front-page.jpg') }}
-                    </x-slot>
-                    <x-slot name="productHeading">NORDA</x-slot>
-                    <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                    <x-slot name="width">Platums 7 m</x-slot>
-                    <x-slot name="height">Augstums 4,8 m</x-slot>
-                    <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
-                    <x-slot name="productLink">@lang('Uzzināt vairāk')</x-slot>
+                    <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-category.card>
             </div>
         </div>

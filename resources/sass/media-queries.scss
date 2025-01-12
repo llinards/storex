@@ -26,7 +26,7 @@
 
     // Placement of the dots.
     .flickity-page-dots {
-        bottom: -5px;
+        bottom: -5px !important;
     }
 
     .review-cell {
@@ -56,11 +56,11 @@
 
     // Placement of the dots.
     .flickity-page-dots {
-        bottom: -22px;
+        bottom: -22px !important;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     h2 {

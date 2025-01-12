@@ -96,6 +96,7 @@ footer a {
 h1 {
     font-size: 28px;
     font-weight: 700;
+    line-height: 1;
 }
 
 h2 {
@@ -200,20 +201,20 @@ label {
     order: 1;
 }
 
-/* Custom Flickity button styles */
-.flickity-prev-next-button .flickity-button-icon {
+.flickity-prev-next-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flickity-prev-next-button,
+.flickity-button-icon {
     color: $storex-red;
 }
 
 .flickity-prev-next-button:disabled {
     display: none;
-}
-
-.flickity-prev-next-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .flickity-button {
@@ -243,9 +244,10 @@ label {
     bottom: -15px;
 }
 
-.flickity-button:focus {
+.flickity-button:focus,
+.flickity-page-dot:focus {
     outline: none;
-    box-shadow: 0 0 0 2px $storex-red;
+    box-shadow: 0 0 0 0px $storex-red;
 }
 
 .review-cell {

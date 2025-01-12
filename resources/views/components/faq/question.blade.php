@@ -5,7 +5,7 @@
         </h4>
         <svg
             data-accordion-icon
-            class="h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
+            class="acc-svg h-3 w-3 shrink-0 rotate-180 transition-all duration-200"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
