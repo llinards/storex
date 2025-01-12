@@ -38,6 +38,7 @@
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="heading">{{ $category->title }}</x-slot>
+                    {{-- <x-slot name="area">123</x-slot> --}}
                     <x-slot name="description">{!! $category->description !!}</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-categories.card>

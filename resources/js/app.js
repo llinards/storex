@@ -135,3 +135,7 @@ document.querySelectorAll('.scroll-btn').forEach(function (button) {
         });
     });
 });
+
+// var flkty = $('.product').flickity({
+//     fullscreen: true,
+// });
