@@ -14,7 +14,7 @@ class Category extends Model
 
     public array $translatable = ['title', 'slug', 'description', 'area'];
 
-    public function getFallbackLocale(): string
+    public function getFallbackLocale(): string|null
     {
         return env('APP_LOCALE');
     }
