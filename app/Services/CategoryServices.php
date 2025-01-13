@@ -43,6 +43,7 @@ class CategoryServices
             'slug'        => [$locale => $this->setSlug($data->category_title)],
             'description' => [$locale => $data->category_description],
             'image'       => basename($data['category_image'][0]),
+            'area'        => [$locale => $data->category_area],
         ]);
     }
 
@@ -69,6 +70,7 @@ class CategoryServices
             'description' => [$locale => $data->category_description],
             'image'       => basename($data['category_image'][0]),
             'is_featured' => isset($data['is_featured']),
+            'area'        => [$locale => $data->category_area],
         ]);
     }
 

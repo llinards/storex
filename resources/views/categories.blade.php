@@ -9,17 +9,21 @@
         <div class="hidden sm:block">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message />
+                    <x-info-status-message/>
                 </div>
             @else
                 <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-12 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
-                        <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
+                        <x-categories.card :featured="$category->is_featured"
+                                           href="{{ route('category.show', ['category' => $category->slug]) }}">
                             <x-slot name="image">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
                             <x-slot name="heading">{{ $category->title }}</x-slot>
                             <x-slot name="description">{!! $category->description !!}</x-slot>
+                            @if(isset($category->area))
+                                <x-slot name="area">{{$category->area}}</x-slot>
+                            @endif
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-categories.card>
                     @endforeach
@@ -31,17 +35,21 @@
         <div class="block pb-16 sm:hidden">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message />
+                    <x-info-status-message/>
                 </div>
             @else
                 <div class="carousel" data-flickity='{ "contain": true }'>
                     @foreach ($categories as $category)
-                        <x-categories.card href="{{ route('category.show', ['category' => $category->slug]) }}">
+                        <x-categories.card :featured="$category->is_featured"
+                                           href="{{ route('category.show', ['category' => $category->slug]) }}">
                             <x-slot name="image">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
                             <x-slot name="heading">{{ $category->title }}</x-slot>
                             <x-slot name="description">{!! $category->description !!}</x-slot>
+                            @if(isset($category->area))
+                                <x-slot name="area">{{$category->area}}</x-slot>
+                            @endif
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-categories.card>
                     @endforeach

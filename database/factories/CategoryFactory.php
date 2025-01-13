@@ -25,7 +25,7 @@ class CategoryFactory extends Factory
         $title = $this->faker->sentence(2);
         $slug  = Str::slug($title);
 
-        if (! Storage::disk('public')->exists('categories')) {
+        if ( ! Storage::disk('public')->exists('categories')) {
             Storage::disk('public')->makeDirectory('categories');
         }
 
@@ -36,16 +36,21 @@ class CategoryFactory extends Factory
                 height: 600
             )),
             'title'       => [
-                'en' => '(EN) ' . $title,
-                'lv' => '(LV) ' . $title,
+                'en' => '(EN) '.$title,
+                'lv' => '(LV) '.$title,
             ],
             'slug'        => [
-                'en' => 'en-' . $slug,
-                'lv' => 'lv-' . $slug,
+                'en' => 'en-'.$slug,
+                'lv' => 'lv-'.$slug,
             ],
             'description' => [
-                'en' => '<p>' . $this->faker->sentence(13) . '</p>',
-                'lv' => '<p>' . $this->faker->sentence(13) . '</p>',
+                'en' => '<p>'.$this->faker->sentence(10).'</p>',
+                'lv' => '<p>'.$this->faker->sentence(10).'</p>',
+            ],
+            'is_featured' => $this->faker->boolean(10),
+            'area'        => [
+                'en' => $this->faker->numberBetween(0, 99),
+                'lv' => $this->faker->numberBetween(0, 99),
             ],
         ];
     }

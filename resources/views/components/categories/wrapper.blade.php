@@ -28,7 +28,7 @@
     </div>
     @if ($categories->isEmpty())
         <div class="mt-3 flex items-center justify-center">
-            <x-info-status-message />
+            <x-info-status-message/>
         </div>
     @else
         <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-8 lg:grid-cols-3 xl:grid-cols-4">
@@ -41,10 +41,9 @@
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="heading">{{ $category->title }}</x-slot>
-                    <x-slot name="area">
-                        @lang('Platība')
-                        56 - 84 m2
-                    </x-slot>
+                    @if($category->area !== '')
+                        <x-slot name="area">{{$category->area}}</x-slot>
+                    @endif
                     <x-slot name="description">{!! $category->description !!}</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-categories.card>
@@ -58,7 +57,7 @@
     <h2 class="border-b-1 pb-2 text-center">@lang('Tenta angāru veidi un aksesuāri')</h2>
     @if ($categories->isEmpty())
         <div class="mt-3 flex items-center justify-center">
-            <x-info-status-message />
+            <x-info-status-message/>
         </div>
     @else
         <div class="carousel my-8" data-flickity='{ "contain": true }'>
@@ -71,10 +70,9 @@
                         {{ Storage::url('categories/' . $category->image) }}
                     </x-slot>
                     <x-slot name="heading">{{ $category->title }}</x-slot>
-                    <x-slot name="area">
-                        @lang('Platība')
-                        56 - 84 m2
-                    </x-slot>
+                    @if(isset($category->area))
+                        <x-slot name="area">{{$category->area}}</x-slot>
+                    @endif
                     <x-slot name="description">{!! $category->description !!}</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-categories.card>

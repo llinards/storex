@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->json('slug');
             $table->json('description');
             $table->boolean('is_featured')->default(false);
+            $table->json('area')->nullable();
             $table->timestamps();
         });
     }
