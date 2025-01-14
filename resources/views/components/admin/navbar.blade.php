@@ -10,18 +10,31 @@
         </div>
 
         <div class="pace-x-6 hidden gap-3 md:flex">
-            <a href="{{ route('admin.index') }}" class="text-black">@lang('Sākums')</a>
-            @if (Route::currentRouteName() !== 'category.create')
-                <span class="text-black">|</span>
-                <a href="{{ route('admin.category.create') }}" class="text-black">@lang('Jauna kategorija')</a>
-            @endif
+            <a href="{{ route('admin.index') }}"
+               class="text-black {{ request()->routeIs('admin.index') ? 'border-b-2 border-black' : '' }}">@lang('Sākums')</a>
+            <span class="text-black">|</span>
+            <a
+                href="{{ route('admin.category.create') }}"
+                class="text-black {{ request()->routeIs('admin.category.create') ? 'border-b-2 border-black' : '' }}"
+            >
+                @lang('Jauna kategorija')
+            </a>
+            <span class="text-black">|</span>
+            @foreach (config('app.available_locales') as $locale)
+                <a
+                    class="text-black {{ app()->getLocale() === $locale ? 'border-b-2 border-red-600' : '' }}"
+                    href="{{ url()->current() }}?changeLanguage={{ $locale }}"
+                >
+                    {{ strtoupper($locale) }}
+                </a>
+            @endforeach
         </div>
 
         <div>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="rounded px-4 py-2 text-black">
-                    <i class="bi bi-box-arrow-right"></i>
+                    Beigt darbu
                 </button>
             </form>
         </div>

@@ -57,14 +57,14 @@ class CategoriesController extends Controller
         return view('category', compact('category'));
     }
 
-    public function showAdmin(int $category)
+    public function showAdmin(string $locale, int $category)
     {
         $category = Category::findOrFail($category);
 
         return view('admin.categories.show', compact('category'));
     }
 
-    public function update(Request $data, int $id): RedirectResponse
+    public function update(string $locale, Request $data, int $id): RedirectResponse
     {
         try {
             $this->categoryServices->updateCategory($data, $id);
@@ -78,7 +78,7 @@ class CategoriesController extends Controller
         }
     }
 
-    public function destroy(int $id): RedirectResponse
+    public function destroy(string $locale, int $id): RedirectResponse
     {
         try {
             $this->categoryServices->destroyCategory($id);

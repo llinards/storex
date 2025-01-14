@@ -44,7 +44,12 @@ Route::get('/', function () {
     return redirect(app()->getLocale());
 });
 
-Route::prefix('home')->middleware(['auth'])->group(function () {
+Route::get('/home', function () {
+    return redirect(app()->getLocale().'/home');
+});
+
+Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function (
+) {
     Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
     Route::get('/upload', [FileUploadController::class, 'show']);
