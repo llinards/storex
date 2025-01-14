@@ -1,6 +1,6 @@
 <x-layout.admin>
     <x-slot name="title">Atjaunot kategoriju</x-slot>
-    <x-admin.status-message/>
+    <x-admin.status-message />
     <form
         class="w-full max-w-4xl rounded bg-white p-6 shadow-md"
         action="{{ route('admin.category.update', $category->id) }}"
@@ -27,7 +27,9 @@
             </x-admin.description-text-area>
         </div>
         <div class="mb-2 w-1/5">
-            <label for="category_title" class="mb-2 block font-medium text-gray-700">@lang('Platība (no/līdz)')</label>
+            <label for="category_title" class="mb-2 block font-medium text-gray-700">
+                @lang('Platība (no/līdz)')
+            </label>
             <input
                 type="text"
                 id="category_area"

@@ -1,5 +1,9 @@
 <div class="py-2">
-    <button class="faq-accordion flex w-full items-center justify-between transition-all duration-200">
+    <button
+        class="faq-accordion flex w-full items-center justify-between transition-all duration-200"
+        aria-expanded="false"
+        aria-controls="faq-panel-{{ $question }}"
+    >
         <h4 class="m-0 text-left transition-all duration-200">
             {{ $question }}
         </h4>
@@ -20,7 +24,12 @@
             />
         </svg>
     </button>
-    <div class="faq-panel mt-4 border-b-1 border-storex-grey transition-all duration-200" {{ $attributes }}>
+    <div
+        id="faq-panel-{{ $question }}"
+        class="faq-panel mt-4 border-b-1 border-storex-grey transition-all duration-200"
+        aria-hidden="true"
+        {{ $attributes }}
+    >
         <p class="mb-4">{{ $answer }}</p>
     </div>
 </div>

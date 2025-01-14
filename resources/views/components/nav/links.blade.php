@@ -16,16 +16,16 @@
 {{-- <x-nav.link href="{{ route('gallery') }}" :active="request()->is('gallery')"> --}}
 {{-- @lang('Galerija') --}}
 {{-- </x-nav.link> --}}
-<x-nav.link href="{{ route('pricelist') }}" :active="request()->is('pricelist')">
+<x-nav.link href="{{ route('pricelist') }}" :active="request()->routeIs('pricelist')">
     @lang('Cenrādis')
 </x-nav.link>
-<x-nav.link href="{{ route('about') }}" :active="request()->is('about')">
+<x-nav.link href="{{ route('about') }}" :active="request()->routeIs('about')">
     @lang('Par mums')
 </x-nav.link>
-<x-nav.link href="{{ route('contacts') }}" :active="request()->is('contacts')">
+<x-nav.link href="{{ route('contacts') }}" :active="request()->routeIs('contacts')">
     @lang('Kontakti')
 </x-nav.link>
-<x-nav.link href="{{ route('faq') }}" :active="request()->is('faq')">
+<x-nav.link href="{{ route('faq') }}" :active="request()->routeIs('faq')">
     @lang('BUJ')
 </x-nav.link>
 <x-nav.lang>

@@ -96,6 +96,14 @@ for (i = 0; i < acc.length; i++) {
         let svg = this.querySelector('.acc-svg');
         let h4 = this.querySelector('h4');
 
+        // Toggling the expanded state and aria-hidden attribute
+        let isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        // Update aria-expanded and aria-hidden
+        this.setAttribute('aria-expanded', !isExpanded); // Toggle expanded state
+        panel.setAttribute('aria-hidden', isExpanded); // Toggle hidden state
+
+        // Panel animation and styling
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
             panel.classList.toggle('border-storex-red');
@@ -106,6 +114,7 @@ for (i = 0; i < acc.length; i++) {
             h4.classList.toggle('text-storex-red');
         }
 
+        // SVG icon animation
         if (svg.classList.contains('rotate-180')) {
             svg.classList.remove('rotate-180');
             svg.classList.add('rotate-0');

@@ -21,8 +21,9 @@
                 @else
             --}}
             <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <x-category.card :featured="true"
-                                 href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
+                <x-category.card
+                    :featured="true"
+                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
                     <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
@@ -50,8 +51,9 @@
                 @else
             --}}
             <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
-                <x-category.card :featured="true"
-                                 href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
+                <x-category.card
+                    :featured="true"
+                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
                     <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
