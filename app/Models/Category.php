@@ -14,7 +14,7 @@ class Category extends Model
 
     public array $translatable = ['title', 'slug', 'description', 'area'];
 
-    public function getFallbackLocale(): string|null
+    public function getFallbackLocale(): string
     {
         return env('APP_LOCALE');
     }
@@ -26,9 +26,16 @@ class Category extends Model
 
     public function resolveRouteBinding($value, $field = null)
     {
-        $locale = request()->route('locale');
+        $locale        = request()->route('locale');
+        $defaultLocale = config('app.fallback_locale');
 
-        return $this->where("slug->{$locale}", $value)->firstOrFail();
+        $model = $this->where("slug->{$locale}", $value)->first();
+        
+        if ( ! $model) {
+            $model = $this->where("slug->{$defaultLocale}", $value)->first();
+        }
+
+        return $model ?? abort(404);
     }
 
     protected static function boot(): void
