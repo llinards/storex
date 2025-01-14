@@ -16,7 +16,7 @@ it('returns to login page when trying to access dashboard', function () {
 
 it('returns a validation message if email and/or password is incorrect', function () {
     $response = $this->post('/login', [
-        'email'    => 'wrong@example.com',
+        'email' => 'wrong@example.com',
         'password' => 'wrongpassword',
     ]);
 

@@ -23,23 +23,23 @@ class CategoryFactory extends Factory
         $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
         $title = $this->faker->sentence(2);
-        $slug  = Str::slug($title);
+        $slug = Str::slug($title);
 
-        if ( ! Storage::disk('public')->exists('categories')) {
+        if (! Storage::disk('public')->exists('categories')) {
             Storage::disk('public')->makeDirectory('categories');
         }
 
         return [
-            'image'       => basename($faker->image(
+            'image' => basename($faker->image(
                 dir: storage_path('app/public/categories'),
                 width: 800,
                 height: 600
             )),
-            'title'       => [
+            'title' => [
                 'en' => '(EN) '.$title,
                 'lv' => '(LV) '.$title,
             ],
-            'slug'        => [
+            'slug' => [
                 'en' => 'en-'.$slug,
                 'lv' => 'lv-'.$slug,
             ],
@@ -48,7 +48,7 @@ class CategoryFactory extends Factory
                 'lv' => '<p>'.$this->faker->sentence(10).'</p>',
             ],
             'is_featured' => $this->faker->boolean(10),
-            'area'        => [
+            'area' => [
                 'en' => $this->faker->numberBetween(0, 99),
                 'lv' => $this->faker->numberBetween(0, 99),
             ],

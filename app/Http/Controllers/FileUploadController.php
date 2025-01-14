@@ -17,7 +17,7 @@ class FileUploadController extends Controller
 
     public function show(Request $files)
     {
-//        TODO: This is an array, should be handled differently
+        //        TODO: This is an array, should be handled differently
         foreach ($files->all() as $file) {
             return $this->fileServices->getFile($file);
         }
@@ -34,7 +34,7 @@ class FileUploadController extends Controller
                 foreach ($files as $file) {
                     $fileName = $file->getClientOriginalName();
 
-//        TODO: This is an array, should be handled differently
+                    //        TODO: This is an array, should be handled differently
                     return $this->fileServices->storeFile('uploads', $file, $fileName);
                 }
             }

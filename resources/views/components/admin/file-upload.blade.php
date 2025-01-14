@@ -35,7 +35,7 @@
 
     const options = {
         server: {
-            url: '/{{app()->getLocale()}}/home/upload',
+            url: '/{{ app()->getLocale() }}/home/upload',
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}',
             },

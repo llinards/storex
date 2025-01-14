@@ -20,8 +20,8 @@ it('shows categories page for a valid locale and matching category locale (EN)',
 it('returns to default locale if categories doesnt have a translation', function () {
     Storage::fake('local');
     Category::factory()->create([
-        'title'       => ['lv' => 'Latvian title'],
-        'slug'        => ['lv' => 'latvian-slug'],
+        'title' => ['lv' => 'Latvian title'],
+        'slug' => ['lv' => 'latvian-slug'],
         'description' => ['lv' => 'Latvian description'],
     ]);
     $response = $this->get(route('category.index', 'en'));
@@ -45,8 +45,8 @@ it('shows the category page for a valid locale and matching category locale (EN)
 it('returns to default locale if category doesnt have a translation', function () {
     Storage::fake('local');
     Category::factory()->create([
-        'title'       => ['lv' => 'Latvian title'],
-        'slug'        => ['lv' => 'latvian-slug'],
+        'title' => ['lv' => 'Latvian title'],
+        'slug' => ['lv' => 'latvian-slug'],
         'description' => ['lv' => 'Latvian description'],
     ]);
     $response = $this->get(route('category.show', ['en', 'latvian-slug']));
