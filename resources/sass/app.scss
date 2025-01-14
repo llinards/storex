@@ -82,6 +82,11 @@ main:not(.admin-dashboard) {
     max-width: fit-content;
 }
 
+.btn-secondary {
+    background-color: $storex-grey;
+    max-width: fit-content;
+}
+
 footer,
 footer p,
 footer a {

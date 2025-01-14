@@ -40,8 +40,13 @@
             <label for="category_image" class="mb-2 block font-medium text-gray-700">@lang('Titulbilde')</label>
             <x-admin.file-upload :id="'category_image'" :name="'category_image'" :required="true"/>
         </div>
-        <x-btn :type="'button'">
-            {{ __('Izveidot') }}
-        </x-btn>
+        <div class="flex gap-4">
+            <x-btn-secondary href="{{ route('admin.index') }}">
+                {{ __('Atpakaļ') }}
+            </x-btn-secondary>
+            <x-btn :type="'button'">
+                {{ __('Izveidot') }}
+            </x-btn>
+        </div>
     </form>
 </x-layout.admin>

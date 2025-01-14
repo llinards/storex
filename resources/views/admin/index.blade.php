@@ -21,30 +21,32 @@
                         <td class="px-6 py-4 text-sm text-gray-700">{{ $category->title }}</td>
                         <td class="px-6 py-4 text-sm text-gray-500">{{ $category->created_at }}</td>
                         <td class="px-6 py-4 text-sm text-gray-500">{{ $category->updated_at }}</td>
-                        <td class="px-6 py-4 text-center">
-                            <a
-                                href="{{ route('admin.category.show', ['category' => $category->id]) }}"
-                                class="text-blue-600 hover:text-blue-800"
-                            >
-                                <i class="bi bi-pencil"></i>
-                            </a>
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <form
-                                action="{{ route('admin.category.destroy', ['category' => $category->id]) }}"
-                                method="POST"
-                            >
-                                @csrf
-                                @method('DELETE')
-                                <button
-                                    type="submit"
-                                    title="Dzēst"
-                                    onclick="return confirm('Vai tiešām vēlies dzēst kategoriju?')"
-                                    class="text-red-600 hover:text-red-800"
+                        <td colspan="2" class="px-6 py-4 text-center flex gap-4">
+                            <div>
+                                <a
+                                    href="{{ route('admin.category.show', ['category' => $category->id]) }}"
+                                    class="text-blue-600 hover:text-blue-800"
                                 >
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </form>
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <form
+                                    action="{{ route('admin.category.destroy', ['category' => $category->id]) }}"
+                                    method="POST"
+                                >
+                                    @csrf
+                                    @method('DELETE')
+                                    <button
+                                        type="submit"
+                                        title="Dzēst"
+                                        onclick="return confirm('Vai tiešām vēlies dzēst kategoriju?')"
+                                        class="text-red-600 hover:text-red-800"
+                                    >
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

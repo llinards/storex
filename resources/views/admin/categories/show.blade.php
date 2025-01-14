@@ -9,19 +9,6 @@
         @method('PUT')
         @csrf
         <div class="mb-4">
-            <div class="flex items-center">
-                <input
-                    type="checkbox"
-                    id="is_featured"
-                    name="is_featured"
-                    value="{{ $category->is_featured }}"
-                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                    {{ $category->is_featured ? 'checked' : '' }}
-                />
-                <label for="is_featured" class="ml-2 text-sm text-gray-600">@lang('Atzīmēt kā populāru')</label>
-            </div>
-        </div>
-        <div class="mb-4">
             <label for="category_title" class="mb-2 block font-medium text-gray-700">@lang('Nosaukums')</label>
             <input
                 type="text"
@@ -62,8 +49,26 @@
                 :required="true"
             />
         </div>
-        <x-btn :type="'button'">
-            {{ __('Atjaunot') }}
-        </x-btn>
+        <div class="mb-4">
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_featured"
+                    name="is_featured"
+                    value="{{ $category->is_featured }}"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                    {{ $category->is_featured ? 'checked' : '' }}
+                />
+                <label for="is_featured" class="ml-2 text-sm text-gray-600">@lang('Atzīmēt kā populāru')</label>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <x-btn-secondary href="{{ route('admin.index') }}">
+                {{ __('Atpakaļ') }}
+            </x-btn-secondary>
+            <x-btn :type="'button'">
+                {{ __('Atjaunot') }}
+            </x-btn>
+        </div>
     </form>
 </x-layout.admin>
