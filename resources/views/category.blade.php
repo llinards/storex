@@ -21,8 +21,8 @@
                 @else
             --}}
             <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
+                <x-category.card :featured="true"
+                                 href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
                     <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
@@ -32,7 +32,6 @@
                     <x-slot name="width">Platums 7 m</x-slot>
                     <x-slot name="height">Augstums 4,8 m</x-slot>
                     <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-category.card>
             </div>
@@ -51,8 +50,8 @@
                 @else
             --}}
             <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
-                <x-category.card
-                    href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
+                <x-category.card :featured="true"
+                                 href="{{route('product.show', ['category' => request()->route('category'), 'product' => 'produkts-demo'])}}"
                 >
                     <x-slot name="image">
                         {{ asset('images/storex-alaska-s-front-page.jpg') }}
@@ -62,7 +61,6 @@
                     <x-slot name="width">Platums 7 m</x-slot>
                     <x-slot name="height">Augstums 4,8 m</x-slot>
                     <x-slot name="length">Garums ?</x-slot>
-                    <x-slot name="gate">Vārti: attīšanas veids no abiem galiem, platums 3,7 m un augstums 3,5 m</x-slot>
                     <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                 </x-category.card>
             </div>

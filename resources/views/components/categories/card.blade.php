@@ -1,15 +1,20 @@
 <div class="carousel-cell relative">
     <a {{ $attributes }} class="relative block h-56 overflow-hidden lg:h-64">
-        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt="" />
+        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt=""/>
         @if ($featured)
             <div class="absolute left-0 top-2 z-10 rounded-md bg-storex-red p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-6 fill-white">
-                    <path
-                        fill-rule="evenodd"
-                        d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
-                        clip-rule="evenodd"
-                    />
-                </svg>
+                <div class="flex items-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-5 fill-white">
+                        <path
+                            fill-rule="evenodd"
+                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    <p class="text-small text-white pl-1">
+                        @lang('Populārs produkts')!
+                    </p>
+                </div>
             </div>
         @endif
     </a>
