@@ -1,6 +1,6 @@
 <div class="carousel-cell category-cell rounded-lg bg-white shadow-md sm:relative">
     <a {{ $attributes }} class="block overflow-hidden">
-        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt="" />
+        <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt=""/>
     </a>
 
     <div class="rounded-lg bg-white p-5">
@@ -9,13 +9,13 @@
                 <h3 class="pb-4 font-bold tracking-tight">
                     {{ $heading }}
                 </h3>
-                <div class="flex flex-col justify-between pb-6">
-                    <div class="flex items-center py-2">
+                <div class="flex flex-col justify-between pb-4">
+                    <div class="flex items-center pb-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="me-5 flex-shrink-0"
-                            width="28"
-                            height="28"
+                            class="me-2 flex-shrink-0"
+                            width="20"
+                            height="20"
                             fill="#353535"
                             viewBox="0 0 256 256"
                         >
@@ -25,12 +25,12 @@
                         </svg>
                         <p>{{ $area }}</p>
                     </div>
-                    <div class="flex items-center py-2">
+                    <div class="flex items-center pb-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="me-5 flex-shrink-0"
-                            width="28"
-                            height="28"
+                            class="me-2 flex-shrink-0"
+                            width="20"
+                            height="20"
                             fill="#353535"
                             viewBox="0 0 256 256"
                         >
@@ -40,12 +40,12 @@
                         </svg>
                         <p>{{ $width }}</p>
                     </div>
-                    <div class="flex items-center py-2">
+                    <div class="flex items-center pb-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="me-5 flex-shrink-0"
-                            width="28"
-                            height="28"
+                            class="me-2 flex-shrink-0"
+                            width="20"
+                            height="20"
                             fill="#353535"
                             viewBox="0 0 256 256"
                         >
@@ -55,12 +55,12 @@
                         </svg>
                         <p>{{ $height }}</p>
                     </div>
-                    <div class="flex items-center py-2">
+                    <div class="flex items-center pb-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="me-5 flex-shrink-0"
-                            width="28"
-                            height="28"
+                            class="me-2 flex-shrink-0"
+                            width="20"
+                            height="20"
                             fill="#353535"
                             viewBox="0 0 256 256"
                         >
@@ -69,21 +69,6 @@
                             />
                         </svg>
                         <p>{{ $length }}</p>
-                    </div>
-                    <div class="flex items-center py-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="me-5 flex-shrink-0"
-                            width="28"
-                            height="28"
-                            fill="#353535"
-                            viewBox="0 0 256 256"
-                        >
-                            <path
-                                d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"
-                            ></path>
-                        </svg>
-                        <p>{{ $gate }}</p>
                     </div>
                 </div>
             </div>
