@@ -15,7 +15,7 @@
                 <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-12 lg:grid-cols-3 xl:grid-cols-4">
                     @foreach ($categories as $category)
                         <x-categories.card :featured="$category->is_featured"
-                                           href="{{ route('category.show', ['category' => $category->slug]) }}">
+                                           href="{{ route('category.show', $category->slug) }}">
                             <x-slot name="image">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>
@@ -41,7 +41,7 @@
                 <div class="carousel" data-flickity='{ "contain": true }'>
                     @foreach ($categories as $category)
                         <x-categories.card :featured="$category->is_featured"
-                                           href="{{ route('category.show', ['category' => $category->slug]) }}">
+                                           href="{{ route('category.show', $category->slug) }}">
                             <x-slot name="image">
                                 {{ Storage::url('categories/' . $category->image) }}
                             </x-slot>

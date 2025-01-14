@@ -32,7 +32,7 @@
                     <h5 class="ml-4 py-3 uppercase">Produkcija</h5>
                     @if (! $categories->isEmpty())
                         @foreach ($categories as $category)
-                            <x-footer-link href="{{ route('category.show', ['category' => $category->slug]) }}">
+                            <x-footer-link href="{{ route('category.show', $category->slug) }}">
                                 {{ $category->title }}
                             </x-footer-link>
                         @endforeach
