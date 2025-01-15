@@ -3,13 +3,13 @@
     <td>{{ $length }}</td>
     <td>{{ $width }}</td>
     <td>{{ $height }}</td>
-    <td>{{ $space_between_arches }}</td>
+    <td class="space-between-arches">{{ $space_between_arches }}</td>
     <td>{{ $gate_size }}</td>
     <td>{{ $area }}</td>
-    <td>{{ $pvc_tent }}</td>
-    <td>{{ $frame_tube }}</td>
-    <td>
-        <a class="flex font-bold transition duration-200 hover:text-storex-red" href="{{ $blueprint }}">
+    <td class="pvc-tent">{{ $pvc_tent }}</td>
+    <td class="frame-tube">{{ $frame_tube }}</td>
+    <td class="attachment">
+        <a class="flex font-bold transition duration-200 hover:text-storex-red" href="{{ $attachment }}">
             <svg
                 class="text-grey mr-2 h-6 w-6"
                 aria-hidden="true"

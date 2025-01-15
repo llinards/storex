@@ -6,12 +6,12 @@
             <th>@lang('Garums') (m)</th>
             <th>@lang('Platums') (m)</th>
             <th>@lang('Augstums') (m)</th>
-            <th>@lang('Attālums starp arkām') (m)</th>
+            <th class="space-between-arches">@lang('Attālums starp arkām') (m)</th>
             <th>@lang('Vārtu izmērs PxA') (m)</th>
             <th>@lang('Laukums') (m<sup>2</sup>)</th>
-            <th>@lang('PVC materiāls') (g/m<sup>2</sup>)</th>
-            <th>@lang('Rāmja caurule')</th>
-            <th>@lang('Tehniskais rasējums')</th>
+            <th class="pvc-tent">@lang('PVC materiāls') (g/m<sup>2</sup>)</th>
+            <th class="frame-tube">@lang('Rāmja caurule')</th>
+            <th class="attachment">@lang('Tehniskais rasējums')</th>
             <th class="text-storex-red">@lang('Cena bez PVN')</th>
         </tr>
         </thead>

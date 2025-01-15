@@ -20,7 +20,7 @@
                     <x-slot name="area">{{$variant->area}}</x-slot>
                     <x-slot name="pvc_tent">{{$variant->pvc_tent}}</x-slot>
                     <x-slot name="frame_tube">{{$variant->frame_tube}}</x-slot>
-                    <x-slot name="blueprint">EMPTY</x-slot>
+                    <x-slot name="attachment"></x-slot>
                     <x-slot name="price">{{number_format($variant->price, 0, '.', ' ')}} €</x-slot>
                 </x-product.entry>
             @endforeach
@@ -34,6 +34,20 @@
     </div>
 </x-layout.app>
 <script type="module">
+    function hideTableElements(selector) {
+        const elements = document.querySelectorAll(selector);
+
+        if (elements.length > 0) {
+            const hasTextContent = Array.from(elements).slice(1).some((item) => item.textContent.trim());
+
+            if (!hasTextContent) {
+                elements.forEach((item) => {
+                    item.classList.add('hidden');
+                });
+            }
+        }
+    }
+
     function updatePrice() {
         const allPrices = document.querySelectorAll('[id^="product-price"]');
         allPrices.forEach((price) => {
@@ -54,4 +68,8 @@
         radio.addEventListener('change', updatePrice);
     });
     document.addEventListener('DOMContentLoaded', updatePrice);
+
+    hideTableElements('.frame-tube');
+    hideTableElements('.pvc-tent');
+    hideTableElements('.space-between-arches');
 </script>

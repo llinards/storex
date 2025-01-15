@@ -2,26 +2,26 @@ import {initFlowbite} from 'flowbite';
 // import 'fslightbox';
 initFlowbite;
 
-// Hamburger For Nav
 const burgerIcon = document.getElementById('burger-icon');
 const closeIcon = document.getElementById('close-icon');
 const mobileMenu = document.getElementById('mobile-menu');
 
-burgerIcon.addEventListener('click', () => {
-    mobileMenu.classList.remove('-translate-x-full');
-    mobileMenu.classList.remove('slide-out');
+function showMenu() {
+    mobileMenu.classList.remove('-translate-x-full', 'slide-out');
     mobileMenu.classList.add('slide-in');
     closeIcon.classList.remove('hidden');
     burgerIcon.classList.add('hidden');
-});
+}
 
-closeIcon.addEventListener('click', () => {
+function hideMenu() {
     mobileMenu.classList.remove('slide-in');
-    mobileMenu.classList.add('slide-out');
-    mobileMenu.classList.add('-translate-x-full');
+    mobileMenu.classList.add('slide-out', '-translate-x-full');
     closeIcon.classList.add('hidden');
     burgerIcon.classList.remove('hidden');
-});
+}
+
+burgerIcon.addEventListener('click', showMenu);
+closeIcon.addEventListener('click', hideMenu);
 
 // Production Dropdown Menu Functionality
 const productionBtn = document.getElementById('production-mob-btn');
