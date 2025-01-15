@@ -1,10 +1,10 @@
 <x-layout.admin>
     <x-slot name="title">Sākums</x-slot>
-    <x-admin.status-message/>
+    <x-admin.status-message />
     <div class="container mx-auto mt-8">
-        <h2 class="text-center mb-4">@lang('Visas kategorijas')</h2>
+        <h2 class="mb-4 text-center">@lang('Visas kategorijas')</h2>
         @if ($categories->isEmpty())
-            <x-info-status-message :text="__('Kategorijas nav atrastas')"/>
+            <x-info-status-message :text="__('Kategorijas nav atrastas')" />
         @else
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200 border border-gray-300">
@@ -66,9 +66,9 @@
         @endif
     </div>
     <div class="container mx-auto mt-8">
-        <h2 class="text-center mb-4">@lang('Visi produkti')</h2>
-        @if (!$categories->isEmpty())
-            <x-info-status-message :text="__('Produkti nav atrasti')"/>
+        <h2 class="mb-4 text-center">@lang('Visi produkti')</h2>
+        @if (! $categories->isEmpty())
+            <x-info-status-message :text="__('Produkti nav atrasti')" />
         @else
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200 border border-gray-300">

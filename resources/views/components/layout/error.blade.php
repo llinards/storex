@@ -12,8 +12,9 @@
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
+
     <body class="min-h-screen">
-        <main class="flex min-h-screen flex-col items-center justify-center">
+        <main class="flex min-h-screen flex-col items-center justify-center" aria-labelledby="error-content">
             <div class="mb-4 flex justify-center">
                 <img src="{{ asset('images/storex-logo.png') }}" class="w-1/3" alt="Storex Structures logo" />
             </div>

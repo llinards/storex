@@ -12,8 +12,9 @@
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
+
     <body class="h-screen">
-        <main class="flex h-screen flex-col justify-center">
+        <main class="flex h-screen flex-col justify-center" aria-labelledby="guest-content">
             {{ $slot }}
         </main>
     </body>
