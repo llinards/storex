@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Translatable\HasTranslations;
 
-class Category extends Model
+class Product extends Model
 {
     use HasFactory;
     use HasTranslations;
 
-    public array $translatable = ['title', 'slug', 'description', 'area'];
+    public array $translatable = ['title', 'slug', 'description'];
 
     public function getFallbackLocale(): ?string
     {
@@ -39,9 +39,9 @@ class Category extends Model
         return $model ?? abort(404);
     }
 
-    public function products(): HasMany
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Category::class);
     }
 
     protected static function boot(): void

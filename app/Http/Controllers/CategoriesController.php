@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Services\CategoryServices;
+use App\Services\ProductServices;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -12,10 +13,12 @@ use Illuminate\View\View;
 class CategoriesController extends Controller
 {
     protected CategoryServices $categoryServices;
+    protected ProductServices $productServices;
 
-    public function __construct(CategoryServices $categoryServices)
+    public function __construct(CategoryServices $categoryServices, ProductServices $productServices)
     {
         $this->categoryServices = $categoryServices;
+        $this->productServices  = $productServices;
     }
 
     public function index(): View
@@ -54,7 +57,9 @@ class CategoriesController extends Controller
 
     public function show(string $locale, Category $category)
     {
-        return view('category', compact('category'));
+        $products = $this->productServices->getProducts($category);
+
+        return view('category', compact('category', 'products'));
     }
 
     public function showAdmin(string $locale, int $category)
