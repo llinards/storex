@@ -1,4 +1,4 @@
-<div class="carousel-cell category-cell rounded-lg bg-white shadow-md sm:relative">
+<div class="carousel-cell category-cell rounded-lg bg-white shadow-md sm:relative flex flex-col justify-between">
     <a {{ $attributes }} class="block overflow-hidden">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt=""/>
         @if ($featured)

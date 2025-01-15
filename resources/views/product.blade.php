@@ -43,3 +43,28 @@
         </div>
     </div>
 </x-layout.app>
+<script type="module">
+    const radioBtn = document.querySelectorAll('input[name="tent-type"]');
+    const productPrice = document.getElementById('product-price');
+
+    function updatePrice() {
+        const selectedRadio = document.querySelector('input[name="tent-type"]:checked');
+        let price;
+        switch (selectedRadio.value) {
+            case 'norda55':
+                price = '31 000€';
+                break;
+            case 'norda110':
+                price = '50 000€';
+                break;
+            default:
+                price = 'N/A';
+        }
+
+        productPrice.textContent = price;
+    }
+
+    radioBtn.forEach((radio) => {
+        radio.addEventListener('change', updatePrice);
+    });
+</script>

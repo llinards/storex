@@ -37,7 +37,6 @@
                 />
             </div>
         </div>
-
         <div
             id="product-slider"
             class="product product-nav hidden gap-10 sm:block lg:mt-8"
@@ -60,7 +59,6 @@
             </div>
         </div>
     </div>
-
     <div>
         <h1 class="pb-4 pt-4 leading-none sm:pt-0">{{$product->title}}</h1>
         <div class="product-description">
