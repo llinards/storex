@@ -23,10 +23,8 @@
             </label>
             <x-admin.description-text-area :name="'category_description'" />
         </div>
-        <div class="mb-2 w-1/5">
-            <label for="category_title" class="mb-2 block font-medium text-gray-700">
-                @lang('Platība (no/līdz)')
-            </label>
+        <div class="mb-2 md:w-1/5">
+            <label for="category_title" class="mb-2 block font-medium text-gray-700">@lang('Platība (no/līdz)')</label>
             <input
                 type="text"
                 id="category_area"
@@ -41,6 +39,17 @@
         <div class="mb-4">
             <label for="category_image" class="mb-2 block font-medium text-gray-700">@lang('Titulbilde')</label>
             <x-admin.file-upload :id="'category_image'" :name="'category_image'" :required="true" />
+        </div>
+        <div class="mb-4">
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_available"
+                    name="is_available"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                />
+                <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
+            </div>
         </div>
         <div class="flex gap-4">
             <x-btn-secondary href="{{ route('admin.index') }}">

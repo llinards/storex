@@ -51,7 +51,18 @@
                 :required="true"
             />
         </div>
-        <div class="mb-4">
+        <div class="mb-4 flex gap-4">
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_available"
+                    name="is_available"
+                    value="{{ $category->is_available }}"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                    {{ $category->is_available ? 'checked' : '' }}
+                />
+                <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
+            </div>
             <div class="flex items-center">
                 <input
                     type="checkbox"

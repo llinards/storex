@@ -19,9 +19,8 @@
     }
 
     .carousel-cell {
-        transition:
-            opacity 0.3s ease,
-            transform 0.3s ease;
+        transition: opacity 0.3s ease,
+        transform 0.3s ease;
     }
 
     // Placement of the dots.
@@ -43,6 +42,7 @@
 @media (max-width: 767px) {
     a,
     p,
+    .product-description ul li,
     label {
         font-size: 14px;
     }
@@ -87,6 +87,7 @@
 @media (max-width: 639px) {
     a,
     p,
+    .product-description ul li,
     label {
         font-size: 14px;
     }

@@ -1,9 +1,9 @@
 <x-layout.app>
-    <x-slot name="title">NORDA</x-slot>
-    <x-slot name="description">TBD</x-slot>
+    <x-slot name="title">{{$product->title}}</x-slot>
+    <x-slot name="description">{{$product->description}}</x-slot>
     <x-slot name="image">{{ asset('images/storex-alaska-s-front-page.jpg') }}</x-slot>
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
-        <x-product.card></x-product.card>
+        <x-product.card :product="$product"></x-product.card>
     </div>
 
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
@@ -43,3 +43,28 @@
         </div>
     </div>
 </x-layout.app>
+<script type="module">
+    const radioBtn = document.querySelectorAll('input[name="tent-type"]');
+    const productPrice = document.getElementById('product-price');
+
+    function updatePrice() {
+        const selectedRadio = document.querySelector('input[name="tent-type"]:checked');
+        let price;
+        switch (selectedRadio.value) {
+            case 'norda55':
+                price = '31 000€';
+                break;
+            case 'norda110':
+                price = '50 000€';
+                break;
+            default:
+                price = 'N/A';
+        }
+
+        productPrice.textContent = price;
+    }
+
+    radioBtn.forEach((radio) => {
+        radio.addEventListener('change', updatePrice);
+    });
+</script>
