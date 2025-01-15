@@ -22,8 +22,8 @@ class ProductFactory extends Factory
                 'lv' => 'lv-'.$slug,
             ],
             'description'  => [
-                'en' => '<p>'.$this->faker->sentence(10).'</p>',
-                'lv' => '<p>'.$this->faker->sentence(10).'</p>',
+                'en' => '<p>'.$this->faker->sentence(25).'</p>',
+                'lv' => '<p>'.$this->faker->sentence(25).'</p>',
             ],
             'is_featured'  => $this->faker->boolean(40),
             'is_available' => true,

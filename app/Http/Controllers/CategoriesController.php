@@ -55,14 +55,14 @@ class CategoriesController extends Controller
         }
     }
 
-    public function show(string $locale, Category $category)
+    public function show(string $locale, Category $category): View
     {
         $products = $this->productServices->getProducts($category);
 
         return view('category', compact('category', 'products'));
     }
 
-    public function showAdmin(string $locale, int $category)
+    public function showAdmin(string $locale, int $category): View
     {
         $category = Category::findOrFail($category);
 

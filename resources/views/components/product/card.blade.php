@@ -44,77 +44,27 @@
             data-flickity='{ "asNavFor": ".product-main", "contain": true, "pageDots": false, "prevNextButtons": false}'
         >
             <div class="product-cell flex items-center justify-center rounded-md">
-                <img src=" {{ asset('images/storex-alaska-s-front-page.jpg') }}" alt="" />
+                <img src=" {{ asset('images/storex-alaska-s-front-page.jpg') }}" alt=""/>
             </div>
             <div class="product-cell flex items-center justify-center rounded-md">
-                <img src=" {{ asset('images/storex-container-front-page.jpg') }}" alt="" />
+                <img src=" {{ asset('images/storex-container-front-page.jpg') }}" alt=""/>
             </div>
             <div class="product-cell flex items-center justify-center rounded-md">
-                <img src=" {{ asset('images/storex-siltnamis-front-page.jpg') }}" alt="" />
+                <img src=" {{ asset('images/storex-siltnamis-front-page.jpg') }}" alt=""/>
             </div>
             <div class="product-cell flex items-center justify-center rounded-md">
-                <img src=" {{ asset('images/storex-gyvuliams-front-page.jpg') }}" alt="" />
+                <img src=" {{ asset('images/storex-gyvuliams-front-page.jpg') }}" alt=""/>
             </div>
             <div class="product-cell flex items-center justify-center rounded-md">
-                <img src=" {{ asset('images/category-cover-image-sample.jpg') }}" alt="" />
+                <img src=" {{ asset('images/category-cover-image-sample.jpg') }}" alt=""/>
             </div>
         </div>
     </div>
 
     <div>
-        <h1 class="pb-4 pt-4 leading-none sm:pt-0">NORDA</h1>
-        <div>
-            <ul>
-                <li class="grid grid-flow-col items-center justify-start pb-2">
-                    <svg
-                        class="icon mr-1 h-3 w-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 10 16"
-                    >
-                        <path
-                            d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"
-                        />
-                    </svg>
-                    <p>
-                        @lang('Noderīgs, ja citi modeļi nav piemēroti ierobežotās vietas dēļ')
-                        .
-                    </p>
-                </li>
-                <li class="grid grid-flow-col items-center justify-start pb-2">
-                    <svg
-                        class="icon mr-1 h-3 w-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 10 16"
-                    >
-                        <path
-                            d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"
-                        />
-                    </svg>
-                    <p>
-                        @lang('Liels angāra augstums, maza platība')
-                        .
-                    </p>
-                </li>
-
-                <li class="grid grid-flow-col items-center justify-start pb-2">
-                    <svg
-                        class="icon mr-1 h-3 w-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 10 16"
-                    >
-                        <path
-                            d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"
-                        />
-                    </svg>
-                    <p>
-                        @lang('Vārtu augstums 4,1m, aizķerams ar kravas automašīnu')
-                        .
-                    </p>
-                </li>
-            </ul>
+        <h1 class="pb-4 pt-4 leading-none sm:pt-0">{{$product->title}}</h1>
+        <div class="product-description">
+            {!! $product->description !!}
         </div>
         <div>
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
@@ -127,13 +77,13 @@
             <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
             <ul>
                 <li class="flex items-center pb-2">
-                    <input class="input-radio" type="radio" id="norda55" name="tent-type" value="norda55" checked />
+                    <input class="input-radio" type="radio" id="norda55" name="tent-type" value="norda55" checked/>
                     <label class="input-radio-label" for="norda55">
                         @lang('NORDA 55 - platība 55 m2, augstums 10m, platums 5,5m')
                     </label>
                 </li>
                 <li class="flex items-center pb-2">
-                    <input class="input-radio" type="radio" id="norda110" name="tent-type" value="norda110" />
+                    <input class="input-radio" type="radio" id="norda110" name="tent-type" value="norda110"/>
                     <label class="input-radio-label" for="norda110">
                         @lang('NORDA 110 - platība 110 m2, augstums 20m, platums 5,5m')
                     </label>
