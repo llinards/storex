@@ -1,12 +1,13 @@
 <tr class="border-b-1 border-storex-grey text-center">
-    <td class="text-left text-storex-red">{{ $name }}</td>
+    <td class="text-left text-storex-red">{{ $title }}</td>
     <td>{{ $length }}</td>
     <td>{{ $width }}</td>
     <td>{{ $height }}</td>
-    <td>{{ $archDistance }}</td>
-    <td>{{ $gateDimension }}</td>
+    <td>{{ $space_between_arches }}</td>
+    <td>{{ $gate_size }}</td>
     <td>{{ $area }}</td>
-    <td>{{ $pvc }}</td>
+    <td>{{ $pvc_tent }}</td>
+    <td>{{ $frame_tube }}</td>
     <td>
         <a class="flex font-bold transition duration-200 hover:text-storex-red" href="{{ $blueprint }}">
             <svg

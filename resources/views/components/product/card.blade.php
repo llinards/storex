@@ -66,7 +66,10 @@
         </div>
         <div>
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
-                <span id="product-price" class="font-bold">31 000€</span>
+                @foreach($product->variants as $variant)
+                    <span id="product-price_{{Str::slug($variant->title, '_')}}"
+                          class="font-bold {{ $loop->first ? '' : 'hidden' }}">{{number_format($variant->price, 0, '.', ' ')}} €</span>
+                @endforeach
                 +
                 @lang('PVN')
             </p>
@@ -74,18 +77,18 @@
         <div>
             <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
             <ul>
-                <li class="flex items-center pb-2">
-                    <input class="input-radio" type="radio" id="norda55" name="tent-type" value="norda55" checked/>
-                    <label class="input-radio-label" for="norda55">
-                        @lang('NORDA 55 - platība 55 m2, augstums 10m, platums 5,5m')
-                    </label>
-                </li>
-                <li class="flex items-center pb-2">
-                    <input class="input-radio" type="radio" id="norda110" name="tent-type" value="norda110"/>
-                    <label class="input-radio-label" for="norda110">
-                        @lang('NORDA 110 - platība 110 m2, augstums 20m, platums 5,5m')
-                    </label>
-                </li>
+                @foreach($product->variants as $variant)
+                    <li class="flex items-center pb-2">
+                        <input class="input-radio" type="radio" id="{{Str::slug($variant->title, '_')}}"
+                               name="product_variant"
+                               value="{{$variant->title}}" {{ $loop->first ? 'checked' : '' }} />
+                        <label class="input-radio-label" for="{{Str::slug($variant->title, '_')}}">
+                            <strong>{{$variant->title}}</strong>: @lang('platība') {{$variant->area}}
+                            m<sup>2</sup>, @lang('augstums') {{$variant->height}}
+                            m, @lang('platums') {{$variant->width}} m
+                        </label>
+                    </li>
+                @endforeach
             </ul>
             <div class="flex justify-center sm:justify-start">
                 <x-btn href="#contact-us" class="scroll-btn my-2 flex items-center">

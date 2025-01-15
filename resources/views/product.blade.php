@@ -9,31 +9,21 @@
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
         <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
         <x-product.pricelist-wrapper>
-            <x-product.entry>
-                <x-slot name="name">NORDA 55</x-slot>
-                <x-slot name="length">10</x-slot>
-                <x-slot name="width">5,5</x-slot>
-                <x-slot name="height">5,3</x-slot>
-                <x-slot name="archDistance">2</x-slot>
-                <x-slot name="gateDimension">3,4* x 4,1</x-slot>
-                <x-slot name="area">55</x-slot>
-                <x-slot name="pvc">650</x-slot>
-                <x-slot name="blueprint">product/1</x-slot>
-                <x-slot name="price">3100€</x-slot>
-            </x-product.entry>
-
-            <x-product.entry>
-                <x-slot name="name">NORDA 110</x-slot>
-                <x-slot name="length">20</x-slot>
-                <x-slot name="width">5,5</x-slot>
-                <x-slot name="height">5,3</x-slot>
-                <x-slot name="archDistance">2</x-slot>
-                <x-slot name="gateDimension">3,4* x 4,1</x-slot>
-                <x-slot name="area">110</x-slot>
-                <x-slot name="pvc">650</x-slot>
-                <x-slot name="blueprint">product/2</x-slot>
-                <x-slot name="price">6200€</x-slot>
-            </x-product.entry>
+            @foreach($product->variants as $variant)
+                <x-product.entry>
+                    <x-slot name="title">{{$variant->title}}</x-slot>
+                    <x-slot name="length">{{$variant->length}}</x-slot>
+                    <x-slot name="width">{{$variant->width}}</x-slot>
+                    <x-slot name="height">{{$variant->height}}</x-slot>
+                    <x-slot name="space_between_arches">{{$variant->space_between_arches}}</x-slot>
+                    <x-slot name="gate_size">{{$variant->gate_size}}</x-slot>
+                    <x-slot name="area">{{$variant->area}}</x-slot>
+                    <x-slot name="pvc_tent">{{$variant->pvc_tent}}</x-slot>
+                    <x-slot name="frame_tube">{{$variant->frame_tube}}</x-slot>
+                    <x-slot name="blueprint">EMPTY</x-slot>
+                    <x-slot name="price">{{number_format($variant->price, 0, '.', ' ')}} €</x-slot>
+                </x-product.entry>
+            @endforeach
         </x-product.pricelist-wrapper>
     </div>
 
@@ -44,27 +34,24 @@
     </div>
 </x-layout.app>
 <script type="module">
-    const radioBtn = document.querySelectorAll('input[name="tent-type"]');
-    const productPrice = document.getElementById('product-price');
-
     function updatePrice() {
-        const selectedRadio = document.querySelector('input[name="tent-type"]:checked');
-        let price;
-        switch (selectedRadio.value) {
-            case 'norda55':
-                price = '31 000€';
-                break;
-            case 'norda110':
-                price = '50 000€';
-                break;
-            default:
-                price = 'N/A';
+        const allPrices = document.querySelectorAll('[id^="product-price"]');
+        allPrices.forEach((price) => {
+            price.classList.add('hidden');
+        });
+        const selectedRadio = document.querySelector('input[name="product_variant"]:checked');
+        if (selectedRadio) {
+            const selectedId = selectedRadio.id;
+            const selectedPrice = document.getElementById(`product-price_${selectedId}`);
+            if (selectedPrice) {
+                selectedPrice.classList.remove('hidden');
+            }
         }
-
-        productPrice.textContent = price;
     }
 
-    radioBtn.forEach((radio) => {
+    const variantRadios = document.querySelectorAll('input[name="product_variant"]');
+    variantRadios.forEach((radio) => {
         radio.addEventListener('change', updatePrice);
     });
+    document.addEventListener('DOMContentLoaded', updatePrice);
 </script>
