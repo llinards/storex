@@ -5,7 +5,7 @@
                 <div class="product-cell h-72 sm:h-96">
                     <img
                         class="h-full w-full object-cover"
-                        src="{{ Storage::url('products/' . $image->image) }}"
+                        src="{{ Storage::url('products/' . $image->filename) }}"
                         alt=""
                     />
                 </div>
@@ -18,7 +18,7 @@
         >
             <div class="product-cell flex items-center justify-center rounded-md">
                 @foreach($product->images as $image)
-                    <img src="{{ Storage::url('products/' . $image->image) }}" alt=""/>
+                    <img src="{{ Storage::url('products/' . $image->filename) }}" alt=""/>
                 @endforeach
             </div>
         </div>

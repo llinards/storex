@@ -18,7 +18,7 @@ class ProductImageFactory extends Factory
         }
 
         return [
-            'image' => basename($faker->image(
+            'filename' => basename($faker->image(
                 dir: storage_path('app/public/products'),
                 width: 800,
                 height: 600
