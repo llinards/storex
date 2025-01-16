@@ -1,5 +1,6 @@
 <x-layout.app>
     <x-slot name="title">{{$product->title}}</x-slot>
+    {{-- TODO: Sanitze description --}}
     <x-slot name="description">{{$product->description}}</x-slot>
     <x-slot name="image">{{ asset('images/storex-alaska-s-front-page.jpg') }}</x-slot>
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
@@ -20,7 +21,9 @@
                     <x-slot name="area">{{$variant->area}}</x-slot>
                     <x-slot name="pvc_tent">{{$variant->pvc_tent}}</x-slot>
                     <x-slot name="frame_tube">{{$variant->frame_tube}}</x-slot>
-                    <x-slot name="attachment"></x-slot>
+                    @if($variant->attachment)
+                        <x-slot name="attachment">{{$variant->attachment->filename}}</x-slot>
+                    @endif
                     <x-slot name="price">{{number_format($variant->price, 0, '.', ' ')}} €</x-slot>
                 </x-product.entry>
             @endforeach
