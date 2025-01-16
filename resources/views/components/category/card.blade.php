@@ -1,5 +1,5 @@
 <div class="carousel-cell category-cell flex flex-col justify-between rounded-lg bg-white shadow-md sm:relative">
-    <a {{ $attributes }} class="block overflow-hidden">
+    <a {{ $attributes }} class="block h-56 overflow-hidden lg:h-64">
         <img class="h-full w-full rounded-t-lg object-cover" src="{{ $image ?? '' }}" alt="" />
         @if ($featured)
             <div
@@ -31,7 +31,7 @@
         @endif
     </a>
 
-    <div class="rounded-lg bg-white p-5">
+    <div class="h-56 rounded-lg bg-white p-5 lg:h-64">
         <div>
             <div class="flex-grow">
                 <h3 class="pb-4 font-bold tracking-tight">
