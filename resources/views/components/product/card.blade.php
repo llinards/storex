@@ -3,11 +3,13 @@
         <div id="product-card" class="product product-main" data-flickity='{"pageDots": false, "fullscreen": true }'>
             @foreach ($product->images as $image)
                 <div class="product-cell h-72 sm:h-96">
-                    <img
-                        class="h-full w-full object-cover"
-                        src="{{ Storage::url('products/' . $image->filename) }}"
-                        alt=""
-                    />
+                    <a href="{{ Storage::url('products/' . $image->filename) }}" data-fancybox="gallery">
+                        <img
+                            class="h-full w-full object-cover"
+                            src="{{ Storage::url('products/' . $image->filename) }}"
+                            alt=""
+                        />
+                    </a>
                 </div>
             @endforeach
         </div>

@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+Fancybox.bind('[data-fancybox]', {
+    // Your custom options
+});
+
 // Accordion Functionality and Styling
 let acc = document.getElementsByClassName('faq-accordion');
 let i;
