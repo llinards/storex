@@ -42,7 +42,6 @@
             {{ isset($title) ? $title . ' | ' . config('app.name') : 'Sākums' . ' | ' . config('app.name') }}
         </title>
 
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         {{-- <script src="https://unpkg.com/flickity-fullscreen@2/fullscreen.js"></script> --}}
 
         <!-- Scripts -->
@@ -56,5 +55,6 @@
             <x-call-btn></x-call-btn>
         </main>
         @include('includes.footer')
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     </body>
 </html>

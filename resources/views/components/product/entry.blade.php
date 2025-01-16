@@ -8,10 +8,13 @@
     <td>{{ $area }}</td>
     <td class="pvc-tent">{{ $pvc_tent }}</td>
     <td class="frame-tube">{{ $frame_tube }}</td>
-    @if(isset($attachment))
+    @if (isset($attachment))
         <td class="attachment">
-            <a target="_blank" class="flex font-bold transition duration-200 hover:text-storex-red"
-               href="{{asset('storage/attachments/'.$attachment)}}">
+            <a
+                target="_blank"
+                class="flex font-bold transition duration-200 hover:text-storex-red"
+                href="{{ asset('storage/attachments/' . $attachment) }}"
+            >
                 <svg
                     class="text-grey mr-2 h-6 w-6"
                     aria-hidden="true"

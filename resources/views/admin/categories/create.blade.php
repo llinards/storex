@@ -24,7 +24,9 @@
             <x-admin.description-text-area :name="'category_description'" />
         </div>
         <div class="mb-2 md:w-1/5">
-            <label for="category_title" class="mb-2 block font-medium text-gray-700">@lang('Platība (no/līdz)')</label>
+            <label for="category_title" class="mb-2 block font-medium text-gray-700">
+                @lang('Platība (no/līdz)')
+            </label>
             <input
                 type="text"
                 id="category_area"
