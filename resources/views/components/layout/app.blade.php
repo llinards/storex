@@ -10,9 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-        {{--
-            <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css">
-        --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
         <meta name="author" content="{{ config('app.name') }}" />
         <meta name="locale" content="{{ app()->getLocale() }}" />
@@ -41,9 +39,8 @@
         <title>
             {{ isset($title) ? $title . ' | ' . config('app.name') : 'Sākums' . ' | ' . config('app.name') }}
         </title>
-
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        {{-- <script src="https://unpkg.com/flickity-fullscreen@2/fullscreen.js"></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])

@@ -1,13 +1,15 @@
 <div class="bg-white p-4 pb-8 sm:grid sm:grid-cols-2 sm:gap-10 sm:rounded-md sm:border-1 sm:pb-0 md:p-6 lg:p-8">
     <div>
         <div id="product-card" class="product product-main" data-flickity='{"pageDots": false, "fullscreen": true }'>
-            @foreach($product->images as $image)
+            @foreach ($product->images as $image)
                 <div class="product-cell h-72 sm:h-96">
-                    <img
-                        class="h-full w-full object-cover"
-                        src="{{ Storage::url('products/' . $image->filename) }}"
-                        alt=""
-                    />
+                    <a href="{{ Storage::url('products/' . $image->filename) }}" data-fancybox="gallery">
+                        <img
+                            class="h-full w-full object-cover"
+                            src="{{ Storage::url('products/' . $image->filename) }}"
+                            alt=""
+                        />
+                    </a>
                 </div>
             @endforeach
         </div>
@@ -16,24 +18,29 @@
             class="product product-nav hidden gap-10 sm:block lg:mt-8"
             data-flickity='{ "asNavFor": ".product-main", "contain": true, "pageDots": false, "prevNextButtons": false}'
         >
-            <div class="product-cell flex items-center justify-center rounded-md">
-                @foreach($product->images as $image)
-                    <img src="{{ Storage::url('products/' . $image->filename) }}" alt=""/>
-                @endforeach
-            </div>
+            @foreach ($product->images as $image)
+                <div class="product-cell flex items-center justify-center rounded-md">
+                    <img src="{{ Storage::url('products/' . $image->filename) }}" alt="" />
+                </div>
+            @endforeach
         </div>
     </div>
     <div>
-        <h1 class="pb-4 pt-4 leading-none sm:pt-0">{{$product->title}}</h1>
+        <h1 class="pb-4 pt-4 leading-none sm:pt-0">{{ $product->title }}</h1>
         <div class="product-description">
             {!! $product->description !!}
         </div>
         <div>
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
-                @foreach($product->variants as $variant)
-                    <span id="product-price_{{Str::slug($variant->title, '_')}}"
-                          class="font-bold {{ $loop->first ? '' : 'hidden' }}">{{number_format($variant->price, 0, '.', ' ')}} €</span>
+                @foreach ($product->variants as $variant)
+                    <span
+                        id="product-price_{{ Str::slug($variant->title, '_') }}"
+                        class="{{ $loop->first ? '' : 'hidden' }} font-bold"
+                    >
+                        {{ number_format($variant->price, 0, '.', ' ') }} €
+                    </span>
                 @endforeach
+
                 +
                 @lang('PVN')
             </p>
@@ -41,15 +48,29 @@
         <div>
             <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
             <ul>
-                @foreach($product->variants as $variant)
+                @foreach ($product->variants as $variant)
                     <li class="flex items-center pb-2">
-                        <input class="input-radio" type="radio" id="{{Str::slug($variant->title, '_')}}"
-                               name="product_variant"
-                               value="{{$variant->title}}" {{ $loop->first ? 'checked' : '' }} />
-                        <label class="input-radio-label" for="{{Str::slug($variant->title, '_')}}">
-                            <strong>{{$variant->title}}</strong>: @lang('platība') {{$variant->area}}
-                            m<sup>2</sup>, @lang('augstums') {{$variant->height}}
-                            m, @lang('platums') {{$variant->width}} m
+                        <input
+                            class="input-radio"
+                            type="radio"
+                            id="{{ Str::slug($variant->title, '_') }}"
+                            name="product_variant"
+                            value="{{ $variant->title }}"
+                            {{ $loop->first ? 'checked' : '' }}
+                        />
+                        <label class="input-radio-label" for="{{ Str::slug($variant->title, '_') }}">
+                            <strong>{{ $variant->title }}</strong>
+                            :
+                            @lang('platība')
+                            {{ $variant->area }}
+                            m
+                            <sup>2</sup>
+                            ,
+                            @lang('augstums')
+                            {{ $variant->height }}
+                            m,
+                            @lang('platums')
+                            {{ $variant->width }} m
                         </label>
                     </li>
                 @endforeach
