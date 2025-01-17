@@ -55,15 +55,12 @@
                         </svg>
                         <p class="text-small">
                             <strong>
-                                @lang('Platība')
-                                :
+                                @lang('Platība'):
                             </strong>
-                            {{ $area }} m
-                            <sup>2</sup>
+                            {{ $area }} m<sup>2</sup>
                         </p>
                     </div>
                 @endif
-
                 {{ $description }}
             </div>
         </div>
