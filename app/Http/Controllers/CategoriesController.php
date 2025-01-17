@@ -58,7 +58,7 @@ class CategoriesController extends Controller
 
     public function show(string $locale, Category $category): View
     {
-        $products = $this->productServices->getProducts($category);
+        $products = $this->productServices->getProducts($category)->load('images');
 
         return view('category', compact('category', 'products'));
     }
