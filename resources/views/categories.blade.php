@@ -9,7 +9,7 @@
         <div class="hidden sm:block">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Kategorijas nav atrastas')" />
+                    <x-info-status-message :text="__('Kategorijas nav atrastas')"/>
                 </div>
             @else
                 <div class="gap-10 sm:grid sm:grid-cols-2 sm:p-0 sm:pt-12 lg:grid-cols-3 xl:grid-cols-4">
@@ -23,7 +23,7 @@
                             </x-slot>
                             <x-slot name="heading">{{ $category->title }}</x-slot>
                             <x-slot name="description">{!! $category->description !!}</x-slot>
-                            @if (isset($category->area))
+                            @if ($category->area)
                                 <x-slot name="area">{{ $category->area }}</x-slot>
                             @endif
 
@@ -38,7 +38,7 @@
         <div class="block pb-16 sm:hidden">
             @if ($categories->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Kategorijas nav atrastas')" />
+                    <x-info-status-message :text="__('Kategorijas nav atrastas')"/>
                 </div>
             @else
                 <div class="carousel" data-flickity='{ "contain": true }'>
@@ -52,7 +52,7 @@
                             </x-slot>
                             <x-slot name="heading">{{ $category->title }}</x-slot>
                             <x-slot name="description">{!! $category->description !!}</x-slot>
-                            @if (isset($category->area))
+                            @if ($category->area)
                                 <x-slot name="area">{{ $category->area }}</x-slot>
                             @endif
 
