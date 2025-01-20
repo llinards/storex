@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Services\CategoryServices;
+use App\Services\FileServices;
 use App\Services\ProductServices;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -14,11 +15,16 @@ class CategoriesController extends Controller
 {
     protected CategoryServices $categoryServices;
     protected ProductServices $productServices;
+    protected FileServices $fileServices;
 
-    public function __construct(CategoryServices $categoryServices, ProductServices $productServices)
-    {
+    public function __construct(
+        CategoryServices $categoryServices,
+        ProductServices $productServices,
+        FileServices $fileServices
+    ) {
         $this->categoryServices = $categoryServices;
         $this->productServices  = $productServices;
+        $this->fileServices     = $fileServices;
     }
 
     public function index(): View
@@ -45,7 +51,7 @@ class CategoriesController extends Controller
     {
         try {
             $this->categoryServices->storeCategory($data);
-            $this->categoryServices->storeMedia($data['category_image']);
+            $this->fileServices->storeMedia($data['category_image'], 'categories');
             Log::info('Category created');
 
             return redirect()->route('admin.index')->with('success', 'Kategorija izveidota!');

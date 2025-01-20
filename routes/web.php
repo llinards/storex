@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes([
     'register' => true,
-    'reset' => true,
-    'verify' => true,
+    'reset'    => true,
+    'verify'   => true,
 ]);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
@@ -64,4 +64,7 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
         [CategoriesController::class, 'update'])->name('admin.category.update');
     Route::delete('/produkcija/rediget/{category}',
         [CategoriesController::class, 'destroy'])->name('admin.category.destroy');
+
+    Route::get('/produkts/izveidot', [ProductsController::class, 'create'])->name('admin.product.create');
+    Route::post('/produkts/izveidot', [ProductsController::class, 'store'])->name('admin.product.store');
 });

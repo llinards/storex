@@ -2,6 +2,7 @@ import * as FilePond from 'filepond';
 import 'filepond/dist/filepond.min.css';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
 import {
     AutoLink,
@@ -12,6 +13,7 @@ import {
     Essentials,
     Italic,
     Link,
+    List,
     Paragraph,
     Superscript,
     Underline,
@@ -33,6 +35,7 @@ window.Bold = Bold;
 window.Essentials = Essentials;
 window.Italic = Italic;
 window.Link = Link;
+window.List = List;
 window.Paragraph = Paragraph;
 window.Superscript = Superscript;
 window.Underline = Underline;

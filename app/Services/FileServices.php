@@ -21,6 +21,15 @@ class FileServices
             : Storage::disk($this->disk)->putFileAs($location, $file, $fileName);
     }
 
+    public function storeMedia(array $data, string $folder): void
+    {
+        foreach ($data as $item) {
+            if ($item) {
+                $this->moveFile($item, basename($item), $folder);
+            }
+        }
+    }
+
     public function moveFile($from, $file, $to): string
     {
         $to .= '/'.$file;

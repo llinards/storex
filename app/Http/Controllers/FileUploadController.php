@@ -27,6 +27,7 @@ class FileUploadController extends Controller
     {
         $fileTypes = [
             'category_image',
+            'product_images',
         ];
         foreach ($fileTypes as $fileType) {
             if ($data->hasFile($fileType)) {

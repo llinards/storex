@@ -52,16 +52,7 @@ class CategoryServices
             'is_available' => isset($data['is_available']),
         ]);
     }
-
-    public function storeMedia(array $data): void
-    {
-        foreach ($data as $item) {
-            if ($item) {
-                $this->fileServices->moveFile($item, basename($item), 'categories');
-            }
-        }
-    }
-
+    
     public function updateCategory(object $data, int $id): void
     {
         $locale   = $this->getLocale();

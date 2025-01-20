@@ -4,7 +4,7 @@
         <div class="flex items-center">
             <div class="text-lg font-bold">
                 <a href="{{ route('admin.index') }}">
-                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8" />
+                    <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
                 </a>
             </div>
         </div>
@@ -22,6 +22,13 @@
                 class="{{ request()->routeIs('admin.category.create') ? 'border-b-2 border-black' : '' }} text-black"
             >
                 @lang('Jauna kategorija')
+            </a>
+            <span class="text-black">|</span>
+            <a
+                href="{{ route('admin.product.create') }}"
+                class="{{ request()->routeIs('admin.product.create') ? 'border-b-2 border-black' : '' }} text-black"
+            >
+                @lang('Jauns produkts')
             </a>
             <span class="text-black">|</span>
             @foreach (config('app.available_locales') as $locale)

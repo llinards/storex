@@ -51,7 +51,12 @@
             labelIdle: 'Pievienot bildi',
             maxFileSize: '500KB',
             acceptedFileTypes: ['image/*'],
-            allowImagePreview: false,
+        },
+        product_images: {
+            labelIdle: 'Pievienot bildes',
+            maxFileSize: '500KB',
+            acceptedFileTypes: ['image/*'],
+            allowMultiple: true,
         },
     };
 
