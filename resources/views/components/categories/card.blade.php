@@ -61,6 +61,7 @@
                         </p>
                     </div>
                 @endif
+
                 {{ $description }}
             </div>
         </div>

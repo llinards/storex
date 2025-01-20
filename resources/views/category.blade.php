@@ -12,7 +12,7 @@
         <div class="hidden sm:block">
             @if ($products->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Produkti nav atrasti')" />
+                    <x-info-status-message :text="__('Produkti nav atrasti')"/>
                 </div>
             @else
                 <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -22,13 +22,13 @@
                             href="{{route('product.show', [request()->route('category'), $product->slug])}}"
                         >
                             <x-slot name="image">
-                                {{ asset('images/storex-alaska-s-front-page.jpg') }}
+                                {{ asset('storage/products/' . $product->images[0]->filename) }}
                             </x-slot>
                             <x-slot name="heading">{{ $product->title }}</x-slot>
-                            <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                            <x-slot name="width">Platums 7 m</x-slot>
-                            <x-slot name="height">Augstums 4,8 m</x-slot>
-                            <x-slot name="length">Garums ?</x-slot>
+                            <x-slot name="area">0</x-slot>
+                            <x-slot name="width">0</x-slot>
+                            <x-slot name="height">0</x-slot>
+                            <x-slot name="length">0</x-slot>
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-category.card>
                     @endforeach
@@ -40,7 +40,7 @@
         <div class="block pb-16 sm:hidden">
             @if ($products->isEmpty())
                 <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Produkti nav atrasti')" />
+                    <x-info-status-message :text="__('Produkti nav atrasti')"/>
                 </div>
             @else
                 <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
@@ -50,13 +50,13 @@
                             href="{{route('product.show', [request()->route('category'), $product->slug])}}"
                         >
                             <x-slot name="image">
-                                {{ asset('images/storex-alaska-s-front-page.jpg') }}
+                                {{ asset('storage/products/' . $product->images[0]->filename) }}
                             </x-slot>
                             <x-slot name="heading">{{ $product->title }}</x-slot>
-                            <x-slot name="area">Platība 56 - 84 m2</x-slot>
-                            <x-slot name="width">Platums 7 m</x-slot>
-                            <x-slot name="height">Augstums 4,8 m</x-slot>
-                            <x-slot name="length">Garums ?</x-slot>
+                            <x-slot name="area">0</x-slot>
+                            <x-slot name="width">0</x-slot>
+                            <x-slot name="height">0</x-slot>
+                            <x-slot name="length">0</x-slot>
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-category.card>
                     @endforeach
