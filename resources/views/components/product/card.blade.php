@@ -32,21 +32,24 @@
         </div>
         <div>
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
-                @foreach ($product->variants as $variant)
+                @forelse ($product->variants as $variant)
                     <span
                         id="product-price_{{ Str::slug($variant->title, '_') }}"
                         class="{{ $loop->first ? '' : 'hidden' }} font-bold"
                     >
                         {{ number_format($variant->price, 0, '.', ' ') }} €
                     </span>
-                @endforeach
-
+                @empty
+                    <span class="font-bold">{{ number_format($product->price, 0, '.', ' ') }} €</span>
+                @endforelse
                 +
                 @lang('PVN')
             </p>
         </div>
         <div>
-            <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
+            @if($product->variants->isNotEmpty())
+                <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
+            @endif
             <ul>
                 @foreach ($product->variants as $variant)
                     <li class="flex items-center pb-2">
