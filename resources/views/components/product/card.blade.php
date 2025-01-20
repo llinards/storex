@@ -20,7 +20,7 @@
         >
             @foreach ($product->images as $image)
                 <div class="product-cell flex items-center justify-center rounded-md">
-                    <img src="{{ Storage::url('products/' . $image->filename) }}" alt="" />
+                    <img src="{{ Storage::url('products/' . $image->filename) }}" alt=""/>
                 </div>
             @endforeach
         </div>
@@ -63,8 +63,7 @@
                             :
                             @lang('platība')
                             {{ $variant->area }}
-                            m
-                            <sup>2</sup>
+                            m<sup>2</sup>
                             ,
                             @lang('augstums')
                             {{ $variant->height }}
