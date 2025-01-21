@@ -52,14 +52,14 @@ class CategoryServices
             'is_available' => isset($data['is_available']),
         ]);
     }
-    
+
     public function updateCategory(object $data, int $id): void
     {
         $locale   = $this->getLocale();
         $category = $this->getCategory($id);
 
         if ($data['category_image'] !== $category->image) {
-            $this->storeMedia($data['category_image']);
+            $this->fileServices->storeMedia($data['category_image'], 'categories');
         }
         $category->update([
             'title'        => [$locale => $data->category_title],

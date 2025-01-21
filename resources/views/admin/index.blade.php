@@ -101,7 +101,8 @@
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->created_at }}</td>
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->updated_at }}</td>
                             <td class="px-6 py-4 text-center">
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <a href="{{route('admin.product.show', $product->id)}}"
+                                   class="text-blue-600 hover:text-blue-800">
                                     <i class="bi bi-pencil"></i>
                                 </a>
                             </td>

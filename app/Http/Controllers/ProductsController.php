@@ -58,6 +58,28 @@ class ProductsController extends Controller
         return view('product', compact('product'));
     }
 
+    public function showAdmin(string $locale, int $product): View
+    {
+        $product    = Product::findOrFail($product);
+        $categories = $this->categoryServices->getCategories();
+
+        return view('admin.products.show', compact('product', 'categories'));
+    }
+
+    public function update(string $locale, Request $data, int $id)
+    {
+        try {
+            $this->productServices->updateProduct($data, $id);
+            Log::info('Product updated');
+
+            return redirect()->route('admin.index')->with('success', 'Produkts atjaunots!');
+        } catch (\Exception $e) {
+            Log::error('Product not updated: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Produkts netika atjaunots!');
+        }
+    }
+
     public function destroy(string $locale, int $id): RedirectResponse
     {
         try {

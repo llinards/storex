@@ -57,6 +57,23 @@ class ProductServices
         ]);
     }
 
+    public function updateProduct(object $data, int $id): void
+    {
+        $locale  = $this->getLocale();
+        $product = $this->getProduct($id);
+
+        $product->update([
+            'title'        => [$locale => $data->product_title],
+            'slug'         => [$locale => $this->setSlug($data->product_title)],
+            'description'  => [$locale => $data->product_description],
+            'category_id'  => $data->category_id,
+            'is_featured'  => isset($data['is_featured']),
+            'is_available' => isset($data['is_available']),
+            'is_accessory' => isset($data['is_accessory']),
+            'price'        => $data->product_price ?? null,
+        ]);
+    }
+
     public function storeProductImages(array $data): void
     {
         foreach ($data as $item) {

@@ -67,5 +67,7 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
 
     Route::get('/produkts/izveidot', [ProductsController::class, 'create'])->name('admin.product.create');
     Route::post('/produkts/izveidot', [ProductsController::class, 'store'])->name('admin.product.store');
+    Route::get('/produkts/rediget/{product}', [ProductsController::class, 'showAdmin'])->name('admin.product.show');
+    Route::put('/produkts/rediget/{product}', [ProductsController::class, 'update'])->name('admin.product.update');
     Route::delete('/produkts/dzest/{product}', [ProductsController::class, 'destroy'])->name('admin.product.destroy');
 });
