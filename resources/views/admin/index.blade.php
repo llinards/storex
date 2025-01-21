@@ -106,7 +106,7 @@
                                 </a>
                             </td>
                             <td class="px-6 py-4 text-center">
-                                <form action="#}" method="POST">
+                                <form action="{{route('admin.product.destroy', $product->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button

@@ -7,8 +7,10 @@ use App\Models\Product;
 use App\Services\CategoryServices;
 use App\Services\FileServices;
 use App\Services\ProductServices;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\View\View;
 
 class ProductsController extends Controller
 {
@@ -26,14 +28,14 @@ class ProductsController extends Controller
         $this->fileServices     = $fileServices;
     }
 
-    public function create()
+    public function create(): View
     {
         $categories = $this->categoryServices->getCategories();
 
         return view('admin.products.create', compact('categories'));
     }
 
-    public function store(Request $data)
+    public function store(Request $data): RedirectResponse
     {
         try {
             $this->productServices->storeProduct($data);
@@ -49,10 +51,24 @@ class ProductsController extends Controller
         }
     }
 
-    public function show(string $locale, Category $category, Product $product)
+    public function show(string $locale, Category $category, Product $product): View
     {
         $product->load('variants.attachment');
 
         return view('product', compact('product'));
+    }
+
+    public function destroy(string $locale, int $id): RedirectResponse
+    {
+        try {
+            $this->productServices->destroyProduct($id);
+            Log::info('Product deleted');
+
+            return redirect()->back()->with('success', 'Produkts izdzēsts!');
+        } catch (\Exception $e) {
+            Log::error('Product not updated: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Produkts netika izdzēsts!');
+        }
     }
 }

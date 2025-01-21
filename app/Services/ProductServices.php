@@ -67,4 +67,13 @@ class ProductServices
             }
         }
     }
+
+    public function destroyProduct(int $id): void
+    {
+        $product = $this->getProduct($id);
+        foreach ($product->images as $image) {
+            $this->fileServices->destroyFile('products/'.$image->filename);
+        }
+        $product->delete();
+    }
 }

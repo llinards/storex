@@ -67,4 +67,5 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
 
     Route::get('/produkts/izveidot', [ProductsController::class, 'create'])->name('admin.product.create');
     Route::post('/produkts/izveidot', [ProductsController::class, 'store'])->name('admin.product.store');
+    Route::delete('/produkts/dzest/{product}', [ProductsController::class, 'destroy'])->name('admin.product.destroy');
 });
