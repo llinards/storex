@@ -75,7 +75,7 @@
                                     ></path>
                                 </svg>
                                 "Rožulejas", Plācis, Straupes pag.,
-                                <br class="md:hidden" />
+                                <br class="md:hidden"/>
                                 Pārgaujas nov., LV-4152
                             </a>
                         </li>
@@ -150,8 +150,7 @@
         <div class="order-3 py-4 text-center md:order-none md:py-8">
             <p class="text-small">© SIA "AE Constructions" {{ now()->year }}</p>
             <p class="text-small">
-                @lang('Visas tiesības aizsargātas')
-                .
+                @lang('Visas tiesības aizsargātas').
             </p>
             <p class="text-small">
                 @lang('Mājaslapu izstrādāja')

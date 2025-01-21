@@ -25,7 +25,7 @@
             @endforeach
         </div>
     </div>
-    <div>
+    <div class="flex flex-col justify-between">
         <h1 class="pb-4 pt-4 leading-none sm:pt-0">{{ $product->title }}</h1>
         <div class="product-description">
             {!! $product->description !!}
