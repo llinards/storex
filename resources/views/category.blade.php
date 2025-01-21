@@ -25,12 +25,10 @@
                                 {{ asset('storage/products/' . $product->images[0]->filename) }}
                             </x-slot>
                             <x-slot name="heading">{{ $product->title }}</x-slot>
-                            @if(!$product->is_accessory)
-                                <x-slot name="area">0</x-slot>
-                                <x-slot name="width">0</x-slot>
-                                <x-slot name="height">0</x-slot>
-                                <x-slot name="length">0</x-slot>
-                            @endif
+                            <x-slot name="area">0</x-slot>
+                            <x-slot name="width">0</x-slot>
+                            <x-slot name="height">0</x-slot>
+                            <x-slot name="length">0</x-slot>
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-category.card>
                     @endforeach
@@ -55,12 +53,10 @@
                                 {{ asset('storage/products/' . $product->images[0]->filename) }}
                             </x-slot>
                             <x-slot name="heading">{{ $product->title }}</x-slot>
-                            @if(!$product->is_accessory)
-                                <x-slot name="area">0</x-slot>
-                                <x-slot name="width">0</x-slot>
-                                <x-slot name="height">0</x-slot>
-                                <x-slot name="length">0</x-slot>
-                            @endif
+                            <x-slot name="area">0</x-slot>
+                            <x-slot name="width">0</x-slot>
+                            <x-slot name="height">0</x-slot>
+                            <x-slot name="length">0</x-slot>
                             <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
                         </x-category.card>
                     @endforeach
