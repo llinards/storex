@@ -35,7 +35,10 @@
 
     const options = {
         server: {
-            url: '/{{ app()->getLocale() }}/home/upload',
+            {{--url: '/{{ app()->getLocale() }}/home/upload',--}}
+            process: '/{{ app()->getLocale() }}/home/file/store',
+            revert: '/{{ app()->getLocale() }}/home/file/destroy',
+            load: '/storage/',
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}',
             },
@@ -43,7 +46,7 @@
         allowFileSizeValidation: true,
         allowReorder: true,
         allowImagePreview: true,
-        files: preloadedFiles, // Add preloaded files here
+        files: preloadedFiles,
     };
 
     const optionsConfig = {

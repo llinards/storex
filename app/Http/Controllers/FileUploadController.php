@@ -15,14 +15,6 @@ class FileUploadController extends Controller
         $this->fileServices = $fileServices;
     }
 
-    public function show(Request $files)
-    {
-        //        TODO: This is an array, should be handled differently
-        foreach ($files->all() as $file) {
-            return $this->fileServices->getFile($file);
-        }
-    }
-
     public function store(Request $data): string
     {
         $fileTypes = [
@@ -46,7 +38,7 @@ class FileUploadController extends Controller
 
     public function destroy(Request $data): string
     {
-        Log::info($data->getContent());
+        Log::info($data);
         $this->fileServices->destroyFile($data->getContent());
 
         return '';

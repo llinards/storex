@@ -52,9 +52,8 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
 ) {
     Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
-    Route::get('/upload', [FileUploadController::class, 'show']);
-    Route::post('/upload', [FileUploadController::class, 'store']);
-    Route::delete('/upload', [FileUploadController::class, 'destroy']);
+    Route::post('/file/store', [FileUploadController::class, 'store']);
+    Route::delete('/file/destroy', [FileUploadController::class, 'destroy']);
 
     Route::get('/produkcija/izveidot', [CategoriesController::class, 'create'])->name('admin.category.create');
     Route::post('/produkcija/izveidot', [CategoriesController::class, 'store'])->name('admin.category.store');
