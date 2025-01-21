@@ -15,10 +15,13 @@
                 id="category_id"
                 name="category_id"
                 class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onchange="showPriceBlock(event)"
             >
                 <option value="" disabled selected>@lang('Izvēlies kategoriju')</option>
                 @foreach($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                    <option value="{{ $category->id }}" data-is-accessory="{{ $category->is_accessory }}">
+                        {{ $category->title }}
+                    </option>
                 @endforeach
             </select>
         </div>
@@ -31,19 +34,6 @@
                 name="product_title"
                 class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-        </div>
-        <div class="mb-4">
-            <div class="flex items-center">
-                <input
-                    type="checkbox"
-                    id="is_accessory"
-                    name="is_accessory"
-                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                    onchange="togglePriceField()"
-                />
-                <label for="is_accessory"
-                       class="ml-2 text-sm text-gray-600">@lang('Vai šis produkts ir aksesuārs?')</label>
-            </div>
         </div>
         <div id="price-block" class="mb-2 md:w-1/3 hidden">
             <label for="product_price" class="mb-2 block font-medium text-gray-700">
@@ -96,10 +86,12 @@
         </div>
     </form>
     <script>
-        function togglePriceField() {
-            const isAccessoryCheckbox = document.getElementById('is_accessory');
+        function showPriceBlock(event) {
+            const selectedCategory = event.target.options[event.target.selectedIndex];
+            const showPrice = selectedCategory.getAttribute('data-is-accessory');
             const priceBlock = document.getElementById('price-block');
-            if (isAccessoryCheckbox.checked) {
+
+            if (showPrice === '1') {
                 priceBlock.classList.remove('hidden');
             } else {
                 priceBlock.classList.add('hidden');
@@ -107,8 +99,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            togglePriceField();
+            showPriceBlock({target: document.getElementById('category_id')});
         });
     </script>
 </x-layout.admin>
-

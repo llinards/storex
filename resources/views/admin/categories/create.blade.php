@@ -1,6 +1,6 @@
 <x-layout.admin>
     <x-slot name="title">Izveidot jaunu kategoriju</x-slot>
-    <x-admin.status-message />
+    <x-admin.status-message/>
     <form
         class="w-full max-w-4xl rounded bg-white p-6 shadow-md"
         action="{{ route('admin.category.store') }}"
@@ -18,10 +18,20 @@
             />
         </div>
         <div class="mb-4">
+            <input
+                type="checkbox"
+                id="is_accessory"
+                name="is_accessory"
+                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+            />
+            <label for="is_accessory"
+                   class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
+        </div>
+        <div class="mb-4">
             <label for="category_description" class="mb-2 block font-medium text-gray-700">
                 @lang('Apraksts')
             </label>
-            <x-admin.description-text-area :name="'category_description'" />
+            <x-admin.description-text-area :name="'category_description'"/>
         </div>
         <div class="mb-2 md:w-1/5">
             <label for="category_title" class="mb-2 block font-medium text-gray-700">
@@ -40,18 +50,16 @@
         </p>
         <div class="mb-4">
             <label for="category_image" class="mb-2 block font-medium text-gray-700">@lang('Titulbilde')</label>
-            <x-admin.file-upload :id="'category_image'" :name="'category_image'" :required="true" />
+            <x-admin.file-upload :id="'category_image'" :name="'category_image'" :required="true"/>
         </div>
         <div class="mb-4">
-            <div class="flex items-center">
-                <input
-                    type="checkbox"
-                    id="is_available"
-                    name="is_available"
-                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                />
-                <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
-            </div>
+            <input
+                type="checkbox"
+                id="is_available"
+                name="is_available"
+                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+            />
+            <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
         </div>
         <div class="flex gap-4">
             <x-btn-secondary href="{{ route('admin.index') }}">

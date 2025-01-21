@@ -1,6 +1,6 @@
 <x-layout.admin>
     <x-slot name="title">Atjaunot kategoriju</x-slot>
-    <x-admin.status-message />
+    <x-admin.status-message/>
     <form
         class="w-full max-w-4xl rounded bg-white p-6 shadow-md"
         action="{{ route('admin.category.update', $category->id) }}"
@@ -17,6 +17,18 @@
                 value="{{ $category->title }}"
                 class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+        </div>
+        <div class="mb-4">
+            <input
+                type="checkbox"
+                id="is_accessory"
+                name="is_accessory"
+                value="{{ $category->is_accessory }}"
+                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                {{ $category->is_accessory ? 'checked' : '' }}
+            />
+            <label for="is_accessory"
+                   class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
         </div>
         <div class="mb-4">
             <label for="category_description" class="mb-2 block font-medium text-gray-700">

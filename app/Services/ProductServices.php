@@ -52,7 +52,6 @@ class ProductServices
             'category_id'  => $data->category_id,
             'is_featured'  => isset($data['is_featured']),
             'is_available' => isset($data['is_available']),
-            'is_accessory' => isset($data['is_accessory']),
             'price'        => $data->product_price ?? null,
         ]);
     }
@@ -69,7 +68,6 @@ class ProductServices
             'category_id'  => $data->category_id,
             'is_featured'  => isset($data['is_featured']),
             'is_available' => isset($data['is_available']),
-            'is_accessory' => isset($data['is_accessory']),
             'price'        => $data->product_price ?? null,
         ]);
     }

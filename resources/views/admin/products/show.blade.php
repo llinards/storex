@@ -36,8 +36,7 @@
                 class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
         </div>
-        @if($product->is_accessory)
-            <p class="mb-2 text-small">@lang('Šis produkts ir aksesuārs')!</p>
+        @if($product->category->is_accessory)
             <div class="mb-2 md:w-1/3">
                 <label for="product_price" class="mb-2 block font-medium text-gray-700">
                     @lang('Cena (bez EUR zīmes)')

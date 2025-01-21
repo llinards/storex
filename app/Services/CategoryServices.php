@@ -50,6 +50,7 @@ class CategoryServices
             'image'        => basename($data['category_image'][0]),
             'area'         => [$locale => $data->category_area],
             'is_available' => isset($data['is_available']),
+            'is_accessory' => isset($data['is_accessory']),
         ]);
     }
 
@@ -68,6 +69,7 @@ class CategoryServices
             'image'        => basename($data['category_image'][0]),
             'is_featured'  => isset($data['is_featured']),
             'is_available' => isset($data['is_available']),
+            'is_accessory' => isset($data['is_accessory']),
             'area'         => [$locale => $data->category_area],
         ]);
     }
