@@ -1,31 +1,34 @@
-@props(['image' => '', 'id' => '', 'name' => '', 'required' => ''])
+@props(['images' => [], 'id' => '', 'name' => '', 'required' => ''])
+
 <input
     class="form-control file-upload"
     type="file"
     id="{{ $name }}"
     name="{{ $name }}[]"
     required="{{ $required }}"
-    image="{{ $image }}"
-/>
+    data-images="{{ json_encode($images) }}"/>
 
 <script type="module">
     const fileUpload = document.getElementById('{{ $name }}');
     const fileId = fileUpload.getAttribute('id');
-    const files = fileUpload.getAttribute('image');
+    const images = JSON.parse(fileUpload.getAttribute('data-images'));
 
     FilePond.registerPlugin(FilePondPluginFileValidateType);
     FilePond.registerPlugin(FilePondPluginImagePreview);
     FilePond.registerPlugin(FilePondPluginFileValidateSize);
 
-    console.log(files);
+    console.log(images);
 
     const existingImages = [];
 
-    if (files) {
-        existingImages.push(files);
+    if (Array.isArray(images)) {
+        images.forEach(image => {
+            if (image) {
+                existingImages.push(image);
+            }
+        });
     }
 
-    // Build the FilePond files array from the existingImages array
     const preloadedFiles = existingImages.map((imageUrl) => ({
         source: imageUrl,
         options: {
@@ -35,7 +38,6 @@
 
     const options = {
         server: {
-            {{--url: '/{{ app()->getLocale() }}/home/upload',--}}
             process: '/{{ app()->getLocale() }}/home/file/store',
             revert: '/{{ app()->getLocale() }}/home/file/destroy',
             load: '/storage/',

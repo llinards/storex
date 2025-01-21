@@ -59,7 +59,7 @@
             <x-admin.file-upload
                 :id="'category_image'"
                 :name="'category_image'"
-                :image="'/categories/'.$category->image"
+                :images="['/categories/'.$category->image]"
                 :required="true"
             />
         </div>
