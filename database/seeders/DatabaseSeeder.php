@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             'name'  => 'Test User',
             'email' => 'test@test.com',
         ]);
-        Category::factory()->count(4)->create()->each(function ($category) {
+        Category::factory()->count(3)->create()->each(function ($category) {
             Product::factory()->count(4)->create(['category_id' => $category->id])
                    ->each(function ($product) {
                        ProductVariant::factory()->count(2)->create(['product_id' => $product->id])
@@ -26,7 +26,16 @@ class DatabaseSeeder extends Seeder
                                          ProductVariantAttachment::factory()->count(1)->create(['product_variant_id' => $variant->id]);
                                      });
 
-                       ProductImage::factory()->count(10)->create(['product_id' => $product->id]);
+                       ProductImage::factory()->count(6)->create(['product_id' => $product->id]);
+                   });
+        });
+
+        Category::factory()->count(1)->create([
+            'is_accessory' => true,
+        ])->each(function ($category) {
+            Product::factory()->count(4)->create(['category_id' => $category->id, 'is_featured' => false])
+                   ->each(function ($product) {
+                       ProductImage::factory()->count(6)->create(['product_id' => $product->id]);
                    });
         });
     }
