@@ -40,6 +40,7 @@ class ProductsController extends Controller
         try {
             $this->productServices->storeProduct($data);
             $this->productServices->storeProductImages($data['product_images']);
+            $this->productServices->storeProductVariant($data['product_variant']);
             $this->fileServices->storeMedia($data['product_images'], 'products');
             Log::info('Product created');
 

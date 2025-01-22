@@ -11,6 +11,7 @@ class ProductServices
 {
     protected FileServices $fileServices;
     protected Product $product;
+    protected ProductVariant $productVariant;
 
     public function __construct(FileServices $fileServices)
     {
@@ -54,6 +55,25 @@ class ProductServices
             'is_available' => isset($data['is_available']),
             'price'        => $data->product_price ?? null,
         ]);
+    }
+
+    public function storeProductVariant(array $data): void
+    {
+        $locale = $this->getLocale();
+        foreach ($data as $variant) {
+            $this->product->variants()->create([
+                'title'                => [$locale => $variant['title']],
+                'price'                => $variant['price'],
+                'length'               => $variant['length'],
+                'width'                => $variant['width'],
+                'height'               => $variant['height'],
+                'space_between_arches' => $variant['space_between_arches'] ?? null,
+                'gate_size'            => $variant['gate_size'],
+                'area'                 => $variant['area'],
+                'pvc_tent'             => $variant['pvc_tent'] ?? null,
+                'frame_tube'           => $variant['frame_tube'] ?? null,
+            ]);
+        }
     }
 
     public function updateProduct(object $data, int $id): void
