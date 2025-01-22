@@ -71,6 +71,7 @@ class ProductsController extends Controller
     {
         try {
             $this->productServices->updateProduct($data, $id);
+            $this->productServices->updateProductVariant($data['product_variant']);
             $this->productServices->updateProductImages($data['product_images']);
             Log::info('Product updated');
 

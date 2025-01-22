@@ -91,6 +91,28 @@ class ProductServices
         ]);
     }
 
+    public function updateProductVariant(array $data): void
+    {
+        $locale = $this->getLocale();
+        foreach ($data as $variant) {
+            $this->product->variants()->updateOrCreate(
+                ['id' => $variant['id'] ?? null],
+                [
+                    'title'                => [$locale => $variant['title']],
+                    'price'                => $variant['price'],
+                    'length'               => $variant['length'],
+                    'width'                => $variant['width'],
+                    'height'               => $variant['height'],
+                    'space_between_arches' => $variant['space_between_arches'] ?? null,
+                    'gate_size'            => $variant['gate_size'],
+                    'area'                 => $variant['area'],
+                    'pvc_tent'             => $variant['pvc_tent'] ?? null,
+                    'frame_tube'           => $variant['frame_tube'] ?? null,
+                ]
+            );
+        }
+    }
+
     public function storeProductImages(array $data): void
     {
         foreach ($data as $item) {
@@ -136,5 +158,10 @@ class ProductServices
             $this->fileServices->destroyFile('products/'.$image->filename);
         }
         $product->delete();
+    }
+
+    public function destroyProductVariant(int $id): void
+    {
+        $this->product->variants()->findOrFail($id)->delete();
     }
 }
