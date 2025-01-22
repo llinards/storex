@@ -14,7 +14,7 @@
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Nosaukums</th>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Izveidots</th>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Rediģēts</th>
-                        <th colspan="2" class="px-6 py-3 text-left text-sm font-medium text-gray-600">Darbības</th>
+                        <th colspan="2"/>
                     </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
@@ -100,13 +100,11 @@
                             <td class="px-6 py-4 text-sm text-gray-700">{{ $product->title }}</td>
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->created_at }}</td>
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->updated_at }}</td>
-                            <td class="px-6 py-4 text-center">
+                            <td colspan="2" class="flex gap-4 px-6 py-4">
                                 <a href="{{route('admin.product.show', $product->id)}}"
                                    class="text-blue-600 hover:text-blue-800">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                            </td>
-                            <td class="px-6 py-4 text-center">
                                 <form action="{{route('admin.product.destroy', $product->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')

@@ -19,18 +19,6 @@
             />
         </div>
         <div class="mb-4">
-            <input
-                type="checkbox"
-                id="is_accessory"
-                name="is_accessory"
-                value="{{ $category->is_accessory }}"
-                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                {{ $category->is_accessory ? 'checked' : '' }}
-            />
-            <label for="is_accessory"
-                   class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
-        </div>
-        <div class="mb-4">
             <label for="category_description" class="mb-2 block font-medium text-gray-700">
                 @lang('Apraksts')
             </label>
@@ -85,6 +73,18 @@
                     {{ $category->is_featured ? 'checked' : '' }}
                 />
                 <label for="is_featured" class="ml-2 text-sm text-gray-600">@lang('Atzīmēt kā populāru')</label>
+            </div>
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_accessory"
+                    name="is_accessory"
+                    value="{{ $category->is_accessory }}"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                    {{ $category->is_accessory ? 'checked' : '' }}
+                />
+                <label for="is_accessory"
+                       class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
             </div>
         </div>
         <div class="flex gap-4">

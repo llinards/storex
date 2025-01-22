@@ -18,16 +18,6 @@
             />
         </div>
         <div class="mb-4">
-            <input
-                type="checkbox"
-                id="is_accessory"
-                name="is_accessory"
-                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-            />
-            <label for="is_accessory"
-                   class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
-        </div>
-        <div class="mb-4">
             <label for="category_description" class="mb-2 block font-medium text-gray-700">
                 @lang('Apraksts')
             </label>
@@ -52,14 +42,26 @@
             <label for="category_image" class="mb-2 block font-medium text-gray-700">@lang('Titulbilde')</label>
             <x-admin.file-upload :id="'category_image'" :name="'category_image'" :required="true"/>
         </div>
-        <div class="mb-4">
-            <input
-                type="checkbox"
-                id="is_available"
-                name="is_available"
-                class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
-            />
-            <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
+        <div class="mb-4 flex gap-4">
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_available"
+                    name="is_available"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                />
+                <label for="is_available" class="ml-2 text-sm text-gray-600">@lang('Rādīt mājaslapā')</label>
+            </div>
+            <div class="flex items-center">
+                <input
+                    type="checkbox"
+                    id="is_accessory"
+                    name="is_accessory"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                />
+                <label for="is_accessory"
+                       class="ml-2 text-sm text-gray-600">@lang('Šī ir kategorija priekš aksesuāru tipa produktiem')</label>
+            </div>
         </div>
         <div class="flex gap-4">
             <x-btn-secondary href="{{ route('admin.index') }}">
