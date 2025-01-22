@@ -8,27 +8,27 @@
     <div class="container mx-auto px-4 py-8 sm:py-12 lg:px-6 xl:px-8">
         <x-product.pricelist-wrapper>
             <x-product.entry>
-                <x-slot name="name">NORDA 55</x-slot>
+                <x-slot name="title">NORDA 55</x-slot>
                 <x-slot name="length">10</x-slot>
                 <x-slot name="width">5,5</x-slot>
                 <x-slot name="height">5,3</x-slot>
-                <x-slot name="archDistance">2</x-slot>
-                <x-slot name="gateDimension">3,4* x 4,1</x-slot>
+                <x-slot name="space_between_arches">2</x-slot>
+                <x-slot name="gate_size">3,4* x 4,1</x-slot>
                 <x-slot name="area">55</x-slot>
-                <x-slot name="pvc">650</x-slot>
+                <x-slot name="pvc_tent">650</x-slot>
                 <x-slot name="blueprint">product/1</x-slot>
                 <x-slot name="price">3100€</x-slot>
             </x-product.entry>
 
             <x-product.entry>
-                <x-slot name="name">NORDA 110</x-slot>
+                <x-slot name="title">NORDA 110</x-slot>
                 <x-slot name="length">20</x-slot>
                 <x-slot name="width">5,5</x-slot>
                 <x-slot name="height">5,3</x-slot>
-                <x-slot name="archDistance">2</x-slot>
-                <x-slot name="gateDimension">3,4* x 4,1</x-slot>
+                <x-slot name="space_between_arches">2</x-slot>
+                <x-slot name="gate_size">3,4* x 4,1</x-slot>
                 <x-slot name="area">110</x-slot>
-                <x-slot name="pvc">650</x-slot>
+                <x-slot name="pvc_tent">650</x-slot>
                 <x-slot name="blueprint">product/2</x-slot>
                 <x-slot name="price">6200€</x-slot>
             </x-product.entry>
