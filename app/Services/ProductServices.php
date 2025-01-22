@@ -11,7 +11,6 @@ class ProductServices
 {
     protected FileServices $fileServices;
     protected Product $product;
-    protected ProductVariant $productVariant;
 
     public function __construct(FileServices $fileServices)
     {

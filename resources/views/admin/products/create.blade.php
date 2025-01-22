@@ -120,124 +120,123 @@
             div.classList.add('variant-group', 'flex', 'flex-col', 'gap-2', 'mb-4', 'border', 'p-4', 'rounded-lg');
             div.innerHTML = `
             <div>
-            <div class="flex gap-4 flex-wrap justify-center mt-2">
-             <div>
-                <label for="product_variant[${variantIndex}][title]" class="block text-sm font-medium text-gray-700">
-                    @lang('Nosaukums')
+                <div class="flex gap-4 flex-wrap justify-center mt-2">
+                     <div>
+                        <label for="product_variant[${variantIndex}][title]" class="block text-sm font-medium text-gray-700">
+                            @lang('Nosaukums')
             </label>
             <input
                 type="text"
                 name="product_variant[${variantIndex}][title]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-                <div>
-                    <label for="product_variant[${variantIndex}][price]" class="block text-sm font-medium text-gray-700">
-                        @lang('Cena (EUR)')
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                        <div>
+                            <label for="product_variant[${variantIndex}][price]" class="block text-sm font-medium text-gray-700">
+                                @lang('Cena (EUR)')
             </label>
             <input
              type="number"
              step=".01"
                 name="product_variant[${variantIndex}][price]"
-                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                </div>
-                <div>
-                    <label for="product_variant[${variantIndex}][length]" class="block text-sm font-medium text-gray-700">
-                        @lang('Garums (metros)')
+                                class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label for="product_variant[${variantIndex}][length]" class="block text-sm font-medium text-gray-700">
+                                @lang('Garums (metros)')
             </label>
             <input
              type="number"
              step=".01"
                 name="product_variant[${variantIndex}][length]"
-                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                </div>
-                <div>
-                    <label for="product_variant[${variantIndex}][width]" class="block text-sm font-medium text-gray-700">
-                        @lang('Platums (metros)')
+                                class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label for="product_variant[${variantIndex}][width]" class="block text-sm font-medium text-gray-700">
+                                @lang('Platums (metros)')
             </label>
             <input
                type="number"
                step=".01"
                 name="product_variant[${variantIndex}][width]"
-                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                </div>
-                <div>
-                    <label for="product_variant[${variantIndex}][height]" class="block text-sm font-medium text-gray-700">
-                        @lang('Augstums (metros)')
+                                class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label for="product_variant[${variantIndex}][height]" class="block text-sm font-medium text-gray-700">
+                                @lang('Augstums (metros)')
             </label>
             <input
                 type="number"
                 step=".01"
                 name="product_variant[${variantIndex}][height]"
-                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                </div>
+                                class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
 
-            <div>
-                <label for="product_variant[${variantIndex}][space_between_arches]" class="block text-sm font-medium text-gray-700">
-                    @lang('Attālums starp arkām (metros)')
+                    <div>
+                        <label for="product_variant[${variantIndex}][space_between_arches]" class="block text-sm font-medium text-gray-700">
+                            @lang('Attālums starp arkām (metros)')
             </label>
             <input
               type="number"
               step=".01"
                 name="product_variant[${variantIndex}][space_between_arches]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div>
-                <label for="product_variant[${variantIndex}][gate_size]" class="block text-sm font-medium text-gray-700">
-                    @lang('Vārtu izmērs PxA (metros)')
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                    <div>
+                        <label for="product_variant[${variantIndex}][gate_size]" class="block text-sm font-medium text-gray-700">
+                            @lang('Vārtu izmērs PxA (metros)')
             </label>
             <input
                 type="text"
                 name="product_variant[${variantIndex}][gate_size]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-             <div>
-                <label for="product_variant[${variantIndex}][area]" class="block text-sm font-medium text-gray-700">
-                    @lang('Laukums (kvadrātmetros)')
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                     <div>
+                        <label for="product_variant[${variantIndex}][area]" class="block text-sm font-medium text-gray-700">
+                            @lang('Laukums (kvadrātmetros)')
             </label>
             <input
               type="number"
               step=".01"
                 name="product_variant[${variantIndex}][area]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-             <div>
-                <label for="product_variant[${variantIndex}][pvc_tent]" class="block text-sm font-medium text-gray-700">
-                    @lang('PVC materiāls (g uz kvadrātmetru)')
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                     <div>
+                        <label for="product_variant[${variantIndex}][pvc_tent]" class="block text-sm font-medium text-gray-700">
+                            @lang('PVC materiāls (g uz kvadrātmetru)')
             </label>
             <input
                 type="number"
                 step=".01"
                 name="product_variant[${variantIndex}][pvc_tent]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div>
-                <label for="product_variant[${variantIndex}][frame_tube]" class="block text-sm font-medium text-gray-700">
-                    @lang('Rāmja caurule')
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                    <div>
+                        <label for="product_variant[${variantIndex}][frame_tube]" class="block text-sm font-medium text-gray-700">
+                            @lang('Rāmja caurule')
             </label>
             <input
                 type="text"
                 name="product_variant[${variantIndex}][frame_tube]"
-                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                </div>
+                <div class="float-right">
+                <button
+                    type="button"
+                    class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg"
+                    onclick="removeVariantGroup(this)"
+                ><i class="bi bi-trash"></i></button>
             </div>
-            </div>
-            <div class="float-right">
-            <button
-                type="button"
-                class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg"
-                onclick="removeVariantGroup(this)"
-            ><i class="bi bi-trash"></i></button>
-            </div>
-
         `;
             container.appendChild(div);
             variantIndex++;
