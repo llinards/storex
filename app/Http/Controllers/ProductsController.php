@@ -70,6 +70,7 @@ class ProductsController extends Controller
     {
         try {
             $this->productServices->updateProduct($data, $id);
+            $this->productServices->updateProductImages($data['product_images']);
             Log::info('Product updated');
 
             return redirect()->route('admin.index')->with('success', 'Produkts atjaunots!');

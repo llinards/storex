@@ -59,8 +59,8 @@ class CategoryServices
         $locale   = $this->getLocale();
         $category = $this->getCategory($id);
 
-//        TODO: Should remove old image
         if ($data['category_image'] !== $category->image) {
+            $this->fileServices->destroyFile('categories/'.$category->image);
             $this->fileServices->storeMedia($data['category_image'], 'categories');
         }
         $category->update([

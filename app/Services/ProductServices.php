@@ -58,10 +58,10 @@ class ProductServices
 
     public function updateProduct(object $data, int $id): void
     {
-        $locale  = $this->getLocale();
-        $product = $this->getProduct($id);
+        $locale        = $this->getLocale();
+        $this->product = $this->getProduct($id);
 
-        $product->update([
+        $this->product->update([
             'title'        => [$locale => $data->product_title],
             'slug'         => [$locale => $this->setSlug($data->product_title)],
             'description'  => [$locale => $data->product_description],
@@ -79,6 +79,33 @@ class ProductServices
                 $this->product->images()->create([
                     'filename' => basename($item),
                 ]);
+            }
+        }
+    }
+
+    public function updateProductImages(array $data): void
+    {
+        $data     = array_filter($data);
+        $newOrder = array_map(static function ($item) {
+            return basename($item);
+        }, $data);
+
+        $this->product->images->each(function ($image, $index) use ($newOrder) {
+            if (in_array($image->filename, $newOrder)) {
+                $image->update(['order' => array_search($image->filename, $newOrder)]);
+            } else {
+                $image->delete();
+                $this->fileServices->destroyFile('products/'.$image->filename);
+            }
+        });
+
+        foreach ($newOrder as $index => $filename) {
+            if ( ! $this->product->images->contains('filename', $filename)) {
+                $this->product->images()->create([
+                    'filename' => $filename,
+                    'order'    => $index,
+                ]);
+                $this->fileServices->moveFile('uploads/'.$filename, $filename, '/products');
             }
         }
     }
