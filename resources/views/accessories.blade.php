@@ -1,35 +1,21 @@
 <x-layout.app>
+    <x-slot name="title">{{$category->title}}</x-slot>
+    {{-- TODO: Sanitze description --}}
+    <x-slot name="description">{{ $category->description }}</x-slot>
+    <x-slot name="image">{{ asset('storage/categories/' . $category->image) }}</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8 ">
-        <h1 class="pt-28 sm:pt-0 sm:pb-12">@lang('Aksesuāri tenta angāriem ')</h1>
+        <h1 class="pt-28 sm:pt-0 sm:pb-12">{{$category->title}}</h1>
 
-        <div class="hidden sm:grid xl:grid-cols-2 gap-4 sm:justify-center">
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-a</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-b</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-c</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-d</x-slot>
-            </x-accessories.card>
-        </div>
-
-        <div class="sm:hidden carousel mb-8" data-flickity='{ "contain": true }'>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-a</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-b</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-c</x-slot>
-            </x-accessories.card>
-            <x-accessories.card>
-                <x-slot name="gallery">gallery-d</x-slot>
-            </x-accessories.card>
+        <div class="sm:grid xl:grid-cols-2 gap-4 sm:justify-center">
+            @foreach($products as $product)
+                <x-accessories.card>
+                    <x-slot name="slug">{{ Str::slug($product->title, '-') }}</x-slot>
+                    <x-slot name="image"> {{ asset('storage/products/' . $product->images[0]->filename) }}</x-slot>
+                    <x-slot name="title">{{$product->title}}</x-slot>
+                    <x-slot name="description">{!! $product->description !!}</x-slot>
+                    <x-slot name="price">{{ number_format($product->price, 0, '.', ' ') }}</x-slot>
+                </x-accessories.card>
+            @endforeach
         </div>
     </div>
 
