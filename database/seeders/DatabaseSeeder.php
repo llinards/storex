@@ -26,12 +26,14 @@ class DatabaseSeeder extends Seeder
             'is_accessory' => true,
             'area'         => null,
         ])->each(function ($category) {
-            Product::factory()->count(4)->create(['category_id' => $category->id, 'is_featured' => false])
+            Product::factory()->count(4)->create([
+                'category_id' => $category->id, 'is_featured' => false, 'price' => 4999,
+            ])
                    ->each(function ($product) {
                        ProductImage::factory()->count(6)->create(['product_id' => $product->id]);
                    });
         });
-        
+
         Category::factory()->count(3)->create()->each(function ($category) {
             Product::factory()->count(4)->create(['category_id' => $category->id])
                    ->each(function ($product) {
