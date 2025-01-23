@@ -36,6 +36,9 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     })->name('pricelist');
 
     Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
+    Route::get('/produkcija/aksesuari', function () {
+        return view('accessories');
+    });
     Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
     Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
 });
@@ -45,11 +48,10 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return redirect(app()->getLocale().'/home');
+    return redirect(app()->getLocale() . '/home');
 });
 
-Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function (
-) {
+Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function () {
     Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
     Route::post('/file/store', [FileUploadController::class, 'store']);
@@ -57,12 +59,18 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
 
     Route::get('/produkcija/izveidot', [CategoriesController::class, 'create'])->name('admin.category.create');
     Route::post('/produkcija/izveidot', [CategoriesController::class, 'store'])->name('admin.category.store');
-    Route::get('/produkcija/rediget/{category}',
-        [CategoriesController::class, 'showAdmin'])->name('admin.category.show');
-    Route::put('/produkcija/rediget/{category}',
-        [CategoriesController::class, 'update'])->name('admin.category.update');
-    Route::delete('/produkcija/rediget/{category}',
-        [CategoriesController::class, 'destroy'])->name('admin.category.destroy');
+    Route::get(
+        '/produkcija/rediget/{category}',
+        [CategoriesController::class, 'showAdmin']
+    )->name('admin.category.show');
+    Route::put(
+        '/produkcija/rediget/{category}',
+        [CategoriesController::class, 'update']
+    )->name('admin.category.update');
+    Route::delete(
+        '/produkcija/rediget/{category}',
+        [CategoriesController::class, 'destroy']
+    )->name('admin.category.destroy');
 
     Route::get('/produkts/izveidot', [ProductsController::class, 'create'])->name('admin.product.create');
     Route::post('/produkts/izveidot', [ProductsController::class, 'store'])->name('admin.product.store');
