@@ -38,7 +38,7 @@ productionBtn.addEventListener('click', function () {
     productionBtn.classList.toggle('text-storex-red');
     productionBtn.classList.toggle('border-transparent');
 
-    arrowSvg.classList.toggle('rotate-180');
+    arrowSvg.classList.toggle('rotate-[270deg]');
 });
 
 // Carousel Opacity Effect
