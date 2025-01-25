@@ -67,7 +67,7 @@ class ProductsController extends Controller
         return view('admin.products.show', compact('product', 'categories'));
     }
 
-    public function update(string $locale, Request $data, int $id)
+    public function update(string $locale, Request $data, int $id): RedirectResponse
     {
         try {
             $this->productServices->updateProduct($data, $id);
