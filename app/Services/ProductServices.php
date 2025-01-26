@@ -91,9 +91,12 @@ class ProductServices
         ]);
     }
 
-    public function updateProductVariant(array $data): void
+    public function updateProductVariant(array|null $data): void
     {
         $locale = $this->getLocale();
+        if ( ! $data) {
+            return;
+        }
         foreach ($data as $variant) {
             $this->product->variants()->updateOrCreate(
                 ['id' => $variant['id'] ?? null],
