@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductVariant;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 
@@ -32,6 +33,11 @@ class ProductServices
         return Product::findOrFail($id);
     }
 
+    protected function getProductVariant(int $id): ProductVariant
+    {
+        return ProductVariant::findOrFail($id);
+    }
+
     public function getProducts(Category $category): Collection
     {
         return $category->products->where('is_available', true);
@@ -56,9 +62,12 @@ class ProductServices
         ]);
     }
 
-    public function storeProductVariant(array $data): void
+    public function storeProductVariant(array|null $data): void
     {
         $locale = $this->getLocale();
+        if ( ! $data) {
+            return;
+        }
         foreach ($data as $variant) {
             $this->product->variants()->create([
                 'title'                => [$locale => $variant['title']],
@@ -165,6 +174,7 @@ class ProductServices
 
     public function destroyProductVariant(int $id): void
     {
-        $this->product->variants()->findOrFail($id)->delete();
+        $variant = $this->getProductVariant($id);
+        $variant->delete();
     }
 }

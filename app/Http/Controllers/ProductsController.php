@@ -96,4 +96,18 @@ class ProductsController extends Controller
             return redirect()->back()->with('error', 'Produkts netika izdzēsts!');
         }
     }
+
+    public function destroyProductVariant(string $locale, int $id): RedirectResponse
+    {
+        try {
+            $this->productServices->destroyProductVariant($id);
+            Log::info('Product variant deleted');
+
+            return redirect()->back()->with('success', 'Produkta variants izdzēsts!');
+        } catch (\Exception $e) {
+            Log::error('Product variant not updated: '.$e->getMessage());
+
+            return redirect()->back()->with('error', 'Produkta variants netika izdzēsts!');
+        }
+    }
 }

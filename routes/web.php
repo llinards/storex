@@ -75,4 +75,7 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
     Route::get('/produkts/rediget/{product}', [ProductsController::class, 'showAdmin'])->name('admin.product.show');
     Route::put('/produkts/rediget/{product}', [ProductsController::class, 'update'])->name('admin.product.update');
     Route::delete('/produkts/dzest/{product}', [ProductsController::class, 'destroy'])->name('admin.product.destroy');
+
+    Route::get('/produkts/varianti/dzest/{variant}',
+        [ProductsController::class, 'destroyProductVariant'])->name('admin.product-variant.destroy');
 });
