@@ -16,9 +16,7 @@
     FilePond.registerPlugin(FilePondPluginFileValidateType);
     FilePond.registerPlugin(FilePondPluginImagePreview);
     FilePond.registerPlugin(FilePondPluginFileValidateSize);
-
-    console.log(images);
-
+    
     const existingImages = [];
 
     if (Array.isArray(images)) {
