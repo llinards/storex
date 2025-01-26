@@ -75,8 +75,8 @@
                     <thead class="bg-gray-100">
                     <tr>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Statuss</th>
-                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Kategorija</th>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Nosaukums</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Kategorija</th>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Izveidots</th>
                         <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Rediģēts</th>
                         <th colspan="2"/>
@@ -96,8 +96,8 @@
                                         </span>
                                 @endif
                             </td>
-                            <td class="px-6 py-4 text-sm text-gray-700">{{ $product->category->title }}</td>
                             <td class="px-6 py-4 text-sm text-gray-700">{{ $product->title }}</td>
+                            <td class="px-6 py-4 text-sm text-gray-700">{{ $product->category->title }}</td>
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->created_at }}</td>
                             <td class="px-6 py-4 text-sm text-gray-500">{{ $product->updated_at }}</td>
                             <td colspan="2" class="flex gap-4 px-6 py-4">
