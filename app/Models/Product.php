@@ -60,7 +60,7 @@ class Product extends Model
         parent::boot();
 
         static::addGlobalScope('created_at', static function (Builder $builder) {
-            $builder->orderByDesc('created_at');
+            $builder->orderBy('created_at');
         });
     }
 }
