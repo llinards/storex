@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\SubmissionsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/kontakti', function () {
         return view('contacts');
     })->name('contacts');
+    Route::post('/kontakti/sazinaties-ar-mums', [SubmissionsController::class, 'submit'])->name('contact-us');
     Route::get('/buj', function () {
         return view('faq');
     })->name('faq');
@@ -53,10 +55,11 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return redirect(app()->getLocale() . '/home');
+    return redirect(app()->getLocale().'/home');
 });
 
-Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function () {
+Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function (
+) {
     Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
     Route::post('/file/store', [FileUploadController::class, 'store']);
