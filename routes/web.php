@@ -38,6 +38,14 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
     Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
     Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
+
+    Route::get('/blogs', function () {
+        return view('blog');
+    });
+
+    Route::get('/blogs/tenta-angari-pasakumiem', function () {
+        return view('article');
+    });
 });
 
 Route::get('/', function () {
@@ -45,11 +53,10 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return redirect(app()->getLocale().'/home');
+    return redirect(app()->getLocale() . '/home');
 });
 
-Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function (
-) {
+Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware(['setLocale', 'auth'])->group(function () {
     Route::get('/', [CategoriesController::class, 'adminIndex'])->name('admin.index');
 
     Route::post('/file/store', [FileUploadController::class, 'store']);
@@ -76,6 +83,8 @@ Route::prefix('{locale}/home')->where(['locale' => '[a-zA-Z]{2}'])->middleware([
     Route::put('/produkts/rediget/{product}', [ProductsController::class, 'update'])->name('admin.product.update');
     Route::delete('/produkts/dzest/{product}', [ProductsController::class, 'destroy'])->name('admin.product.destroy');
 
-    Route::get('/produkts/varianti/dzest/{variant}',
-        [ProductsController::class, 'destroyProductVariant'])->name('admin.product-variant.destroy');
+    Route::get(
+        '/produkts/varianti/dzest/{variant}',
+        [ProductsController::class, 'destroyProductVariant']
+    )->name('admin.product-variant.destroy');
 });
