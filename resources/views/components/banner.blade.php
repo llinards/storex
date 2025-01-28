@@ -1,26 +1,20 @@
-<div
-    style="background-image: url({{ $backgroundImage ?? '' }})"
-    {{
-        $attributes->merge([
-            'class' => 'flex items-center sm:flex-none sm:items-start px-4 sm:px-0 sm:grid sm:grid-cols-12 h-screen
-                                                                                                                                                                                                                                                                                                                            sm:h-96 header grid-rows-12 ',
-        ])
+<div style="background-image: url({{ $backgroundImage ?? '' }})" {{ $attributes->merge([
+    'class' => 'flex flex-col justify-center items center text-center sm:text-left h-screen sm:h-96 px-8 sm:px-12
+    md:px-16 lg:px-20
+    xl:px-24
+    header',
+    ])
     }}
->
-    <div class="col-span-8 col-start-2 row-start-5 text-center sm:text-left md:row-start-3 lg:row-start-4">
+    >
+    <div>
         <h2 class="text-shadow text-3xl leading-tight text-white md:text-5xl md:leading-tight">
-            {{ $heading }}
+            {{ $heading ?? '' }}
         </h2>
         <p class="text-shadow pt-2 text-white">
-            {{ $subText }}
+            {{ $subText ?? '' }}
         </p>
-        <div>
+        <div class="pt-4">
             {{ $btnOne ?? '' }}
         </div>
-    </div>
-    <div
-        class="col-span-4 col-start-9 row-start-11 hidden sm:col-start-9 sm:block lg:col-start-10 xl:col-span-2 xl:col-start-11"
-    >
-        {{ $btnTwo ?? '' }}
     </div>
 </div>
