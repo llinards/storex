@@ -15,6 +15,7 @@ import {
     Link,
     List,
     Paragraph,
+    SourceEditing,
     Superscript,
     Underline,
 } from 'ckeditor5';
@@ -39,3 +40,4 @@ window.List = List;
 window.Paragraph = Paragraph;
 window.Superscript = Superscript;
 window.Underline = Underline;
+window.SourceEditing = SourceEditing;
