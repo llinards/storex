@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactUsRequest;
 use App\Mail\ContactUsSubmitted;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\URL;
 
 class SubmissionsController extends Controller
 {
-    public function submit(ContactUsRequest $request)
+    public function submit(ContactUsRequest $request): RedirectResponse
     {
         try {
             $data = $request->validated();

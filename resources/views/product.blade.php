@@ -71,6 +71,12 @@
         }
     }
 
+    const selectedProductVariantInput = document.getElementById('selected-product-variant');
+
+    function handleRadioChange(event) {
+        selectedProductVariantInput.value = event.target.value;
+    }
+
     const variantRadios = document.querySelectorAll('input[name="product_variant"]');
     variantRadios.forEach((radio) => {
         radio.addEventListener('change', updatePrice);
@@ -80,4 +86,13 @@
     hideTableElements('.frame-tube');
     hideTableElements('.pvc-tent');
     hideTableElements('.space-between-arches');
+
+    variantRadios.forEach((radio) => {
+        radio.addEventListener('change', handleRadioChange);
+    });
+
+    const selectedRadio = document.querySelector('input[name="product_variant"]:checked');
+    if (selectedRadio) {
+        selectedProductVariantInput.value = selectedRadio.value;
+    }
 </script>

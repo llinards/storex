@@ -17,6 +17,7 @@
         <form action="{{route('contact-us')}}" method="POST" class="flex flex-col mt-2">
             @csrf
             @method('POST')
+            <input id="selected-product-variant" name="selected-product-variant" type="text" class="hidden">
             <label for="email">
                 <span class="text-storex-red">*</span>
                 @lang('E-pasts')

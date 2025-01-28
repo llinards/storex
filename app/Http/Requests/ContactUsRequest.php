@@ -30,6 +30,7 @@ class ContactUsRequest extends FormRequest
             'phone'                      => ['required', 'string', 'max:255'],
             'company'                    => ['nullable', 'string', 'max:255'],
             'message'                    => ['nullable', 'string'],
+            'selected-product-variant'   => ['nullable', 'string'],
             'agrees-for-data-processing' => ['accepted'],
         ];
     }

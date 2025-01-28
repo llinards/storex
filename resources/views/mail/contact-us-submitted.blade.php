@@ -3,6 +3,10 @@
 
 # Saņemts jauns ziņojums no kontaktformas.
 
+@if($data['selected-product-variant'])
+**Klients interesējas par:** {{ $data['selected-product-variant'] }}<br/>
+@endif
+
 **E-pasts:** {{ $data['email'] }}<br/>
 **Telefona numurs:** {{ $data['phone'] }}<br/>
 **Vārds, Uzvārds:** {{ $data['fullname'] }}<br/>

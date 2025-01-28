@@ -50,7 +50,7 @@
             @if($product->variants->isNotEmpty())
                 <p class="pb-2 font-bold text-storex-inactive-grey">@lang('Modelis')</p>
             @endif
-            <ul>
+            <ul id="product-variants">
                 @foreach ($product->variants as $variant)
                     <li class="flex items-center pb-2">
                         <input
