@@ -32,7 +32,7 @@
             <x-input-error field="email"/>
             <label class="pt-4" for="phone">
                 <span class="text-storex-red">*</span>
-                @lang('Telefona nummurs')
+                @lang('Telefona numurs')
             </label>
             <input
                 class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
