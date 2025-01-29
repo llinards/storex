@@ -25,13 +25,13 @@
 
     <div id="mobile-menu" class="fixed inset-0 z-40 -translate-x-full transform bg-storex-grey sm:hidden">
         <div class="relative h-full w-full">
-            <div class="flex h-full flex-col pt-24 justify-between">
+            <div class="flex h-full flex-col pt-24">
                 <ul class=" text-left text-white">
                     {{ $slot }}
                 </ul>
 
                 {{-- CONTACTS --}}
-                <div class="grid content-between px-4 pb-12">
+                <div class="grid content-between px-4 py-6 pb-12">
                     <div class="flex items-center">
                         <svg class="sm:hidden icon mr-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 10 16">
