@@ -120,7 +120,7 @@ return [
 
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
-        'store' => env('APP_MAINTENANCE_STORE', 'database'),
+        'store'  => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
     /*
@@ -129,7 +129,7 @@ return [
 
     'available_locales' => [
         'lv',
-        'en',
+//        'en',
     ],
 
     'google_maps_api_key' => env('GOOGLE_MAPS_API_KEY'),
