@@ -15,7 +15,7 @@
         </a>
 
         {{-- Button positioned on top of the image --}}
-        <div class="absolute bottom-3 w-80 bg-white p-3 flex justify-between items-end">
+        <div class="absolute bottom-3 w-72 sm:w-80 bg-white p-3 flex justify-between items-end">
             <h2 class="text-lg">{{ $productName }}</h2>
             <button
                 class="gallery-trigger inline-flex items-center border-b-2 border-transparent font-bold text-storex-red transition duration-200 hover:border-storex-red focus:outline-none focus:ring-2 focus:ring-storex-red"
