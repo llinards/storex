@@ -343,7 +343,7 @@ label,
 }
 
 /* When the radio button is checked */
-.input-radio:checked + .input-radio-label::before {
+.input-radio:checked+.input-radio-label::before {
     background-color: $storex-red;
     border-color: $storex-red;
     border: solid white 3px;

@@ -146,3 +146,25 @@ document.querySelectorAll('.scroll-btn').forEach(function (button) {
         });
     });
 });
+
+// Binds gallery image button to fancybox gallery. 
+document.addEventListener("DOMContentLoaded", function () {
+    Fancybox.bind("[data-fancybox]", {
+        Thumbs: { autoStart: false }
+    });
+
+    document.querySelectorAll(".gallery-trigger").forEach(button => {
+        button.addEventListener("click", function () {
+            let galleryName = this.getAttribute("data-gallery");
+            let images = [];
+
+            document.querySelectorAll(`[data-fancybox="${galleryName}"]`).forEach(link => {
+                images.push({ src: link.getAttribute("href"), type: "image" });
+            });
+
+            Fancybox.show(images, {
+                Thumbs: { autoStart: true }
+            });
+        });
+    });
+});
