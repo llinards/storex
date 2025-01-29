@@ -16,7 +16,8 @@
                 <x-slot name="gate_size">3,4* x 4,1</x-slot>
                 <x-slot name="area">55</x-slot>
                 <x-slot name="pvc_tent">650</x-slot>
-                <x-slot name="blueprint">product/1</x-slot>
+                <x-slot name="frame_tube">n/a</x-slot>
+                <x-slot name="attachment">product/1</x-slot>
                 <x-slot name="price">3100€</x-slot>
             </x-product.entry>
 
@@ -29,7 +30,8 @@
                 <x-slot name="gate_size">3,4* x 4,1</x-slot>
                 <x-slot name="area">110</x-slot>
                 <x-slot name="pvc_tent">650</x-slot>
-                <x-slot name="blueprint">product/2</x-slot>
+                <x-slot name="frame_tube">n/a</x-slot>
+                <x-slot name="attachment">product/2</x-slot>
                 <x-slot name="price">6200€</x-slot>
             </x-product.entry>
         </x-product.pricelist-wrapper>
