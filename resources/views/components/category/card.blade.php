@@ -52,7 +52,7 @@
                                 ></path>
                             </svg>
                             <p class="text-small">
-                                <strong>@lang('Laukums'):</strong> {{ $area }} m<sup>2</sup>
+                                <strong>@lang('Platība'):</strong> {{ $area }} m<sup>2</sup>
                             </p>
                         </div>
                     @endif
