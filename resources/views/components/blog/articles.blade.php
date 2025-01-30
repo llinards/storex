@@ -11,9 +11,7 @@
         </div>
         <div class="flex justify-end">
             <x-sm-btn href="#" class="scroll-btn flex items-center">
-                @lang('
-                Lasīt vairāk
-                ')
+                @lang('Lasīt vairāk')
             </x-sm-btn>
         </div>
     </div>
