@@ -60,8 +60,7 @@
             </x-footer-link>
             <x-footer-link>
                 <span class="text-storex-red">@lang('Priekšējais panelis')</span>
-                @lang('ar iestrādātiem
-                vārtiem')
+                @lang('ar iestrādātiem vārtiem')
                 <span class="text-storex-red">€550</span>
                 2.6x3.1 +
                 @lang('PVN')

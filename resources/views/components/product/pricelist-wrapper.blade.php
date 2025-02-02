@@ -23,7 +23,7 @@
                 (m)
             </th>
             <th>
-                @lang('Laukums')
+                @lang('Platība')
                 (m<sup>2</sup>)
             </th>
             <th class="pvc-tent">
