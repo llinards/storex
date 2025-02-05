@@ -6,9 +6,9 @@
             ></path>
         </svg>
     </x-slot>
-    <x-slot name="heading">@lang('10 gadu pieredze')</x-slot>
+    <x-slot name="heading">@lang('Vairāk nekā 10 gadu pieredze')</x-slot>
     <x-slot name="description">
-        @lang('Ar desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes
+        @lang('Ar vairāk nekā desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes
         risinājumus,
         kas ir pārbaudīti dažādos apstākļos un piemēroti visdažādākajām vajadzībām.')
     </x-slot>
