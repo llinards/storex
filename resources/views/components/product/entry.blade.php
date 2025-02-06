@@ -1,3 +1,4 @@
+{{--TODO: Remove--}}
 <tr class="border-b-1 border-storex-grey text-center">
     <td class="text-left text-storex-red">{{ $title }}</td>
     <td>{{ $length }}</td>

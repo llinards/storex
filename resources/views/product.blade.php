@@ -1,8 +1,9 @@
 <x-layout.app>
     <x-slot name="title">{{ $product->title }}</x-slot>
-    {{-- TODO: Sanitze description --}}
+    {{-- TODO: Sanitize description --}}
     <x-slot name="description">{{ $product->description }}</x-slot>
     <x-slot name="image">{{ asset('images/storex-alaska-s-front-page.jpg') }}</x-slot>
+
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
         <x-product.card :product="$product"></x-product.card>
     </div>
@@ -12,22 +13,29 @@
             <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
             <x-product.pricelist-wrapper>
                 @foreach ($product->variants as $variant)
-                    <x-product.entry>
-                        <x-slot name="title">{{ $variant->title }}</x-slot>
-                        <x-slot name="length">{{ $variant->length }}</x-slot>
-                        <x-slot name="width">{{ $variant->width }}</x-slot>
-                        <x-slot name="height">{{ $variant->height }}</x-slot>
-                        <x-slot name="space_between_arches">{{ $variant->space_between_arches }}</x-slot>
-                        <x-slot name="gate_size">{{ $variant->gate_size }}</x-slot>
-                        <x-slot name="area">{{ $variant->area }}</x-slot>
-                        <x-slot name="pvc_tent">{{ $variant->pvc_tent }}</x-slot>
-                        <x-slot name="frame_tube">{{ $variant->frame_tube }}</x-slot>
-                        @if ($variant->attachment)
-                            <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
-                        @endif
+                    <x-slot name="title">{{ $variant->title }}</x-slot>
 
-                        <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
-                    </x-product.entry>
+                    @php
+                        $attributes = [
+                            'length' => $variant->length,
+                            'width' => $variant->width,
+                            'height' => $variant->height,
+                            'space_between_arches' => $variant->space_between_arches,
+                            'gate_size' => $variant->gate_size,
+                            'area' => $variant->area,
+                            'pvc_tent' => $variant->pvc_tent,
+                            'frame_tube' => $variant->frame_tube,
+                            'attachment' => optional($variant->attachment)->filename,
+                        ];
+                    @endphp
+
+                    @foreach ($attributes as $key => $value)
+                        @if (!empty($value))
+                            <x-slot :name="$key">{{ $value }}</x-slot>
+                        @endif
+                    @endforeach
+
+                    <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
                 @endforeach
             </x-product.pricelist-wrapper>
         </div>
@@ -39,23 +47,8 @@
         </div>
     </div>
 </x-layout.app>
+
 <script type="module">
-    function hideTableElements(selector) {
-        const elements = document.querySelectorAll(selector);
-
-        if (elements.length > 0) {
-            const hasTextContent = Array.from(elements)
-                .slice(1)
-                .some((item) => item.textContent.trim());
-
-            if (!hasTextContent) {
-                elements.forEach((item) => {
-                    item.classList.add('hidden');
-                });
-            }
-        }
-    }
-
     function updatePrice() {
         const allPrices = document.querySelectorAll('[id^="product-price"]');
         allPrices.forEach((price) => {
@@ -82,10 +75,6 @@
         radio.addEventListener('change', updatePrice);
     });
     document.addEventListener('DOMContentLoaded', updatePrice);
-
-    hideTableElements('.frame-tube');
-    hideTableElements('.pvc-tent');
-    hideTableElements('.space-between-arches');
 
     variantRadios.forEach((radio) => {
         radio.addEventListener('change', handleRadioChange);
