@@ -16,7 +16,7 @@
     FilePond.registerPlugin(FilePondPluginFileValidateType);
     FilePond.registerPlugin(FilePondPluginImagePreview);
     FilePond.registerPlugin(FilePondPluginFileValidateSize);
-    
+
     const existingImages = [];
 
     if (Array.isArray(images)) {
@@ -47,6 +47,7 @@
         allowReorder: true,
         allowImagePreview: true,
         files: preloadedFiles,
+        credits: false,
     };
 
     const optionsConfig = {

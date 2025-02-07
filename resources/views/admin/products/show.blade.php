@@ -95,7 +95,7 @@
     </form>
     <script>
         let variantIndex = document.querySelectorAll('.variant-group').length;
-        
+
         function addVariantGroup() {
             const container = document.getElementById('variant-container');
             const div = document.createElement('div');
