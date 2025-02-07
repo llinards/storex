@@ -25,7 +25,6 @@
                         @if ($variant->attachment)
                             <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
                         @endif
-
                         <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
                     </x-product.entry>
                 @endforeach
@@ -40,21 +39,34 @@
     </div>
 </x-layout.app>
 <script type="module">
-    function hideTableElements(selector) {
-        const elements = document.querySelectorAll(selector);
+    function hideEmptyTableColumns(selectors) {
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
 
-        if (elements.length > 0) {
-            const hasTextContent = Array.from(elements)
-                .slice(1)
-                .some((item) => item.textContent.trim());
+            if (elements.length > 0) {
+                const hasTextContent = Array.from(elements)
+                    .slice(1)
+                    .some(item => item.textContent.trim() !== '');
 
-            if (!hasTextContent) {
-                elements.forEach((item) => {
-                    item.classList.add('hidden');
-                });
+                if (!hasTextContent) {
+                    elements.forEach(item => item.classList.add('hidden'));
+                }
             }
-        }
+        });
     }
+
+    const tableColumns = [
+        '.length',
+        '.width',
+        '.height',
+        '.space-between-arches',
+        '.gate-size',
+        '.area',
+        '.pvc-tent',
+        '.frame-tube'
+    ];
+
+    hideEmptyTableColumns(tableColumns);
 
     function updatePrice() {
         const allPrices = document.querySelectorAll('[id^="product-price"]');
@@ -82,10 +94,6 @@
         radio.addEventListener('change', updatePrice);
     });
     document.addEventListener('DOMContentLoaded', updatePrice);
-
-    hideTableElements('.frame-tube');
-    hideTableElements('.pvc-tent');
-    hideTableElements('.space-between-arches');
 
     variantRadios.forEach((radio) => {
         radio.addEventListener('change', handleRadioChange);

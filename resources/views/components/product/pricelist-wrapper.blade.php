@@ -3,14 +3,14 @@
         <thead>
         <tr class="border-y-1 border-storex-inactive-grey text-center">
             <th class="text-left">@lang('Modelis')</th>
-            <th>
+            <th class="length">
                 @lang('Garums') (m)
             </th>
-            <th>
+            <th class="width">
                 @lang('Platums')
                 (m)
             </th>
-            <th>
+            <th class="height">
                 @lang('Augstums')
                 (m)
             </th>
@@ -18,11 +18,11 @@
                 @lang('Attālums starp arkām')
                 (m)
             </th>
-            <th>
+            <th class="gate-size">
                 @lang('Vārtu izmērs PxA')
                 (m)
             </th>
-            <th>
+            <th class="area ">
                 @lang('Platība')
                 (m<sup>2</sup>)
             </th>

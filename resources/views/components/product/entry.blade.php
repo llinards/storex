@@ -1,11 +1,11 @@
 <tr class="border-b-1 border-storex-grey text-center">
     <td class="text-left text-storex-red">{{ $title }}</td>
-    <td>{{ $length }}</td>
-    <td>{{ $width }}</td>
-    <td>{{ $height }}</td>
+    <td class="length">{{ $length }}</td>
+    <td class="width">{{ $width }}</td>
+    <td class="height">{{ $height }}</td>
     <td class="space-between-arches">{{ $space_between_arches }}</td>
-    <td>{{ $gate_size }}</td>
-    <td>{{ $area }}</td>
+    <td class="gate-size">{{ $gate_size }}</td>
+    <td class="area">{{ $area }}</td>
     <td class="pvc-tent">{{ $pvc_tent }}</td>
     <td class="frame-tube">{{ $frame_tube }}</td>
     @if (isset($attachment))
@@ -36,7 +36,7 @@
             </a>
         </td>
     @else
-        <td></td>
+        <td>-</td>
     @endif
     <td>{{ $price }}</td>
 </tr>
