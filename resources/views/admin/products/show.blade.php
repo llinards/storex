@@ -34,6 +34,39 @@
             <x-admin.description-text-area
                 name="product_description">{{ $product->description }}</x-admin.description-text-area>
         </div>
+        @if(!$product->category->is_accessory)
+            <h4 class="font-medium text-gray-700 mb-2">@lang('Produkta kopsavilkums')</h4>
+            <div id="product-variant-summary" class="mb-4 flex gap-2">
+                <div>
+                    <label for="available_area"
+                           class="block text-sm font-medium text-gray-700">@lang('Platība')</label>
+                    <input type="text" id="available_area" name="available_area"
+                           placeholder="No/līdz"
+                           class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                </div>
+                <div>
+                    <label for="available_width"
+                           class="block text-sm font-medium text-gray-700">@lang('Platums')</label>
+                    <input type="text" id="available_width" name="available_width"
+                           placeholder="No/līdz"
+                           class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                </div>
+                <div>
+                    <label for="available_height"
+                           class="block text-sm font-medium text-gray-700">@lang('Augstums')</label>
+                    <input type="text" id="available_height" name="available_height"
+                           placeholder="No/līdz"
+                           class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                </div>
+                <div>
+                    <label for="available_length"
+                           class="block text-sm font-medium text-gray-700">@lang('Garums')</label>
+                    <input type="text" id="available_length" name="available_length"
+                           placeholder="No/līdz"
+                           class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                </div>
+            </div>
+        @endif
         <div class="mb-4">
             <label for="product_images" class="mb-2 block font-medium text-gray-700">@lang('Bildes')</label>
             <x-admin.file-upload

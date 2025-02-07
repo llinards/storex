@@ -14,7 +14,10 @@ class Product extends Model
     use HasFactory;
     use HasTranslations;
 
-    public array $translatable = ['title', 'slug', 'description'];
+    public array $translatable = [
+        'title', 'slug', 'description', 'available_area', 'available_width',
+        'available_height', 'available_length',
+    ];
 
     public function getFallbackLocale(): ?string
     {

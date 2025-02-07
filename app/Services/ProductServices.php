@@ -52,13 +52,17 @@ class ProductServices
     {
         $locale        = $this->getLocale();
         $this->product = Product::create([
-            'title'        => [$locale => $data->product_title],
-            'slug'         => [$locale => $this->setSlug($data->product_title)],
-            'description'  => [$locale => $data->product_description],
-            'category_id'  => $data->category_id,
-            'is_featured'  => isset($data['is_featured']),
-            'is_available' => isset($data['is_available']),
-            'price'        => $data->product_price ?? null,
+            'title'            => [$locale => $data->product_title],
+            'slug'             => [$locale => $this->setSlug($data->product_title)],
+            'description'      => [$locale => $data->product_description],
+            'available_area'   => [$locale => $data->available_area],
+            'available_width'  => [$locale => $data->available_width],
+            'available_height' => [$locale => $data->available_height],
+            'available_length' => [$locale => $data->available_length],
+            'category_id'      => $data->category_id,
+            'is_featured'      => isset($data['is_featured']),
+            'is_available'     => isset($data['is_available']),
+            'price'            => $data->product_price ?? null,
         ]);
     }
 
@@ -90,13 +94,17 @@ class ProductServices
         $this->product = $this->getProduct($id);
 
         $this->product->update([
-            'title'        => [$locale => $data->product_title],
-            'slug'         => [$locale => $this->setSlug($data->product_title)],
-            'description'  => [$locale => $data->product_description],
-            'category_id'  => $data->category_id,
-            'is_featured'  => isset($data['is_featured']),
-            'is_available' => isset($data['is_available']),
-            'price'        => $data->product_price ?? null,
+            'title'            => [$locale => $data->product_title],
+            'slug'             => [$locale => $this->setSlug($data->product_title)],
+            'description'      => [$locale => $data->product_description],
+            'available_area'   => [$locale => $data->available_area],
+            'available_width'  => [$locale => $data->available_width],
+            'available_height' => [$locale => $data->available_height],
+            'available_length' => [$locale => $data->available_length],
+            'category_id'      => $data->category_id,
+            'is_featured'      => isset($data['is_featured']),
+            'is_available'     => isset($data['is_available']),
+            'price'            => $data->product_price ?? null,
         ]);
     }
 
