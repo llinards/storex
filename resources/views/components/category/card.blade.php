@@ -37,7 +37,7 @@
                     {{ $heading }}
                 </h3>
                 <div class="flex flex-col justify-between pb-4">
-                    @if (isset($length))
+                    @if($length->isNotEmpty())
                         <div class="flex items-center pb-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@
                             </p>
                         </div>
                     @endif
-                    @if (isset($width))
+                    @if($width->isNotEmpty())
                         <div class="flex items-center pb-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@
                             </p>
                         </div>
                     @endif
-                    @if (isset($height))
+                    @if($area->isNotEmpty())
                         <div class="flex items-center pb-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@
                             </p>
                         </div>
                     @endif
-                    @if (isset($area))
+                    @if($area->isNotEmpty())
                         <div class="flex items-center pb-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
