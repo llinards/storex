@@ -25,7 +25,7 @@
                                 {{ asset('storage/products/' . $product->images[0]->filename) }}
                             </x-slot>
                             <x-slot name="heading">{{ $product->title }}</x-slot>
-                            <x-slot name="area">{{$product->available_length}}</x-slot>
+                            <x-slot name="area">{{$product->available_area}}</x-slot>
                             <x-slot name="width">{{$product->available_width}}</x-slot>
                             <x-slot name="height">{{$product->available_height}}</x-slot>
                             <x-slot name="length">{{$product->available_length}}</x-slot>

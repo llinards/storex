@@ -42,6 +42,7 @@
                            class="block text-sm font-medium text-gray-700">@lang('Platība')</label>
                     <input type="text" id="available_area" name="available_area"
                            placeholder="No/līdz"
+                           value="{{ $product->available_area }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
                 <div>
@@ -49,6 +50,7 @@
                            class="block text-sm font-medium text-gray-700">@lang('Platums')</label>
                     <input type="text" id="available_width" name="available_width"
                            placeholder="No/līdz"
+                           value="{{ $product->available_width }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
                 <div>
@@ -56,6 +58,7 @@
                            class="block text-sm font-medium text-gray-700">@lang('Augstums')</label>
                     <input type="text" id="available_height" name="available_height"
                            placeholder="No/līdz"
+                           value="{{ $product->available_height }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
                 <div>
@@ -63,6 +66,7 @@
                            class="block text-sm font-medium text-gray-700">@lang('Garums')</label>
                     <input type="text" id="available_length" name="available_length"
                            placeholder="No/līdz"
+                           value="{{ $product->available_length }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
             </div>
