@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\PricelistController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SubmissionsController;
 use Illuminate\Support\Facades\Auth;
@@ -33,9 +34,8 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/aktualitates', function () {
         return view('article');
     })->name('article');
-    Route::get('/cenradis', function () {
-        return view('pricelist');
-    })->name('pricelist');
+
+    Route::get('/cenradis', PricelistController::class)->name('pricelist');
 
     Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
     Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');

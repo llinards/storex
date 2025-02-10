@@ -30,7 +30,7 @@ class CategoryServices
         return Category::findOrFail($id);
     }
 
-    public function getCategories(): Collection
+    public function getActiveCategories(): Collection
     {
         return Category::all()->where('is_available', true);
     }

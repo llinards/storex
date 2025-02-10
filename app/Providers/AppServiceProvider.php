@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer(['home', 'components.nav.links', 'includes.footer'],
             static function ($view) use ($categoryServices) {
-                $categories = $categoryServices->getCategories();
+                $categories = $categoryServices->getActiveCategories();
                 $view->with('categories', $categories);
             });
     }

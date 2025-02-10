@@ -30,7 +30,7 @@ class ProductsController extends Controller
 
     public function create(): View
     {
-        $categories = $this->categoryServices->getCategories();
+        $categories = $this->categoryServices->getActiveCategories();
 
         return view('admin.products.create', compact('categories'));
     }
@@ -62,7 +62,7 @@ class ProductsController extends Controller
     public function showAdmin(string $locale, int $product): View
     {
         $product    = Product::findOrFail($product);
-        $categories = $this->categoryServices->getCategories();
+        $categories = $this->categoryServices->getActiveCategories();
 
         return view('admin.products.show', compact('product', 'categories'));
     }

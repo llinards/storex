@@ -29,7 +29,7 @@ class CategoriesController extends Controller
 
     public function index(): View
     {
-        $categories = $this->categoryServices->getCategories();
+        $categories = $this->categoryServices->getActiveCategories();
 
         return view('categories', compact('categories'));
     }
@@ -64,7 +64,7 @@ class CategoriesController extends Controller
 
     public function show(string $locale, Category $category): View
     {
-        $products = $this->productServices->getProducts($category)->load('images');
+        $products = $this->productServices->getActiveProducts($category)->load('images');
         if ($category->is_accessory) {
             return view('accessories', compact('category', 'products'));
         }

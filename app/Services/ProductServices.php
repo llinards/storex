@@ -38,7 +38,7 @@ class ProductServices
         return ProductVariant::findOrFail($id);
     }
 
-    public function getProducts(Category $category): Collection
+    public function getActiveProducts(Category $category): Collection
     {
         return $category->products->where('is_available', true);
     }
@@ -46,6 +46,11 @@ class ProductServices
     public function getAllProducts(): Collection
     {
         return Product::all()->load('category');
+    }
+
+    public function getAllProductVariants(): Collection
+    {
+        return ProductVariant::all();
     }
 
     public function storeProduct(object $data): void

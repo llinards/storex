@@ -5,37 +5,32 @@
         {{-- <x-footer-link>@lang('Nospiest uz augšējās rindkopas priekš salīdzināšanas')</x-footer-link> --}}
     </div>
 
-    <div class="container mx-auto px-4 py-8 sm:py-12 lg:px-6 xl:px-8">
-        <x-product.pricelist-wrapper>
-            <x-product.entry>
-                <x-slot name="title">NORDA 55</x-slot>
-                <x-slot name="length">10</x-slot>
-                <x-slot name="width">5,5</x-slot>
-                <x-slot name="height">5,3</x-slot>
-                <x-slot name="space_between_arches">2</x-slot>
-                <x-slot name="gate_size">3,4* x 4,1</x-slot>
-                <x-slot name="area">55</x-slot>
-                <x-slot name="pvc_tent">650</x-slot>
-                <x-slot name="frame_tube">n/a</x-slot>
-                <x-slot name="attachment">product/1</x-slot>
-                <x-slot name="price">3100€</x-slot>
-            </x-product.entry>
+    @if($productVariants->isNotEmpty())
+        <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
+            <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
+            <x-product.pricelist-wrapper>
 
-            <x-product.entry>
-                <x-slot name="title">NORDA 110</x-slot>
-                <x-slot name="length">20</x-slot>
-                <x-slot name="width">5,5</x-slot>
-                <x-slot name="height">5,3</x-slot>
-                <x-slot name="space_between_arches">2</x-slot>
-                <x-slot name="gate_size">3,4* x 4,1</x-slot>
-                <x-slot name="area">110</x-slot>
-                <x-slot name="pvc_tent">650</x-slot>
-                <x-slot name="frame_tube">n/a</x-slot>
-                <x-slot name="attachment">product/2</x-slot>
-                <x-slot name="price">6200€</x-slot>
-            </x-product.entry>
-        </x-product.pricelist-wrapper>
-    </div>
+                @foreach ($productVariants as $variant)
+                    <x-product.entry>
+                        <x-slot name="title">{{ $variant->title }}</x-slot>
+                        <x-slot name="length">{{ $variant->length }}</x-slot>
+                        <x-slot name="width">{{ $variant->width }}</x-slot>
+                        <x-slot name="height">{{ $variant->height }}</x-slot>
+                        <x-slot name="space_between_arches">{{ $variant->space_between_arches }}</x-slot>
+                        <x-slot name="gate_size">{{ $variant->gate_size }}</x-slot>
+                        <x-slot name="area">{{ $variant->area }}</x-slot>
+                        <x-slot name="pvc_tent">{{ $variant->pvc_tent }}</x-slot>
+                        <x-slot name="frame_tube">{{ $variant->frame_tube }}</x-slot>
+                        @if ($variant->attachment)
+                            <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
+                        @endif
+                        <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
+                    </x-product.entry>
+                @endforeach
+                
+            </x-product.pricelist-wrapper>
+        </div>
+    @endif
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
         <div class="border-t-1 pt-4">
             <x-footer-link>
