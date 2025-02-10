@@ -48,12 +48,12 @@
                 --}}
                 <div class="order-6 md:order-none">
                     <h5 class="ml-4 py-3 uppercase">Sadaļas</h5>
-                    <x-footer-link href="#">@lang('Par mums')</x-footer-link>
-                    <x-footer-link href="#">@lang('Kontakti')</x-footer-link>
+                    <x-footer-link href="{{ route('about') }}">@lang('Par mums')</x-footer-link>
+                    <x-footer-link href="{{ route('contacts') }}">@lang('Kontakti')</x-footer-link>
                     {{-- <x-footer-link href="#">@lang('Galerija')</x-footer-link> --}}
-                    <x-footer-link href="#">@lang('BUJ')</x-footer-link>
-                    <x-footer-link href="#">@lang('Privātuma politika')</x-footer-link>
-                    <x-footer-link href="#">@lang('Noteikumi un nosacījumi')</x-footer-link>
+                    <x-footer-link href="{{ route('faq') }}">@lang('BUJ')</x-footer-link>
+                    {{-- <x-footer-link href="#">@lang('Privātuma politika')</x-footer-link> --}}
+                    {{-- <x-footer-link href="#">@lang('Noteikumi un nosacījumi')</x-footer-link> --}}
                 </div>
                 <div class="order-2 grid content-between md:order-none">
                     <ul class="py-2 md:py-0">
