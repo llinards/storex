@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 use Spatie\Translatable\HasTranslations;
 
 class ProductVariant extends Model
@@ -19,6 +20,18 @@ class ProductVariant extends Model
     public function getFallbackLocale(): ?string
     {
         return env('APP_LOCALE');
+    }
+
+    public function category(): HasOneThrough
+    {
+        return $this->hasOneThrough(
+            Category::class,
+            Product::class,
+            'id',
+            'id',
+            'product_id',
+            'category_id'
+        );
     }
 
     public function product(): BelongsTo

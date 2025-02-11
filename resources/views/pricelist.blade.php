@@ -1,8 +1,7 @@
 <x-layout.app>
     <x-slot name="title">@lang('Cenrādis')</x-slot>
     <div class="container mx-auto px-4 pt-28 sm:pt-12 lg:px-6 xl:px-8">
-        <h1>@lang('Tenta angāra modeļi')</h1>
-        {{-- <x-footer-link>@lang('Nospiest uz augšējās rindkopas priekš salīdzināšanas')</x-footer-link> --}}
+        <h1>@lang('Visi tenta angāra modeļi')</h1>
     </div>
 
     @if($productVariants->isNotEmpty())
@@ -12,7 +11,11 @@
 
                 @foreach ($productVariants as $variant)
                     <x-product.entry>
-                        <x-slot name="title">{{ $variant->title }}</x-slot>
+                        <x-slot name="title"><a
+                                href="{{ route('product.show', ['category' => $variant->product->category->slug, 'product' => $variant->product->slug]) }}">
+                                {{ $variant->title }}
+                            </a>
+                        </x-slot>
                         <x-slot name="length">{{ $variant->length }}</x-slot>
                         <x-slot name="width">{{ $variant->width }}</x-slot>
                         <x-slot name="height">{{ $variant->height }}</x-slot>
@@ -27,23 +30,14 @@
                         <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
                     </x-product.entry>
                 @endforeach
-                
+
             </x-product.pricelist-wrapper>
         </div>
     @endif
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
         <div class="border-t-1 pt-4">
-            <x-footer-link>
-                *
-                @lang('Augustums virs konteinera.')
-            </x-footer-link>
-            <x-footer-link>
-                **
-                @lang('Cena norādīta bez vārtiem.')
-            </x-footer-link>
             <p class="py-2 font-bold">
-                @lang('Papildus opcija')
-                :
+                @lang('Papildus opcijas'):
             </p>
             <x-footer-link>
                 <span class="text-storex-red">
@@ -57,7 +51,7 @@
                 <span class="text-storex-red">@lang('Priekšējais panelis')</span>
                 @lang('ar iestrādātiem vārtiem')
                 <span class="text-storex-red">€550</span>
-                2.6x3.1 +
+                (2.6x3.1) +
                 @lang('PVN')
             </x-footer-link>
         </div>
