@@ -52,7 +52,7 @@
                     <x-footer-link href="{{ route('contacts') }}">@lang('Kontakti')</x-footer-link>
                     {{-- <x-footer-link href="#">@lang('Galerija')</x-footer-link> --}}
                     <x-footer-link href="{{ route('faq') }}">@lang('BUJ')</x-footer-link>
-                    {{-- <x-footer-link href="#">@lang('Privātuma politika')</x-footer-link> --}}
+                    <x-footer-link href="{{route('privacy-policy')}}">@lang('Privātuma politika')</x-footer-link>
                     {{-- <x-footer-link href="#">@lang('Noteikumi un nosacījumi')</x-footer-link> --}}
                 </div>
                 <div class="order-2 grid content-between md:order-none">

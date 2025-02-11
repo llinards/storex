@@ -19,9 +19,8 @@
     }
 
     .carousel-cell {
-        transition:
-            opacity 0.3s ease,
-            transform 0.3s ease;
+        transition: opacity 0.3s ease,
+        transform 0.3s ease;
     }
 
     // Placement of the dots.
@@ -118,5 +117,11 @@
     td {
         padding: 8px;
         white-space: nowrap;
+    }
+    
+    #cookies-policy.cookies {
+        left: 52%;
+        transform: translateX(-50%);
+        width: 400px;
     }
 }

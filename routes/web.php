@@ -34,6 +34,9 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/aktualitates', function () {
         return view('article');
     })->name('article');
+    Route::get('/privatuma-politika', function () {
+        return view('privacy-policy');
+    })->name('privacy-policy');
 
     Route::get('/cenradis', PricelistController::class)->name('pricelist');
 

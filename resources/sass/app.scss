@@ -343,7 +343,7 @@ label,
 }
 
 /* When the radio button is checked */
-.input-radio:checked+.input-radio-label::before {
+.input-radio:checked + .input-radio-label::before {
     background-color: $storex-red;
     border-color: $storex-red;
     border: solid white 3px;
@@ -443,5 +443,26 @@ td {
 //     outline: 2px solid $storex-red;
 //     outline-offset: 2px;
 // }
+
+// Cookies consent banner styles
+.cookiesBtn__link {
+    background-color: $storex-red !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+}
+
+#cookies-policy .cookies__details {
+    color: $storex-red !important;
+}
+
+#cookies-policy .cookies__category input:checked + .cookies__box::after {
+    background-color: $storex-red !important;
+}
+
+#cookies-policy .cookies__intro a:focus, #cookies-policy .cookies__intro a:hover {
+    color: $storex-red !important;
+    text-decoration-color: $storex-red !important;
+}
+
 
 @import 'media-queries';
