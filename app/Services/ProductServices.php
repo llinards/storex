@@ -51,7 +51,7 @@ class ProductServices
     public function getAllActiveProducts(): Collection
     {
         return Product::where('is_available', true)->with('category', 'images')->orderBy('category_id',
-            'asc')->get();
+            'desc')->get();
     }
 
     public function getAllProductVariants(): Collection
