@@ -28,12 +28,13 @@
             <p class="py-2 text-2xl text-storex-red sm:py-4 sm:text-3xl">
                 @forelse ($product->variants as $variant)
                     @php
-                        $price = str_replace('*', '', str_replace(' ', '', $variant->price)); // Remove * and spaces
-                        $price = (int) filter_var($price, FILTER_SANITIZE_NUMBER_INT); // Extract the numeric part
+                        $raw_price = str_replace(' ', '', $variant->price); // Remove spaces
+                        $numeric_price = (float) preg_replace('/[^0-9.]/', '', $raw_price); // Extract only numbers and decimals
+                        $formatted_price = number_format($numeric_price, 0, '.', ' '); // Format with thousand separators
                     @endphp
                     <span id="product-price_{{ Str::slug($variant->title, '_') }}"
                           class="{{ $loop->first ? '' : 'hidden' }} font-bold">
-                  {{ number_format($price, 0, '.', ' ') }} €
+                 {{ $formatted_price }} €
                 </span>
                 @empty
                     <span class="font-bold">{{ number_format($product->price, 0, '.', ' ') }} €</span>

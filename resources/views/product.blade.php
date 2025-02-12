@@ -13,9 +13,10 @@
             <x-product.pricelist-wrapper>
                 @foreach ($product->variants as $variant)
                     @php
-                        $raw_price = str_replace(' ', '', $variant->price);
-                        $numeric_price = (int) filter_var($raw_price, FILTER_SANITIZE_NUMBER_INT);
-                        $formatted_price = number_format($numeric_price, 0, '.', ' ');
+                        $raw_price = str_replace(' ', '', $variant->price); // Remove spaces
+                        $hasAsterisk = strpos($raw_price, '*') !== false; // Check if * exists
+                        $numeric_price = (float) preg_replace('/[^0-9.]/', '', $raw_price); // Extract only numbers and decimals
+                        $formatted_price = number_format($numeric_price, 0, '.', ' '); // Format with thousand separators
                     @endphp
                     <x-product.entry>
                         <x-slot name="title">{{ $variant->title }}</x-slot>
@@ -31,7 +32,8 @@
                             <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
                         @endif
                         <x-slot
-                            name="price">{{ $formatted_price }}{{ strpos($raw_price, '*') !== false ? ' €*' : ' €' }}
+                            name="price">
+                            {{ $formatted_price }}{{ $hasAsterisk ? ' €*' : ' €' }}
                         </x-slot>
                     </x-product.entry>
                 @endforeach
