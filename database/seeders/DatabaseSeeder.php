@@ -34,8 +34,8 @@ class DatabaseSeeder extends Seeder
                    });
         });
 
-        Category::factory()->count(3)->create()->each(function ($category) {
-            Product::factory()->count(4)->create(['category_id' => $category->id])
+        Category::factory()->count(1)->create()->each(function ($category) {
+            Product::factory()->count(2)->create(['category_id' => $category->id])
                    ->each(function ($product) {
                        ProductVariant::factory()->count(2)->create(['product_id' => $product->id])
                                      ->each(function ($variant) {

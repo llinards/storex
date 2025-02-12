@@ -15,7 +15,7 @@ class Product extends Model
     use HasTranslations;
 
     public array $translatable = [
-        'title', 'slug', 'description', 'available_area', 'available_width',
+        'title', 'slug', 'description', 'additional_info', 'available_area', 'available_width',
         'available_height', 'available_length',
     ];
 

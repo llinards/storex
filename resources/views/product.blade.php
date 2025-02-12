@@ -46,6 +46,9 @@
                 @lang('Cena bez uzstādīšanas un piegādes. Iespēja pasūtīt zaļas un pelēkas krāsas tentis.')
             </p>
         </div>
+        <div class="product-description">
+            {!! $product->additional_info !!}
+        </div>
     </div>
 
     <div style="background-image: url('{{ asset('images/storex-background.png') }}')" class="bg-cover bg-center">

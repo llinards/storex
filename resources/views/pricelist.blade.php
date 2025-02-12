@@ -43,8 +43,14 @@
     @endif
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
         <div class="border-t-1 pt-4">
-            <p class="py-2 font-bold">
-                @lang('Papildus opcijas'):
+            <p class="py-2">
+                @lang('Cena bez uzstādīšanas un piegādes. Iespēja pasūtīt zaļas un pelēkas krāsas tentis.')
+            </p>
+            <p class="py-2">
+                * @lang('Augstums no konteinera.')
+            </p>
+            <p class="py-2">
+                ** @lang('Cena norādīt bez priekšējā un aizmugurējā paneļa.')
             </p>
             <x-footer-link>
                 <span class="text-storex-red">

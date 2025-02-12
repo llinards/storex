@@ -113,6 +113,16 @@
                         onclick="addVariantGroup()">@lang('Pievienot variantus/modeļus')</button>
             @endif
         </div>
+        @if(!$product->category->is_accessory)
+            <div class="mb-4">
+                <label for="product_additional_info"
+                       class="mb-2 block font-medium text-gray-700">@lang('Papildus informācija')</label>
+                <textarea id="product_additional_info" name="product_additional_info"
+                          class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  {{ $product->additional_info }}
+                </textarea>
+            </div>
+        @endif
         <div class="mb-4 flex gap-4">
             <div class="flex items-center">
                 <input type="checkbox" id="is_available" name="is_available" value="{{ $product->is_available }}"
