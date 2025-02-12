@@ -38,7 +38,6 @@
                         </x-slot>
                     </x-product.entry>
                 @endforeach
-
             </x-product.pricelist-wrapper>
         </div>
     @endif

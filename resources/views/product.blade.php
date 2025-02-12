@@ -40,6 +40,13 @@
             </x-product.pricelist-wrapper>
         </div>
     @endif
+    <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
+        <div class="border-t-1 pt-2">
+            <p class="py-2">
+                @lang('Cena bez uzstādīšanas un piegādes. Iespēja pasūtīt zaļas un pelēkas krāsas tentis.')
+            </p>
+        </div>
+    </div>
 
     <div style="background-image: url('{{ asset('images/storex-background.png') }}')" class="bg-cover bg-center">
         <div class="container mx-auto px-4 py-8 sm:py-12 lg:px-6 xl:px-8">
