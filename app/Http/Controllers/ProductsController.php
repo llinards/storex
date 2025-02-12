@@ -28,6 +28,13 @@ class ProductsController extends Controller
         $this->fileServices     = $fileServices;
     }
 
+    public function index(): View
+    {
+        $products = $this->productServices->getAllActiveProducts();
+
+        return view('products', compact('products'));
+    }
+
     public function create(): View
     {
         $categories = $this->categoryServices->getActiveCategories();

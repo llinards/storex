@@ -40,7 +40,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
 
     Route::get('/cenradis', PricelistController::class)->name('pricelist');
 
-    Route::get('/produkcija', [CategoriesController::class, 'index'])->name('category.index');
+    Route::get('/produkcija', [ProductsController::class, 'index'])->name('category.index');
     Route::get('/produkcija/{category}', [CategoriesController::class, 'show'])->name('category.show');
     Route::get('/produkcija/{category}/{product}', [ProductsController::class, 'show'])->name('product.show');
 

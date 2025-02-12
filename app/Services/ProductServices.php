@@ -48,6 +48,12 @@ class ProductServices
         return Product::all()->load('category');
     }
 
+    public function getAllActiveProducts(): Collection
+    {
+        return Product::where('is_available', true)->with('category', 'images')->orderBy('category_id',
+            'asc')->get();
+    }
+
     public function getAllProductVariants(): Collection
     {
         return ProductVariant::all();

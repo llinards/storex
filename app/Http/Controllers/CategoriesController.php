@@ -26,14 +26,7 @@ class CategoriesController extends Controller
         $this->productServices  = $productServices;
         $this->fileServices     = $fileServices;
     }
-
-    public function index(): View
-    {
-        $categories = $this->categoryServices->getActiveCategories();
-
-        return view('categories', compact('categories'));
-    }
-
+    
     public function adminIndex(): View
     {
         $categories = $this->categoryServices->getAllCategories();
