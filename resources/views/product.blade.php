@@ -1,8 +1,7 @@
 <x-layout.app>
     <x-slot name="title">{{ $product->title }}</x-slot>
-    {{-- TODO: Sanitze description --}}
-    <x-slot name="description">{{ $product->description }}</x-slot>
-    <x-slot name="image">{{ asset('images/storex-alaska-s-front-page.jpg') }}</x-slot>
+    <x-slot name="description">{{ strip_tags($category->description) }}</x-slot>
+    <x-slot name="image">{{ asset('storage/products/' . $product->images[0]->filename) }}</x-slot>
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
         <x-product.card :product="$product"></x-product.card>
     </div>
