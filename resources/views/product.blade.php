@@ -33,7 +33,7 @@
                         @endif
                         <x-slot
                             name="price">
-                            {{ $formatted_price }}{{ $hasAsterisk ? ' €*' : ' €' }}
+                            {{ $formatted_price }}{{ $hasAsterisk ? ' €**' : ' €' }}
                         </x-slot>
                     </x-product.entry>
                 @endforeach

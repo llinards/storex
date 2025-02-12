@@ -34,7 +34,7 @@
                             <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
                         @endif
                         <x-slot
-                            name="price">{{ $formatted_price }}{{ $hasAsterisk ? ' €*' : ' €' }}
+                            name="price">{{ $formatted_price }}{{ $hasAsterisk ? ' €**' : ' €' }}
                         </x-slot>
                     </x-product.entry>
                 @endforeach
