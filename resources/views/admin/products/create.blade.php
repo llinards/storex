@@ -117,14 +117,14 @@
             div.innerHTML = `
                 <div class="flex gap-4 flex-wrap justify-center mt-2">
                     ${createVariantInput('title', 'Nosaukums')}
-                    ${createVariantInput('price', 'Cena (EUR)', 'number', '.01')}
-                    ${createVariantInput('length', 'Garums (metros)', 'number', '.01')}
-                    ${createVariantInput('width', 'Platums (metros)', 'number', '.01')}
-                    ${createVariantInput('height', 'Augstums (metros)', 'number', '.01')}
-                    ${createVariantInput('space_between_arches', 'Attālums starp arkām (metros)', 'number', '.01')}
+                    ${createVariantInput('price', 'Cena (EUR)')}
+                    ${createVariantInput('length', 'Garums (metros)')}
+                    ${createVariantInput('width', 'Platums (metros)')}
+                    ${createVariantInput('height', 'Augstums (metros)')}
+                    ${createVariantInput('space_between_arches', 'Attālums starp arkām (metros)')}
                     ${createVariantInput('gate_size', 'Vārtu izmērs PxA (metros)')}
-                    ${createVariantInput('area', 'Laukums (kvadrātmetros)', 'number', '.01')}
-                    ${createVariantInput('pvc_tent', 'PVC materiāls (g uz kvadrātmetru)', 'number', '.01')}
+                    ${createVariantInput('area', 'Laukums (kvadrātmetros)')}
+                    ${createVariantInput('pvc_tent', 'PVC materiāls (g uz kvadrātmetru)')}
                     ${createVariantInput('frame_tube', 'Rāmja caurule')}
                 </div>
                 <div class="float-right">

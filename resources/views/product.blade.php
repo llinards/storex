@@ -12,6 +12,11 @@
             <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
             <x-product.pricelist-wrapper>
                 @foreach ($product->variants as $variant)
+                    @php
+                        $raw_price = str_replace(' ', '', $variant->price);
+                        $numeric_price = (int) filter_var($raw_price, FILTER_SANITIZE_NUMBER_INT);
+                        $formatted_price = number_format($numeric_price, 0, '.', ' ');
+                    @endphp
                     <x-product.entry>
                         <x-slot name="title">{{ $variant->title }}</x-slot>
                         <x-slot name="length">{{ $variant->length }}</x-slot>
@@ -25,7 +30,9 @@
                         @if ($variant->attachment)
                             <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
                         @endif
-                        <x-slot name="price">{{ number_format($variant->price, 0, '.', ' ') }} €</x-slot>
+                        <x-slot
+                            name="price">{{ $formatted_price }}{{ strpos($raw_price, '*') !== false ? ' €*' : ' €' }}
+                        </x-slot>
                     </x-product.entry>
                 @endforeach
             </x-product.pricelist-wrapper>

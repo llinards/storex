@@ -91,8 +91,8 @@
                                         <label for="product_variant[{{$index}}][{{$field}}]"
                                                class="block text-sm font-medium text-gray-700">@lang($label)</label>
                                         <input
-                                            type="{{ in_array($field, ['price', 'length', 'width', 'height', 'space_between_arches', 'area', 'pvc_tent']) ? 'number' : 'text' }}"
-                                            step=".01" value="{{ $variant->$field }}"
+                                            type="text"
+                                            value="{{ $variant->$field }}"
                                             name="product_variant[{{$index}}][{{$field}}]"
                                             class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                                     </div>
@@ -140,14 +140,14 @@
             div.innerHTML = `
         <div class="flex gap-4 flex-wrap justify-center mt-2">
             ${createVariantInput('title', 'Nosaukums')}
-            ${createVariantInput('price', 'Cena (EUR)', 'number', '.01')}
-            ${createVariantInput('length', 'Garums (metros)', 'number', '.01')}
-            ${createVariantInput('width', 'Platums (metros)', 'number', '.01')}
-            ${createVariantInput('height', 'Augstums (metros)', 'number', '.01')}
-            ${createVariantInput('space_between_arches', 'Attālums starp arkām (metros)', 'number', '.01')}
+            ${createVariantInput('price', 'Cena (EUR)')}
+            ${createVariantInput('length', 'Garums (metros)')}
+            ${createVariantInput('width', 'Platums (metros)')}
+            ${createVariantInput('height', 'Augstums (metros)')}
+            ${createVariantInput('space_between_arches', 'Attālums starp arkām (metros)')}
             ${createVariantInput('gate_size', 'Vārtu izmērs PxA (metros)')}
-            ${createVariantInput('area', 'Laukums (kvadrātmetros)', 'number', '.01')}
-            ${createVariantInput('pvc_tent', 'PVC materiāls (g uz kvadrātmetru)', 'number', '.01')}
+            ${createVariantInput('area', 'Laukums (kvadrātmetros)')}
+            ${createVariantInput('pvc_tent', 'PVC materiāls (g uz kvadrātmetru)')}
             ${createVariantInput('frame_tube', 'Rāmja caurule')}
         </div>
         <div class="float-right">
