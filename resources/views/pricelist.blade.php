@@ -5,8 +5,7 @@
     </div>
 
     @if($productVariants->isNotEmpty())
-        <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
-            <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
+        <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8 pt-4">
             <x-product.pricelist-wrapper>
 
                 @foreach ($productVariants as $variant)
@@ -50,7 +49,9 @@
                 * @lang('Augstums no konteinera.')
             </p>
             <p class="py-2">
-                ** @lang('Cena norādīt bez priekšējā un aizmugurējā paneļa.')
+                ** @lang('ST36-62 un ST36-62D cena norādīta <strong class="text-storex-red">bez</strong> priekšējā un aizmugurējā paneļa.')
+                <br/>
+                ** @lang('ST144 cena norādīta <strong class="text-storex-red">ar</strong> priekšējo un aizmugurējo paneli.')
             </p>
             <x-footer-link>
                 <span class="text-storex-red">
