@@ -7,7 +7,7 @@
     }}
     >
     <div>
-        <h2 class="text-shadow text-3xl leading-tight text-white md:text-5xl md:leading-tight">
+        <h2 class="text-shadow text-3xl leading-tight text-white md:text-5xl md:leading-tight font-bold">
             {{ $heading ?? '' }}
         </h2>
         <p class="text-shadow pt-2 text-white">
