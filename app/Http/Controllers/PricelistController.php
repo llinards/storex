@@ -18,7 +18,7 @@ class PricelistController extends Controller
     {
         $productVariants = $this->productServices->getAllProductVariants()
                                                  ->load(['attachment', 'product', 'category'])
-                                                 ->sortBy('price');
+                                                 ->sortBy('product_id');
 
         return view('pricelist', compact('productVariants'));
     }
