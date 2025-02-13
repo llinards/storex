@@ -10,56 +10,52 @@
         {{-- DESKTOP LAYOUT --}}
         <div class="hidden sm:block">
             @if ($products->isEmpty())
-                <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Produkti nav atrasti')"/>
-                </div>
+            <div class="mt-3 flex items-center justify-center">
+                <x-info-status-message :text="__('Produkti nav atrasti')" />
+            </div>
             @else
-                <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    @foreach ($products as $product)
-                        <x-category.card
-                            :featured="$product->is_featured"
-                            href="{{route('product.show', [request()->route('category'), $product->slug])}}"
-                        >
-                            <x-slot name="image">
-                                {{ asset('storage/products/' . $product->images[0]->filename) }}
-                            </x-slot>
-                            <x-slot name="heading">{{ $product->title }}</x-slot>
-                            <x-slot name="area">{{$product->available_area}}</x-slot>
-                            <x-slot name="width">{{$product->available_width}}</x-slot>
-                            <x-slot name="height">{{$product->available_height}}</x-slot>
-                            <x-slot name="length">{{$product->available_length}}</x-slot>
-                            <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
-                        </x-category.card>
-                    @endforeach
-                </div>
+            <div class="gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                @foreach ($products as $product)
+                <x-category.card :featured="$product->is_featured"
+                    href="{{route('product.show', [request()->route('category'), $product->slug])}}">
+                    <x-slot name="image">
+                        {{ asset('storage/products/' . $product->images[0]->filename) }}
+                    </x-slot>
+                    <x-slot name="heading">{{ $product->title }}</x-slot>
+                    <x-slot name="area">{{$product->available_area}}</x-slot>
+                    <x-slot name="width">{{$product->available_width}}</x-slot>
+                    <x-slot name="height">{{$product->available_height}}</x-slot>
+                    <x-slot name="length">{{$product->available_length}}</x-slot>
+                    <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
+                </x-category.card>
+                @endforeach
+            </div>
             @endif
         </div>
 
         {{-- MOBILE LAYOUT --}}
         <div class="block pb-16 sm:hidden">
             @if ($products->isEmpty())
-                <div class="mt-3 flex items-center justify-center">
-                    <x-info-status-message :text="__('Produkti nav atrasti')"/>
-                </div>
+            <div class="mt-3 flex items-center justify-center">
+                <x-info-status-message :text="__('Produkti nav atrasti')" />
+            </div>
             @else
-                <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
-                    @foreach ($products as $product)
-                        <x-category.card
-                            :featured="$product->is_featured"
-                            href="{{route('product.show', [request()->route('category'), $product->slug])}}"
-                        >
-                            <x-slot name="image">
-                                {{ asset('storage/products/' . $product->images[0]->filename) }}
-                            </x-slot>
-                            <x-slot name="heading">{{ $product->title }}</x-slot>
-                            <x-slot name="area">{{$product->available_area}}</x-slot>
-                            <x-slot name="width">{{$product->available_width}}</x-slot>
-                            <x-slot name="height">{{$product->available_height}}</x-slot>
-                            <x-slot name="length">{{$product->available_length}}</x-slot>
-                            <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
-                        </x-category.card>
-                    @endforeach
-                </div>
+            <div class="carousel m-0 p-0" data-flickity='{ "contain": true }'>
+                @foreach ($products as $product)
+                <x-category.card :featured="$product->is_featured"
+                    href="{{route('product.show', [request()->route('category'), $product->slug])}}">
+                    <x-slot name="image">
+                        {{ asset('storage/products/' . $product->images[0]->filename) }}
+                    </x-slot>
+                    <x-slot name="heading">{{ $product->title }}</x-slot>
+                    <x-slot name="area">{{$product->available_area}}</x-slot>
+                    <x-slot name="width">{{$product->available_width}}</x-slot>
+                    <x-slot name="height">{{$product->available_height}}</x-slot>
+                    <x-slot name="length">{{$product->available_length}}</x-slot>
+                    <x-slot name="link">@lang('Uzzināt vairāk')</x-slot>
+                </x-category.card>
+                @endforeach
+            </div>
             @endif
         </div>
     </div>

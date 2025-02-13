@@ -5,15 +5,15 @@
         data-tabs-inactive-classes="text-storex-inactive-grey">
         <li class="mx-4">
             <button id="business-tab" data-tabs-target="#business" type="button" role="tab" aria-controls="business"
-                    aria-selected="false" aria-selected="true"
-                    class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg">
+                aria-selected="false" aria-selected="true"
+                class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg">
                 @lang('Tenta angāri biznesam')
             </button>
         </li>
         <li class="mx-4">
             <button id="agriculture-tab" data-tabs-target="#agriculture" type="button" role="tab"
-                    aria-controls="agriculture"
-                    class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg">
+                aria-controls="agriculture"
+                class="text-wrap pb-1 font-bold transition duration-200 hover:text-storex-red sm:py-0 sm:text-lg">
                 @lang('Tenta angāri lauksaimniekiem')
             </button>
         </li>
@@ -23,7 +23,7 @@
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z">
                         </path>
@@ -32,30 +32,42 @@
                 <div>
                     <h3>@lang('Lauksaimniecības produktu uzglabāšana')</h3>
                     <p>
-                        @lang('Mūsu angārus jau ir iecienījuši zemnieki Latvijā, Lietuvā, Polijā un citās valstīs. Lauksaimnieki tos bieži izmanto lauksaimniecības produkcijas, siena, salmu, labības un tehnikas glabāšanai. ')
+                        @lang('Mūsu angārus jau ir iecienījuši zemnieki Latvijā, Lietuvā, Polijā un citās valstīs.
+                        Lauksaimnieki tos bieži izmanto lauksaimniecības produkcijas, siena, salmu, labības un tehnikas
+                        glabāšanai. ')
                     </p>
                 </div>
             </div>
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M168,16A72.07,72.07,0,0,0,96,88a73.29,73.29,0,0,0,.63,9.42L27.12,192.22A15.93,15.93,0,0,0,28.71,213L43,227.29a15.93,15.93,0,0,0,20.78,1.59l94.81-69.53A73.29,73.29,0,0,0,168,160a72,72,0,1,0,0-144Zm56,72a55.72,55.72,0,0,1-11.16,33.52L134.49,43.16A56,56,0,0,1,224,88ZM54.32,216,40,201.68,102.14,117A72.37,72.37,0,0,0,139,153.86ZM112,88a55.67,55.67,0,0,1,11.16-33.51l78.34,78.34A56,56,0,0,1,112,88Zm-2.35,58.34a8,8,0,0,1,0,11.31l-8,8a8,8,0,1,1-11.31-11.31l8-8A8,8,0,0,1,109.67,146.33Z">
                         </path>
                     </svg>
+                    <!-- https://feathericons.dev/?search=feather&iconset=feather -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="icon mx-auto md:h-12 md:w-12">
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                        <line x1="16" x2="2" y1="8" y2="22" />
+                        <line x1="17.5" x2="9" y1="15" y2="15" />
+                    </svg>
+
                 </div>
                 <div>
                     <h3>@lang('Dzīvnieku un putnu turēšana')</h3>
                     <p>
-                        @lang('Angāri ir lieliski piemēroti pastāvīgai liellopu turēšanai. Tenta angāros veiksmīgi audzē arī citus mazos liellopus, fazānus, cāļus un aitas.')
+                        @lang('Angāri ir lieliski piemēroti pastāvīgai liellopu turēšanai. Tenta angāros veiksmīgi audzē
+                        arī citus mazos liellopus, fazānus, cāļus un aitas.')
                     </p>
                 </div>
             </div>
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
                         </path>
@@ -64,7 +76,9 @@
                 <div>
                     <h3>@lang('Lauksaimniecības tehnikas uzglabāšanai un remontam')</h3>
                     <p>
-                        @lang('Uzglabātā lauksaimniecības tehnika angāros nolietojas mazāk, jo tā tiek pasargāta no dažādiem laika apstākļiem. Daudziem lauksaimniekiem tenta angāros ir ierīkota arī lauksaimniecības tehnikas remontdarbnīca. ')
+                        @lang('Uzglabātā lauksaimniecības tehnika angāros nolietojas mazāk, jo tā tiek pasargāta no
+                        dažādiem laika apstākļiem. Daudziem lauksaimniekiem tenta angāros ir ierīkota arī
+                        lauksaimniecības tehnikas remontdarbnīca. ')
                     </p>
                 </div>
             </div>
@@ -73,7 +87,7 @@
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z">
                         </path>
@@ -90,7 +104,7 @@
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M168,16A72.07,72.07,0,0,0,96,88a73.29,73.29,0,0,0,.63,9.42L27.12,192.22A15.93,15.93,0,0,0,28.71,213L43,227.29a15.93,15.93,0,0,0,20.78,1.59l94.81-69.53A73.29,73.29,0,0,0,168,160a72,72,0,1,0,0-144Zm56,72a55.72,55.72,0,0,1-11.16,33.52L134.49,43.16A56,56,0,0,1,224,88ZM54.32,216,40,201.68,102.14,117A72.37,72.37,0,0,0,139,153.86ZM112,88a55.67,55.67,0,0,1,11.16-33.51l78.34,78.34A56,56,0,0,1,112,88Zm-2.35,58.34a8,8,0,0,1,0,11.31l-8,8a8,8,0,1,1-11.31-11.31l8-8A8,8,0,0,1,109.67,146.33Z">
                         </path>
@@ -109,7 +123,7 @@
             <div class="items-center gap-2 py-2 text-center sm:gap-6 sm:py-4 md:flex md:text-left">
                 <div class="pb-4 md:pb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="icon mx-auto md:h-12 md:w-12"
-                         viewBox="0 0 256 256">
+                        viewBox="0 0 256 256">
                         <path
                             d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
                         </path>
