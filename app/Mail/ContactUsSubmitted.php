@@ -24,8 +24,10 @@ class ContactUsSubmitted extends Mailable
      */
     public function envelope(): Envelope
     {
+        $name = $this->data['fullname'] ?? 'Anonīms';
+
         return new Envelope(
-            subject: 'Jauna ziņa no stores.lv mājaslapas',
+            subject: "Ziņa no {$name} - storex.lv mājaslapas",
         );
     }
 
