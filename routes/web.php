@@ -7,12 +7,15 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SubmissionsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
-Auth::routes([
-    'register' => false,
-    'reset'    => true,
-    'verify'   => true,
-]);
+Route::middleware(ProtectAgainstSpam::class)->group(function () {
+    Auth::routes([
+        'register' => false,
+        'reset'    => true,
+        'verify'   => true,
+    ]);
+});
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLocale')->group(function () {
     Route::get('/', function () {
@@ -27,7 +30,8 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/kontakti', function () {
         return view('contacts');
     })->name('contacts');
-    Route::post('/kontakti/sazinaties-ar-mums', [SubmissionsController::class, 'submit'])->name('contact-us');
+    Route::post('/kontakti/sazinaties-ar-mums',
+        [SubmissionsController::class, 'submit'])->middleware(ProtectAgainstSpam::class)->name('contact-us');
     Route::get('/buj', function () {
         return view('faq');
     })->name('faq');

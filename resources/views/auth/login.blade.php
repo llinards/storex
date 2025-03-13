@@ -7,13 +7,13 @@
             <div class="w-full max-w-md">
                 <div class="rounded-lg bg-white shadow-md">
                     <div class="flex justify-center bg-gray-200 px-6 py-4 text-lg font-semibold">
-                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8" />
+                        <img src="{{ asset('images/storex-logo.png') }}" alt="Logo" class="h-8"/>
                     </div>
 
                     <div class="px-6 py-4">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-
+                            <x-honeypot/>
                             <div class="mb-4">
                                 <label for="email" class="mb-2 block text-sm font-bold text-gray-700">
                                     {{ __('Email Address') }}
@@ -32,7 +32,7 @@
                                     />
 
                                     @error('email')
-                                        <span class="text-small mt-2 text-red-500">
+                                    <span class="text-small mt-2 text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -55,7 +55,7 @@
                                     />
 
                                     @error('password')
-                                        <span class="text-small mt-2 text-red-500">
+                                    <span class="text-small mt-2 text-red-500">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
