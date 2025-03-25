@@ -6,8 +6,7 @@
         </div>
         <div class="pb-4 lg:pb-0">
             <p>
-                @lang('Aizpildi visus nepieciešamos laukus un STOREX speciālists ar Jums sazināsies pēc iespējas
-                ātrāk!')
+                @lang('Aizpildi visus nepieciešamos laukus un STOREX speciālists ar Jums sazināsies pēc iespējas ātrāk!')
             </p>
         </div>
     </div>
@@ -60,8 +59,8 @@
             <div class="pt-4">
                 <input class="input-radio" type="checkbox" id="agrees-for-data-processing"
                        name="agrees-for-data-processing"/>
-                <label for="agrees-for-data-processing" class="input-radio-label">@lang('Piekrītu, ka mani iesniegtie
-                    dati tiek apstrādāti un uzglabāti.')</label>
+                <label for="agrees-for-data-processing"
+                       class="input-radio-label">@lang('Piekrītu, ka mani iesniegtie dati tiek apstrādāti un uzglabāti.')</label>
             </div>
             <x-input-error field="agrees-for-data-processing"/>
 

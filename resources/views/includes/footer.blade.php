@@ -39,7 +39,7 @@
                 </div>
                 --}}
                 <div class="order-6 md:order-none">
-                    <h5 class="ml-4 py-3 uppercase">Sadaļas</h5>
+                    <h5 class="ml-4 py-3 uppercase">@lang('Sadaļas')</h5>
                     <x-footer-link href="{{ route('about') }}">@lang('Par mums')</x-footer-link>
                     <x-footer-link href="{{ route('contacts') }}">@lang('Kontakti')</x-footer-link>
                     {{-- <x-footer-link href="#">@lang('Galerija')</x-footer-link> --}}
