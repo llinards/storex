@@ -15,7 +15,7 @@ class ProductVariant extends Model
     use HasFactory;
     use HasTranslations;
 
-    public array $translatable = ['title'];
+    public array $translatable = ['title', 'frame_tube'];
 
     public function getFallbackLocale(): ?string
     {
