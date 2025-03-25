@@ -6,7 +6,6 @@
     </svg>
     <h3 class="mt-4">@lang('Uzticamība')</h3>
     <p class="p-0">
-        @lang('Piedāvājam 100% servisu, kas ietver ne tikai profesionālas konsultācijas pirms iegādes, bet arī
-        visaptverošu atbalstu un palīdzību pēc iegādes, lai nodrošinātu Jūsu pilnīgu apmierinātību.')
+        @lang('Piedāvājam 100% servisu, kas ietver ne tikai profesionālas konsultācijas pirms iegādes, bet arī visaptverošu atbalstu un palīdzību pēc iegādes, lai nodrošinātu Jūsu pilnīgu apmierinātību.')
     </p>
 </div>

@@ -15,9 +15,7 @@
     <div>
         <h2 class="mt-4 lg:mt-0">@lang('Vairāk nekā 10 gadu pieredze')</h2>
         <p class="p-0">
-            @lang('Ar vairāk nekā desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes
-            risinājumus,
-            kas ir pārbaudīti dažādos apstākļos un piemēroti visdažādākajām vajadzībām.')
+            @lang('Ar vairāk nekā desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes risinājumus, kas ir pārbaudīti dažādos apstākļos un piemēroti visdažādākajām vajadzībām.')
         </p>
     </div>
 </div>

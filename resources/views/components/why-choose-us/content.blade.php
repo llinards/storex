@@ -8,9 +8,7 @@
     </x-slot>
     <x-slot name="heading">@lang('Vairāk nekā 10 gadu pieredze')</x-slot>
     <x-slot name="description">
-        @lang('Ar vairāk nekā desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes
-        risinājumus,
-        kas ir pārbaudīti dažādos apstākļos un piemēroti visdažādākajām vajadzībām.')
+        @lang('Ar vairāk nekā desmit gadu pieredzi tenta angāru nozarē, mēs piedāvājam augstākās kvalitātes risinājumus, kas ir pārbaudīti dažādos apstākļos un piemēroti visdažādākajām vajadzībām.')
     </x-slot>
 </x-why-choose-us.card>
 
@@ -24,8 +22,7 @@
     </x-slot>
     <x-slot name="heading">@lang('Ātra un ērta piegāde')</x-slot>
     <x-slot name="description">
-        @lang('Nodrošinām ātru piegādi un ātru piekļuvi mūsu produkcijai, pateicoties plašiem preču krājumiem,
-        kas vienmēr ir pieejami uz vietas mūsu noliktavā.')
+        @lang('Nodrošinām ātru piegādi un ātru piekļuvi mūsu produkcijai, pateicoties plašiem preču krājumiem, kas vienmēr ir pieejami uz vietas mūsu noliktavā.')
     </x-slot>
 </x-why-choose-us.card>
 
@@ -39,8 +36,7 @@
     </x-slot>
     <x-slot name="heading">@lang('Uzticamība')</x-slot>
     <x-slot name="description">
-        @lang('Piedāvājam 100% servisu, kas ietver ne tikai profesionālas konsultācijas pirms iegādes, bet arī
-        visaptverošu atbalstu un palīdzību pēc iegādes, lai nodrošinātu Jūsu pilnīgu apmierinātību.')
+        @lang('Piedāvājam 100% servisu, kas ietver ne tikai profesionālas konsultācijas pirms iegādes, bet arī visaptverošu atbalstu un palīdzību pēc iegādes, lai nodrošinātu Jūsu pilnīgu apmierinātību.')
     </x-slot>
 </x-why-choose-us.card>
 
@@ -54,8 +50,7 @@
     </x-slot>
     <x-slot name="heading">@lang('Montāža')</x-slot>
     <x-slot name="description">
-        @lang('Visām mūsu precēm ir pieejamas detalizētas tiešsaistes montāžas instrukcijas, kas atvieglo
-        produkcijas uzstādīšanu un nodrošina, ka process ir skaidrs un vienkāršs.')
+        @lang('Visām mūsu precēm ir pieejamas detalizētas tiešsaistes montāžas instrukcijas, kas atvieglo produkcijas uzstādīšanu un nodrošina, ka process ir skaidrs un vienkāršs.')
     </x-slot>
 </x-why-choose-us.card>
 
@@ -69,8 +64,6 @@
     </x-slot>
     <x-slot name="heading">@lang('Ātra uzstādīšana')</x-slot>
     <x-slot name="description">
-        @lang('Mūsu angāri ir viegli un ātri uzstādāmi, neatkarīgi no tā, vai to veicam mēs vai Jūs paši.
-        Produkcija izstrādāta tā, lai to varētu uzstādīt jebkādos klimatiskos apstākļos, nodrošinot
-        augstu funkcionalitāti un ilgtspēju.')
+        @lang('Mūsu angāri ir viegli un ātri uzstādāmi, neatkarīgi no tā, vai to veicam mēs vai Jūs paši. Produkcija izstrādāta tā, lai to varētu uzstādīt jebkādos klimatiskos apstākļos, nodrošinot augstu funkcionalitāti un ilgtspēju.')
     </x-slot>
 </x-why-choose-us.card>

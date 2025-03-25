@@ -6,7 +6,6 @@
     </svg>
     <h3 class="mt-4">@lang('Montāža')</h3>
     <p class="p-0">
-        @lang('Visām mūsu precēm ir pieejamas detalizētas tiešsaistes montāžas instrukcijas, kas atvieglo
-        produkcijas uzstādīšanu un nodrošina, ka process ir skaidrs un vienkāršs.')
+        @lang('Visām mūsu precēm ir pieejamas detalizētas tiešsaistes montāžas instrukcijas, kas atvieglo produkcijas uzstādīšanu un nodrošina, ka process ir skaidrs un vienkāršs.')
     </p>
 </div>

@@ -10,18 +10,10 @@
                 <div class="order-1 md:order-none">
                     <h5 class="md:pb-3">@lang('Mūsu prioritāte ir apmierināts klients!')</h5>
                     <p class="py-2 leading-none">
-                        @lang('Pirms angāra iegādes Jums ir iespēja to 8011 apskatīt reālajā
-                        vidē – mēs
-                        nodrošināsim Jūsu
-                        reģionā esošo klientu kontaktus, lai varētu
-                        aplūkot uzstādītos angārus un pārliecināties
-                        par to kvalitāti. Mēs ticam, ka arī Jūs pēc savas pieredzes, būsiet gatavi palīdzēt citiem
-                        interesentiem ar savu atsauksmi un pirkuma demonstrāciju.')
+                        @lang('Pirms angāra iegādes Jums ir iespēja to apskatīt reālajā vidē – mēs nodrošināsim Jūsu reģionā esošo klientu kontaktus, lai varētu aplūkot uzstādītos angārus un pārliecināties par to kvalitāti. Mēs ticam, ka arī Jūs pēc savas pieredzes, būsiet gatavi palīdzēt citiem interesentiem ar savu atsauksmi un pirkuma demonstrāciju.')
                     </p>
                     <p class="py-2 leading-none">
-                        @lang('Kopš 2019. gada mēs esam daļa no STOREX
-                        STRUCTURES grupas, kas garantē mūsu
-                        produktu augstos kvalitātes standartus un uzticamību.')
+                        @lang('Kopš 2019. gada mēs esam daļa no STOREX STRUCTURES grupas, kas garantē mūsu produktu augstos kvalitātes standartus un uzticamību.')
                     </p>
                 </div>
                 <div class="order-4 md:order-none">

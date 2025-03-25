@@ -6,8 +6,6 @@
     </svg>
     <h3 class="mt-4">@lang('Ātra uzstādīšana')</h3>
     <p class="p-0">
-        @lang('Mūsu angāri ir viegli un ātri uzstādāmi, neatkarīgi no tā, vai to veicam mēs vai Jūs paši.
-        Produkcija izstrādāta tā, lai to varētu uzstādīt jebkādos klimatiskos apstākļos, nodrošinot
-        augstu funkcionalitāti un ilgtspēju.')
+        @lang('Mūsu angāri ir viegli un ātri uzstādāmi, neatkarīgi no tā, vai to veicam mēs vai Jūs paši. Produkcija izstrādāta tā, lai to varētu uzstādīt jebkādos klimatiskos apstākļos, nodrošinot augstu funkcionalitāti un ilgtspēju.')
     </p>
 </div>

@@ -8,35 +8,35 @@
 <x-faq.question>
     <x-slot name="question">@lang('Vai iespējams salabot tenta angāru?')</x-slot>
     <x-slot name="answer">
-      @lang('Tenta angāru tentu ir iespējams salabot nenoņemot to no metāla konstrukcijas (Tentu remkomplekts jeb tenta sakausēšana/salīmēšana).')
+        @lang('Tenta angāru tentu ir iespējams salabot nenoņemot to no metāla konstrukcijas (Tentu remkomplekts jeb tenta sakausēšana/salīmēšana).')
     </x-slot>
 </x-faq.question>
 
 <x-faq.question>
     <x-slot name="question">@lang('Kāds ir tenta kalpošanas laiks?')</x-slot>
     <x-slot name="answer">
-       @lang('Tenta kalpošanas laiks ir no 5 - 25 gadi (atkarīgs no tenta biezuma un no tā, kā tiek ekspluatēts pats angārs).')
+        @lang('Tenta kalpošanas laiks ir no 5 - 25 gadi (atkarīgs no tenta biezuma un no tā, kā tiek ekspluatēts pats angārs).')
     </x-slot>
 </x-faq.question>
 
 <x-faq.question>
     <x-slot name="question">@lang('No kāda materiāla ir taisīts angāra rāmis?')</x-slot>
     <x-slot name="answer">
-       @lang('Angāra rāmis ir veidots no cinkotas metāla trubas (diametrs ir 60cm).')
+        @lang('Angāra rāmis ir veidots no cinkotas metāla trubas (diametrs ir 60 cm).')
     </x-slot>
 </x-faq.question>
 
 <x-faq.question>
     <x-slot name="question">@lang('Cik angāram ir vārti?')</x-slot>
     <x-slot name="answer">
-       @lang('Standarta aprīkojuma angāram ir divi vārti.')
+        @lang('Standarta aprīkojuma angāram ir divi vārti.')
     </x-slot>
 </x-faq.question>
 
 <x-faq.question>
     <x-slot name="question">@lang('Vai vajag nostiprināt angāru pie zemes?')</x-slot>
     <x-slot name="answer">
-       @lang('Obligāti! Katrs angārs jānostiprina pie pamatnes. Stiprinājumi ir angāra komplektācijā.')
+        @lang('Obligāti! Katrs angārs jānostiprina pie pamatnes. Stiprinājumi ir angāra komplektācijā.')
     </x-slot>
 </x-faq.question>
 
@@ -57,14 +57,14 @@
 <x-faq.question>
     <x-slot name="question">@lang('Vai ir iespējams nosiltināt tikai angāru?')</x-slot>
     <x-slot name="answer">
-    @lang('Jā, ir iespējams nosiltināt angāru pašu spēkiem ar Styrodur®, Isover® , Fastfixx®, Rockwool®, EPS')
+        @lang('Jā, ir iespējams nosiltināt angāru pašu spēkiem ar Styrodur®, Isover® , Fastfixx®, Rockwool®, EPS')
     </x-slot>
 </x-faq.question>
 
 <x-faq.question>
     <x-slot name="question">@lang('Vai ir iespējams iemontēt citus vārtus tenta angāros?')</x-slot>
     <x-slot name="answer">
-     @lang('Jā, konstrukcija atļauj iemontēt citus vārtus.')
+        @lang('Jā, konstrukcija atļauj iemontēt citus vārtus.')
     </x-slot>
 </x-faq.question>
 
@@ -78,6 +78,6 @@
 <x-faq.question>
     <x-slot name="question">@lang('Vai Jūsu angāriem ir ventilācija?')</x-slot>
     <x-slot name="answer">
-       @lang('Visiem angāriem ir ventilācijas lūkas.')
+        @lang('Visiem angāriem ir ventilācijas lūkas.')
     </x-slot>
 </x-faq.question>
