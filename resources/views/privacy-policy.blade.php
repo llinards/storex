@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4 pb-8 sm:py-12 lg:px-6 xl:px-8">
         <div class="pb-8 pt-28 sm:pb-12 sm:pt-0">
             <h1>@lang('Privātuma politika')</h1>
-            <p class="mt-2 text-gray-600">{{ __('Pēdējoreiz atjaunināts: 12.02.2025 ') }}</p>
+            <p class="mt-2 text-gray-600">{{ __('Pēdējoreiz atjaunināts: 14.04.2025') }}</p>
         </div>
 
         <div class="prose lg:prose-lg mx-auto">
