@@ -18,10 +18,10 @@ class CookiesServiceProvider extends ServiceProvider
                ->csrf();
 
 //         Register all Analytics cookies at once using one single shorthand method:
-//        Cookies::analytics()
-//               ->google(
-//                   id: "G-Z80E71HY3E",
-//               );
+        Cookies::analytics()
+               ->google(
+                   id: "G-Z80E71HY3E",
+               );
 
         // Register custom cookies under the pre-existing "optional" category:
         // Cookies::optional()
