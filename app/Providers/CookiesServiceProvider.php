@@ -18,7 +18,7 @@ class CookiesServiceProvider extends ServiceProvider
 
         Cookies::analytics()
                ->google(
-                   id: "G-Z80E71HY3E"
+                   id: env('GOOGLE_ANALYTICS_ID'),
                );
     }
 }
