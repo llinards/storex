@@ -14,6 +14,22 @@
 
     <meta name="author" content="{{ config('app.name') }}"/>
     <meta name="locale" content="{{ app()->getLocale() }}"/>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WN778BD6');</script>
+    <!-- End Google Tag Manager -->
+
     <meta
         name="keywords"
         content="tenta angāri, vieglās konstrukcijas angāri, tenta noliktavas, tenta garažas, PVC nojumes, pasākumu nojumes, agāru īre, tenta pārklāji, tirdzniecības nojumes, lopu novietnes, mājdzīvnieku fermas, PVC remonts"
@@ -48,6 +64,12 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN778BD6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 @include('includes.navbar')
 <main aria-labelledby="main-content">
     {{ $slot }}
