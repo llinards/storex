@@ -20,12 +20,12 @@ class SubmissionsController extends Controller
 
             Log::info('Message sent from contact us from');
 
-            return Redirect::to(URL::previous()."#contact-us-form")->with('success',
+            return Redirect::to(URL::previous().'#contact-us-form')->with('success',
                 __('Paldies! Jūsu ziņa ir nosūtīta! Mēs ar Jums sazināsimies pēc iespējas ātrāk.'));
         } catch (\Throwable $e) {
             Log::error('Message not sent: '.$e->getMessage());
 
-            return Redirect::to(URL::previous()."#contact-us-form")->with('error',
+            return Redirect::to(URL::previous().'#contact-us-form')->with('error',
                 __('Kļūda! Mēģini vēlreiz vai sazinies ar mums pa tālruni.'));
         }
     }

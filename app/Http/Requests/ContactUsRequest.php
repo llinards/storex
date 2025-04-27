@@ -25,12 +25,12 @@ class ContactUsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'fullname'                   => ['required', 'string', 'max:255'],
-            'email'                      => ['required', 'string', 'email', 'max:255'],
-            'phone'                      => ['required', 'string', 'max:255'],
-            'company'                    => ['nullable', 'string', 'max:255'],
-            'message'                    => ['nullable', 'string'],
-            'selected-product-variant'   => ['nullable', 'string'],
+            'fullname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            'company' => ['nullable', 'string', 'max:255'],
+            'message' => ['nullable', 'string'],
+            'selected-product-variant' => ['nullable', 'string'],
             'agrees-for-data-processing' => ['accepted'],
         ];
     }
@@ -43,12 +43,12 @@ class ContactUsRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'fullname.required'                   => __('Lūdzu ievadiet savu vārdu un uzvārdu.'),
-            'email.required'                      => __('Lūdzu ievadiet savu e-pasta adresi.'),
-            'email.email'                         => __('Lūdzu ievadiet derīgu e-pasta adresi.'),
-            'phone.required'                      => __('Lūdzu ievadiet savu telefona numuru.'),
-            'company.string'                      => __('Lūdzu ievadiet uzņēmuma nosaukumu.'),
-            'message.string'                      => __('Lūdzu ievadiet ziņojumu.'),
+            'fullname.required' => __('Lūdzu ievadiet savu vārdu un uzvārdu.'),
+            'email.required' => __('Lūdzu ievadiet savu e-pasta adresi.'),
+            'email.email' => __('Lūdzu ievadiet derīgu e-pasta adresi.'),
+            'phone.required' => __('Lūdzu ievadiet savu telefona numuru.'),
+            'company.string' => __('Lūdzu ievadiet uzņēmuma nosaukumu.'),
+            'message.string' => __('Lūdzu ievadiet ziņojumu.'),
             'agrees-for-data-processing.accepted' => __('Lūdzu apstipriniet, ka piekrītat datu uzglabāšanai un apstrādei.'),
         ];
     }

@@ -15,7 +15,9 @@ use Illuminate\View\View;
 class ProductsController extends Controller
 {
     protected ProductServices $productServices;
+
     protected CategoryServices $categoryServices;
+
     protected FileServices $fileServices;
 
     public function __construct(
@@ -23,9 +25,9 @@ class ProductsController extends Controller
         CategoryServices $categoryServices,
         FileServices $fileServices
     ) {
-        $this->productServices  = $productServices;
+        $this->productServices = $productServices;
         $this->categoryServices = $categoryServices;
-        $this->fileServices     = $fileServices;
+        $this->fileServices = $fileServices;
     }
 
     public function index(): View
@@ -68,7 +70,7 @@ class ProductsController extends Controller
 
     public function showAdmin(string $locale, int $product): View
     {
-        $product    = Product::findOrFail($product);
+        $product = Product::findOrFail($product);
         $categories = $this->categoryServices->getActiveCategories();
 
         return view('admin.products.show', compact('product', 'categories'));

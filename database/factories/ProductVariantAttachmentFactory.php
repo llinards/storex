@@ -7,10 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductVariantAttachmentFactory extends Factory
 {
-
     public function definition(): array
     {
-        if ( ! Storage::disk('public')->exists('attachments')) {
+        if (! Storage::disk('public')->exists('attachments')) {
             Storage::disk('public')->makeDirectory('attachments');
         }
 
