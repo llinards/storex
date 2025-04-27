@@ -12,8 +12,8 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 Route::middleware(ProtectAgainstSpam::class)->group(function () {
     Auth::routes([
         'register' => false,
-        'reset'    => true,
-        'verify'   => true,
+        'reset' => true,
+        'verify' => true,
     ]);
 });
 

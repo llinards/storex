@@ -23,7 +23,7 @@
                 @lang('E-pasts')
             </label>
             <input
-                class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
+                class="py-2 px-3 rounded-lg border-2 border-storex-outline-grey focus:border-storex-red focus:ring-storex-red focus-visible:outline-none focus-visible:ring-storex-red"
                 id="email" name="email" type="email" value="{{ old('email') }}"/>
             <x-input-error field="email"/>
             <label class="pt-4" for="phone">
@@ -31,7 +31,7 @@
                 @lang('Telefona numurs')
             </label>
             <input
-                class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
+                class="py-2 px-3 rounded-lg border-2 border-storex-outline-grey focus:border-storex-red focus:ring-storex-red focus-visible:outline-none focus-visible:ring-storex-red"
                 id="phone" name="phone" type="tel" value="{{ old('phone') }}"/>
             <x-input-error field="phone"/>
 
@@ -40,7 +40,7 @@
                 @lang('Vārds, Uzvārds')
             </label>
             <input
-                class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
+                class="py-2 px-3 rounded-lg border-2 border-storex-outline-grey focus:border-storex-red focus:ring-storex-red focus-visible:outline-none focus-visible:ring-storex-red"
                 id="fullname" name="fullname" type="text" value="{{ old('fullname') }}"/>
             <x-input-error field="fullname"/>
 
@@ -48,12 +48,12 @@
                 @lang('Uzņēmums')
             </label>
             <input
-                class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
+                class="py-2 px-3 rounded-lg border-2 border-storex-outline-grey focus:border-storex-red focus:ring-storex-red focus-visible:outline-none focus-visible:ring-storex-red"
                 id="company" name="company" type="text" value="{{ old('company') }}"/>
 
             <label class="pt-4" for="message">@lang('Jūsu ziņa')</label>
             <textarea name="message"
-                      class="rounded-lg border-2 border-storex-outline-grey transition-all duration-200 focus:border-storex-red focus:ring-storex-red"
+                      class="py-2 px-3 rounded-lg border-2 border-storex-outline-grey focus:border-storex-red focus:ring-storex-red focus-visible:outline-none focus-visible:ring-storex-red"
                       id="message" cols="20" rows="6">{{old('message')}}</textarea>
 
             <div class="pt-4">

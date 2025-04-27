@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 class ProductServices
 {
     protected FileServices $fileServices;
+
     protected Product $product;
 
     public function __construct(FileServices $fileServices)
@@ -61,86 +62,86 @@ class ProductServices
 
     public function storeProduct(object $data): void
     {
-        $locale        = $this->getLocale();
+        $locale = $this->getLocale();
         $this->product = Product::create([
-            'title'            => [$locale => $data->product_title],
-            'slug'             => [$locale => $this->setSlug($data->product_title)],
-            'description'      => [$locale => $data->product_description],
-            'additional_info'  => [$locale => $data->product_additional_info],
-            'available_area'   => [$locale => $data->available_area],
-            'available_width'  => [$locale => $data->available_width],
+            'title' => [$locale => $data->product_title],
+            'slug' => [$locale => $this->setSlug($data->product_title)],
+            'description' => [$locale => $data->product_description],
+            'additional_info' => [$locale => $data->product_additional_info],
+            'available_area' => [$locale => $data->available_area],
+            'available_width' => [$locale => $data->available_width],
             'available_height' => [$locale => $data->available_height],
             'available_length' => [$locale => $data->available_length],
-            'category_id'      => $data->category_id,
-            'is_featured'      => isset($data['is_featured']),
-            'is_available'     => isset($data['is_available']),
-            'price'            => $data->product_price ?? null,
+            'category_id' => $data->category_id,
+            'is_featured' => isset($data['is_featured']),
+            'is_available' => isset($data['is_available']),
+            'price' => $data->product_price ?? null,
         ]);
     }
 
-    public function storeProductVariant(array|null $data): void
+    public function storeProductVariant(?array $data): void
     {
         $locale = $this->getLocale();
-        if ( ! $data) {
+        if (! $data) {
             return;
         }
         foreach ($data as $variant) {
             $this->product->variants()->create([
-                'title'                => [$locale => $variant['title']],
-                'price'                => $variant['price'],
-                'length'               => $variant['length'],
-                'width'                => $variant['width'],
-                'height'               => $variant['height'],
+                'title' => [$locale => $variant['title']],
+                'price' => $variant['price'],
+                'length' => $variant['length'],
+                'width' => $variant['width'],
+                'height' => $variant['height'],
                 'space_between_arches' => $variant['space_between_arches'] ?? null,
-                'gate_size'            => $variant['gate_size'],
-                'area'                 => $variant['area'],
-                'pvc_tent'             => $variant['pvc_tent'] ?? null,
-                'frame_tube'           => $variant['frame_tube'] ?? null,
+                'gate_size' => $variant['gate_size'],
+                'area' => $variant['area'],
+                'pvc_tent' => $variant['pvc_tent'] ?? null,
+                'frame_tube' => $variant['frame_tube'] ?? null,
             ]);
         }
     }
 
     public function updateProduct(object $data, int $id): void
     {
-        $locale        = $this->getLocale();
+        $locale = $this->getLocale();
         $this->product = $this->getProduct($id);
 
         $this->product->update([
-            'title'            => [$locale => $data->product_title],
-            'slug'             => [$locale => $this->setSlug($data->product_title)],
-            'description'      => [$locale => $data->product_description],
-            'additional_info'  => [$locale => $data->product_additional_info],
-            'available_area'   => [$locale => $data->available_area],
-            'available_width'  => [$locale => $data->available_width],
+            'title' => [$locale => $data->product_title],
+            'slug' => [$locale => $this->setSlug($data->product_title)],
+            'description' => [$locale => $data->product_description],
+            'additional_info' => [$locale => $data->product_additional_info],
+            'available_area' => [$locale => $data->available_area],
+            'available_width' => [$locale => $data->available_width],
             'available_height' => [$locale => $data->available_height],
             'available_length' => [$locale => $data->available_length],
-            'category_id'      => $data->category_id,
-            'is_featured'      => isset($data['is_featured']),
-            'is_available'     => isset($data['is_available']),
-            'price'            => $data->product_price ?? null,
+            'category_id' => $data->category_id,
+            'is_featured' => isset($data['is_featured']),
+            'is_available' => isset($data['is_available']),
+            'price' => $data->product_price ?? null,
         ]);
     }
 
-    public function updateProductVariant(array|null $data): void
+    public function updateProductVariant(?array $data): void
     {
         $locale = $this->getLocale();
-        if ( ! $data) {
+        if (! $data) {
             return;
         }
         foreach ($data as $variant) {
             $this->product->variants()->updateOrCreate(
                 ['id' => $variant['id'] ?? null],
                 [
-                    'title'                => [$locale => $variant['title']],
-                    'price'                => $variant['price'],
-                    'length'               => $variant['length'],
-                    'width'                => $variant['width'],
-                    'height'               => $variant['height'],
+                    'title' => [$locale => $variant['title']],
+                    'price' => $variant['price'],
+                    'length' => $variant['length'],
+                    'width' => $variant['width'],
+                    'height' => $variant['height'],
                     'space_between_arches' => $variant['space_between_arches'] ?? null,
-                    'gate_size'            => $variant['gate_size'],
-                    'area'                 => $variant['area'],
-                    'pvc_tent'             => $variant['pvc_tent'] ?? null,
-                    'frame_tube'           => $variant['frame_tube'] ?? null,
+                    'gate_size' => $variant['gate_size'],
+                    'area' => $variant['area'],
+                    'pvc_tent' => $variant['pvc_tent'] ?? null,
+                    'frame_tube' => $variant['frame_tube'] ?? null,
                 ]
             );
         }
@@ -159,7 +160,7 @@ class ProductServices
 
     public function updateProductImages(array $data): void
     {
-        $data     = array_filter($data);
+        $data = array_filter($data);
         $newOrder = array_map(static function ($item) {
             return basename($item);
         }, $data);
@@ -174,10 +175,10 @@ class ProductServices
         });
 
         foreach ($newOrder as $index => $filename) {
-            if ( ! $this->product->images->contains('filename', $filename)) {
+            if (! $this->product->images->contains('filename', $filename)) {
                 $this->product->images()->create([
                     'filename' => $filename,
-                    'order'    => $index,
+                    'order' => $index,
                 ]);
                 $this->fileServices->moveFile('uploads/'.$filename, $filename, '/products');
             }

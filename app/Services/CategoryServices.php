@@ -44,11 +44,11 @@ class CategoryServices
     {
         $locale = $this->getLocale();
         Category::create([
-            'title'        => [$locale => $data->category_title],
-            'slug'         => [$locale => $this->setSlug($data->category_title)],
-            'description'  => [$locale => $data->category_description],
-            'image'        => basename($data['category_image'][0]),
-            'area'         => [$locale => $data->category_area],
+            'title' => [$locale => $data->category_title],
+            'slug' => [$locale => $this->setSlug($data->category_title)],
+            'description' => [$locale => $data->category_description],
+            'image' => basename($data['category_image'][0]),
+            'area' => [$locale => $data->category_area],
             'is_available' => isset($data['is_available']),
             'is_accessory' => isset($data['is_accessory']),
         ]);
@@ -56,7 +56,7 @@ class CategoryServices
 
     public function updateCategory(object $data, int $id): void
     {
-        $locale   = $this->getLocale();
+        $locale = $this->getLocale();
         $category = $this->getCategory($id);
 
         if ($data['category_image'] !== $category->image) {
@@ -64,14 +64,14 @@ class CategoryServices
             $this->fileServices->storeMedia($data['category_image'], 'categories');
         }
         $category->update([
-            'title'        => [$locale => $data->category_title],
-            'slug'         => [$locale => $this->setSlug($data->category_title)],
-            'description'  => [$locale => $data->category_description],
-            'image'        => basename($data['category_image'][0]),
-            'is_featured'  => isset($data['is_featured']),
+            'title' => [$locale => $data->category_title],
+            'slug' => [$locale => $this->setSlug($data->category_title)],
+            'description' => [$locale => $data->category_description],
+            'image' => basename($data['category_image'][0]),
+            'is_featured' => isset($data['is_featured']),
             'is_available' => isset($data['is_available']),
             'is_accessory' => isset($data['is_accessory']),
-            'area'         => [$locale => $data->category_area],
+            'area' => [$locale => $data->category_area],
         ]);
     }
 

@@ -10,28 +10,28 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         $title = $this->faker->sentence(2);
-        $slug  = Str::slug($title);
+        $slug = Str::slug($title);
 
         return [
-            'title'            => [
+            'title' => [
                 'en' => '(EN) '.$title,
                 'lv' => '(LV) '.$title,
             ],
-            'slug'             => [
+            'slug' => [
                 'en' => 'en-'.$slug,
                 'lv' => 'lv-'.$slug,
             ],
-            'description'      => [
+            'description' => [
                 'en' => '<p>'.$this->faker->sentence(25).'</p>',
                 'lv' => '<p>'.$this->faker->sentence(25).'</p>',
             ],
-            'is_featured'      => $this->faker->boolean(40),
-            'is_available'     => true,
+            'is_featured' => $this->faker->boolean(40),
+            'is_available' => true,
             'available_length' => [
                 'en' => $this->faker->randomFloat(2, 1, 1000),
                 'lv' => $this->faker->randomFloat(2, 1, 1000),
             ],
-            'available_width'  => [
+            'available_width' => [
                 'en' => $this->faker->randomFloat(2, 1, 1000),
                 'lv' => $this->faker->randomFloat(2, 1, 1000),
             ],
@@ -39,7 +39,7 @@ class ProductFactory extends Factory
                 'en' => $this->faker->randomFloat(2, 1, 1000),
                 'lv' => $this->faker->randomFloat(2, 1, 1000),
             ],
-            'available_area'   => [
+            'available_area' => [
                 'en' => $this->faker->randomFloat(2, 1, 1000),
                 'lv' => $this->faker->randomFloat(2, 1, 1000),
             ],

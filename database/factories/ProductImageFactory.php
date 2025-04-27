@@ -13,7 +13,7 @@ class ProductImageFactory extends Factory
         $faker = \Faker\Factory::create();
         $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
-        if ( ! Storage::disk('public')->exists('products')) {
+        if (! Storage::disk('public')->exists('products')) {
             Storage::disk('public')->makeDirectory('products');
         }
 

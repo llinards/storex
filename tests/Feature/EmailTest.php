@@ -7,10 +7,10 @@ test('contact us form sends email when submitted with valid data', function () {
     Mail::fake();
 
     $validData = [
-        'fullname'                   => 'Test User',
-        'email'                      => 'test@example.com',
-        'phone'                      => '12345678',
-        'message'                    => 'This is a test message',
+        'fullname' => 'Test User',
+        'email' => 'test@example.com',
+        'phone' => '12345678',
+        'message' => 'This is a test message',
         'agrees-for-data-processing' => true,
     ];
 
@@ -32,10 +32,10 @@ test('contact us form validation triggers with invalid data', function () {
     Mail::fake();
 
     $invalidData = [
-        'fullname'                   => '',
-        'email'                      => 'not-an-email',
-        'phone'                      => '',
-        'message'                    => '',
+        'fullname' => '',
+        'email' => 'not-an-email',
+        'phone' => '',
+        'message' => '',
         'agrees-for-data-processing' => false,
     ];
 
@@ -47,4 +47,3 @@ test('contact us form validation triggers with invalid data', function () {
     // Make sure no email was sent
     Mail::assertNothingSent();
 });
-
