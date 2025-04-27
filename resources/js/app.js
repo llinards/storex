@@ -1,7 +1,3 @@
-import { initFlowbite } from 'flowbite';
-// import 'fslightbox';
-initFlowbite;
-
 const burgerIcon = document.getElementById('burger-icon');
 const closeIcon = document.getElementById('close-icon');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -147,10 +143,10 @@ document.querySelectorAll('.scroll-btn').forEach(function (button) {
     });
 });
 
-// Binds gallery image button to fancybox gallery. 
+// Binds gallery image button to fancybox gallery.
 document.addEventListener("DOMContentLoaded", function () {
     Fancybox.bind("[data-fancybox]", {
-        Thumbs: { autoStart: false }
+        Thumbs: {autoStart: false}
     });
 
     document.querySelectorAll(".gallery-trigger").forEach(button => {
@@ -159,11 +155,11 @@ document.addEventListener("DOMContentLoaded", function () {
             let images = [];
 
             document.querySelectorAll(`[data-fancybox="${galleryName}"]`).forEach(link => {
-                images.push({ src: link.getAttribute("href"), type: "image" });
+                images.push({src: link.getAttribute("href"), type: "image"});
             });
 
             Fancybox.show(images, {
-                Thumbs: { autoStart: true }
+                Thumbs: {autoStart: true}
             });
         });
     });
