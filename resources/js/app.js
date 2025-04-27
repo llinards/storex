@@ -1,3 +1,6 @@
+import {Fancybox} from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 const burgerIcon = document.getElementById('burger-icon');
 const closeIcon = document.getElementById('close-icon');
 const mobileMenu = document.getElementById('mobile-menu');
