@@ -1,5 +1,8 @@
 import {Fancybox} from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import {initFlowbite} from 'flowbite';
+
+initFlowbite;
 
 const burgerIcon = document.getElementById('burger-icon');
 const closeIcon = document.getElementById('close-icon');
