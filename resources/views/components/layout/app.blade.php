@@ -14,6 +14,7 @@
     <meta name="author" content="{{ config('app.name') }}"/>
     <meta name="locale" content="{{ app()->getLocale() }}"/>
 
+    <!-- Start Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -62,12 +63,14 @@
 </head>
 
 <body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN778BD6"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 @include('includes.navbar')
 <main aria-labelledby="main-content">
     {{ $slot }}

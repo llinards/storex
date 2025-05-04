@@ -13,12 +13,7 @@ class CookiesServiceProvider extends ServiceProvider
     protected function registerCookies(): void
     {
         Cookies::essentials()
-            ->session()
-            ->csrf();
-
-        Cookies::analytics()
-            ->google(
-                id: 'G-Z80E71HY3E'
-            );
+               ->session()
+               ->csrf();
     }
 }
