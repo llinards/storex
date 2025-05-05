@@ -25,14 +25,14 @@ class CategoriesController extends Controller
         FileServices $fileServices
     ) {
         $this->categoryServices = $categoryServices;
-        $this->productServices = $productServices;
-        $this->fileServices = $fileServices;
+        $this->productServices  = $productServices;
+        $this->fileServices     = $fileServices;
     }
 
     public function adminIndex(): View
     {
         $categories = $this->categoryServices->getAllCategories();
-        $products = $this->productServices->getAllProducts();
+        $products   = $this->productServices->getAllProducts();
 
         return view('admin.index', compact('categories', 'products'));
     }
@@ -59,7 +59,7 @@ class CategoriesController extends Controller
 
     public function show(string $locale, Category $category): View
     {
-        $products = $this->productServices->getActiveProducts($category)->load('images');
+        $products = $this->productServices->getActiveProducts($category);
         if ($category->is_accessory) {
             return view('accessories', compact('category', 'products'));
         }

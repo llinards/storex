@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(CategoryServices $categoryServices): void
     {
         Model::unguard();
+        Model::automaticallyEagerLoadRelationships();
 
         View::composer(['home', 'components.nav.links', 'includes.footer'],
             static function ($view) use ($categoryServices) {
