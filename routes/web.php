@@ -75,6 +75,7 @@ Route::group(
             'localeSessionRedirect',
             'localizationRedirect',
             'localeViewPath',
+            'auth',
         ],
     ],
     function () {
