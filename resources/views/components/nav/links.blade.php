@@ -30,10 +30,11 @@
 </x-nav.link>
 @if(count(config('app.available_locales')) > 1)
     <x-nav.lang>
-        @foreach (config('app.available_locales') as $locale)
-            <x-nav.lang-link href="{{ url()->current() }}?changeLanguage={{ $locale }}"
-                             :active="app()->getLocale() === $locale">
-                {{ strtoupper($locale) }}
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <x-nav.lang-link hreflang="{{ $localeCode }}"
+                             href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                             :active="app()->getLocale() === $localeCode">
+                {{ $properties['native'] }}
             </x-nav.lang-link>
         @endforeach
     </x-nav.lang>

@@ -61,12 +61,12 @@ class ProductsController extends Controller
         }
     }
 
-    public function show(string $locale, Category $category, Product $product): View
+    public function show(Category $category, Product $product): View
     {
         return view('product', compact('product'));
     }
 
-    public function showAdmin(string $locale, int $product): View
+    public function showAdmin(int $product): View
     {
         $product    = Product::findOrFail($product);
         $categories = $this->categoryServices->getActiveCategories();
@@ -74,7 +74,7 @@ class ProductsController extends Controller
         return view('admin.products.show', compact('product', 'categories'));
     }
 
-    public function update(string $locale, Request $data, int $id): RedirectResponse
+    public function update(Request $data, int $id): RedirectResponse
     {
         try {
             $this->productServices->updateProduct($data, $id);
@@ -90,7 +90,7 @@ class ProductsController extends Controller
         }
     }
 
-    public function destroy(string $locale, int $id): RedirectResponse
+    public function destroy(int $id): RedirectResponse
     {
         try {
             $this->productServices->destroyProduct($id);
@@ -104,7 +104,7 @@ class ProductsController extends Controller
         }
     }
 
-    public function destroyProductVariant(string $locale, int $id): RedirectResponse
+    public function destroyProductVariant(int $id): RedirectResponse
     {
         try {
             $this->productServices->destroyProductVariant($id);
