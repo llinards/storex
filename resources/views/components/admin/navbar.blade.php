@@ -31,12 +31,13 @@
                 @lang('Jauns produkts')
             </a>
             <span class="text-black">|</span>
-            @foreach (config('app.available_locales') as $locale)
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                 <a
-                    class="{{ app()->getLocale() === $locale ? 'border-b-2 border-red-600' : '' }} text-black"
-                    href="{{ url()->current() }}?changeLanguage={{ $locale }}"
+                    class="{{ app()->getLocale() === $localeCode ? 'border-b-2 border-red-600' : '' }} text-black"
+                    hreflang="{{ $localeCode }}"
+                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
                 >
-                    {{ strtoupper($locale) }}
+                    {{ $properties['native'] }}
                 </a>
             @endforeach
         </div>

@@ -4,11 +4,15 @@ namespace App\Providers;
 
 use App\Services\CategoryServices;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Mcamara\LaravelLocalization\Traits\LoadsTranslatedCachedRoutes;
 
 class AppServiceProvider extends ServiceProvider
 {
+    use LoadsTranslatedCachedRoutes;
+
     /**
      * Register any application services.
      */
@@ -27,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
         Model::automaticallyEagerLoadRelationships();
+        RouteServiceProvider::loadCachedRoutesUsing(fn() => $this->loadCachedRoutes());
 
         View::composer(['home', 'components.nav.links', 'includes.footer'],
             static function ($view) use ($categoryServices) {

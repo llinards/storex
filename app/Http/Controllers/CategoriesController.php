@@ -57,7 +57,7 @@ class CategoriesController extends Controller
         }
     }
 
-    public function show(string $locale, Category $category): View
+    public function show(Category $category): View
     {
         $products = $this->productServices->getActiveProducts($category);
         if ($category->is_accessory) {
@@ -67,14 +67,14 @@ class CategoriesController extends Controller
         return view('category', compact('category', 'products'));
     }
 
-    public function showAdmin(string $locale, int $category): View
+    public function showAdmin(int $category): View
     {
         $category = Category::findOrFail($category);
 
         return view('admin.categories.show', compact('category'));
     }
 
-    public function update(string $locale, Request $data, int $id): RedirectResponse
+    public function update(Request $data, int $id): RedirectResponse
     {
         try {
             $this->categoryServices->updateCategory($data, $id);
@@ -88,7 +88,7 @@ class CategoriesController extends Controller
         }
     }
 
-    public function destroy(string $locale, int $id): RedirectResponse
+    public function destroy(int $id): RedirectResponse
     {
         try {
             $this->categoryServices->destroyCategory($id);

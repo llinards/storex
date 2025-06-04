@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
@@ -17,7 +18,7 @@ class Category extends Model
 
     public function getFallbackLocale(): ?string
     {
-        return env('APP_LOCALE');
+        return config('app.fallback_locale');
     }
 
     public function getRouteKeyName(): string
@@ -27,16 +28,34 @@ class Category extends Model
 
     public function resolveRouteBinding($value, $field = null)
     {
-        $locale = request()->route('locale');
-        $defaultLocale = config('app.fallback_locale');
+        $locale           = request()->route('locale') ?? app()->getLocale();
+        $supportedLocales = array_keys(LaravelLocalization::getSupportedLocales());
 
         $model = $this->where("slug->{$locale}", $value)->first();
 
-        if (! $model) {
-            $model = $this->where("slug->{$defaultLocale}", $value)->first();
+        if ($model) {
+            return $model;
         }
 
-        return $model ?? abort(404);
+        foreach ($supportedLocales as $availableLocale) {
+            if ($availableLocale !== $locale) {
+                $model = $this->where("slug->{$availableLocale}", $value)->first();
+
+                if ($model) {
+                    $localizedSlug = $model->getTranslation('slug', $locale, false);
+
+                    if ($localizedSlug && $localizedSlug !== $value) {
+                        session()->flash('redirect_to_localized_category_url', [
+                            'locale'        => $locale,
+                            'category_slug' => $localizedSlug,
+                        ]);
+                    }
+
+                    return $model;
+                }
+            }
+        }
+        abort(404);
     }
 
     public function products(): HasMany
