@@ -8,54 +8,38 @@
                 </div>
             </th>
             <th class="length sortable" data-column="1" data-type="numeric">
-                <button class="flex flex-col items-center justify-center hover:text-storex-red">
-                    <div class="flex items-center">
-                        <span>@lang('Garums')</span>
-                        <span class="sort-arrow ml-1 text-gray-400">▲</span>
-                    </div>
-                    <span class="text-sm">(m)</span>
+                <button class="flex items-center justify-center hover:text-storex-red">
+                    <span>@lang('Garums') (m)</span>
+                    <span class="sort-arrow ml-1 text-gray-400">▲</span>
                 </button>
             </th>
             <th class="width sortable" data-column="2" data-type="numeric">
-                <button class="flex flex-col items-center justify-center hover:text-storex-red">
-                    <div class="flex items-center">
-                        <span>@lang('Platums')</span>
-                        <span class="sort-arrow ml-1 text-gray-400">▲</span>
-                    </div>
-                    <span class="text-sm">(m)</span>
+                <button class="flex items-center justify-center hover:text-storex-red">
+                    <span>@lang('Platums') (m)</span>
+                    <span class="sort-arrow ml-1 text-gray-400">▲</span>
                 </button>
             </th>
             <th class="height sortable" data-column="3" data-type="numeric">
-                <button class="flex flex-col items-center justify-center hover:text-storex-red">
-                    <div class="flex items-center">
-                        <span>@lang('Augstums')</span>
-                        <span class="sort-arrow ml-1 text-gray-400">▲</span>
-                    </div>
-                    <span class="text-sm">(m)</span>
+                <button class="flex items-center justify-center hover:text-storex-red">
+                    <span>@lang('Augstums') (m)</span>
+                    <span class="sort-arrow ml-1 text-gray-400">▲</span>
                 </button>
             </th>
             <th class="space-between-arches sortable" data-column="4" data-type="numeric">
-                <button class="flex flex-col items-center justify-center hover:text-storex-red">
-                    <div class="flex items-center">
-                        <span>@lang('Attālums starp arkām')</span>
-                        <span class="sort-arrow ml-1 text-gray-400">▲</span>
-                    </div>
-                    <span class="text-sm">(m)</span>
+                <button class="flex items-center justify-center hover:text-storex-red">
+                    <span>@lang('Attālums starp arkām') (m)</span>
+                    <span class="sort-arrow ml-1 text-gray-400">▲</span>
                 </button>
             </th>
             <th class="gate-size">
-                <div class="flex flex-col items-center">
-                    <span>@lang('Vārtu izmērs PxA')</span>
-                    <span class="text-sm">(m)</span>
+                <div class="flex items-center">
+                    <span>@lang('Vārtu izmērs PxA') (m)</span>
                 </div>
             </th>
             <th class="area sortable" data-column="6" data-type="numeric">
-                <button class="flex flex-col items-center justify-center hover:text-storex-red">
-                    <div class="flex items-center">
-                        <span>@lang('Platība')</span>
-                        <span class="sort-arrow ml-1 text-gray-400">▲</span>
-                    </div>
-                    <span class="text-sm">(m<sup>2</sup>)</span>
+                <button class="flex items-center justify-center hover:text-storex-red">
+                    <span>@lang('Platība') (m<sup>2</sup>)</span>
+                    <span class="sort-arrow ml-1 text-gray-400">▲</span>
                 </button>
             </th>
             <th class="pvc-tent sortable" data-column="7" data-type="numeric">
