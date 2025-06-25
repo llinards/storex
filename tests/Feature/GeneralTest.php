@@ -20,3 +20,22 @@ it('return english locale using en prefix', function () {
     $response->assertOk();
     expect(app()->getLocale())->toBe('en');
 });
+
+it('returns 404 for invalid locale', function () {
+    $response = $this->get('/invalid-locale');
+    $response->assertStatus(404);
+});
+
+it('returns appropriate content type headers', function () {
+    $response = $this->get(route('about'));
+
+    $response->assertStatus(200)
+             ->assertHeader('Content-Type', 'text/html; charset=UTF-8');
+});
+
+it('loads without errors on different screen sizes', function () {
+    $response = $this->get('/lv');
+
+    $response->assertStatus(200)
+             ->assertSee('<meta name="viewport"', false);
+});
