@@ -2,9 +2,9 @@ name: Storex Tests
 
 on:
   push:
-    branches: [ "development", "staging", "main" ]
+    branches: [ "staging", "main" ]
   pull_request:
-    branches: [ "development", "staging", "main" ]
+    branches: [ "staging", "main" ]
 
 jobs:
   php-8-3-tests:
@@ -13,11 +13,17 @@ jobs:
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.3'
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # instead of v3
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.composer/cache
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
+        continue-on-error: false
       - name: Install NPM
         run: npm install
       - name: Build Assets
@@ -42,3 +48,31 @@ jobs:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/database.sqlite
         run: php artisan test
+
+  deploy-staging:
+    needs: php-8-3-tests
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/staging'
+    environment: staging
+
+    steps:
+      - name: Deploy to Staging
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://forge.laravel.com/api/v1/servers/${{ secrets.FORGE_STAGING_SERVER_ID }}/sites/${{ secrets.FORGE_STAGING_SITE_ID }}/deployment/deploy'
+          method: 'POST'
+          customHeaders: '{"Authorization": "Bearer ${{ secrets.FORGE_API_TOKEN_STOREX }}", "Accept": "application/json", "Content-Type": "application/json"}'
+
+  deploy-production:
+    needs: php-8-3-tests
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment: production
+
+    steps:
+      - name: Deploy to Production
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://forge.laravel.com/api/v1/servers/${{ secrets.FORGE_PRODUCTION_SERVER_ID }}/sites/${{ secrets.FORGE_PRODUCTION_SITE_ID }}/deployment/deploy'
+          method: 'POST'
+          customHeaders: '{"Authorization": "Bearer ${{ secrets.FORGE_API_TOKEN_STOREX }}", "Accept": "application/json", "Content-Type": "application/json"}'
