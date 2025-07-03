@@ -7,10 +7,10 @@ test('contact us form sends email when submitted with valid data', function () {
     Mail::fake();
 
     $validData = [
-        'fullname' => 'Test User',
-        'email' => 'test@example.com',
-        'phone' => '12345678',
-        'message' => 'This is a test message',
+        'fullname'                   => 'Test User',
+        'email'                      => 'test@example.com',
+        'phone'                      => '12345678',
+        'message'                    => 'This is a test message',
         'agrees-for-data-processing' => true,
     ];
 
@@ -20,7 +20,7 @@ test('contact us form sends email when submitted with valid data', function () {
     $response->assertSessionHas('success');
 
     Mail::assertSent(ContactUsSubmitted::class, function ($mail) use ($validData) {
-        return $mail->hasTo('gintaras@storex.lv') &&
+        return $mail->hasTo('web_forms@storex.lv') &&
                $mail->data['fullname'] === $validData['fullname'] &&
                $mail->data['email'] === $validData['email'] &&
                $mail->data['phone'] === $validData['phone'] &&
@@ -32,10 +32,10 @@ test('contact us form validation triggers with invalid data', function () {
     Mail::fake();
 
     $invalidData = [
-        'fullname' => '',
-        'email' => 'not-an-email',
-        'phone' => '',
-        'message' => '',
+        'fullname'                   => '',
+        'email'                      => 'not-an-email',
+        'phone'                      => '',
+        'message'                    => '',
         'agrees-for-data-processing' => false,
     ];
 
