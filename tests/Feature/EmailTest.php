@@ -47,3 +47,38 @@ test('contact us form validation triggers with invalid data', function () {
     // Make sure no email was sent
     Mail::assertNothingSent();
 });
+
+test('contact us form handles partial invalid data correctly', function () {
+    Mail::fake();
+
+    $partialInvalidData = [
+        'fullname'                   => 'Valid Name',
+        'email'                      => 'invalid-email', // Invalid email
+        'phone'                      => '12345678',
+        'message'                    => 'Valid message',
+        'agrees-for-data-processing' => true,
+    ];
+
+    $response = $this->post(route('contact-us', 'lv'), $partialInvalidData);
+
+    $response->assertSessionHasErrors(['email']);
+    $response->assertSessionDoesntHaveErrors(['fullname', 'phone', 'message']);
+    Mail::assertNothingSent();
+});
+
+test('contact us form requires data processing agreement', function () {
+    Mail::fake();
+
+    $dataWithoutAgreement = [
+        'fullname' => 'Test User',
+        'email'    => 'test@example.com',
+        'phone'    => '12345678',
+        'message'  => 'This is a test message',
+        // Missing agrees-for-data-processing
+    ];
+
+    $response = $this->post(route('contact-us', 'lv'), $dataWithoutAgreement);
+
+    $response->assertSessionHasErrors(['agrees-for-data-processing']);
+    Mail::assertNothingSent();
+});

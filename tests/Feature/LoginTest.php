@@ -31,3 +31,26 @@ it('returns redirect to admin dashboard if user has been authenticated', functio
     $response->assertStatus(200);
     $response->assertViewIs('admin.index');
 });
+
+it('logs out user successfully', function () {
+    $user = User::factory()->create();
+
+    $this->actingAs($user)
+         ->post('/logout')
+         ->assertRedirect('/');
+
+    $this->assertGuest();
+});
+
+it('remembers user when remember me is checked', function () {
+    $user = User::factory()->create();
+
+    $response = $this->post('/login', [
+        'email'    => $user->email,
+        'password' => 'password',
+        'remember' => true,
+    ]);
+
+    $response->assertRedirect(route('admin.index'));
+    $this->assertAuthenticatedAs($user);
+});
