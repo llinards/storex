@@ -20,7 +20,7 @@ test('contact us form sends email when submitted with valid data', function () {
     $response->assertSessionHas('success');
 
     Mail::assertSent(ContactUsSubmitted::class, function ($mail) use ($validData) {
-        return $mail->hasTo('info@storex.lv') &&
+        return $mail->hasTo('web_forms@storex.lv') &&
                $mail->data['fullname'] === $validData['fullname'] &&
                $mail->data['email'] === $validData['email'] &&
                $mail->data['phone'] === $validData['phone'] &&
