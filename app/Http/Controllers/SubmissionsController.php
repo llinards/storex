@@ -16,7 +16,7 @@ class SubmissionsController extends Controller
     {
         try {
             $data = $request->validated();
-            Mail::to('linards_lazdins@hotmail.com')->send(new ContactUsSubmitted($data));
+            Mail::to('kasiulionisgintaras@gmail.com')->send(new ContactUsSubmitted($data));
 
             Log::info('Message sent from contact us from');
 
