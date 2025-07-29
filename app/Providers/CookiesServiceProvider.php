@@ -13,7 +13,7 @@ class CookiesServiceProvider extends ServiceProvider
     protected function registerCookies(): void
     {
         Cookies::essentials()
-               ->session()
-               ->csrf();
+            ->session()
+            ->csrf();
     }
 }

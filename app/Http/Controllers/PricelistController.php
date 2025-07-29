@@ -17,7 +17,7 @@ class PricelistController extends Controller
     public function __invoke(): View
     {
         $productVariants = $this->productServices->getAllProductVariants()
-                                                 ->sortBy('product_id');
+            ->sortBy('product_id');
 
         return view('pricelist', compact('productVariants'));
     }
