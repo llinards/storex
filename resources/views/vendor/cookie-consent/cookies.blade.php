@@ -44,11 +44,15 @@
                                            id="cookies-policy-check-{{ $category->key() }}"/>
                                 @endif
                                 <span class="cookies__box">
-                                <strong class="cookies__label">{{ $category->title }}</strong>
-                            </span>
-                                @if($category->description)
-                                    <p class="cookies__info">{{ $category->description }}</p>
-                                @endif
+                                    @php
+                                        $categoryTitleKey = "cookieConsent::cookies.categories.{$category->key()}.title";
+                                    @endphp
+                                    <strong class="cookies__label">{{ __($categoryTitleKey) }}</strong>
+                                </span>
+                                @php
+                                    $categoryDescriptionKey = "cookieConsent::cookies.categories.{$category->key()}.description";
+                                @endphp
+                                <p class="cookies__info">{{ __($categoryDescriptionKey) }}</p>
                             </label>
 
                             <div class="cookies__expandable" id="cookies-policy-{{ $category->key() }}">
@@ -58,7 +62,18 @@
                                             <p class="cookies__name text-sm">{{ $cookie->name }}</p>
                                             <br/>
                                             <p class="cookies__duration text-sm">{{ \Carbon\CarbonInterval::minutes($cookie->duration)->cascade() }}</p>
-                                            @if($cookie->description)
+                                            @php
+                                                $translationKey = match($cookie->name) {
+                                                    'storex_structures_cookie_consent' => 'cookieConsent::cookies.defaults.consent',
+                                                    'storex_structures_session' => 'cookieConsent::cookies.defaults.session',
+                                                    'XSRF-TOKEN' => 'cookieConsent::cookies.defaults.csrf',
+                                                    default => null
+                                                };
+                                            @endphp
+
+                                            @if($translationKey)
+                                                <p class="cookies__description text-sm">{{ __($translationKey) }}</p>
+                                            @elseif($cookie->description)
                                                 <p class="cookies__description text-sm">{{ $cookie->description }}</p>
                                             @endif
                                         </li>
