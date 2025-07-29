@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCategoryRequest;
 use App\Models\Category;
 use App\Services\CategoryServices;
 use App\Services\FileServices;
@@ -42,7 +43,7 @@ class CategoriesController extends Controller
         return view('admin.categories.create');
     }
 
-    public function store(Request $data): RedirectResponse
+    public function store(StoreCategoryRequest $data): RedirectResponse
     {
         try {
             $this->categoryServices->storeCategory($data);
