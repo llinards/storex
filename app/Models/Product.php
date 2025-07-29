@@ -32,8 +32,8 @@ class Product extends Model
 
     public function resolveRouteBinding($value, $field = null)
     {
-        $locale           = request()->route('locale') ?? app()->getLocale();
-        $defaultLocale    = config('app.fallback_locale');
+        $locale = request()->route('locale') ?? app()->getLocale();
+        $defaultLocale = config('app.fallback_locale');
         $supportedLocales = array_keys(LaravelLocalization::getSupportedLocales());
 
         $model = $this->where("slug->{$locale}", $value)->first();
@@ -51,10 +51,10 @@ class Product extends Model
 
                     if ($localizedSlug && $localizedSlug !== $value) {
                         session()->flash('redirect_to_localized_url', [
-                            'locale'        => $locale,
+                            'locale' => $locale,
                             'category_slug' => $model->category->getTranslation('slug', $locale, false)
                                                ?? $model->category->getTranslation('slug', $defaultLocale),
-                            'product_slug'  => $localizedSlug,
+                            'product_slug' => $localizedSlug,
                         ]);
                     }
 

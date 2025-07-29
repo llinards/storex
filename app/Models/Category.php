@@ -28,7 +28,7 @@ class Category extends Model
 
     public function resolveRouteBinding($value, $field = null)
     {
-        $locale           = request()->route('locale') ?? app()->getLocale();
+        $locale = request()->route('locale') ?? app()->getLocale();
         $supportedLocales = array_keys(LaravelLocalization::getSupportedLocales());
 
         $model = $this->where("slug->{$locale}", $value)->first();
@@ -46,7 +46,7 @@ class Category extends Model
 
                     if ($localizedSlug && $localizedSlug !== $value) {
                         session()->flash('redirect_to_localized_category_url', [
-                            'locale'        => $locale,
+                            'locale' => $locale,
                             'category_slug' => $localizedSlug,
                         ]);
                     }

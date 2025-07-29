@@ -16,7 +16,7 @@ it('returns to login page when trying to access dashboard', function () {
 
 it('returns a validation message if email and/or password is incorrect', function () {
     $response = $this->post('/login', [
-        'email'    => 'wrong@example.com',
+        'email' => 'wrong@example.com',
         'password' => 'wrongpassword',
     ]);
 
@@ -36,8 +36,8 @@ it('logs out user successfully', function () {
     $user = User::factory()->create();
 
     $this->actingAs($user)
-         ->post('/logout')
-         ->assertRedirect('/');
+        ->post('/logout')
+        ->assertRedirect('/');
 
     $this->assertGuest();
 });
@@ -46,7 +46,7 @@ it('remembers user when remember me is checked', function () {
     $user = User::factory()->create();
 
     $response = $this->post('/login', [
-        'email'    => $user->email,
+        'email' => $user->email,
         'password' => 'password',
         'remember' => true,
     ]);

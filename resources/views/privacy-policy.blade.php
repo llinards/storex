@@ -31,7 +31,22 @@
                         @foreach ($category->getCookies() as $cookie)
                             <tr class="border-b-1 border-storex-grey text-center">
                                 <td class="">{{ $cookie->name }}</td>
-                                <td class="">{{ $cookie->description }}</td>
+                                <td class="">
+                                    @php
+                                        $translationKey = match($cookie->name) {
+                                            'storex_structures_cookie_consent' => 'cookieConsent::cookies.defaults.consent',
+                                            'storex_structures_session' => 'cookieConsent::cookies.defaults.session',
+                                            'XSRF-TOKEN' => 'cookieConsent::cookies.defaults.csrf',
+                                            default => null
+                                        };
+                                    @endphp
+
+                                    @if($translationKey)
+                                        {{ __($translationKey) }}
+                                    @elseif($cookie->description)
+                                        {{ $cookie->description }}
+                                    @endif
+                                </td>
                                 <td class="">
                                     {{ \Carbon\CarbonInterval::minutes($cookie->duration)->cascade() }}
                                 </td>
@@ -39,6 +54,7 @@
                         @endforeach
                     @endforeach
                     </tbody>
+
                 </table>
             </div>
 

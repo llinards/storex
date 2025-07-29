@@ -7,10 +7,10 @@ test('contact us form sends email when submitted with valid data', function () {
     Mail::fake();
 
     $validData = [
-        'fullname'                   => 'Test User',
-        'email'                      => 'test@example.com',
-        'phone'                      => '12345678',
-        'message'                    => 'This is a test message',
+        'fullname' => 'Test User',
+        'email' => 'test@example.com',
+        'phone' => '12345678',
+        'message' => 'This is a test message',
         'agrees-for-data-processing' => true,
     ];
 
@@ -32,10 +32,10 @@ test('contact us form validation triggers with invalid data', function () {
     Mail::fake();
 
     $invalidData = [
-        'fullname'                   => '',
-        'email'                      => 'not-an-email',
-        'phone'                      => '',
-        'message'                    => '',
+        'fullname' => '',
+        'email' => 'not-an-email',
+        'phone' => '',
+        'message' => '',
         'agrees-for-data-processing' => false,
     ];
 
@@ -52,10 +52,10 @@ test('contact us form handles partial invalid data correctly', function () {
     Mail::fake();
 
     $partialInvalidData = [
-        'fullname'                   => 'Valid Name',
-        'email'                      => 'invalid-email', // Invalid email
-        'phone'                      => '12345678',
-        'message'                    => 'Valid message',
+        'fullname' => 'Valid Name',
+        'email' => 'invalid-email', // Invalid email
+        'phone' => '12345678',
+        'message' => 'Valid message',
         'agrees-for-data-processing' => true,
     ];
 
@@ -71,9 +71,9 @@ test('contact us form requires data processing agreement', function () {
 
     $dataWithoutAgreement = [
         'fullname' => 'Test User',
-        'email'    => 'test@example.com',
-        'phone'    => '12345678',
-        'message'  => 'This is a test message',
+        'email' => 'test@example.com',
+        'phone' => '12345678',
+        'message' => 'This is a test message',
         // Missing agrees-for-data-processing
     ];
 
