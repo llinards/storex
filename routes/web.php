@@ -95,7 +95,7 @@ Route::group(
             [CategoriesController::class, 'update']
         )->name('admin.category.update');
         Route::delete(
-            '/produkcija/rediget/{category}',
+            '/produkcija/dzest/{category}',
             [CategoriesController::class, 'destroy']
         )->name('admin.category.destroy');
 
