@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
 use App\Services\CategoryServices;
 use App\Services\FileServices;
 use App\Services\ProductServices;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
@@ -75,7 +75,7 @@ class CategoriesController extends Controller
         return view('admin.categories.show', compact('category'));
     }
 
-    public function update(Request $data, int $id): RedirectResponse
+    public function update(UpdateCategoryRequest $data, int $id): RedirectResponse
     {
         try {
             $this->categoryServices->updateCategory($data, $id);
