@@ -58,8 +58,9 @@ class CategoryServices
     {
         $locale = $this->getLocale();
         $category = $this->getCategory($id);
+        $categoryImage = basename($data['category_image'][0]);
 
-        if ($data['category_image'] !== $category->image) {
+        if ($categoryImage !== $category->image) {
             $this->fileServices->destroyFile('categories/'.$category->image);
             $this->fileServices->storeMedia($data['category_image'], 'categories');
         }
@@ -67,7 +68,7 @@ class CategoryServices
             'title' => [$locale => $data->category_title],
             'slug' => [$locale => $this->setSlug($data->category_title)],
             'description' => [$locale => $data->category_description],
-            'image' => basename($data['category_image'][0]),
+            'image' => $categoryImage,
             'is_featured' => isset($data['is_featured']),
             'is_available' => isset($data['is_available']),
             'is_accessory' => isset($data['is_accessory']),

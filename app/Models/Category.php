@@ -26,6 +26,12 @@ class Category extends Model
         return 'slug';
     }
 
+    protected $casts = [
+        'is_available' => 'boolean',
+        'is_accessory' => 'boolean',
+        'is_featured' => 'boolean',
+    ];
+
     public function resolveRouteBinding($value, $field = null)
     {
         $locale = request()->route('locale') ?? app()->getLocale();

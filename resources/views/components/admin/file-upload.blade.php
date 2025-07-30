@@ -52,7 +52,7 @@
 
     const optionsConfig = {
         category_image: {
-            labelIdle: 'Pievienot bildi',
+            labelIdle: 'Pievieno kategorijas titulbildi.',
             maxFileSize: '500KB',
             acceptedFileTypes: ['image/*'],
         },
