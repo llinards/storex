@@ -9,16 +9,21 @@ class ProductVariantAttachmentFactory extends Factory
 {
     public function definition(): array
     {
-        if (! Storage::disk('public')->exists('attachments')) {
-            Storage::disk('public')->makeDirectory('attachments');
+        // Use the default disk instead of hardcoded 'public'
+        $disk = config('filesystems.default', 'local');
+
+        if (! Storage::disk($disk)->exists('attachments')) {
+            Storage::disk($disk)->makeDirectory('attachments');
         }
 
         return [
-            'filename' => basename($this->faker->file(
-                storage_path('factory'),
-                storage_path('app/public/attachments'),
-                false
-            )),
+            'filename' => app()->environment('testing')
+                ? 'test-attachment-'.$this->faker->uuid().'.pdf'
+                : basename($this->faker->file(
+                    storage_path('factory'),
+                    storage_path('app/public/attachments'),
+                    false
+                )),
         ];
     }
 }

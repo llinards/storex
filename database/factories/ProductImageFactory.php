@@ -13,8 +13,18 @@ class ProductImageFactory extends Factory
         $faker = \Faker\Factory::create();
         $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
-        if (! Storage::disk('public')->exists('products')) {
-            Storage::disk('public')->makeDirectory('products');
+        // Use the default disk instead of hardcoded 'public'
+        $disk = config('filesystems.default', 'local');
+
+        if (! Storage::disk($disk)->exists('products')) {
+            Storage::disk($disk)->makeDirectory('products');
+        }
+
+        // For testing with Storage::fake(), we don't need actual images
+        if (app()->environment('testing')) {
+            return [
+                'filename' => 'test-image-'.$this->faker->uuid().'.jpg',
+            ];
         }
 
         return [

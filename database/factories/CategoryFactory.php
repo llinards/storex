@@ -17,16 +17,21 @@ class CategoryFactory extends Factory
         $title = $this->faker->sentence(2);
         $slug = Str::slug($title);
 
-        if (! Storage::disk('public')->exists('categories')) {
-            Storage::disk('public')->makeDirectory('categories');
+        // Use the default disk instead of hardcoded 'public'
+        $disk = config('filesystems.default', 'local');
+
+        if (! Storage::disk($disk)->exists('categories')) {
+            Storage::disk($disk)->makeDirectory('categories');
         }
 
         return [
-            'image' => basename($faker->image(
-                dir: storage_path('app/public/categories'),
-                width: 800,
-                height: 600
-            )),
+            'image' => app()->environment('testing')
+                ? 'test-category-'.$this->faker->uuid().'.jpg'
+                : basename($faker->image(
+                    dir: storage_path('app/public/categories'),
+                    width: 800,
+                    height: 600
+                )),
             'title' => [
                 'en' => '(EN) '.$title,
                 'lv' => '(LV) '.$title,
