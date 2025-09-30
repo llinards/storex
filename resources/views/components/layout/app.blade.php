@@ -39,7 +39,7 @@
         property="og:title"
         content="{{ isset($title) ? $title . ' | ' . config('app.name') : config('app.name') }}"
     />
-    <meta property="og:image" content="{{ $image ?? asset('images/storex-logo.png') }}"/>
+    <meta property="og:image" content="{{ $image ?? asset('images/storex-logo-og.png') }}"/>
     <meta
         name="description"
         content="{{ $description ?? 'Ja Jums pašlaik ir maza saimniecība, bet Jūs plānojat to nākotnē paplašināt - izvēlieties tādu izmēru, kāds ir nepieciešams pašlaik, un nākotnē Jūs vienmēr varēsiet to pagarināt. Viena modeļa tenta angāriem, kas savienoti savā starpā, nav spraugu, plaisu un detaļas skaisti saplūst kopā. Jau vairākus gadus mūsu kādreizējie klienti ik pa laikam sazinās ar mums, lūdzot pagarināt viņu nopirkto angāru.' }}"
@@ -49,7 +49,7 @@
         content="{{ $description ?? 'Ja Jums pašlaik ir maza saimniecība, bet Jūs plānojat to nākotnē paplašināt - izvēlieties tādu izmēru, kāds ir nepieciešams pašlaik, un nākotnē Jūs vienmēr varēsiet to pagarināt. Viena modeļa tenta angāriem, kas savienoti savā starpā, nav spraugu, plaisu un detaļas skaisti saplūst kopā. Jau vairākus gadus mūsu kādreizējie klienti ik pa laikam sazinās ar mums, lūdzot pagarināt viņu nopirkto angāru.' }}"
     />
 
-    <meta property="og:url" content=" {{ Request::url() }}"/>
+    <meta property="og:url" content="{{ Request::url() }}"/>
     <meta property="og:type" content="website"/>
 
     <title>
