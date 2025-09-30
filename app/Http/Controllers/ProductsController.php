@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Services\CategoryServices;
@@ -44,7 +45,7 @@ class ProductsController extends Controller
         return view('admin.products.create', compact('categories'));
     }
 
-    public function store(Request $data): RedirectResponse
+    public function store(StoreProductRequest $data): RedirectResponse
     {
         try {
             $this->productServices->storeProduct($data);

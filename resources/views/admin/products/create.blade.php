@@ -15,21 +15,25 @@
                             data-is-accessory="{{ $category->is_accessory }}">{{ $category->title }}</option>
                 @endforeach
             </select>
+            <x-input-error field="category_id"/>
         </div>
         <div class="mb-4">
             <label for="product_title" class="mb-2 block font-medium text-gray-700">@lang('Produkta nosaukums')</label>
             <input type="text" id="product_title" name="product_title"
                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <x-input-error field="product_title"/>
         </div>
         <div id="price-block" class="mb-2 md:w-1/3 hidden">
             <label for="product_price"
                    class="mb-2 block font-medium text-gray-700">@lang('Cena (bez EUR zīmes)')</label>
             <input type="text" id="product_price" name="product_price"
                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <x-input-error field="product_price"/>
         </div>
         <div class="mb-4">
             <label for="product_description" class="mb-2 block font-medium text-gray-700">@lang('Apraksts')</label>
             <x-admin.description-text-area name="product_description"/>
+            <x-input-error field="product_description"/>
         </div>
         <h4 class="font-medium text-gray-700 mb-2">@lang('Produkta kopsavilkums')</h4>
         <div id="product-variant-summary" class="mb-4 flex gap-2">
@@ -39,6 +43,7 @@
                 <input type="text" id="available_length" name="available_length"
                        placeholder="No/līdz"
                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                <x-input-error field="available_length"/>
             </div>
             <div>
                 <label for="available_width"
@@ -46,6 +51,7 @@
                 <input type="text" id="available_width" name="available_width"
                        placeholder="No/līdz"
                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                <x-input-error field="available_width"/>
             </div>
             <div>
                 <label for="available_height"
@@ -53,6 +59,7 @@
                 <input type="text" id="available_height" name="available_height"
                        placeholder="No/līdz"
                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                <x-input-error field="available_height"/>
             </div>
             <div>
                 <label for="available_area"
@@ -60,11 +67,12 @@
                 <input type="text" id="available_area" name="available_area"
                        placeholder="No/līdz"
                        class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                <x-input-error field="available_area"/>
             </div>
         </div>
         <div class="mb-4">
             <label for="product_images" class="mb-2 block font-medium text-gray-700">@lang('Bildes')</label>
-            <x-admin.file-upload id="product_images" name="product_images" required/>
+            <x-admin.file-upload id="product_images" name="product_images"/>
         </div>
         <div id="product-variant-block" class="mb-4 hidden">
             <div id="variant-container"></div>
