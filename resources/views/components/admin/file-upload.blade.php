@@ -46,6 +46,7 @@
         allowFileSizeValidation: true,
         allowReorder: true,
         allowImagePreview: true,
+        imagePreviewHeight: 150,
         files: preloadedFiles,
         credits: false,
     };

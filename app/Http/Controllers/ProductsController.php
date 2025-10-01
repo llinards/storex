@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Services\CategoryServices;
 use App\Services\FileServices;
 use App\Services\ProductServices;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
@@ -44,7 +45,7 @@ class ProductsController extends Controller
         return view('admin.products.create', compact('categories'));
     }
 
-    public function store(Request $data): RedirectResponse
+    public function store(StoreProductRequest $data): RedirectResponse
     {
         try {
             $this->productServices->storeProduct($data);
@@ -74,7 +75,7 @@ class ProductsController extends Controller
         return view('admin.products.show', compact('product', 'categories'));
     }
 
-    public function update(Request $data, int $id): RedirectResponse
+    public function update(UpdateProductRequest $data, int $id): RedirectResponse
     {
         try {
             $this->productServices->updateProduct($data, $id);

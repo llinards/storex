@@ -15,11 +15,13 @@
                     <option value="{{ $category->id }}">{{ $category->title }}</option>
                 @endforeach
             </select>
+            <x-input-error field="category_id"/>
         </div>
         <div class="mb-4">
             <label for="product_title" class="mb-2 block font-medium text-gray-700">@lang('Produkta nosaukums')</label>
             <input type="text" id="product_title" name="product_title" value="{{ $product->title }}"
                    class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <x-input-error field="product_title"/>
         </div>
         @if($product->category->is_accessory)
             <div class="mb-2 md:w-1/3">
@@ -33,6 +35,7 @@
             <label for="product_description" class="mb-2 block font-medium text-gray-700">@lang('Apraksts')</label>
             <x-admin.description-text-area
                 name="product_description">{{ $product->description }}</x-admin.description-text-area>
+            <x-input-error field="product_description"/>
         </div>
         @if(!$product->category->is_accessory)
             <h4 class="font-medium text-gray-700 mb-2">@lang('Produkta kopsavilkums')</h4>
@@ -44,6 +47,7 @@
                            placeholder="No/līdz"
                            value="{{ $product->available_length }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <x-input-error field="available_length"/>
                 </div>
                 <div>
                     <label for="available_width"
@@ -52,6 +56,7 @@
                            placeholder="No/līdz"
                            value="{{ $product->available_width }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <x-input-error field="available_width"/>
                 </div>
                 <div>
                     <label for="available_height"
@@ -60,6 +65,7 @@
                            placeholder="No/līdz"
                            value="{{ $product->available_height }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <x-input-error field="available_height"/>
                 </div>
                 <div>
                     <label for="available_area"
@@ -68,6 +74,7 @@
                            placeholder="No/līdz"
                            value="{{ $product->available_area }}"
                            class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <x-input-error field="available_area"/>
                 </div>
             </div>
         @endif
@@ -75,7 +82,7 @@
             <label for="product_images" class="mb-2 block font-medium text-gray-700">@lang('Bildes')</label>
             <x-admin.file-upload
                 :images="$product->images->pluck('filename')->map(fn($filename) => '/products/' . $filename)->toArray()"
-                id="product_images" name="product_images" required/>
+                id="product_images" name="product_images"/>
         </div>
 
         <div id="product-variant-block" class="mb-4">
@@ -117,10 +124,9 @@
             <div class="mb-4">
                 <label for="product_additional_info"
                        class="mb-2 block font-medium text-gray-700">@lang('Papildus informācija')</label>
-                <textarea id="product_additional_info" name="product_additional_info"
-                          class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  {{ $product->additional_info }}
-                </textarea>
+                <x-admin.description-text-area
+                    name="product_additional_info">{{ $product->additional_info }}</x-admin.description-text-area>
+                <x-input-error field="product_additional_info"/>
             </div>
         @endif
         <div class="mb-4 flex gap-4">
