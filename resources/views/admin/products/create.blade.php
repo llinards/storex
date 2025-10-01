@@ -79,6 +79,12 @@
             <button type="button" class="bg-green-500 text-white px-4 py-2 rounded-lg"
                     onclick="addVariantGroup()">@lang('Pievienot variantus/modeļus')</button>
         </div>
+        <div id="product_additional_info" class="mb-4">
+            <label for="product_additional_info"
+                   class="mb-2 block font-medium text-gray-700">@lang('Papildus informācija')</label>
+            <x-admin.description-text-area name="product_additional_info"/>
+            <x-input-error field="product_additional_info"/>
+        </div>
         <div class="mb-4 flex gap-4">
             <div class="flex items-center">
                 <input type="checkbox" id="is_available" name="is_available"
@@ -103,16 +109,19 @@
             const showPrice = selectedCategory.getAttribute('data-is-accessory');
             const priceBlock = document.getElementById('price-block');
             const productVariantBlock = document.getElementById('product-variant-block');
+            const productAdditionalBlock = document.getElementById('product_additional_info');
             const productVariantSummaryBlock = document.getElementById('product-variant-summary');
 
             if (showPrice === '1') {
                 productVariantBlock.classList.add('hidden');
                 priceBlock.classList.remove('hidden');
                 productVariantSummaryBlock.classList.add('hidden');
+                productAdditionalBlock.classList.add('hidden');
             } else {
                 productVariantBlock.classList.remove('hidden');
                 priceBlock.classList.add('hidden');
                 productVariantSummaryBlock.classList.remove('hidden');
+                productAdditionalBlock.classList.remove('hidden');
             }
         }
 

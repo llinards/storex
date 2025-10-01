@@ -1,5 +1,5 @@
 <textarea
-    id="description-text-area"
+    id="description-text-area-{{ $name }}"
     name="{{ $name }}"
     class="w-full rounded-lg border px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 >
@@ -31,5 +31,5 @@
         },
     };
 
-    ClassicEditor.create(document.querySelector('#description-text-area'), editorConfig);
+    ClassicEditor.create(document.querySelector('#description-text-area-{{ $name }}'), editorConfig);
 </script>

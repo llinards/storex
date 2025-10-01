@@ -25,6 +25,7 @@ class UpdateProductRequest extends FormRequest
             'available_width' => 'nullable|string',
             'available_height' => 'nullable|string',
             'available_area' => 'nullable|string',
+            'product_additional_info' => 'nullable|string',
         ];
     }
 
@@ -44,6 +45,7 @@ class UpdateProductRequest extends FormRequest
             'available_width.string' => __('Produkta platums jābūt teksta tipam.'),
             'available_height.string' => __('Produkta augstums jābūt teksta tipam.'),
             'available_area.string' => __('Produkta laukums jābūt teksta tipam.'),
+            'product_additional_info.string' => __('Produkta papildus informācija jābūt teksta tipam.'),
         ];
     }
 }
