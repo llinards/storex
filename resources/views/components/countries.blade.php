@@ -363,7 +363,7 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">JSC “AgroSens Oy”</h2>
-        <p class="pb-4">Turku - Finland</p>
+        <p class="pb-4">Lugupidamisega</p>
         <ul>
             <li>
                 <a href="tel:+358400600206" class="flex items-center text-sm">
