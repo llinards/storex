@@ -25,7 +25,7 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">Life By You OÜ</h2>
-        <p class="pb-4">Vana-papli tee 2, Lemmatsi Kambja vald, Tartumaa 61704 Estonia</p>
+        <p class="pb-4">Vana-papli tee 2, Lemmatsi Kambja vald, Tartumaa 61704<br/>Estonia</p>
         <ul>
             <li>
                 <a href="tel:+3725502345" class="flex items-center text-sm">
@@ -102,7 +102,9 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">UAB "STOREX Structures Lietuva"</h2>
-        <p class="pb-4">Vana-papli tee 2, Lemmatsi Kambja vald, Tartumaa 61704 Estonia</p>
+        <p class="pb-4">Elektrėnų g. 10E<br/>
+            51218 Kaunas<br/>
+            Lietuva</p>
         <ul>
             <li>
                 <a href="tel:+37068912072" class="flex items-center text-sm">
@@ -186,16 +188,16 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">PROFIMET Sp. z o.o.</h2>
-        <p class="pb-4">Ul. Nieszawska 1/214 61-022 Poznań, Rzeczpospolita Polska</p>
+        <p class="pb-4">Ul. Nieszawska 1/214 61-022 Poznań, Rzeczpospolita<br/>Polska</p>
         <ul>
             <li>
-                <a href="tel:+37068912072" class="flex items-center text-sm">
+                <a href="tel:+48573580712" class="flex items-center text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon mr-2 h-6 w-6 shrink-0" viewBox=" 0 0 256 256">
                         <path
                             d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
                         ></path>
                     </svg>
-                    <span class="transition-all duration-200 hover:text-storex-red">+370 689 12072</span>
+                    <span class="transition-all duration-200 hover:text-storex-red">+48 (573) 580-71-2</span>
                 </a>
             </li>
             <li>
@@ -279,7 +281,7 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">STOREX STRUCTURES S.R.L.</h2>
-        <p class="pb-4">strada Garofitei 20, sat Ostratu, com. Corbeanca, judetul Ilfov</p>
+        <p class="pb-4">strada Garofitei 20, sat Ostratu, com. Corbeanca, judetul Ilfov<br/>Romania</p>
         <ul>
             <li>
                 <a href="tel:+40784841777" class="flex items-center text-sm">
@@ -362,17 +364,19 @@
                 </g>
             </g>
         </svg>
-        <h2 class="py-4 text-xl text-storex-red">JSC “AgroSens Oy”</h2>
-        <p class="pb-4">Lugupidamisega</p>
+        <h2 class="py-4 text-xl text-storex-red">Life By You OÜ</h2>
+        <p class="pb-4">Vanapapli tee 4, Lemmatsi<br/>
+            Kambja vald, Tartumaa<br/>
+            Estonia</p>
         <ul>
             <li>
-                <a href="tel:+358400600206" class="flex items-center text-sm">
+                <a href="tel:+358405299399" class="flex items-center text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon mr-2 h-6 w-6 shrink-0" viewBox=" 0 0 256 256">
                         <path
                             d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
                         ></path>
                     </svg>
-                    <span class="transition-all duration-200 hover:text-storex-red">+358 400 600 206</span>
+                    <span class="transition-all duration-200 hover:text-storex-red">+358 40 5299399</span>
                 </a>
             </li>
             <li>
@@ -456,7 +460,7 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">Storex Structures GmbH</h2>
-        <p class="pb-4">Wittestraße 30K, 13509 Berlin</p>
+        <p class="pb-4">Wittestraße 30K, 13509<br/>Berlin</p>
         <ul>
             <li>
                 <a href="tel:+493053478199" class="flex items-center text-sm">
@@ -476,8 +480,7 @@
                         ></path>
                     </svg>
                     <span class="transition-all duration-200 hover:text-storex-red">
-                        info
-                        @storex-structures.com
+                        info@storex-structures.com
                     </span>
                 </a>
             </li>
@@ -561,7 +564,7 @@
             </g>
         </svg>
         <h2 class="py-4 text-xl text-storex-red">STOREX Structures</h2>
-        <p class="pb-4">Madrid, Calle Ronda de Segovia 35</p>
+        <p class="pb-4">Calle Ronda de Segovia 35<br/>Madrid</p>
         <ul>
             <li>
                 <a href="tel:+34696205633" class="flex items-center text-sm">
