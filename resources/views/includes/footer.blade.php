@@ -116,8 +116,13 @@
                 @lang('Visas tiesības aizsargātas').
             </p>
             <p class="text-small">
-                @lang('Mājaslapu izstrādāja')
-                <a class="text-small underline" target="_blank" href="https://slmedia.lv">S&L Media SIA</a>.
+                @lang('Dizains:')
+                <a class="text-small underline" target="_blank" href="https://simpledesign.lv">SIMPLE
+                    DESIGN</a>
+            </p>
+            <p class="text-small">
+                @lang('Izstrādāja:')
+                <a class="text-small underline" target="_blank" href="https://slmedia.lv">S&L MEDIA</a>
             </p>
         </div>
     </div>
