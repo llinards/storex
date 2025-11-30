@@ -30,7 +30,7 @@ it('returns appropriate content type headers', function () {
     $response = $this->get(route('about'));
 
     $response->assertStatus(200)
-        ->assertHeader('Content-Type', 'text/html; charset=UTF-8');
+        ->assertHeader('Content-Type', 'text/html; charset=utf-8');
 });
 
 it('loads without errors on different screen sizes', function () {
