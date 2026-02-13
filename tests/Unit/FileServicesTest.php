@@ -63,23 +63,16 @@ describe('moveFile', function () {
 });
 
 describe('destroyFile', function () {
-    it('deletes a file from storage', function () {
+    it('deletes file from storage and logs the deletion', function () {
         Storage::disk('public')->put('uploads/to-delete.jpg', 'content');
-        Log::shouldReceive('info')->once()->with('File deleted: uploads/to-delete.jpg');
+
+        Log::shouldReceive('info')
+            ->once()
+            ->with('File deleted: uploads/to-delete.jpg');
 
         $this->fileServices->destroyFile('uploads/to-delete.jpg');
 
         Storage::disk('public')->assertMissing('uploads/to-delete.jpg');
-    });
-
-    it('logs the deletion', function () {
-        Storage::disk('public')->put('test/file.jpg', 'content');
-
-        Log::shouldReceive('info')
-            ->once()
-            ->with('File deleted: test/file.jpg');
-
-        $this->fileServices->destroyFile('test/file.jpg');
     });
 });
 

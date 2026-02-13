@@ -107,62 +107,25 @@ it('creates a new category with valid data', function () {
     Storage::disk('local')->assertExists($category->image_path);
 });
 
-it('validates category title is required', function () {
-    Storage::fake('local');
-
-    $categoryData = [
-        'category_title' => '',
-        'category_description' => 'This is a test category description',
-        'category_image' => [UploadedFile::fake()->image('category.jpg')],
-    ];
-
-    $this->actingAs($this->user)
-        ->post(route('admin.category.store'), $categoryData)
-        ->assertSessionHasErrors(['category_title']);
-});
-
-it('validates category description is required', function () {
-    Storage::fake('local');
-
-    $categoryData = [
-        'category_title' => 'Test Category',
-        'category_description' => '',
-        'category_image' => [UploadedFile::fake()->image('category.jpg')],
-    ];
-
-    $this->actingAs($this->user)
-        ->post(route('admin.category.store'), $categoryData)
-        ->assertSessionHasErrors(['category_description']);
-});
-
-it('validates category title maximum length', function () {
-    Storage::fake('local');
-
-    $categoryData = [
-        'category_title' => str_repeat('A', 101), // Over 100 chars
-        'category_description' => 'This is a test category description',
-        'category_image' => [UploadedFile::fake()->image('category.jpg')],
-    ];
-
-    $this->actingAs($this->user)
-        ->post(route('admin.category.store'), $categoryData)
-        ->assertSessionHasErrors(['category_title']);
-});
-
-it('validates category area maximum length', function () {
+it('validates required fields', function (string $field, mixed $value) {
     Storage::fake('local');
 
     $categoryData = [
         'category_title' => 'Test Category',
         'category_description' => 'This is a test category description',
-        'category_area' => str_repeat('A', 101), // Over 100 chars
         'category_image' => [UploadedFile::fake()->image('category.jpg')],
+        $field => $value,
     ];
 
     $this->actingAs($this->user)
         ->post(route('admin.category.store'), $categoryData)
-        ->assertSessionHasErrors(['category_area']);
-});
+        ->assertSessionHasErrors([$field]);
+})->with([
+    'empty title' => ['category_title', ''],
+    'empty description' => ['category_description', ''],
+    'title too long' => ['category_title', str_repeat('A', 101)],
+    'area too long' => ['category_area', str_repeat('A', 101)],
+]);
 
 it('shows admin category detail page', function () {
     $category = Category::factory()->create();

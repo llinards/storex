@@ -1,41 +1,38 @@
 <?php
 
-it('returns a successful response', fn () => $this->get('/lv')->assertStatus(200));
+it('returns a successful response for home page', fn () => $this->get('/lv')->assertSuccessful());
 
-// it('redirects to the default locale', fn() => $this->get('/')->assertRedirect('/lv'));
+it('returns pricelist page', fn () => $this->get(route('pricelist'))->assertSuccessful());
 
-it('returns a page with a pricelist', fn () => $this->get(route('pricelist'))->assertStatus(200));
+it('returns faq page', fn () => $this->get(route('faq'))->assertSuccessful());
 
-it('returns a faq page', fn () => $this->get(route('faq'))->assertStatus(200));
+it('returns contact us page', fn () => $this->get(route('contacts'))->assertSuccessful());
 
-it('returns a contact us page', fn () => $this->get(route('contacts'))->assertStatus(200));
+it('returns about us page', fn () => $this->get(route('about'))->assertSuccessful());
 
-it('returns an about us page', fn () => $this->get(route('about'))->assertStatus(200));
+it('returns privacy policy page', fn () => $this->get(route('privacy-policy'))->assertSuccessful());
 
-it('returns a privacy policy page', fn () => $this->get(route('privacy-policy'))->assertStatus(200));
-
-it('return english locale using en prefix', function () {
+it('uses english locale with en prefix', function () {
     $this->refreshApplicationWithLocale('en');
-    $response = $this->get('/en');
-    $response->assertOk();
+
+    $this->get('/en')
+        ->assertOk();
+
     expect(app()->getLocale())->toBe('en');
 });
 
 it('returns 404 for invalid locale', function () {
-    $response = $this->get('/invalid-locale');
-    $response->assertStatus(404);
+    $this->get('/invalid-locale')->assertNotFound();
 });
 
-it('returns appropriate content type headers', function () {
-    $response = $this->get(route('about'));
-
-    $response->assertStatus(200)
+it('returns correct content type header', function () {
+    $this->get(route('about'))
+        ->assertSuccessful()
         ->assertHeader('Content-Type', 'text/html; charset=utf-8');
 });
 
-it('loads without errors on different screen sizes', function () {
-    $response = $this->get('/lv');
-
-    $response->assertStatus(200)
+it('includes viewport meta tag for responsive design', function () {
+    $this->get('/lv')
+        ->assertSuccessful()
         ->assertSee('<meta name="viewport"', false);
 });
