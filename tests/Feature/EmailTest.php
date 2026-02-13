@@ -3,7 +3,7 @@
 use App\Mail\ContactUsSubmitted;
 use Illuminate\Support\Facades\Mail;
 
-test('contact us form sends email when submitted with valid data', function () {
+it('sends email when contact form submitted with valid data', function () {
     Mail::fake();
 
     $validData = [
@@ -28,7 +28,7 @@ test('contact us form sends email when submitted with valid data', function () {
     });
 });
 
-test('contact us form validation triggers with invalid data', function () {
+it('validates contact form with invalid data', function () {
     Mail::fake();
 
     $invalidData = [
@@ -41,19 +41,16 @@ test('contact us form validation triggers with invalid data', function () {
 
     $response = $this->post(route('contact-us', 'lv'), $invalidData);
 
-    // Verify we're redirected back with errors
     $response->assertSessionHasErrors(['fullname', 'email', 'phone', 'agrees-for-data-processing']);
-
-    // Make sure no email was sent
     Mail::assertNothingSent();
 });
 
-test('contact us form handles partial invalid data correctly', function () {
+it('validates contact form with partial invalid data', function () {
     Mail::fake();
 
     $partialInvalidData = [
         'fullname' => 'Valid Name',
-        'email' => 'invalid-email', // Invalid email
+        'email' => 'invalid-email',
         'phone' => '12345678',
         'message' => 'Valid message',
         'agrees-for-data-processing' => true,
@@ -66,7 +63,7 @@ test('contact us form handles partial invalid data correctly', function () {
     Mail::assertNothingSent();
 });
 
-test('contact us form requires data processing agreement', function () {
+it('requires data processing agreement on contact form', function () {
     Mail::fake();
 
     $dataWithoutAgreement = [
@@ -74,11 +71,28 @@ test('contact us form requires data processing agreement', function () {
         'email' => 'test@example.com',
         'phone' => '12345678',
         'message' => 'This is a test message',
-        // Missing agrees-for-data-processing
     ];
 
     $response = $this->post(route('contact-us', 'lv'), $dataWithoutAgreement);
 
     $response->assertSessionHasErrors(['agrees-for-data-processing']);
     Mail::assertNothingSent();
+});
+
+it('handles email sending error gracefully', function () {
+    Mail::shouldReceive('to')
+        ->andThrow(new \Exception('Mail server error'));
+
+    $validData = [
+        'fullname' => 'Test User',
+        'email' => 'test@example.com',
+        'phone' => '12345678',
+        'message' => 'This is a test message',
+        'agrees-for-data-processing' => true,
+    ];
+
+    $response = $this->post(route('contact-us', 'lv'), $validData);
+
+    $response->assertRedirect();
+    $response->assertSessionHas('error');
 });
