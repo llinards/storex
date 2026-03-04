@@ -18,8 +18,13 @@
                 "/Applications/Herd.app/Contents/Resources/herd-mcp.phar"
             ],
             "environment": {
-                "SITE_PATH": "/Users/linardslazdins/Developer/sites/storex"
+                "SITE_PATH": "/Users/linardslazdins/Development/sites/storex"
             }
+        },
+        "nightwatch": {
+            "type": "remote",
+            "enabled": true,
+            "url": "https://nightwatch.laravel.com/mcp"
         }
     }
 }
