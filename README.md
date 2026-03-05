@@ -1,8 +1,6 @@
-# STOREX
+# Storex Structures
 
-A multi-language product catalog website for tent products.
-
-![Storex](https://storex.lv/images/placeholder-tent-1.jpg)
+A multilingual product catalog and company website for Storex Structures — a platform for tents, marquees, and related accessories.
 
 ## Production Website
 
@@ -10,117 +8,106 @@ Visit the live website at [https://storex.lv](https://storex.lv)
 
 ## About
 
-Storex is a platform for tents, marquees, and related accessories. The platform allows users to browse products by
-categories, view detailed product information, and request quotes or make inquiries. The website is fully
-multi-language, supporting multiple locales for international customers.
+Storex is a product catalog platform that allows users to browse products by categories, view detailed product information with multiple variants and specifications, and submit inquiries via a contact form. The website is fully multilingual, supporting multiple locales for international customers.
 
 ## Features
 
-- **Multi-language Support**: Complete translation system for all content using Spatie's translatable package
-- **Product Catalog**: Hierarchical category and product structure with detailed product information
-- **Product Variants**: Support for multiple variants of the same product with different specifications
-- **Image Gallery**: Multiple images per product with gallery view
-- **Admin Panel**: Secure admin interface for managing categories, products, and content
-- **Contact Form**: Spam-protected contact form with honeypot technology
-- **Responsive Design**: Mobile-friendly interface using Tailwind CSS
-- **SEO Friendly**: Optimized URLs and metadata for search engines
-- **GDPR Compliant**: Cookie consent management
+- **Multi-language Support** — full translation system using Spatie Translatable (JSON columns) and mcamara/laravel-localization for locale-based routing
+- **Product Catalog** — hierarchical categories and products with detailed specifications
+- **Product Variants** — multiple variants per product with dimensions, pricing, and downloadable attachments
+- **Image Gallery** — multiple images per product with lightbox (Fancyapps UI)
+- **Admin Panel** — secure admin interface for managing categories, products, and content with CKEditor rich text editing and FilePond file uploads
+- **Blog** — articles section for content marketing
+- **Pricelist** — downloadable pricelist page
+- **FAQ** — frequently asked questions section
+- **Contact Form** — spam-protected with Spatie Honeypot
+- **Cookie Consent** — GDPR-compliant cookie management (Whitecube Laravel Cookie Consent)
+- **Responsive Design** — mobile-friendly UI with Tailwind CSS and Flowbite components
 
-## Technology Stack
+## Tech Stack
 
 ### Backend
 
-- PHP 8.2
-- Laravel 12.0
-- MySQL Database
-- Spatie Translatable
-- Laravel Localization
-- Laravel Honeypot
+- **PHP** 8.3
+- **Laravel** 12
+- **MySQL** database
+- **Laravel UI** for authentication
+- **Spatie Laravel Translatable** for multilingual content
+- **mcamara/laravel-localization** for locale-based routing
+- **Spatie Laravel Honeypot** for spam protection
+- **Whitecube Laravel Cookie Consent** for GDPR compliance
 
 ### Frontend
 
-- Tailwind CSS
-- Vite
-- Alpine.js
-- CKEditor 5
-- FilePond for file uploads
-- Flowbite components
+- **Blade** templates with component-based architecture
+- **Tailwind CSS** 3 for styling
+- **Flowbite** UI component library
+- **Vite** 7 for asset bundling
+- **SCSS** for custom styles
+- **Bootstrap Icons** for iconography
+- **CKEditor 5** for rich text editing (admin)
+- **Fancyapps UI** for lightbox/gallery
+- **FilePond** for file uploads
+
+### Development & Tooling
+
+- **Pest** 4 for testing
+- **Laravel Pint** for PHP code formatting
+- **Prettier** with Blade and Tailwind plugins
+- **Laravel Telescope** for debugging
+- **Laravel Nightwatch** for monitoring
+- **Laravel Sail** for Docker-based local development
+- **Laravel Herd** as the local development server
+
+## Prerequisites
+
+- PHP >= 8.2
+- Composer
+- Node.js & npm
+- MySQL
 
 ## Installation
 
-### Prerequisites
+```bash
+git clone https://github.com/llinards/storex.git
+cd storex
 
-- PHP 8.2 or higher
-- Composer
-- Node.js and NPM
-- MySQL
+composer install
+npm install
 
-### Setup Steps
+cp .env.example .env
+php artisan key:generate
 
-1. Clone the repository
-   ```
-   git clone https://github.com/llinards/storex.git
-   cd storex
-   ```
+# Configure your database in .env, then run migrations
+php artisan migrate
 
-2. Install PHP dependencies
-   ```
-   composer install
-   ```
-
-3. Install JavaScript dependencies
-   ```
-   npm install
-   ```
-
-4. Create environment file
-   ```
-   cp .env.example .env
-   ```
-
-5. Generate application key
-   ```
-   php artisan key:generate
-   ```
-
-6. Configure your database in the .env file
-   ```
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=storex
-   DB_USERNAME=root
-   DB_PASSWORD=
-   ```
-
-7. Run database migrations
-   ```
-   php artisan migrate
-   ```
-
-8. Build frontend assets
-   ```
-   npm run build
-   ```
-
-9. Start the development server
-   ```
-   php artisan serve
-   ```
-
-10. Visit http://localhost:8000 in your browser
+npm run build
+```
 
 ## Development
 
-### Running in Development Mode
+```bash
+# Start all services (server, queue, logs, vite) concurrently
+composer run dev
 
-```
+# Or run individually
+php artisan serve
 npm run dev
 ```
 
-### Code Formatting
+## Testing
 
+```bash
+php artisan test --compact
 ```
+
+## Code Formatting
+
+```bash
+# PHP
+vendor/bin/pint
+
+# Blade & frontend
 npm run format
 ```
 
