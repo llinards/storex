@@ -3,7 +3,10 @@
     <x-slot name="description">{{ strip_tags($category->description) }}</x-slot>
     <x-slot name="image">{{ asset('storage/categories/' . $category->image) }}</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8 ">
-        <h1 class="pt-28 pb-8 sm:pt-0 sm:pb-12">{{$category->title}}</h1>
+        <div class="pb-4">
+            {{ Breadcrumbs::render('category.show', $category) }}
+        </div>
+        <h1 class="pb-8 sm:pb-12">{{$category->title}}</h1>
 
         <div class="grid xl:grid-cols-2 gap-8 sm:justify-center">
             @foreach($products as $product)
