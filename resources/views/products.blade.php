@@ -2,6 +2,9 @@
     <x-slot name="title">@lang('Tenta angāru veidi')</x-slot>
     <div class="container mx-auto px-4 sm:py-12 lg:px-6 xl:px-8">
         <div class="pt-28 sm:pt-0">
+            <div class="pb-4">
+                {{ Breadcrumbs::render('category.index') }}
+            </div>
             <h1>@lang('Tenta angāru veidi')</h1>
         </div>
 

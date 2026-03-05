@@ -3,6 +3,9 @@
     <x-slot name="description">{{ strip_tags($product->description) }}</x-slot>
     <x-slot name="image">{{ asset('storage/products/' . $product->images[0]->filename) }}</x-slot>
     <div class="container mx-auto pb-8 pt-28 sm:pb-12 sm:pt-12 lg:px-6 xl:px-8">
+        <div class="px-4 pb-4 sm:px-0">
+            {{ Breadcrumbs::render('product.show', $product) }}
+        </div>
         <x-product.card :product="$product"></x-product.card>
     </div>
 
