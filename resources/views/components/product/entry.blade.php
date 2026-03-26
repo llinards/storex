@@ -13,7 +13,7 @@
             <a
                 target="_blank"
                 class="flex font-bold transition duration-200 hover:text-storex-red"
-                href="{{ asset('storage/attachments/' . $attachment) }}"
+                href="{{ asset('storage/attachments/' . $attachment) }}?v={{ filemtime(storage_path('app/public/attachments/' . $attachment)) }}"
             >
                 <svg
                     class="text-grey mr-2 h-6 w-6"
