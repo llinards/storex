@@ -1,4 +1,5 @@
 <x-layout.app>
+     <x-slot name="title">{{ __('Sākums') }}</x-slot>
     <div
         style="background-image: url('{{ asset('images/placeholder-tent-1.jpg') }}')"
         class="bg-cover bg-center 2xl:container 2xl:mx-auto 2xl:max-w-[1472px]"
