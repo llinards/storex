@@ -8,6 +8,8 @@ return [
     'supportedLocales' => [
         'lv' => ['name' => 'Latvian', 'script' => 'Latn', 'native' => 'LV', 'regional' => 'lv_LV'],
         'en' => ['name' => 'English', 'script' => 'Latn', 'native' => 'EN', 'regional' => 'en_GB'],
+        'cs' => ['name' => 'Czech', 'script' => 'Latn', 'native' => 'CS', 'regional' => 'cs_CZ'],
+        'sk' => ['name' => 'Slovak', 'script' => 'Latn', 'native' => 'SK', 'regional' => 'sk_SK'],
     ],
 
     // Requires middleware `LaravelSessionRedirect.php`.
@@ -43,7 +45,7 @@ return [
     // If you want to display the locales in particular order in the language selector you should write the order here.
     // CAUTION: Please consider using the appropriate locale code otherwise it will not work
     // Example: 'localesOrder' => ['es','en'],
-    'localesOrder' => ['lv', 'en'],
+    'localesOrder' => ['lv', 'en', 'cs', 'sk'],
 
     // If you want to use custom language URL segments like 'at' instead of 'de-AT', you can map them to allow the
     // LanguageNegotiator to assign the desired locales based on HTTP Accept Language Header. For example, if you want
