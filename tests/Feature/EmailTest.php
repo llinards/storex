@@ -81,7 +81,7 @@ it('requires data processing agreement on contact form', function () {
 
 it('handles email sending error gracefully', function () {
     Mail::shouldReceive('to')
-        ->andThrow(new \Exception('Mail server error'));
+        ->andThrow(new Exception('Mail server error'));
 
     $validData = [
         'fullname' => 'Test User',
