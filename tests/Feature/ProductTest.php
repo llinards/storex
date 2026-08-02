@@ -5,6 +5,7 @@ use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\ProductVariant;
 use App\Models\User;
+use App\Services\ProductServices;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
@@ -262,9 +263,9 @@ it('deletes product variant successfully', function () {
 it('handles product creation error gracefully', function () {
     Storage::fake('public');
 
-    $this->mock(\App\Services\ProductServices::class)
+    $this->mock(ProductServices::class)
         ->shouldReceive('storeProduct')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $category = Category::factory()->create();
 
@@ -285,9 +286,9 @@ it('handles product update error gracefully', function () {
     $category = Category::factory()->create();
     $product = Product::factory()->create(['category_id' => $category->id]);
 
-    $this->mock(\App\Services\ProductServices::class)
+    $this->mock(ProductServices::class)
         ->shouldReceive('updateProduct')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $updateData = [
         'category_id' => $category->id,
@@ -306,9 +307,9 @@ it('handles product deletion error gracefully', function () {
     $category = Category::factory()->create();
     $product = Product::factory()->create(['category_id' => $category->id]);
 
-    $this->mock(\App\Services\ProductServices::class)
+    $this->mock(ProductServices::class)
         ->shouldReceive('destroyProduct')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $this->actingAs($this->user)
         ->delete(route('admin.product.destroy', $product->id))

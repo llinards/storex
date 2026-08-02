@@ -4,6 +4,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\User;
+use App\Services\CategoryServices;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
@@ -224,9 +225,9 @@ it('handles category creation error gracefully', function () {
     Storage::fake('local');
 
     // Mock the CategoryServices to throw an exception
-    $this->mock(\App\Services\CategoryServices::class)
+    $this->mock(CategoryServices::class)
         ->shouldReceive('storeCategory')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $categoryData = [
         'category_title' => 'Test Category',
@@ -244,9 +245,9 @@ it('handles category update error gracefully', function () {
     $category = Category::factory()->create();
 
     // Mock the CategoryServices to throw an exception
-    $this->mock(\App\Services\CategoryServices::class)
+    $this->mock(CategoryServices::class)
         ->shouldReceive('updateCategory')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $updateData = [
         'category_title' => 'Updated Category',
@@ -264,9 +265,9 @@ it('handles category deletion error gracefully', function () {
     $category = Category::factory()->create();
 
     // Mock the CategoryServices to throw an exception
-    $this->mock(\App\Services\CategoryServices::class)
+    $this->mock(CategoryServices::class)
         ->shouldReceive('destroyCategory')
-        ->andThrow(new \Exception('Database error'));
+        ->andThrow(new Exception('Database error'));
 
     $this->actingAs($this->user)
         ->delete(route('admin.category.destroy', $category->id))
