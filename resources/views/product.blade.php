@@ -9,7 +9,7 @@
         <x-product.card :product="$product"></x-product.card>
     </div>
 
-    @if($product->variants->isNotEmpty())
+    @if ($product->variants->isNotEmpty())
         <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
             <h2 class="pb-4 text-center">@lang('Tehniskā specifikācija')</h2>
             <x-product.pricelist-wrapper>
@@ -33,8 +33,7 @@
                         @if ($variant->attachment)
                             <x-slot name="attachment">{{ $variant->attachment->filename }}</x-slot>
                         @endif
-                        <x-slot
-                            name="price">
+                        <x-slot name="price">
                             {{ $formatted_price }}{{ $hasAsterisk ? ' €**' : ' €' }}
                         </x-slot>
                     </x-product.entry>
@@ -44,6 +43,9 @@
     @endif
     <div class="container mx-auto px-4 pb-8 sm:pb-12 lg:px-6 xl:px-8">
         <div class="border-t-1 pt-2">
+            <p class="py-2">
+                @lang('Angāra garumu ir iespējams pagarināt / saīsināt pēc Jūsu nepieciešamības.')
+            </p>
             <p class="py-2">
                 @lang('Cena bez uzstādīšanas un piegādes. Iespēja pasūtīt zaļas un pelēkas krāsas tentis.')
             </p>
