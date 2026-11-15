@@ -9,7 +9,7 @@
     "devDependencies": {
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",
-        "ckeditor5": "^48.0.0",
+        "ckeditor5": "^49.0.0",
         "concurrently": "^10.0.3",
         "laravel-vite-plugin": "^3.0.0",
         "postcss": "^8.4.47",
